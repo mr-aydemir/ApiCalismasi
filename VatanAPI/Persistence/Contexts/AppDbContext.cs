@@ -64,6 +64,7 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "",
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
                     CategoryId = 101,
+                    Image=
                 },
                 new Product
                 {

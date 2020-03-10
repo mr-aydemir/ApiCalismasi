@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Drawing;
 
 namespace VatanAPI.Domain.Models
 {
@@ -14,6 +15,7 @@ namespace VatanAPI.Domain.Models
 
         public int CategoryId { get; set; }
         public string Url { get; set; }
+        public Image Image{get; set;}
         public Category Category { get; set; }
     }
 }
