@@ -1,0 +1,17 @@
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.csprojAssemblyReference.cache
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\App.g.cs
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.cache
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\bin\Debug\VatanArayüz.exe.config
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\bin\Debug\VatanArayüz.exe
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\bin\Debug\VatanArayüz.pdb
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\MainWindow.g.cs
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.lref
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\MainWindow.baml
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.g.resources
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.Properties.Resources.resources
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.csproj.GenerateResource.cache
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.exe
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.pdb
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.Resource1.resources
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\App.baml
+C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanConceptStyle.baml

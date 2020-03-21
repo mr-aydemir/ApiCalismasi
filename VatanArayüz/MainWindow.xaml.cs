@@ -24,5 +24,10 @@ namespace VatanArayüz
         {
             InitializeComponent();
         }
+       public void OnImageButtonClick(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Tamam");
+        }
+
     }
 }

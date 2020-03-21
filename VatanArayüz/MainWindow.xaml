@@ -6,7 +6,20 @@
         xmlns:local="clr-namespace:VatanArayüz"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+	<StackPanel Height="418" VerticalAlignment="Top" Margin="0,0,2,0">
+		<DockPanel Height="50" LastChildFill="False" VerticalAlignment="Top" Margin="168,0,53,0">
+			<Button Content="Web'e Özel" MaxHeight="100" VerticalAlignment="Top" MaxWidth="100" Style="{DynamicResource topbarbutton}" Foreground="#337ab7"/>
+			<Button Content="Fırsat" MaxHeight="100" VerticalAlignment="Top" MaxWidth="100" Style="{DynamicResource topbarbutton}"/>
+			<Button Content="Yeni" MaxHeight="100" VerticalAlignment="Top" MaxWidth="100" Style="{DynamicResource topbarbutton}"/>
+			<Button Content="Outlet" MaxHeight="100" VerticalAlignment="Top" MaxWidth="100" Style="{DynamicResource topbarbutton}"/>
+			<Button Content="Mağazalar" MaxHeight="100" VerticalAlignment="Top" MaxWidth="100" Style="{DynamicResource topbarbutton}"/>
+			<Button Content="Sipariş Takibi" MaxHeight="100" VerticalAlignment="Top" MaxWidth="100" Style="{DynamicResource topbarbutton}"/>
+			<Button Content="Bize Ulaşın!" MaxHeight="100" VerticalAlignment="Top" MaxWidth="100" Style="{DynamicResource topbarbutton}" Margin="10,15,10,0"/>
+		</DockPanel>
+		<DockPanel MaxHeight="100" LastChildFill="False">
+			<Image  Margin="25,0,120,5"  MaxHeight="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="https://www.vatanbilgisayar.com/assets/dist/images/logo.png"/>
+			<TextBox Height="27" TextWrapping="NoWrap" Tag="Aramak İstediğiniz Ürünü Yazın" Width="245" Style="{DynamicResource Searchbar}" HorizontalAlignment="Center" VerticalAlignment="Center" ButtonBase.Click="OnImageButtonClick"/>
+			<Button Content="GİRİŞ YAP"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="50,0,0,0" Style="{DynamicResource MyAccountButton}" />
+		</DockPanel>
+	</StackPanel>
 </Window>
