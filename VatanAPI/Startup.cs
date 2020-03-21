@@ -39,10 +39,12 @@ namespace VatanAPI
 
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IImageRepository, ImageRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IImageService, ImageService>();
             services.AddAutoMapper(typeof(Startup));
             //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
         }

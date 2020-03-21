@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Hosting;
-using System.Net.Http;
-using System.IO;
-using Microsoft.Win32.SafeHandles;
-using System.Net.Http.Headers;
+using VatanAPI.Domain.Models;
+using VatanAPI.Domain.Services;
+using VatanAPI.Resources;
 
 namespace VatanAPI.Controllers
 {
@@ -16,23 +12,21 @@ namespace VatanAPI.Controllers
     [Route("api/[controller]")]
     public class ImagesController : ControllerBase
     {
+        private readonly IImageService _imageService;
+        private readonly IMapper _mapper;
 
-        private readonly SafeFileHandle filePath;
-        public ImagesController(SafeFileHandle safeFileHandle)
+        public ImagesController(IImageService imageService, IMapper mapper)
         {
-            safeFileHandle = filePath;
+            _imageService = imageService;
+            _mapper = mapper;
         }
-        [HttpGet]
 
-        public HttpResponseMessage Get()
+        [HttpGet]
+        public async Task<IEnumerable<ImageResource>> ListAsync()//GetAllSync ile aynı kodlar.
         {
-            using(FileStream fs= new FileStream(filePath, FileMode.Open))
-            {
-                HttpResponseMessage response = new HttpResponseMessage();
-                response.Content = new StreamContent(fs);
-                response.Content.Headers.ContentType = new MediaTypeHeaderValue("image/jpeg");
-                return response;
-            }
+            var images = await _imageService.ListAsync();
+            var resources = _mapper.Map<IEnumerable<Image>, IEnumerable<ImageResource>>(images);
+            return resources;
         }
     }
 }

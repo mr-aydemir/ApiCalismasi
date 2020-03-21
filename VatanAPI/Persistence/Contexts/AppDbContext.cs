@@ -12,7 +12,7 @@ namespace VatanAPI.Persistence.Contexts
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
-       // public DbSet<Outstanding> outstandingProducts { get; set; }
+        public DbSet<Image> Images { get; set; }
 
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
@@ -50,10 +50,8 @@ namespace VatanAPI.Persistence.Contexts
                 new Product
                 {
                     Id = 100,
-                    Name = "Monster Abra 14.53",
-                    QuantityInPackage = 1,
+                    Name = "HP 15-DA1021NT",
                     Url = "",
-                    UnitOfMeasurement = EUnitOfMeasurement.Unity,
                     CategoryId = 101
                 },
                 new Product
@@ -64,7 +62,6 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "",
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
                     CategoryId = 101,
-                    Image=
                 },
                 new Product
                 {
@@ -102,37 +99,58 @@ namespace VatanAPI.Persistence.Contexts
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
                     CategoryId = 101,
                 }
-            ) ;
-            /*
-            builder.Entity<OutstandingProduct>().ToTable("Outstanding Product");
-            builder.Entity<OutstandingProduct>().HasKey(p => p.Id);
-            builder.Entity<OutstandingProduct>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            );
+            builder.Entity<Image>().ToTable("Images");
+            builder.Entity<Image>().HasKey(p => p.Id);
+            builder.Entity<Image>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Image>().Property(p => p.Name).IsRequired().HasMaxLength(50);
+            builder.Entity<Image>().Property(p => p.Url).IsRequired();
 
-            builder.Entity<OutstandingProduct>().HasOne(p=>p.Products).HasForeignKey(p => p.CategoryId);
-            builder.Entity<OutstandingProduct>().HasData
+            builder.Entity<Image>().HasData
             (
-                new OutstandingProduct
+                new Image
+                {
+                    Id = 100,
+                    Name = "Monster Abra 14.53",
+                    Url = "",
+                    ProductId = 100
+                },
+                new Image
+                {
+                    Id = 101,
+                    Name = "Monster Abra 14.53",
+                    Url = "",
+                    ProductId = 101
+                },
+                new Image
                 {
                     Id = 102,
-                    ProductId = 99                    
+                    Name = "Monster Abra 14.53",
+                    Url = "",
+                    ProductId = 102
                 },
-                new OutstandingProduct
+                new Image
                 {
                     Id = 103,
-                    ProductId = 99
+                    Name = "Monster Abra 14.53",
+                    Url = "",
+                    ProductId = 103
                 },
-                new OutstandingProduct
+                new Image
                 {
                     Id = 104,
-                    ProductId = 99
+                    Name = "Monster Abra 14.53",
+                    Url = "",
+                    ProductId = 104
                 },
-                new OutstandingProduct
+                new Image
                 {
                     Id = 105,
-                    ProductId = 99
+                    Name = "Monster Abra 14.53",
+                    Url = "",
+                    ProductId = 105
                 }
-
-            );*/
+            );
         }
     }
 }

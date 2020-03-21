@@ -64,7 +64,7 @@ namespace VatanAPI.Controllers
             return Ok(categoryResource);
         }
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteAsync(int id)
+        public async Task<IActionResult> DeleteAsync(int id)//parametrede verilmiş olan id numarasına sahip veriyi siler.
         {
             var result = await _categoryService.DeleteAsync(id);
 

@@ -108,3 +108,9 @@ E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.dll
 E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.pdb
 E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\AutoMapper.dll
 E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\Microsoft.Win32.SystemEvents.dll
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\System.Drawing.Common.dll
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.MvcApplicationPartsAssemblyInfo.cache
