@@ -65,7 +65,7 @@
 								</TextBox.Style>
 							</TextBox>
 							<Button   Name="AButton" MaxWidth="50" MaxHeight="30" Background="Transparent" Foreground="Transparent" Panel.ZIndex="2" HorizontalAlignment="Right" BorderThickness="0" >
-								<Image Source="C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\Resources\search-icon.png" Margin="0,0,0,0"/>
+								<Image  Margin="0,0,0,0" Source="search-icon.png" />
 							</Button>
 						</Grid>
 					</Border>
@@ -74,29 +74,55 @@
 		</Setter>
 	</Style>
 	<!--Koyu mavi Profil Butonu Tasarımı Aşağıdadır-->
-	<Color x:Key="BlackBlue">#FF003177</Color>
 	<Style x:Key="MyAccountButton" TargetType="Button">
 		<Setter Property="SnapsToDevicePixels" Value="True"/>
-		<Setter Property="Background" Value="#003177"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}" >
-					<Border BorderThickness="1" BorderBrush="Transparent" CornerRadius="18" Padding="1"
+					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="18" Padding="1"
 						HorizontalAlignment="Center" VerticalAlignment="Center" Background="#003177" MaxWidth="200">
 						<DockPanel>
-							<Image Name="butonicon" Height="20" Width="20" Stretch="Fill" Margin="15,0,0,0" Source="pack://siteoforigin:,,,/Resources/person-icon-white.png" MaxWidth="100"/>
-							<Label Content="GİRİŞ YAP" FontSize="12" FontWeight="Bold" Foreground="White" MaxWidth="100"/>
-							<Image Height="20" Width="20" Stretch="Fill" Margin="2,0,15,0" Source="pack://siteoforigin:,,,/Resources/person-icon-white.png" MaxWidth="100"/>
+							<Image Name="butonicon" Height="20" Width="20" Stretch="Fill" Margin="15,0,0,0"  MaxWidth="100" Source="person-icon-white.png"/>
+							<Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Foreground="White" MaxWidth="100"/>
+							<Image Height="20" Width="20" Stretch="Fill" Margin="2,0,15,0"  MaxWidth="100" Source="Arrow-icon-white.png"/>
 						</DockPanel>
 					</Border>
-
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Background" Value="#FF000D1F"/>
+							<Setter TargetName="border" Property="Background" Value="#FF020238"/>
 							<Setter Property="Foreground" Value="White" />
 						</Trigger>
 						<Trigger Property="IsPressed" Value="True">
-							<Setter Property="Background" Value="#FF000D1F" />
+							<Setter Property="Background" Value="#FF003177" />
+							<Setter Property="Foreground" Value="White" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Sepet Butonu Tasarımı Aşağıdadır-->
+	<BitmapImage x:Key="MyImageSource" UriSource="Arrow-icon-white.png"/>
+	<Style x:Key="MyCartButton" TargetType="Button">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="18" Padding="1"
+						HorizontalAlignment="Center" VerticalAlignment="Center" Background="#003177" MaxWidth="200">
+						<DockPanel>
+							<Image Name="butonicon" Height="20" Width="20" Stretch="Fill" Margin="15,0,0,0"  MaxWidth="100" Source="cart-icon.png"/>
+							<Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Foreground="White" MaxWidth="100"/>
+							<Image Height="20" Width="20" Stretch="Fill" Margin="2,0,15,0"  MaxWidth="100" Source="Arrow-icon-white.png"/>
+						</DockPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="Background" Value="#FF020238"/>
+							<Setter Property="Foreground" Value="White" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="#FF003177" />
 							<Setter Property="Foreground" Value="White" />
 						</Trigger>
 					</ControlTemplate.Triggers>

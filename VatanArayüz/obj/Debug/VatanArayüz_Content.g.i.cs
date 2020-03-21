@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("search-icon.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("cart-icon.png")]
 
 

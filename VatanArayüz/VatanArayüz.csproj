@@ -56,10 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Resource1.Designer.cs">
+    <Compile Include="Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Resource1.resx</DependentUpon>
+      <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
     <Page Include="VatanConceptStyle.xaml">
       <SubType>Designer</SubType>
@@ -96,9 +96,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Resource1.resx">
+    <EmbeddedResource Include="Resource.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -109,16 +109,25 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\search-icon.png" />
+    <Resource Include="Resources\search-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Arrow-icon-white.png" />
+    <Resource Include="Resources\person-icon-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\person-icon-white.png" />
+    <Resource Include="Resources\Arrow-icon-white.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="search-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="person-icon-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Arrow-icon-white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cart-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
