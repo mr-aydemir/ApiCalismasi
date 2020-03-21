@@ -23,7 +23,9 @@
 			<Button Content="GİRİŞ YAP"  VerticalAlignment="Center" HorizontalAlignment="Center" Margin="5,0,0,0" Style="{DynamicResource MyCartButton}"  />
 		</DockPanel>
 		<Border BorderThickness="1" BorderBrush="Gray" Height="55">
-			
+			<DockPanel MaxHeight="100" LastChildFill="False">
+				<!--Buraya Telefon Bilgisayar .. yazan yeri yazabilirsin.-->
+			</DockPanel>
 		</Border>
 	</StackPanel>
 </Window>
