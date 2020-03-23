@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\
+C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Release\
 VatanArayüz
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\App.xaml
 2-1360527271
 
@@ -16,5 +16,5 @@ C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\App.xaml
 141183416626
 VatanConceptStyle.xaml;MainWindow.xaml;
 
-False
+True
 
