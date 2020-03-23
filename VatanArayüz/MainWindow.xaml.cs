@@ -20,6 +20,8 @@ namespace VatanArayüz
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+
         public MainWindow()
         {
             InitializeComponent();
@@ -30,6 +32,46 @@ namespace VatanArayüz
         }
 
         private void Button_SourceUpdated(object sender, DataTransferEventArgs e)
+        {
+           
+        }
+
+        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        {
+            
+        }
+
+        private void Button_MouseEnter_1(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Button_MouseEnter_2(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Button_MouseEnter_3(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Button_MouseEnter_4(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Button_MouseEnter_5(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Button_MouseEnter_6(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void Button_MouseEnter_7(object sender, MouseEventArgs e)
         {
 
         }
