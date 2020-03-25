@@ -5,145 +5,158 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         Title="MainWindow" Height="2641.7" Width="1160">
-    <ScrollViewer Margin="0,0,0,1">
-        <StackPanel Height="2610" VerticalAlignment="Top">
-            <DockPanel Height="50" LastChildFill="False" Margin="275,0,272,0" Width="1000" HorizontalAlignment="Center">
-                <Button Content="Web'e Özel" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Foreground="#337ab7" Margin="255,18,0,12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20"/>
-                <Button Content="Fırsat" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Margin="10,18,10,12" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.743,1.05" Height="20"/>
-                <Button Content="Yeni" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Content="Outlet" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Content="Mağazalar" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                <Button Content="Sipariş Takibi" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                <Button Content="Bize Ulaşın!" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
-            </DockPanel>
-            <DockPanel MaxHeight="100" LastChildFill="False" Width="1134">
-                <Image  Margin="25,0,60,5"  MaxHeight="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="https://www.vatanbilgisayar.com/assets/dist/images/logo.png"/>
-                <TextBox Height="27" TextWrapping="NoWrap" Tag="Aramak İstediğiniz Ürünü Yazın" Margin="200,0,0,0" Width="245" Style="{DynamicResource Searchbar}" HorizontalAlignment="Center" VerticalAlignment="Center" ButtonBase.Click="OnImageButtonClick"/>
-                <Button Content="GİRİŞ YAP" Margin="150,0,0,0" Style="{DynamicResource MyAccountButton}" />
-                <Button Content="SEPETİM" Margin="5,0,0,0" Style="{DynamicResource MyCartButton}"  />
-            </DockPanel>
-            <Border BorderThickness="1" BorderBrush="LightGray" Height="55">
-                <DockPanel MaxHeight="100" LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Button Content="TELEFON"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="15,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="BİLGİSAYAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="86" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="BİLGİSAYAR PARÇALARI"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="167" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="KAMERA"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="TV VE ELEKTRONİĞİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="137" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="OFİS"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="AKSESUAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="OYUN VE HOBİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="106" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="EV ALETLERİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="90" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                    <Button Content="SPOR VE OUTDOOR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="133" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
-                </DockPanel>
-            </Border>
-            <DockPanel x:Name="reklam" Height="274" LastChildFill="False" Width="1134">
-                <Image x:Name="image" Height="274" VerticalAlignment="Top" Width="1133"/>
-            </DockPanel>
-            <!--fırsatların gözükeceği yer-->
-            <Border BorderBrush="LightGray" BorderThickness="1" Height="51" Width="1138">
-                <DockPanel MaxHeight="100" LastChildFill="False" Height="50" Margin="0,-1,0,0">
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="290,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter"/>
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="1,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter_1"/>
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="1,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter_2"/>
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="1,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter_3"/>
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="1,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter_4"/>
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="1,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter_5"/>
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="1,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter_6"/>
-                    <Button  VerticalAlignment="Center" HorizontalAlignment="Center" Height="50" Width="75" Margin="1,0,0,0" Style="{DynamicResource frstbutton}" MouseEnter="Button_MouseEnter_7"/>
-                </DockPanel>
-            </Border>
-            <DockPanel Height="50" LastChildFill="False" Width="1134">
-                <Label Content="Günün Fırsatları" Height="30" FontSize="15" VerticalAlignment="Top" Width="150" Margin="0,10,0,0"/>
-                <Button x:Name="frstbutton" Content="TÜM FIRSAT ÜRÜNLERİ" Height="50" VerticalAlignment="Top" Width="200" Margin="750,0,0,0" Style="{DynamicResource Button_1}"/>
-            </DockPanel>
-            <DockPanel Height="298" LastChildFill="False" Width="1134">
-                <!--Fırsat Ürünlerin olduğu bölüm-->
-            </DockPanel>
-            <DockPanel Height="50" LastChildFill="False" Width="1134" Background="#FFEBEBEB" >
-                <Label Content="Web' Özel Sınırlı Stok" Height="30" FontSize="15" VerticalAlignment="Top" Width="150" Margin="0,10,0,0"/>
-                <Button x:Name="webbutton" Content="TÜMÜNÜ GÖR" Height="50" VerticalAlignment="Top" Width="142" Margin="800,0,0,0" Style="{DynamicResource Button_1.1}"/>
-            </DockPanel>
-            <DockPanel Height="282" LastChildFill="False" Width="1134" Background="#FFEBEBEB">
-                <!--Web'e Özel Sınırlı Ürünlerin Bölümü-->
-            </DockPanel>
-            <DockPanel Height="46" LastChildFill="False" Width="1134" Background="#FFEBEBEB">
-                <Button x:Name="button_10" Height="22" VerticalAlignment="Top" Width="20" Margin="525,0,0,0" Style="{DynamicResource Button_1.2}"/>
-                <Button x:Name="button_11" Height="22" VerticalAlignment="Top" Width="20" Margin="1,0,0,0" Style="{DynamicResource Button_1.2}"/>
-                <Button x:Name="button_12" Height="22" VerticalAlignment="Top" Width="20" Margin="1,0,0,0" Style="{DynamicResource Button_1.2}"/>
-                <Button x:Name="button_13" Height="22" VerticalAlignment="Top" Width="20" Margin="1,0,0,0" Style="{DynamicResource Button_1.2}"/>
-            </DockPanel>
-            <DockPanel Height="41" LastChildFill="False" Width="1134">
-                <Label Content="En Çok Satanlar" FontSize="15" Width="150" Margin="0,0,0,10"/>
-                <Button x:Name="button_20" Width="35" Margin="850,0,0,10" Style="{DynamicResource Button_2.left}"/>
-                <Button x:Name="button_21" Width="35" Margin="1,0,0,10" Style="{DynamicResource Button_2.right}"/>
-            </DockPanel>
-            <DockPanel Height="223" LastChildFill="False" Width="1134">
-                <!--En çok satanlar bölümü-->
-            </DockPanel>
-            <DockPanel Height="38" LastChildFill="False" Width="1134">
-                <Label Content="Çok Satan Markalar" FontSize="15" Width="150" Margin="0,0,0,10"/>
-            </DockPanel>
-            <DockPanel Height="100" LastChildFill="False" Width="1134">
-                <!--Çok satan markalar-->
-            </DockPanel>
-            <Grid Height="199" Width="1134" Background="#003177">
-                <Image x:Name="image1" HorizontalAlignment="Left" Height="42" Margin="89,35,0,0" VerticalAlignment="Top" Width="54" Source="https://lh3.googleusercontent.com/proxy/ha58iUNGMw1Q8gRVNhaifkcld-IfVBJ6qzifedgXhypkvesP2BVLC-zXG_ENkoVIJ3oAUU94d9koGAZzEqDrz6HdzVeeucbppz4CgP3T"/>
-                <Label x:Name="label" Content="MOTOKURYE" Height="29" Margin="148,25,0,0" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="Gray"/>
-                <Label x:Name="label1" Content="Seçili ürünlere 30dk - 3&#xA;saat arasında sahip olma&#xA;fırsatı." HorizontalAlignment="Left" Margin="148,59,0,0" VerticalAlignment="Top" Width="150" Foreground="Gray" Height="62" Background="Transparent" FontWeight="Bold"/>
-                <Label x:Name="label2" Content="BUGÜN TESLİM" HorizontalAlignment="Left" Margin="404,25,0,0" VerticalAlignment="Top" Width="131" FontWeight="Bold" FontSize="16" Height="29" Foreground="Gray"/>
-                <Label x:Name="label3" Content="Seçili ürünlere gün&#xA;içerisinde sahip olma&#xA;fırsatı." HorizontalAlignment="Left" Margin="404,59,0,0" VerticalAlignment="Top" Foreground="Gray" Width="131" Height="62" FontWeight="Bold"/>
-                <Label x:Name="label4" Content="KARGO BEDAVA" HorizontalAlignment="Left" Margin="628,25,0,0" VerticalAlignment="Top" Width="149" FontWeight="Bold" FontSize="16" Height="29" Foreground="Gray"/>
-                <Label x:Name="label5" Content="Seçili ürünlerde standart &#xD;&#xA;kargo bedava." HorizontalAlignment="Left" Margin="628,54,0,0" VerticalAlignment="Top" Foreground="Gray" Width="149" Height="67" FontWeight="Bold"/>
-                <Label x:Name="label6" Content="KOLAY İADE" HorizontalAlignment="Left" Margin="865,25,0,0" VerticalAlignment="Top" Width="149" FontWeight="Bold" FontSize="16" Height="29" Foreground="Gray"/>
-                <Label x:Name="label7" Content="14 gün içerisinde cayma&#xD;&#xA;hakkı." HorizontalAlignment="Left" Margin="865,54,0,0" VerticalAlignment="Top" Foreground="Gray" Width="149" Height="67" FontWeight="Bold"/>
-            </Grid>
-            <Grid Height="224" Width="1134">
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="155,10,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image2" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/card-finans.jpg"/>
-                </Border>
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="370,10,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image3" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/world.jpg"/>
-                </Border>
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="585,10,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image4" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/maximum.jpg"/>
-                </Border>
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="800,10,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image5" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/axess.jpg"/>
-                </Border>
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="155,114,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image6" Source="https://www.vatanbilgisayar.com/upload/general/taksit-footer/paraf43.jpg"/>
-                </Border>
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="370,114,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image7" Source="https://www.vatanbilgisayar.com/upload/general/taksit-footer/bonus5.jpg"/>
-                </Border>
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="585,114,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image8" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/bank-kart-combo.jpg"/>
-                </Border>
-                <Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="800,114,0,0" VerticalAlignment="Top" Width="195">
-                    <Image x:Name="image9" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/tekcekim.png"/>
-                </Border>
-            </Grid>
-            <Grid Height="460" Width="1134">
-                <Label x:Name="label8" Content="Vatan Bilgisayar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="129" Height="31" FontSize="14" FontWeight="Bold"/>
-                <Button x:Name="button30" Content="Hakkımızda" Margin="10,46,0,0" VerticalAlignment="Top" Width="87" Height="20" Style="{DynamicResource vtnbutton}" HorizontalAlignment="Left"/>
-                <Button x:Name="button31" Content="Markalarımız" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="87" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button32" Content="İnsan Kaynaklarımız" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="129" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button33" Content="Gizlilik Politikamız" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="118" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button34" Content="Bilgi Toplum Hizmetleri" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="154" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button35" Content="İletişim" HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top" Width="49" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Label x:Name="label9" Content="Müşteri Hizmetleri" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Width="140" Height="31" FontSize="14" FontWeight="Bold"/>
-                <Button x:Name="button40" Content="İşlem Rehberi" Margin="10,276,0,0" VerticalAlignment="Top" Width="99" Height="20" Style="{DynamicResource vtnbutton}" HorizontalAlignment="Left"/>
-                <Button x:Name="button41" Content="İade ve İptal" HorizontalAlignment="Left" Margin="11,301,0,0" VerticalAlignment="Top" Width="87" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button42" Content="Ödeme Seçenekleri" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="140" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button43" Content="Keyifli Garanti" HorizontalAlignment="Left" Margin="10,351,0,0" VerticalAlignment="Top" Width="100" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button44" Content="Servis Takip Formu" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Width="129" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button45" Content="e-Arşiv Fatura" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top" Width="100" Height="20" Style="{DynamicResource vtnbutton}"/>
-                <Button x:Name="button46" Content="Outlet" HorizontalAlignment="Left" Margin="10,426,0,0" VerticalAlignment="Top" Width="48" Height="20" Style="{DynamicResource vtnbutton}"/>
-            </Grid>
-            <Image x:Name="image10" Height="43" Width="339" Margin="750,0,0,0" Source="https://www.vatanbilgisayar.com/assets/app/images/payment-types.jpg" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+	<ScrollViewer>
+		<!--Webe özel , Fırsat ... butonları-->
+		<StackPanel Height="2610" VerticalAlignment="Top">
+			<DockPanel Height="50" LastChildFill="False" Margin="275,0,272,0" Width="1000" HorizontalAlignment="Center">
+				<Button Content="Web'e Özel" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Foreground="#337ab7" Margin="255,18,0,12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20"/>
+				<Button Content="Fırsat" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Margin="10,18,10,12" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.743,1.05" Height="20"/>
+				<Button Content="Yeni" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<Button Content="Outlet" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<Button Content="Mağazalar" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<Button Content="Sipariş Takibi" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+				<Button Content="Bize Ulaşın!" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+			</DockPanel>
+			<!--vatan iconu arama çubuğu-->
+			<DockPanel MaxHeight="100" LastChildFill="False" Width="1134">
+				<Image  Margin="25,0,60,5"  MaxHeight="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="https://www.vatanbilgisayar.com/assets/dist/images/logo.png"/>
+				<TextBox Height="27" TextWrapping="NoWrap" Tag="Aramak İstediğiniz Ürünü Yazın" Margin="200,0,0,0" Width="245" Style="{DynamicResource Searchbar}" HorizontalAlignment="Center" VerticalAlignment="Center" ButtonBase.Click="OnImageButtonClick"/>
+				<Button Content="GİRİŞ YAP" Margin="150,0,0,0" Style="{DynamicResource MyAccountButton}" />
+				<Button Content="SEPETİM" Margin="5,0,0,0" Style="{DynamicResource MyCartButton}"  />
+			</DockPanel>
+			<!--Kategori Butonları-->
+			<Border BorderThickness="1" BorderBrush="LightGray" Height="55">
+				<DockPanel MaxHeight="100" LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Center">
+					<Button Name="b0" Content="TELEFON"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="15,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b1" Content="BİLGİSAYAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="86" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b2" Content="BİLGİSAYAR PARÇALARI"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="167" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b3" Content="KAMERA"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b4" Content="TV VE ELEKTRONİĞİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="137" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b5" Content="OFİS"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b6" Content="AKSESUAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b7" Content="OYUN VE HOBİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="106" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b8" Content="EV ALETLERİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="90" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b9" Content="SPOR VE OUTDOOR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="133" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+				</DockPanel>
+			</Border>
+			<DockPanel x:Name="reklam" Height="274" LastChildFill="False" Width="1134">
+				<Image x:Name="SwipperImage" Height="274" VerticalAlignment="Top" Width="1133"/>
+			</DockPanel>
+			<!--fırsatların gözükeceği yer-->
+			<Border BorderBrush="LightGray" BorderThickness="1" Height="51" Width="1138" HorizontalAlignment="Stretch" >
+				<DockPanel Name="swiper" MaxHeight="100" Height="50" Margin="0" LastChildFill="False" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+				<!--Butonlar programla ekleniyor foreach-->
+				</DockPanel>
+			</Border>
+			<DockPanel Height="50" LastChildFill="False" Width="1134">
+				<Label Content="Günün Fırsatları" Height="30" FontSize="15" VerticalAlignment="Top" Width="150" Margin="0,10,0,0"/>
+				<Button x:Name="frstbutton" Content="TÜM FIRSAT ÜRÜNLERİ" Height="50" VerticalAlignment="Top" Width="200" Margin="750,0,0,0" Style="{DynamicResource Button_1}">
+					<Button.Tag>
+						<ImageSource>https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/kapali-thumb-min.jpg</ImageSource>
+					</Button.Tag>
+				</Button>
+			</DockPanel>
+			<!--Fırsat Ürünlerin olduğu bölüm-->
+			<UniformGrid Columns="4" >
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+			</UniformGrid>
+			<DockPanel Height="50" LastChildFill="False" HorizontalAlignment="Stretch" Background="#FFEBEBEB" >
+				<Label Content="Web' Özel Sınırlı Stok" Height="30" FontSize="15" VerticalAlignment="Top" Width="150" Margin="0,10,0,0"/>
+				<Button x:Name="webbutton" Content="TÜMÜNÜ GÖR" Height="50" VerticalAlignment="Top" Width="142" Margin="800,0,0,0" Style="{DynamicResource Button_1.1}"/>
+			</DockPanel>
+			<!--Web'e Özel Sınırlı Ürünlerin Bölümü-->
+			<UniformGrid Columns="2" Rows="1" Margin="50,5" Background="#FFEBEBEB" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+				<Button Margin="20,5" Style="{DynamicResource ProductButton2}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton2}" />
+			</UniformGrid>
+			<DockPanel Height="46" LastChildFill="False" Width="1134" Background="#FFEBEBEB">
+				<Button x:Name="button_10" Height="22" VerticalAlignment="Top" Width="20" Margin="525,0,0,0" Style="{DynamicResource Button_1.2}"/>
+				<Button x:Name="button_11" Height="22" VerticalAlignment="Top" Width="20" Margin="1,0,0,0" Style="{DynamicResource Button_1.2}"/>
+				<Button x:Name="button_12" Height="22" VerticalAlignment="Top" Width="20" Margin="1,0,0,0" Style="{DynamicResource Button_1.2}"/>
+				<Button x:Name="button_13" Height="22" VerticalAlignment="Top" Width="20" Margin="1,0,0,0" Style="{DynamicResource Button_1.2}"/>
+			</DockPanel>
+			<DockPanel Height="41" LastChildFill="False" Width="1134">
+				<Label Content="En Çok Satanlar" FontSize="15" Width="150" Margin="0,0,0,10"/>
+				<Button x:Name="button_20" Width="35" Margin="850,0,0,10" Style="{DynamicResource Button_2.left}"/>
+				<Button x:Name="button_21" Width="35" Margin="1,0,0,10" Style="{DynamicResource Button_2.right}"/>
+			</DockPanel>
+			<!--En çok satanlar bölümü-->
+			<UniformGrid Columns="4" Rows="1" Margin="50,5">
+				<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+			</UniformGrid>
+			<DockPanel Height="38" LastChildFill="False" Width="1134">
+				<Label Content="Çok Satan Markalar" FontSize="15" Width="150" Margin="0,0,0,10"/>
+			</DockPanel>
+			<DockPanel Height="100" LastChildFill="False" Width="1134">
+				<!--Çok satan markalar-->
+			</DockPanel>
+			<Grid Height="199" Width="1134" Background="#003177">
+				<Image x:Name="image1" HorizontalAlignment="Left" Height="42" Margin="89,35,0,0" VerticalAlignment="Top" Width="54" Source="https://lh3.googleusercontent.com/proxy/ha58iUNGMw1Q8gRVNhaifkcld-IfVBJ6qzifedgXhypkvesP2BVLC-zXG_ENkoVIJ3oAUU94d9koGAZzEqDrz6HdzVeeucbppz4CgP3T"/>
+				<Label x:Name="label" Content="MOTOKURYE" Height="29" Margin="148,25,0,0" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="Gray"/>
+				<Label x:Name="label1" Content="Seçili ürünlere 30dk - 3&#xA;saat arasında sahip olma&#xA;fırsatı." HorizontalAlignment="Left" Margin="148,59,0,0" VerticalAlignment="Top" Width="150" Foreground="Gray" Height="62" Background="Transparent" FontWeight="Bold"/>
+				<Label x:Name="label2" Content="BUGÜN TESLİM" HorizontalAlignment="Left" Margin="404,25,0,0" VerticalAlignment="Top" Width="131" FontWeight="Bold" FontSize="16" Height="29" Foreground="Gray"/>
+				<Label x:Name="label3" Content="Seçili ürünlere gün&#xA;içerisinde sahip olma&#xA;fırsatı." HorizontalAlignment="Left" Margin="404,59,0,0" VerticalAlignment="Top" Foreground="Gray" Width="131" Height="62" FontWeight="Bold"/>
+				<Label x:Name="label4" Content="KARGO BEDAVA" HorizontalAlignment="Left" Margin="628,25,0,0" VerticalAlignment="Top" Width="149" FontWeight="Bold" FontSize="16" Height="29" Foreground="Gray"/>
+				<Label x:Name="label5" Content="Seçili ürünlerde standart &#xD;&#xA;kargo bedava." HorizontalAlignment="Left" Margin="628,54,0,0" VerticalAlignment="Top" Foreground="Gray" Width="149" Height="67" FontWeight="Bold"/>
+				<Label x:Name="label6" Content="KOLAY İADE" HorizontalAlignment="Left" Margin="865,25,0,0" VerticalAlignment="Top" Width="149" FontWeight="Bold" FontSize="16" Height="29" Foreground="Gray"/>
+				<Label x:Name="label7" Content="14 gün içerisinde cayma&#xD;&#xA;hakkı." HorizontalAlignment="Left" Margin="865,54,0,0" VerticalAlignment="Top" Foreground="Gray" Width="149" Height="67" FontWeight="Bold"/>
+			</Grid>
+			<Grid Height="224" Width="1134">
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="155,10,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image2" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/card-finans.jpg"/>
+				</Border>
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="370,10,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image3" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/world.jpg"/>
+				</Border>
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="585,10,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image4" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/maximum.jpg"/>
+				</Border>
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="800,10,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image5" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/axess.jpg"/>
+				</Border>
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="155,114,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image6" Source="https://www.vatanbilgisayar.com/upload/general/taksit-footer/paraf43.jpg"/>
+				</Border>
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="370,114,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image7" Source="https://www.vatanbilgisayar.com/upload/general/taksit-footer/bonus5.jpg"/>
+				</Border>
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="585,114,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image8" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/bank-kart-combo.jpg"/>
+				</Border>
+				<Border BorderBrush="#FFD2D2D2" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="800,114,0,0" VerticalAlignment="Top" Width="195">
+					<Image x:Name="image9" Source="https://www.vatanbilgisayar.com/assets/app/images/footer/credit-cards/tekcekim.png"/>
+				</Border>
+			</Grid>
+			<Grid Height="460" Width="1134">
+				<Label x:Name="label8" Content="Vatan Bilgisayar" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="129" Height="31" FontSize="14" FontWeight="Bold"/>
+				<Button x:Name="button30" Content="Hakkımızda" Margin="10,46,0,0" VerticalAlignment="Top" Width="87" Height="20" Style="{DynamicResource vtnbutton}" HorizontalAlignment="Left"/>
+				<Button x:Name="button31" Content="Markalarımız" HorizontalAlignment="Left" Margin="10,71,0,0" VerticalAlignment="Top" Width="87" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button32" Content="İnsan Kaynaklarımız" HorizontalAlignment="Left" Margin="10,96,0,0" VerticalAlignment="Top" Width="129" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button33" Content="Gizlilik Politikamız" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top" Width="118" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button34" Content="Bilgi Toplum Hizmetleri" HorizontalAlignment="Left" Margin="10,146,0,0" VerticalAlignment="Top" Width="154" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button35" Content="İletişim" HorizontalAlignment="Left" Margin="10,171,0,0" VerticalAlignment="Top" Width="49" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Label x:Name="label9" Content="Müşteri Hizmetleri" HorizontalAlignment="Left" Margin="10,240,0,0" VerticalAlignment="Top" Width="140" Height="31" FontSize="14" FontWeight="Bold"/>
+				<Button x:Name="button40" Content="İşlem Rehberi" Margin="10,276,0,0" VerticalAlignment="Top" Width="99" Height="20" Style="{DynamicResource vtnbutton}" HorizontalAlignment="Left"/>
+				<Button x:Name="button41" Content="İade ve İptal" HorizontalAlignment="Left" Margin="11,301,0,0" VerticalAlignment="Top" Width="87" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button42" Content="Ödeme Seçenekleri" HorizontalAlignment="Left" Margin="10,326,0,0" VerticalAlignment="Top" Width="140" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button43" Content="Keyifli Garanti" HorizontalAlignment="Left" Margin="10,351,0,0" VerticalAlignment="Top" Width="100" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button44" Content="Servis Takip Formu" HorizontalAlignment="Left" Margin="10,376,0,0" VerticalAlignment="Top" Width="129" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button45" Content="e-Arşiv Fatura" HorizontalAlignment="Left" Margin="10,401,0,0" VerticalAlignment="Top" Width="100" Height="20" Style="{DynamicResource vtnbutton}"/>
+				<Button x:Name="button46" Content="Outlet" HorizontalAlignment="Left" Margin="10,426,0,0" VerticalAlignment="Top" Width="48" Height="20" Style="{DynamicResource vtnbutton}"/>
+			</Grid>
+			<Image x:Name="image10" Height="43" Width="339" Margin="750,0,0,0" Source="https://www.vatanbilgisayar.com/assets/app/images/payment-types.jpg" VerticalAlignment="Center" HorizontalAlignment="Center"/>
 
 
 
-        </StackPanel>
-    </ScrollViewer>
+		</StackPanel>
+	</ScrollViewer>
 </Window>

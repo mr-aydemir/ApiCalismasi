@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ForControllers;
+using ForControllers.VatanArayüz;
+using VatanArayüz.Content;
 
 namespace VatanArayüz
 {
@@ -20,12 +23,39 @@ namespace VatanArayüz
     /// </summary>
     public partial class MainWindow : Window
     {
-        
+        List<SwiperItem> swiperItems=new List<SwiperItem>();
 
         public MainWindow()
         {
             InitializeComponent();
+            swiperItems.Add(new SwiperItem("sb0", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/kapali-thumb-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb1", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/cep7-thumb-min.png", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/cep-kamp-23-mart-web-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb2", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/sepet-yuzde-5-thumb-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/note-kdv-23-mart-web-reviz-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb3", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/gece-tv-thumb.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/tv-kamp-24-mart-web-revv-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb4", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/pc-mon-kamp-thumb-17-ocak-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/9mart/kamp-pc-mon-24-mart-web-revz-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb5", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/kea-28-ocak-thumb-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/kea-kampanya-25-varan-web-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb6", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/yazici-thumb-24-mart-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/yazici-super-24-mart-webz-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb7", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/maraton-thumb.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/phlipps-web-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb8", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/iphone-super-thumb-23-mart-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/iphone-super-fiyat-23-mart-web-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb9", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/tum-thumb-24-mart.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/apple-tum-24-mart-wb-min.png"));
+            swiperItems.Add(new SwiperItem("sb10", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/sg-ilanlar-3-thumb-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/super-fiyat-air-24-mart-web-min.jpg"));
+            swiperItems.Add(new SwiperItem("sb11", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/spor-thumb-17-mart-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/bisiklet-super-17-mart-web-revize-min.jpg"));
+            foreach (SwiperItem item in swiperItems)
+            {
+                Button newBtn = new Button();
+                newBtn.Name = item.Name;
+                newBtn.Tag = item.IconLink;
+                Style st = FindResource("frstbutton") as Style;
+                newBtn.Style = st;
+                newBtn.Content = new BitmapImage(new Uri(item.IconLink));
+                newBtn.MouseEnter += frstbutton_MouseEnter;
+                swiper.Children.Add(newBtn);
+                
+            }
+
+            SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
         }
+        
        public void OnImageButtonClick(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Tamam");
@@ -36,44 +66,18 @@ namespace VatanArayüz
            
         }
 
-        private void Button_MouseEnter(object sender, MouseEventArgs e)
+        private void frstbutton_MouseEnter(object sender, MouseEventArgs e)
         {
-            
-        }
-
-        private void Button_MouseEnter_1(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseEnter_2(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseEnter_3(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseEnter_4(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseEnter_5(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseEnter_6(object sender, MouseEventArgs e)
-        {
-
-        }
-
-        private void Button_MouseEnter_7(object sender, MouseEventArgs e)
-        {
-
+            Button buton = (sender as Button);
+            string butonname = buton.Name;
+            foreach (SwiperItem item in swiperItems)
+            {
+                bool a = item.Name == butonname;
+                if (a)
+                {
+                    SwipperImage.Source = new BitmapImage(new Uri(item.PicLink));
+                }
+            }
         }
     }
 }

@@ -37,43 +37,43 @@
     <Style x:Key="menubutton" TargetType="Button">
         <Setter Property="Background" Value="White"/>
         <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="Margin" Value="10,15,10,10"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="MaxWidth" Value="400"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border CornerRadius="4" Background="{TemplateBinding Background}">
+                    <Border Name="border1" CornerRadius="0" Background="{TemplateBinding Background}">
                         <Grid>
-                            <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
+                            <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,5" />
                         </Grid>
                     </Border>
 
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="LightGray" />
-                        </Trigger>
+							<Setter TargetName="border1" Property="BorderThickness" Value="0,1,0,0" />
+							<Setter TargetName="border1" Property="BorderBrush" Value="Black" />
+						</Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <!--fırsatları göstecek buton...-->
-    <Style x:Key="frstbutton" TargetType="Button">
+    <Style x:Name="swipperstyle" x:Key="frstbutton" TargetType="Button">
         <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="FontSize" Value="14"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="Margin" Value="10,15,10,10"/>
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="Margin" Value="0"/>
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border BorderBrush="LightGray" BorderThickness="1" CornerRadius="4" Background="{TemplateBinding Background}">
+				<ControlTemplate TargetType="{x:Type Button}">
+                    <Border BorderBrush="LightGray" BorderThickness="1,0,1,0" CornerRadius="0" Background="{TemplateBinding Background}">
                         <Grid>
-                            <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" />
-                        </Grid>
+							<Image Margin="5,5,5,5" Name="butonImg" Source="{TemplateBinding Content}" />
+						</Grid>
                     </Border>
 
                     <ControlTemplate.Triggers>
@@ -331,6 +331,110 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-
+	<!--Ürün Butonu Tasarımı 1-->
+	<Style x:Key="ProductButton1" TargetType="Button">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Name="TheBorder" CornerRadius="3" BorderThickness="1" Background="White" BorderBrush="LightGray">
+						<StackPanel  Margin="25,3,25,25">
+							<Label Content="Web'e Özel" Foreground="IndianRed" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
+							<Border CornerRadius="5" BorderThickness="1" Background="IndianRed " Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+								<Label FontWeight="Bold" Content="Bu Fiyata Son 35 Ürün" FontSize="12" Foreground="White"  HorizontalAlignment="Center"/>
+							</Border>
+							<Image Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
+							<Label Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
+							<Label Foreground="Black" Content="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
+							<TextBlock>
+								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
+								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
+								<Run Foreground="LightGray" FontWeight="Bold" FontSize="15" TextDecorations="Strikethrough" >6999 TL</Run>
+							</TextBlock>
+							<Border CornerRadius="1" BorderThickness="1" BorderBrush="LightGray" Background="White">
+								<Label Foreground="DarkBlue" FontWeight="Bold" Content="KARGO BEDAVA" FontSize="10"  HorizontalAlignment="Center"/>
+							</Border>
+						</StackPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="TheBorder" Property="BitmapEffect">
+								<Setter.Value>
+									<DropShadowBitmapEffect ShadowDepth="0" />
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Ürün Butonu Tasarımı 2 Sınırlı Stok-->
+	<Style x:Key="ProductButton2" TargetType="Button">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Name="TheBorder" CornerRadius="3" BorderThickness="1" Background="White" BorderBrush="LightGray">
+						<UniformGrid Columns="2">
+							<Image Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
+							<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,3,25,25">
+								<Label Content="Web'e Özel" Foreground="IndianRed" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
+								<Border CornerRadius="5" BorderThickness="1" Background="IndianRed " Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+									<Label FontWeight="Bold" Content="Bu Fiyata Son 35 Ürün" FontSize="12" Foreground="White"  HorizontalAlignment="Center"/>
+								</Border>
+								<Label Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
+								<Label Foreground="Black" Content="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
+								<TextBlock>
+								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
+								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
+								<Run Foreground="LightGray" FontWeight="Bold" FontSize="15" TextDecorations="Strikethrough" >6999 TL</Run>
+								</TextBlock>
+								<Border CornerRadius="1" BorderThickness="1" BorderBrush="LightGray" Background="White">
+									<Label Foreground="DarkBlue" FontWeight="Bold" Content="KARGO BEDAVA" FontSize="10"  HorizontalAlignment="Center"/>
+								</Border>
+							</StackPanel>
+						</UniformGrid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="TheBorder" Property="BitmapEffect">
+								<Setter.Value>
+									<DropShadowBitmapEffect ShadowDepth="0" />
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Ürün Butonu Tasarımı 1 En çok Satanlar-->
+	<Style x:Key="ProductButton3" TargetType="Button">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Name="TheBorder" CornerRadius="3" BorderThickness="1" Background="White" BorderBrush="LightGray">
+						<StackPanel  Margin="25,3,25,25">
+							<Image Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
+							<Label Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
+							<Label Foreground="Black" Content="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
+							<TextBlock>
+								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
+								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
+							</TextBlock>
+						</StackPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="TheBorder" Property="BitmapEffect">
+								<Setter.Value>
+									<DropShadowBitmapEffect ShadowDepth="0" />
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Expanded Menu-->
 </ResourceDictionary>
