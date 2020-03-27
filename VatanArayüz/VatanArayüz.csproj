@@ -59,11 +59,18 @@
     <Compile Include="Content\SwiperItem.cs" />
     <Compile Include="ForControllers\Category.cs" />
     <Compile Include="ForControllers\Product.cs" />
+    <Compile Include="ProductPenceresi.xaml.cs">
+      <DependentUpon>ProductPenceresi.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Page Include="ProductPenceresi.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="VatanConceptStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

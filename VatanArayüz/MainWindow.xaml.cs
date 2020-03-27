@@ -53,7 +53,9 @@ namespace VatanArayüz
                 
             }
 
+            
             SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
+
         }
         
        public void OnImageButtonClick(object sender, RoutedEventArgs e)
@@ -78,6 +80,51 @@ namespace VatanArayüz
                     SwipperImage.Source = new BitmapImage(new Uri(item.PicLink));
                 }
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ProductPenceresi productPenceresi = new ProductPenceresi();
+            productPenceresi.Show();
+            this.Close();
+        }
+
+        private async Task SliderControlAsync(int location)
+        {
+            double maxw = sc2.ScrollableWidth, b = maxw / 4;
+            double loc = location * b;
+            if (loc< sc2.HorizontalOffset)
+            {
+                while (loc < sc2.HorizontalOffset)
+                {
+                    sc2.ScrollToHorizontalOffset(sc2.HorizontalOffset - 50);
+                    await Task.Delay(10);
+                }
+
+                if (sc2.HorizontalOffset != loc)
+                {
+                    sc2.ScrollToHorizontalOffset(loc);
+                }
+            }
+            else if (loc > sc2.HorizontalOffset)
+            {
+                while (loc > sc2.HorizontalOffset)
+                {
+                    sc2.ScrollToHorizontalOffset(sc2.HorizontalOffset + 50);
+                    await Task.Delay(10);
+                }
+
+                if (sc2.HorizontalOffset != loc)
+                {
+                    sc2.ScrollToHorizontalOffset(loc);
+                }
+            }
+            
+        }
+        private async void SliderButton_Click(object sender, RoutedEventArgs e)
+        {
+            int location = Convert.ToInt32((sender as Button).Content);
+            await SliderControlAsync(location);
         }
     }
 }

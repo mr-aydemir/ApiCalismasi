@@ -1,0 +1,53 @@
+﻿<Window x:Class="VatanArayüz.ProductPenceresi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VatanArayüz"
+        mc:Ignorable="d"
+        Title="ProductPenceresi" Height="2641.7" Width="1160">
+	<ScrollViewer x:Name="scroll1">
+		<!--Webe özel , Fırsat ... butonları-->
+		<StackPanel  VerticalAlignment="Top">
+			<DockPanel Height="50" LastChildFill="False" Margin="275,0,272,0" Width="1000" HorizontalAlignment="Center">
+				<Button Content="Web'e Özel" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Foreground="#337ab7" Margin="255,18,0,12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20"/>
+				<Button Content="Fırsat" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Margin="10,18,10,12" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.743,1.05" Height="20"/>
+				<Button Content="Yeni" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<Button Content="Outlet" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<Button Content="Mağazalar" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<Button Content="Sipariş Takibi" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center" />
+				<Button Content="Bize Ulaşın!" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+			</DockPanel>
+			<!--vatan iconu arama çubuğu-->
+			<DockPanel MaxHeight="100" LastChildFill="False" Width="1134">
+				<Image  Margin="25,0,60,5"  MaxHeight="40" VerticalAlignment="Top" HorizontalAlignment="Left" Source="https://www.vatanbilgisayar.com/assets/dist/images/logo.png"/>
+				<TextBox Height="27" TextWrapping="NoWrap" Tag="Aramak İstediğiniz Ürünü Yazın" Margin="200,0,0,0" Width="245" Style="{DynamicResource Searchbar}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+				<Button Content="GİRİŞ YAP" Margin="150,0,0,0" Style="{DynamicResource MyAccountButton}" />
+				<Button Content="SEPETİM" Margin="5,0,0,0" Style="{DynamicResource MyCartButton}"  />
+			</DockPanel>
+			<!--Kategori Butonları-->
+			<Border BorderThickness="1" BorderBrush="LightGray" Height="55">
+				<DockPanel MaxHeight="100" LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Center">
+					<Button Name="b0" Content="TELEFON"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="15,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b1" Content="BİLGİSAYAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="86" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b2" Content="BİLGİSAYAR PARÇALARI"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="167" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b3" Content="KAMERA"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b4" Content="TV VE ELEKTRONİĞİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="137" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b5" Content="OFİS"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b6" Content="AKSESUAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b7" Content="OYUN VE HOBİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="106" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b8" Content="EV ALETLERİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="90" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+					<Button Name="b9" Content="SPOR VE OUTDOOR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="133" Margin="5,0,0,0" Style="{DynamicResource menubutton}"/>
+				</DockPanel>
+			</Border>
+			<Border BorderThickness="1" BorderBrush="LightGray">
+				<Button Content="Web'e Özel" Style="{DynamicResource topbarbutton}" Foreground="#337ab7"  HorizontalAlignment="Left"/>
+			</Border>
+			<UniformGrid Columns="2">
+				<DockPanel >
+					<Button Content="https://pngriver.com/wp-content/uploads/2018/04/Download-Right-Arrow-PNG-Image.png" Style="{DynamicResource frstbutton}"/>
+				</DockPanel>
+			</UniformGrid>
+		</StackPanel>
+	</ScrollViewer>
+</Window>
