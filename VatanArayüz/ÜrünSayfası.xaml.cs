@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace VatanArayüz
 {
     /// <summary>
-    /// ProductPenceresi.xaml etkileşim mantığı
+    /// ÜrünSayfası.xaml etkileşim mantığı
     /// </summary>
-    public partial class ProductPenceresi : Window
+    public partial class ÜrünSayfası : Page
     {
-        public ProductPenceresi()
+        public ÜrünSayfası()
         {
             InitializeComponent();
         }

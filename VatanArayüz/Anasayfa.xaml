@@ -1,0 +1,81 @@
+﻿<Page x:Class="VatanArayüz.Anasayfa"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VatanArayüz"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Anasayfa">
+
+    <StackPanel>
+		<StackPanel>
+			<Image x:Name="SwipperImage" Height="274" VerticalAlignment="Top" Width="1133"/>
+			<!--fırsatların gözükeceği yer-->
+			<Border BorderBrush="LightGray" BorderThickness="1" Height="51" Width="1138" HorizontalAlignment="Stretch" >
+				<DockPanel Name="swiper" MaxHeight="100" Height="50" Margin="0" LastChildFill="False" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+					<!--Butonlar programla ekleniyor foreach-->
+				</DockPanel>
+			</Border>
+		</StackPanel>
+		<StackPanel>
+			<UniformGrid Columns="2">
+				<Label Content="Günün Fırsatları"  FontSize="15" HorizontalAlignment="Left" Margin="5,5"/>
+				<Button x:Name="frstbutton" Content="TÜM FIRSAT ÜRÜNLERİ" HorizontalAlignment="Right" Margin="5,5" Style="{DynamicResource Button_1}"/>
+			</UniformGrid>
+			<!--Fırsat Ürünlerin olduğu bölüm-->
+			<UniformGrid Columns="4" >
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" />
+			</UniformGrid>
+		</StackPanel>
+		<!--Web'e Özel Sınırlı Ürünlerin Bölümü-->
+		<StackPanel Background="#FFEBEBEB">
+			<UniformGrid Columns="2" Rows="1" HorizontalAlignment="Stretch" Background="#FFEBEBEB" Margin="15,50">
+				<Label Content="Web' Özel Sınırlı Stok" Height="30" FontSize="15" HorizontalAlignment="Left" Width="150" Margin="0,10,0,0"/>
+				<Button x:Name="webbutton" Content="TÜMÜNÜ GÖR" Height="50" HorizontalAlignment="Right" Width="140"  Style="{DynamicResource Button_1.1}"/>
+			</UniformGrid>
+			<ScrollViewer x:Name="sc2" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Hidden">
+				<UniformGrid Columns="6" Rows="1" Background="#FFEBEBEB" HorizontalAlignment="Stretch"  >
+					<Button SnapsToDevicePixels="True" Margin="20,5" Width="530" Style="{DynamicResource ProductButton2}" />
+					<Button SnapsToDevicePixels="True" Margin="20,5"  Width="530" Style="{DynamicResource ProductButton2}" />
+					<Button SnapsToDevicePixels="True" Margin="20,5" Width="530" Style="{DynamicResource ProductButton2}" />
+					<Button SnapsToDevicePixels="True" Margin="20,5" Width="530" Style="{DynamicResource ProductButton2}" />
+					<Button SnapsToDevicePixels="True" Margin="20,5" Width="530" Style="{DynamicResource ProductButton2}" />
+					<Button SnapsToDevicePixels="True" Margin="20,5" Width="530" Style="{DynamicResource ProductButton2}" />
+					<Button SnapsToDevicePixels="True" Margin="20,5" Width="530" Style="{DynamicResource ProductButton2}" />
+					<Button SnapsToDevicePixels="True"  Margin="20,5" Width="530" Style="{DynamicResource ProductButton2}" />
+				</UniformGrid>
+			</ScrollViewer>
+			<DockPanel Background="#FFEBEBEB" HorizontalAlignment="Center" VerticalAlignment="Center" LastChildFill="False" Margin="0,50">
+				<Button Content="0" Height="22"  Width="20" Style="{DynamicResource Button_1.2}" Click="SliderButton_Click"/>
+				<Button Content="1" Height="22"  Width="20" Style="{DynamicResource Button_1.2}" Click="SliderButton_Click"/>
+				<Button Content="2" Height="22"  Width="20" Style="{DynamicResource Button_1.2}" Click="SliderButton_Click"/>
+				<Button Content="3" Height="22"  Width="20" Style="{DynamicResource Button_1.2}" Click="SliderButton_Click"/>
+			</DockPanel>
+		</StackPanel>
+		<DockPanel Height="41" LastChildFill="False" Width="1134">
+			<Label Content="En Çok Satanlar" FontSize="15" Width="150" Margin="0,0,0,10"/>
+			<Button x:Name="button_20" Width="35" Margin="850,0,0,10" Style="{DynamicResource Button_2.left}"/>
+			<Button x:Name="button_21" Width="35" Margin="1,0,0,10" Style="{DynamicResource Button_2.right}"/>
+		</DockPanel>
+		<!--En çok satanlar bölümü-->
+		<UniformGrid Columns="4" Rows="1" Margin="50,5">
+			<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+			<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+			<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+			<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
+		</UniformGrid>
+		<DockPanel Height="38" LastChildFill="False" Width="1134">
+			<Label Content="Çok Satan Markalar" FontSize="15" Width="150" Margin="0,0,0,10"/>
+		</DockPanel>
+		<DockPanel Height="100" LastChildFill="False" Width="1134">
+			<!--Çok satan markalar-->
+		</DockPanel>
+	</StackPanel>
+</Page>

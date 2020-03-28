@@ -33,59 +33,59 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-    <!--Kategori Buton Tasarımı-->
-    <Style x:Key="menubutton" TargetType="Button">
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="Black"/>
+	<!--Kategori Buton Tasarımı-->
+	<Style x:Key="menubutton" TargetType="Button">
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Foreground" Value="Black"/>
 		<Setter Property="FontSize" Value="14"/>
 		<Setter Property="MaxWidth" Value="400"/>
 		<Setter Property="FontWeight" Value="Bold"/>
 		<Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border Name="border1" CornerRadius="0" Background="{TemplateBinding Background}">
-                        <Grid>
-                            <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,5" />
-                        </Grid>
-                    </Border>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Name="border1" CornerRadius="0" Background="{TemplateBinding Background}">
+						<Grid>
+							<ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5,0,5" />
+						</Grid>
+					</Border>
 
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="LightGray" />
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" Value="LightGray" />
 							<Setter TargetName="border1" Property="BorderThickness" Value="0,1,0,0" />
 							<Setter TargetName="border1" Property="BorderBrush" Value="Black" />
 						</Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--fırsatları göstecek buton...-->
-    <Style x:Name="swipperstyle" x:Key="frstbutton" TargetType="Button">
-        <Setter Property="Background" Value="White"/>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--fırsatları göstecek buton...-->
+	<Style x:Name="swipperstyle" x:Key="frstbutton" TargetType="Button">
+		<Setter Property="Background" Value="White"/>
 		<Setter Property="Foreground" Value="Black"/>
 		<Setter Property="Margin" Value="0"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
-                    <Border BorderBrush="LightGray" BorderThickness="1,0,1,0" CornerRadius="0" Background="{TemplateBinding Background}">
-                        <Grid>
+					<Border BorderBrush="LightGray" BorderThickness="1,0,1,0" CornerRadius="0" Background="{TemplateBinding Background}">
+						<Grid>
 							<Image Margin="5,5,5,5" Name="butonImg" Source="{TemplateBinding Content}" />
 						</Grid>
-                    </Border>
+					</Border>
 
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="LightGray" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--Arama Bölümü Tasarımı aşağıdadır-->
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" Value="LightGray" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Arama Bölümü Tasarımı aşağıdadır-->
 	<Style  x:Key="Searchbar" TargetType="{x:Type TextBox}" BasedOn="{StaticResource {x:Type TextBox}}">
 		<Setter Property="Template">
 			<Setter.Value>
@@ -182,155 +182,155 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-    <!--Günün Fırsat Ürünleri Butonu-->
-    <Style x:Key="Button_1" TargetType="Button">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}" >
-                    <Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Padding="5"
+	<!--Günün Fırsat Ürünleri Butonu-->
+	<Style x:Key="Button_1" TargetType="Button">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Padding="5"
 						HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" MaxWidth="250">
-                        <DockPanel>
-                            <Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Foreground="Black" MaxWidth="160"/>
-                            <Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://cdn0.iconfinder.com/data/icons/feather/96/591276-arrow-right-512.png"/>
-                        </DockPanel>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="Black"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="Gray"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--Web'e Özel Sınırlı Stok Butonu-->
-    <Style x:Key="Button_1.1" TargetType="Button">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}" >
-                    <Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Padding="5"
+						<DockPanel>
+							<Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Foreground="Black" MaxWidth="160"/>
+							<Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://cdn0.iconfinder.com/data/icons/feather/96/591276-arrow-right-512.png"/>
+						</DockPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="BorderBrush" Value="Black"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="Gray"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Web'e Özel Sınırlı Stok Butonu-->
+	<Style x:Key="Button_1.1" TargetType="Button">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Padding="5"
 						HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFEBEBEB" MaxWidth="250">
-                        <DockPanel>
-                            <Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Foreground="Black" MaxWidth="150"/>
-                            <Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://cdn0.iconfinder.com/data/icons/feather/96/591276-arrow-right-512.png"/>
-                        </DockPanel>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="Black"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="Gray"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--Devam...-->
-    <Style x:Key="Button_1.2" TargetType="Button">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}" >
-                    <Border Name="border" BorderThickness="1" CornerRadius="10" Padding="5"
+						<DockPanel>
+							<Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Foreground="Black" MaxWidth="150"/>
+							<Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://cdn0.iconfinder.com/data/icons/feather/96/591276-arrow-right-512.png"/>
+						</DockPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="BorderBrush" Value="Black"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="Gray"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Devam...-->
+	<Style x:Key="Button_1.2" TargetType="Button">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Name="border" BorderThickness="1" CornerRadius="10" Padding="5"
 						HorizontalAlignment="Center" VerticalAlignment="Center" Background="#FFBDBDBD" MaxWidth="250"/>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#FF0A0A0A"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#FF0A0A0A"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--İsimlerden anlarsın üşendim-->
-    <Style x:Key="Button_2.left" TargetType="Button">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}" >
-                    <Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Padding="1"
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="Background" Value="#FF0A0A0A"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="#FF0A0A0A"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--İsimlerden anlarsın üşendim-->
+	<Style x:Key="Button_2.left" TargetType="Button">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="20" Padding="1"
 						HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" MaxWidth="250">
-                        <DockPanel>
-                            <Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://lh3.googleusercontent.com/proxy/-q7ewHDuSRdQ3tbRRLTJ2fmDyLspaRnZKRk3UU6bURopOKnUhpxt3d0snNlveqbb1RFBAmB4eZInL7cYjKMKzaKZJFD2PBP4_pt9XODQ9uj82YsXYUe-1asiwnEq0xizHueTcmAmX2rOjWTUA9bQ-NSv85G-tTeY"/>
-                        </DockPanel>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="LightGray"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#FF0A0A0A"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <Style x:Key="Button_2.right" TargetType="Button">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}" >
-                    <Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="100" Padding="1"
+						<DockPanel>
+							<Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://lh3.googleusercontent.com/proxy/-q7ewHDuSRdQ3tbRRLTJ2fmDyLspaRnZKRk3UU6bURopOKnUhpxt3d0snNlveqbb1RFBAmB4eZInL7cYjKMKzaKZJFD2PBP4_pt9XODQ9uj82YsXYUe-1asiwnEq0xizHueTcmAmX2rOjWTUA9bQ-NSv85G-tTeY"/>
+						</DockPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="Background" Value="LightGray"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="#FF0A0A0A"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="Button_2.right" TargetType="Button">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Name="border" BorderThickness="1" BorderBrush="Gray" CornerRadius="100" Padding="1"
 						HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" MaxWidth="250">
-                        <DockPanel>
-                            <Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://pngriver.com/wp-content/uploads/2018/04/Download-Right-Arrow-PNG-Image.png"/>
-                        </DockPanel>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="LightGray"/>
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#FF0A0A0A"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    <!--Hakkımızda İşlem rehberi falan-filan için buton tasarımı-->
-    <Style x:Key="vtnbutton" TargetType="Button">
-        <Setter Property="Background" Value="White"/>
-        <Setter Property="Foreground" Value="Black"/>
-        <Setter Property="FontSize" Value="15"/>
-        <Setter Property="Margin" Value="10,15,10,10"/>
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border CornerRadius="4" Background="{TemplateBinding Background}">
-                        <Grid>
-                            <ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" />
-                        </Grid>
-                    </Border>
+						<DockPanel>
+							<Image Height="20" Width="20" Stretch="Fill" Margin="2,0,12,0"  MaxWidth="100" Source="https://pngriver.com/wp-content/uploads/2018/04/Download-Right-Arrow-PNG-Image.png"/>
+						</DockPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="Background" Value="LightGray"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="#FF0A0A0A"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Hakkımızda İşlem rehberi falan-filan için buton tasarımı-->
+	<Style x:Key="vtnbutton" TargetType="Button">
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="FontSize" Value="15"/>
+		<Setter Property="Margin" Value="10,15,10,10"/>
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border CornerRadius="4" Background="{TemplateBinding Background}">
+						<Grid>
+							<ContentPresenter x:Name="MyContentPresenter" Content="{TemplateBinding Content}" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0,0,0,0" />
+						</Grid>
+					</Border>
 
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="White" />
-                            <Setter Property="Foreground" Value="Black" />
-                            <Setter Property="FontWeight" Value="Medium"/>
-                        </Trigger>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" Value="White" />
+							<Setter Property="Foreground" Value="Black" />
+							<Setter Property="FontWeight" Value="Medium"/>
+						</Trigger>
 
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="White" />
-                            <Setter Property="Foreground" Value="Black" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="White" />
+							<Setter Property="Foreground" Value="Black" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 	<!--Ürün Butonu Tasarımı 1-->
 	<Style x:Key="ProductButton1" TargetType="Button">
 		<Setter Property="Template">
@@ -436,5 +436,75 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-	<!--Expanded Menu-->
+	<!--Kategori Menu-->
+	<Style x:Key="KategoriMenu" TargetType="Menu">
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="ItemsSource" Value="{Binding PageViewModels}"/>
+		<Setter Property="Menu.ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<VirtualizingStackPanel Orientation="Vertical"/>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Menu.ItemTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<MenuItem Icon="{Binding Icon}"
+                            Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
+                            CommandParameter="{Binding }"
+                            Style="{StaticResource MenuItem}">
+						<MenuItem.Header>
+							<StackPanel>
+								<TextBlock TextAlignment="Center" Text="{Binding Name}" />
+							</StackPanel>
+						</MenuItem.Header>
+
+					</MenuItem>
+					<DataTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="false">
+						</Trigger>
+					</DataTemplate.Triggers>
+					
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="KategoriMenuItem" TargetType="MenuItem">
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Foreground" Value="Black"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+	</Style>
+	
+	<!--Kategori yolları-->
+	<Style x:Key="KategoriYolButon" TargetType="Button">
+		<Setter Property="Foreground" Value="LightGray"/>
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="FontSize" Value="11" />
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<StackPanel Orientation="Horizontal">
+						<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+								<Run Name="text" Foreground="LightGray" FontWeight="Bold" FontSize="11" Text="{Binding Path=Content,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}}"/>
+						</TextBlock>
+						<Image Margin="10,0,10,0" Source="Arrow-icon-Gray.png" HorizontalAlignment="Center" VerticalAlignment="Center" Height="15" Width="15" />
+					</StackPanel>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="text" Property="TextDecorations" Value="Underline"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 </ResourceDictionary>

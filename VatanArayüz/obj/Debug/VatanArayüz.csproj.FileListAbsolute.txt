@@ -49,5 +49,9 @@ C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.GenerateResource.cache
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
-E:\ApiCalismasi\VatanArayüz\obj\Debug\ProductPenceresi.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\ProductPenceresi.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Window1.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Window1.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Anasayfa.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Anasayfa.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\ÜrünSayfası.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\ÜrünSayfası.baml
