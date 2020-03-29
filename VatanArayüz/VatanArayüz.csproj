@@ -164,5 +164,38 @@
   <ItemGroup>
     <Resource Include="Arrow-icon-Gray_Left.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon1\1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon1\1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon1\1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon1\1-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MenuImage\Tel.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

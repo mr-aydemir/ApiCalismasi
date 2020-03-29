@@ -457,7 +457,7 @@
 					<MenuItem Icon="{Binding Icon}"
                             Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
                             CommandParameter="{Binding }"
-                            Style="{StaticResource MenuItem}">
+                            Style = "{StaticResource MenuItem}">
 						<MenuItem.Header>
 							<StackPanel>
 								<TextBlock TextAlignment="Center" Text="{Binding Name}" />
@@ -478,7 +478,7 @@
 		<Setter Property="Background" Value="White"/>
 		<Setter Property="Foreground" Value="Black"/>
 		<Setter Property="FontSize" Value="14"/>
-		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontWeight" Value="Light"/>
 		<Setter Property="SnapsToDevicePixels" Value="True"/>
 	</Style>
 	
