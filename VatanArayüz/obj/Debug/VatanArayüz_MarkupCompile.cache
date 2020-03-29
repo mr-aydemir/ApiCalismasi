@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 E:\ApiCalismasi\VatanArayüz\App.xaml
-51927491849
+71384749941
 
-12-1967011370
+14-141723463
 141183416626
-Anasayfa.xaml;VatanConceptStyle.xaml;MainWindow.xaml;Window1.xaml;ÜrünSayfası.xaml;
+Anasayfa.xaml;Controls\NavigationDrawer.xaml;Controls\Rating.xaml;VatanConceptStyle.xaml;MainWindow.xaml;Window1.xaml;ÜrünSayfası.xaml;
 
 False
 

@@ -23,7 +23,20 @@
 				<Image Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-5_large.jpg" MaxHeight="450"/>
 				<Image Source="Arrow-icon-Gray.png" Width="20"/>
 			</DockPanel>
-			<Image />
+			<StackPanel Background="WhiteSmoke" >
+				<DockPanel Margin="30">
+					<Label Foreground="Gray" FontSize="15" Content="7WG51EA / 103918" HorizontalAlignment="Left"/>
+				</DockPanel>
+				<Label Foreground="Black" FontSize="18"  HorizontalAlignment="Stretch" Margin="30,0" Target="{Binding ElementName=textBox1}">
+					<AccessText TextWrapping="WrapWithOverflow">
+						HP 15-BS120NT CORE İ3 5005U 2GHZ-4GB-256GB SSD-15.6"-INT-W10 NOTEBOOK
+					</AccessText>
+				</Label>
+				<DockPanel Margin="30,10">
+					<Label Foreground="#003177" FontSize="50" FontWeight="Bold">2099</Label>
+					<Label Foreground="#003177" FontSize="30" FontWeight="Bold" VerticalContentAlignment="Center">TL</Label>
+				</DockPanel>
+			</StackPanel>
 		</UniformGrid>
 	</StackPanel>
 </Page>

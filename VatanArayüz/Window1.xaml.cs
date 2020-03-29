@@ -45,5 +45,10 @@ namespace VatanArayüz
         {
             m1.IsSubmenuOpen = true;
         }
+
+        private void Style_DragEnter(object sender, DragEventArgs e)
+        {
+
+        }
     }
 }

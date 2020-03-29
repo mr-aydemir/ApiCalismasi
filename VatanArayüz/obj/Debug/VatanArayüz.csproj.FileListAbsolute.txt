@@ -55,3 +55,7 @@ E:\ApiCalismasi\VatanArayüz\obj\Debug\Anasayfa.g.cs
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Anasayfa.baml
 E:\ApiCalismasi\VatanArayüz\obj\Debug\ÜrünSayfası.g.cs
 E:\ApiCalismasi\VatanArayüz\obj\Debug\ÜrünSayfası.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\Rating.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\NavigationDrawer.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\Rating.baml
