@@ -61,9 +61,6 @@
     </Compile>
     <Compile Include="Content\SwiperItem.cs" />
     <Compile Include="Controls\NavigationDrawer.cs" />
-    <Compile Include="Controls\Rating.xaml.cs">
-      <DependentUpon>Rating.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ForControllers\Category.cs" />
     <Compile Include="ForControllers\Product.cs" />
     <Compile Include="Resource.Designer.cs">
@@ -82,10 +79,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Controls\NavigationDrawer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\Rating.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -172,7 +165,37 @@
     <Resource Include="Arrow-icon-Gray_Left.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Stars.png" />
+    <Resource Include="Resources\Icon1\1-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon1\1-2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon1\1-3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon1\1-4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Icon\6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\MenuImage\Tel.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

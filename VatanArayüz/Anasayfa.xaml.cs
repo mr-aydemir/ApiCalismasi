@@ -74,7 +74,9 @@ namespace VatanArayüz
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            currentFrame.Content = new ÜrünSayfası();
+            ÜrünSayfası ürünSayfası = new ÜrünSayfası();
+            ürünSayfası.currentFrame = currentFrame;
+            currentFrame.Content = ürünSayfası;
         }
 
         private async Task SliderControlAsync(int location)

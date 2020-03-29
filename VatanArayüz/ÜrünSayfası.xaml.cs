@@ -20,6 +20,7 @@ namespace VatanArayüz
     /// </summary>
     public partial class ÜrünSayfası : Page
     {
+        public Frame currentFrame;
         public ÜrünSayfası()
         {
             InitializeComponent();
