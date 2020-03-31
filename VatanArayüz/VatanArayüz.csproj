@@ -63,6 +63,9 @@
     <Compile Include="Controls\NavigationDrawer.cs" />
     <Compile Include="ForControllers\Category.cs" />
     <Compile Include="ForControllers\Product.cs" />
+    <Compile Include="Notebook-Sayfası.xaml.cs">
+      <DependentUpon>Notebook-Sayfası.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Resource.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -81,6 +84,10 @@
     <Page Include="Controls\NavigationDrawer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Notebook-Sayfası.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="VatanConceptStyle.xaml">
       <SubType>Designer</SubType>

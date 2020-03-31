@@ -9,7 +9,194 @@
       Title="Anasayfa">
 
     <StackPanel>
-		<StackPanel>
+        <!--Kategori Butonları-->
+        <Border BorderThickness="1" BorderBrush="LightGray" Height="55">
+            <DockPanel MaxHeight="100" LastChildFill="False" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Menu  VerticalAlignment="Bottom" Background="White" Style="{DynamicResource KategoriMenu}" Margin="0,-5,0,0" Height="22" >
+                    <MenuItem Name="m0" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,1,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/telefon.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m1" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-20,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="Notebook" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10" Click="Button_Click_1" />
+                                    <Button Content="Masaüstü Bilgisayar" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Tabletler" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,0"/>
+                                    <Button Content="Bilgisayar Bileşenleri(OEM)" MaxHeight="100" MaxWidth="180" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="2'si 1 Arada Laptop" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Oyun Bilgisayarı" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Harici Diskler" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Monitörler" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Yazıcılar" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Network Ürünleri" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Modemler" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Güvenlik Yazılımları" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="İşletim Sistemleri" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Microsoft Office Programları" MaxHeight="100" MaxWidth="180" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Çanta ve Kılıflar" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Notebook Soğutucu" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                    <Button Content="Kulaklık ve Mikrofon" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/assets/dist/images/banner-1.png" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m2" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-40,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/assets/dist/images/banner-1.png" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m3" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-60,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/camera.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m4" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-80,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/televizyon.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m5" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-100,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/yazici.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m6" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-120,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/aksesuar.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m7" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-140,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/oyun.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m8" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-160,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/kea.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                    <MenuItem Name="m9" Header="B" Background="White" Style="{DynamicResource KategoriMenuItem}" Visibility="Hidden" Margin="0,-180,0,0" >
+                        <DockPanel  Background="White">
+                            <StackPanel  Background="White">
+                                <UniformGrid Columns="3"  Background="White">
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                    <Button Content="..." MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="50,0"/>
+                                </UniformGrid>
+                            </StackPanel>
+                            <Image Source="https://www.vatanbilgisayar.com/Upload/GENERAL/menu-banner/spor.jpg" Margin="40,0,0,0"/>
+                        </DockPanel>
+                    </MenuItem>
+                </Menu>
+                <Button Name="b0" Content="TELEFON"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="15,0,0,0" Style="{DynamicResource menubutton}" Click="b0_Click"/>
+                <Button Name="b1" Content="BİLGİSAYAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="81" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b1_Click" />
+                <Button Name="b2" Content="BİLGİSAYAR PARÇALARI"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="167" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b2_Click"/>
+                <Button Name="b3" Content="KAMERA"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b3_Click"/>
+                <Button Name="b4" Content="TV VE ELEKTRONİĞİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="137" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b4_Click"/>
+                <Button Name="b5" Content="OFİS"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b5_Click"/>
+                <Button Name="b6" Content="AKSESUAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b6_Click"/>
+                <Button Name="b7" Content="OYUN VE HOBİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="106" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b7_Click"/>
+                <Button Name="b8" Content="EV ALETLERİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="90" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b8_Click"/>
+                <Button Name="b9" Content="SPOR VE OUTDOOR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="133" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b9_Click"/>
+            </DockPanel>
+        </Border>
+        <StackPanel>
 			<Image x:Name="SwipperImage" Height="274" VerticalAlignment="Top" Width="1133"/>
 			<!--fırsatların gözükeceği yer-->
 			<Border BorderBrush="LightGray" BorderThickness="1" Height="51" Width="1138" HorizontalAlignment="Stretch" >
