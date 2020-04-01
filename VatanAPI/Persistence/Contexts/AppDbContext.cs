@@ -42,61 +42,58 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Product>().Property(p => p.Name).IsRequired().HasMaxLength(50);
             builder.Entity<Product>().Property(p => p.Url).IsRequired();
-            //builder.Entity<Product>().Property(p => p.QuantityInPackage).IsRequired();
-            builder.Entity<Product>().Property(p => p.UnitOfMeasurement).IsRequired();
-
+            builder.Entity<Product>().Property(p => p.Cost).IsRequired();
+            builder.Entity<Product>().Property(p => p.Marka).IsRequired();
+            builder.Entity<Product>().HasMany(p => p.Images).WithOne(p => p.Product).HasForeignKey(p => p.ProductId);
             builder.Entity<Product>().HasData
             (
                 new Product
                 {
                     Id = 100,
                     Name = "HP 15-DA1021NT",
-                    Url = "",
+                    Url = "https://www.vatanbilgisayar.com/hp-15-da1021nt-core-i5-8265u-1-6ghz-8gb-256gb-ssd-15-6-mx110-2gb-w10-notebook.html",
+                    Cost = 4837,
+                    Marka = EMarka.HP,
                     CategoryId = 101
                 },
                 new Product
                 {
                     Id = 101,
-                    Name = "Monster Tulpar 10.71",
-                    QuantityInPackage = 2,
-                    Url = "",
-                    UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Name = "LENOVO IDEAPAD S540",
+                    Url = "https://www.vatanbilgisayar.com/lenovo-ideapad-s540-core-i5-10210u-1-6ghz-8gb-ram-256gb-ssd-15-6-mx250-2gb-w10.html",
+                    Marka = EMarka.LENOVO,
                     CategoryId = 101,
                 },
                 new Product
                 {
                     Id = 102,
                     Name = "Monster Abra A5",
-                    QuantityInPackage = 2,
                     Url = "",
-                    UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Marka = EMarka.Unity,
                     CategoryId = 101,
                 },
                 new Product
                 {
                     Id = 103,
                     Name = "Monster Abra A7",
-                    QuantityInPackage = 2,
                     Url = "",
-                    UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Marka = EMarka.Unity,
                     CategoryId = 101,
                 },
                 new Product
                 {
                     Id = 104,
                     Name = "Acer Nitro 5 i5 9300HQ GTX1650 256GB SSD 1TB HDD",
-                    QuantityInPackage = 2,
                     Url = "",
-                    UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Marka = EMarka.ACER,
                     CategoryId = 101,
                 },
                 new Product
                 {
                     Id = 105,
                     Name = "Monster Tulpar 10.71",
-                    QuantityInPackage = 2,
                     Url = "",
-                    UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    Marka = EMarka.Unity,
                     CategoryId = 101,
                 }
             );
@@ -105,42 +102,41 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Image>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Image>().Property(p => p.Name).IsRequired().HasMaxLength(50);
             builder.Entity<Image>().Property(p => p.Url).IsRequired();
-
             builder.Entity<Image>().HasData
             (
                 new Image
                 {
                     Id = 100,
                     Name = "Monster Abra 14.53",
-                    Url = "",
+                    Url = "mr.org",
                     ProductId = 100
                 },
                 new Image
                 {
                     Id = 101,
                     Name = "Monster Abra 14.53",
-                    Url = "",
+                    Url = "sada.com",
                     ProductId = 101
                 },
                 new Image
                 {
                     Id = 102,
                     Name = "Monster Abra 14.53",
-                    Url = "",
+                    Url = "wwdwd.tr",
                     ProductId = 102
                 },
                 new Image
                 {
                     Id = 103,
                     Name = "Monster Abra 14.53",
-                    Url = "",
+                    Url = "wdawd.sd",
                     ProductId = 103
                 },
                 new Image
                 {
                     Id = 104,
                     Name = "Monster Abra 14.53",
-                    Url = "",
+                    Url = "adsad.com",
                     ProductId = 104
                 },
                 new Image
