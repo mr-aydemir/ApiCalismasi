@@ -16,14 +16,21 @@ using System.Windows.Shapes;
 namespace VatanArayüz
 {
     /// <summary>
-    /// ÜrünSayfası.xaml etkileşim mantığı
+    /// Notebook_Sayfası.xaml etkileşim mantığı
     /// </summary>
-    public partial class ÜrünSayfası : Page
+    public partial class Notebook_Sayfası : Page
     {
         public Frame currentFrame;
-        public ÜrünSayfası()
+        public Notebook_Sayfası()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            ÜrünSayfası ürünSayfası = new ÜrünSayfası();
+            ürünSayfası.currentFrame = currentFrame;
+            currentFrame.Content = ürünSayfası;
         }
     }
 }

@@ -91,7 +91,7 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TextBox}">
 					<Border BorderThickness="1" BorderBrush="Transparent" CornerRadius="10" Padding="3"
-        HorizontalAlignment="Left" VerticalAlignment="Center" Background="#efefef" MaxHeight="100" MaxWidth="500" Width="245">
+							HorizontalAlignment="Left" VerticalAlignment="Center" Background="#efefef" MaxHeight="100" MaxWidth="500" Width="245">
 						<Grid>
 							<TextBox
 								MaxHeight="100" MaxLength="100"  Text="{Binding Path=Text,
@@ -132,7 +132,7 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}" >
 					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="18" Padding="1"
-						HorizontalAlignment="Center" VerticalAlignment="Center" Background="#003177" MaxWidth="200">
+							HorizontalAlignment="Center" VerticalAlignment="Center" Background="#003177" MaxWidth="200">
 						<DockPanel>
 							<Image Name="butonicon" Height="20" Width="20" Stretch="Fill" Margin="15,0,0,0"  MaxWidth="100" Source="person-icon-white.png"/>
 							<Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Foreground="White" MaxWidth="100"/>
@@ -474,15 +474,14 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-	<Style x:Key="KategoriMenuItem" TargetType="MenuItem">
-		<Setter Property="Background" Value="White"/>
-		<Setter Property="Foreground" Value="Black"/>
-		<Setter Property="FontSize" Value="14"/>
-		<Setter Property="FontWeight" Value="Light"/>
-		<Setter Property="SnapsToDevicePixels" Value="True"/>
-	</Style>
-	
-	<!--Kategori yolları-->
+    <Style x:Key="KategoriMenuItem" TargetType="MenuItem">
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Foreground" Value="Black"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+    </Style>
+    <!--Kategori yolları-->
 	<Style x:Key="KategoriYolButon" TargetType="Button">
 		<Setter Property="Foreground" Value="LightGray"/>
 		<Setter Property="Background" Value="White"/>
@@ -507,7 +506,30 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-	<!--Sepete Ekle-->
+    <Style x:Key="KategoriYolButon_2" TargetType="Button">
+        <Setter Property="Foreground" Value="LightGray"/>
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="FontSize" Value="11" />
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
+								<Run Name="text" Foreground="LightGray" FontWeight="Bold" FontSize="11" Text="{Binding Path=Content,RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}}"/>
+                        </TextBlock>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text" Property="TextDecorations" Value="Underline"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Sepete Ekle-->
 	<Style x:Key="AddtoCart" TargetType="Button">
 		<Setter Property="SnapsToDevicePixels" Value="True"/>
 		<Setter Property="Template">
@@ -529,4 +551,109 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+    <!--Radio Buton l-->
+    <Style x:Key="radiobuton" TargetType="RadioButton" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <BulletDecorator Background="White" Cursor="Hand">
+                        <BulletDecorator.Bullet>
+                            <Grid Height="16" Width="16">
+                                <Border Name="RadioOuter" Background="Transparent" BorderBrush="Black" BorderThickness="1" CornerRadius="10"  />
+                                <Border CornerRadius="15" Margin="2" Name="RadioMark" Background="#FF000093" Visibility="Hidden" />
+                            </Grid>
+                        </BulletDecorator.Bullet>
+                        <TextBlock Margin="3,1,0,0" Foreground="#FF3E3E3E" FontFamily="Calibri" FontSize="12" >
+                        <ContentPresenter />
+                        </TextBlock>
+                    </BulletDecorator>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="RadioMark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="RadioOuter" Property="BorderBrush" Value="#FF000093" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Radio Buton 2-->
+    <Style x:Key="radiobuton2" TargetType="RadioButton" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <BulletDecorator Background="White" Cursor="Hand">
+                        <BulletDecorator.Bullet>
+                            <Grid Height="16" Width="16">
+                                <Border Name="RadioOuter" Background="Transparent" BorderBrush="Gray" BorderThickness="1" CornerRadius="2"  />
+                                <Border CornerRadius="15" Margin="2" Name="RadioMark" Background="Gray" Visibility="Hidden" />
+                            </Grid>
+                        </BulletDecorator.Bullet>
+                        <TextBlock Margin="3,1,0,0" Foreground="#FF3E3E3E" FontFamily="Calibri" FontSize="12" >
+                        <ContentPresenter />
+                        </TextBlock>
+                    </BulletDecorator>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="RadioMark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="RadioOuter" Property="BorderBrush" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!--Radio Buton 3-->
+    <Style x:Key="radiobuton3" TargetType="RadioButton" >
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="RadioButton">
+                    <BulletDecorator Background="White" Cursor="Hand">
+                        <BulletDecorator.Bullet>
+                            <Grid Height="16" Width="16">
+                                <Border Name="RadioOuter" Background="Transparent" BorderBrush="Gray" BorderThickness="1" CornerRadius="2"  />
+                                <Border CornerRadius="15" Margin="2" Name="RadioMark" Background="Gray" Visibility="Hidden" />
+                            </Grid>
+                        </BulletDecorator.Bullet>
+                        <TextBlock Margin="3,1,0,0" Foreground="#FF3E3E3E" FontFamily="Calibri" FontSize="12" >
+                        <ContentPresenter />
+                        </TextBlock>
+                    </BulletDecorator>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="true">
+                            <Setter TargetName="RadioMark" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="RadioOuter" Property="BorderBrush" Value="Gray" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+	<!--Fiyat Aralığı Butonu-->
+    <Style x:Key="FiyatAralıgıButon" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="3" 
+							HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#003177" MaxWidth="200">
+                        <DockPanel>
+                            <Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Margin="59,1" Foreground="White" MaxWidth="100" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                        </DockPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF020238"/>
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF003177" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

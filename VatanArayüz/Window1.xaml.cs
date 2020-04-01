@@ -45,5 +45,10 @@ namespace VatanArayüz
         {
             m1.IsSubmenuOpen = true;
         }
+
+        private void radioButton_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
