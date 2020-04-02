@@ -535,7 +535,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}" >
-					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="18" Padding="1"
+					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="30" Padding="1"
 						HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#37ba81" MaxWidth="500">
 						<DockPanel HorizontalAlignment="Center" Margin="10,10">
 							<Image Name="butonicon" MaxHeight="30" Source="cart-icon.png"/>
@@ -668,4 +668,30 @@
 		</Setter>
 	</Style>
 
+    <!--Ürün Sayfasındaki Butonlar-->
+    <Style x:Key="ürünsayfaButon" TargetType="Button">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}" >
+                    <Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="13" 
+							HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#003177" MaxWidth="200">
+                        <DockPanel>
+                            <Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Margin="10,-2" Foreground="White" MaxWidth="100" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+                        </DockPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border" Property="Background" Value="#FF020238"/>
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="#FF003177" />
+                            <Setter Property="Foreground" Value="White" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
