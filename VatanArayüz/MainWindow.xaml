@@ -8,9 +8,13 @@
     <Grid>
         <Grid Height="30" Background="Gray" VerticalAlignment="Top" >
             <StackPanel Orientation="Horizontal">
-                <Button Content="Back" Click="Back_Btn"/>
-                <Button Content="Next" Click="Next_Btn"/>
-            </StackPanel>
+				<Button Click="Back_Btn" >
+					<Image Source="Previous.png" />
+				</Button>
+				<Button Click="Next_Btn">
+					<Image Source="Next.png" />
+				</Button>
+			</StackPanel>
         </Grid>
         <ScrollViewer x:Name="scroll1" Margin="0,30,0,0">
             <!--Webe özel , Fırsat ... butonları-->
