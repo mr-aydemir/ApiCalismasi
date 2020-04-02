@@ -123,45 +123,5 @@ namespace VatanArayüz
             int location = Convert.ToInt32((sender as Button).Content);
             await SliderControlAsync(location);
         }
-        private void b0_Click(object sender, RoutedEventArgs e)
-        {
-            m0.IsSubmenuOpen = true;
-        }
-        private void b1_Click(object sender, RoutedEventArgs e)
-        {
-            m1.IsSubmenuOpen = true;
-        }      
-        private void b2_Click(object sender, RoutedEventArgs e)
-        {
-            m2.IsSubmenuOpen = true;
-        }
-        private void b3_Click(object sender, RoutedEventArgs e)
-        {
-            m3.IsSubmenuOpen = true;
-        }
-        private void b4_Click(object sender, RoutedEventArgs e)
-        {
-            m4.IsSubmenuOpen = true;
-        }
-        private void b5_Click(object sender, RoutedEventArgs e)
-        {
-            m5.IsSubmenuOpen = true;
-        }
-        private void b6_Click(object sender, RoutedEventArgs e)
-        {
-            m6.IsSubmenuOpen = true;
-        }
-        private void b7_Click(object sender, RoutedEventArgs e)
-        {
-            m7.IsSubmenuOpen = true;
-        }
-        private void b8_Click(object sender, RoutedEventArgs e)
-        {
-            m8.IsSubmenuOpen = true;
-        }
-        private void b9_Click(object sender, RoutedEventArgs e)
-        {
-            m9.IsSubmenuOpen = true;
-        }       
     }
 }

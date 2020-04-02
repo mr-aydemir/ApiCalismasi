@@ -109,3 +109,5 @@ C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debu
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.g.cs
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.baml

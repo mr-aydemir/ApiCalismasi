@@ -204,5 +204,8 @@
   <ItemGroup>
     <Resource Include="Resources\MenuImage\Tel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon-arrow-down-percent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
