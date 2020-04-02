@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="2641.7" Width="1160">
+        Title="MainWindow" Height="1110.2" Width="1160">
     <Grid>
         <Grid Height="30" Background="Gray" VerticalAlignment="Top" >
             <StackPanel Orientation="Horizontal">
@@ -39,10 +39,10 @@
                         <ColumnDefinition Width="22*"/>
                         <ColumnDefinition Width="545*"/>
                     </Grid.ColumnDefinitions>
-                    <Image x:Name="image1" HorizontalAlignment="Left" Height="53" Margin="59,35,0,0" VerticalAlignment="Top" Width="45" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-1.png" Grid.Column="1" />
-                    <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="300,35,0,0" VerticalAlignment="Top" Width="60" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-2.png" Grid.Column="1"/>
-                    <Image x:Name="image11" HorizontalAlignment="Left" Height="53" Margin="530,35,0,0" VerticalAlignment="Top" Width="54" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-3.png" Grid.Column="1"/>
-                    <Image x:Name="image12" HorizontalAlignment="Left" Height="49" Margin="766,35,0,0" VerticalAlignment="Top" Width="55" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-4.png" Grid.Column="1"/>
+                    <Image x:Name="image1" HorizontalAlignment="Left" Height="53" Margin="59,35,0,0" VerticalAlignment="Top" Width="45" Source="C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\Resources\Icon1\1-1.png" Grid.Column="1" />
+                    <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="300,35,0,0" VerticalAlignment="Top" Width="60" Source="C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\Resources\Icon1\1-2.png" Grid.Column="1"/>
+                    <Image x:Name="image11" HorizontalAlignment="Left" Height="53" Margin="530,35,0,0" VerticalAlignment="Top" Width="54" Source="C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\Resources\Icon1\1-3.png" Grid.Column="1"/>
+                    <Image x:Name="image12" HorizontalAlignment="Left" Height="49" Margin="766,35,0,0" VerticalAlignment="Top" Width="55" Source="C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\Resources\Icon1\1-4.png" Grid.Column="1"/>
                     <Label x:Name="label" Content="MOTOKURYE" Height="29" Margin="104,25,0,0" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="#FFE3E5F0" Grid.Column="1"/>
                     <Label x:Name="label1" Content="Seçili ürünlere 30dk - 3&#xA;saat arasında sahip olma&#xA;fırsatı." HorizontalAlignment="Left" Margin="104,59,0,0" VerticalAlignment="Top" Width="150" Foreground="#FFE3E5F0" Height="62" Background="Transparent" FontWeight="Bold" Grid.Column="1"/>
                     <Label x:Name="label2" Content="BUGÜN TESLİM" HorizontalAlignment="Left" Margin="360,25,0,0" VerticalAlignment="Top" Width="131" FontWeight="Bold" FontSize="16" Height="29" Foreground="#FFE3E5F0" Grid.Column="1"/>

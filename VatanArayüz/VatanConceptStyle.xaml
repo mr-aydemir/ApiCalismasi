@@ -535,7 +535,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}" >
-					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="18" Padding="1"
+					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="30" Padding="1"
 						HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#37ba81" MaxWidth="500">
 						<DockPanel HorizontalAlignment="Center" Margin="10,10">
 							<Image Name="butonicon" MaxHeight="30" Source="cart-icon.png"/>
@@ -655,5 +655,4 @@
             </Setter.Value>
         </Setter>
     </Style>
-
 </ResourceDictionary>
