@@ -4,7 +4,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1110.2" Width="1160">
+        Title="VATAN BİLGİSAYAR" Height="1110.2" Width="1160"  WindowState="Maximized" Icon="logo.png" SizeToContent="Width">
     <Grid>
         <Grid Height="30" Background="Gray" VerticalAlignment="Top" >
             <StackPanel Orientation="Horizontal">
@@ -19,21 +19,21 @@
         <ScrollViewer x:Name="scroll1" Margin="0,30,0,0">
             <!--Webe özel , Fırsat ... butonları-->
             <StackPanel  VerticalAlignment="Top">
-                <DockPanel Height="50" LastChildFill="False" Margin="275,0,272,0" Width="1000" HorizontalAlignment="Center">
-                    <Button Content="Web'e Özel" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Foreground="#337ab7" Margin="255,18,0,12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20"/>
+                <DockPanel Height="50" Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="False" Cursor="Hand" ScrollViewer.VerticalScrollBarVisibility="Disabled" LastChildFill="False">
+                    <Button Content="Web'e Özel" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Foreground="#337ab7" Margin="0,18,0,12" HorizontalAlignment="Center" VerticalAlignment="Center" Height="20" UseLayoutRounding="False" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
                     <Button Content="Fırsat" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" Margin="10,18,10,12" VerticalAlignment="Center" HorizontalAlignment="Center" RenderTransformOrigin="0.743,1.05" Height="20"/>
                     <Button Content="Yeni" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Button Content="Outlet" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Button Content="Mağazalar" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                     <Button Content="Sipariş Takibi" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center" />
-                    <Button Content="Bize Ulaşın!" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  />
+                    <Button Content="Bize Ulaşın!" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,15,0,10"  />
                 </DockPanel>
                 <!--vatan iconu arama çubuğu-->
                 <DockPanel MaxHeight="100" LastChildFill="False" Width="1134">
-					<Button  Margin="25,0,60,5"  MaxHeight="40" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource ImageButton}" Click="AnasayfayaDön_Click">
+					<Button  Margin="25,0,60,5"  MaxHeight="40" VerticalAlignment="Top" HorizontalAlignment="Left" Style="{DynamicResource ImageButton}" Click="AnasayfayaDön_Click" Cursor="Hand">
 						<Image Source="https://www.vatanbilgisayar.com/assets/dist/images/logo.png"/>
 					</Button>
-					<TextBox Height="27" TextWrapping="NoWrap" Tag="Aramak İstediğiniz Ürünü Yazın" Margin="200,0,0,0" Width="245" Style="{DynamicResource Searchbar}" HorizontalAlignment="Center" VerticalAlignment="Center" ButtonBase.Click="OnImageButtonClick"/>
+					<TextBox Height="27" TextWrapping="NoWrap" Tag="Aramak İstediğiniz Ürünü Yazın" Margin="200,0,0,0" Width="245" Style="{DynamicResource Searchbar}" HorizontalAlignment="Center" VerticalAlignment="Center" ButtonBase.Click="OnImageButtonClick" Background="White" />
                     <Button Content="GİRİŞ YAP" Margin="150,0,0,0" Style="{DynamicResource MyAccountButton}" />
                     <Button Content="SEPETİM" Margin="5,0,0,0" Style="{DynamicResource MyCartButton}"  />
                 </DockPanel>

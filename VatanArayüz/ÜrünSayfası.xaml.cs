@@ -44,7 +44,6 @@ namespace VatanArayüz
 
             }
             swiperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-5_large.jpg"));
-
         }
 
         private void Frstbutton_MouseEnter(object sender, MouseEventArgs e)
@@ -59,6 +58,22 @@ namespace VatanArayüz
                     swiperImage.Source = new BitmapImage(new Uri(item.PicLink));
                 }
             }
+        }
+
+        private void Notebook_Yönlendir(object sender, RoutedEventArgs e)
+        {
+            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası();
+            notebook_Sayfası.currentFrame = currentFrame;
+            currentFrame.Content = notebook_Sayfası;
+        }
+        private void Laptop_Yönlendir(object sender, RoutedEventArgs e)
+        {
+            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası();
+            notebook_Sayfası.başlık.Content = "Laptop";
+            notebook_Sayfası.kategoribilgi.Content = "";
+            notebook_Sayfası.currentFrame = currentFrame;
+            currentFrame.Content = notebook_Sayfası;
+
         }
     }
    

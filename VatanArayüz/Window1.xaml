@@ -90,7 +90,7 @@
                             <Button Content="SEPETE EKLE" Style="{DynamicResource AddtoCart}" Width="265" VerticalAlignment="Top" HorizontalAlignment="Left"/>
                         </StackPanel>
                         <Grid Height="290" Width="458" Background="White">
-                            <Image x:Name="image14" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="22" Source="C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\icon-arrow-down-percent.png"/>
+                            <Image x:Name="image14" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="22" Source="icon-arrow-down-percent.png"/>
                             <Label x:Name="label10" Content="Bu ürünle birlikte alabileceğiniz ürünler" HorizontalAlignment="Left" Margin="27,5,0,0" VerticalAlignment="Top" Width="220"/>
                             <Border BorderBrush="WhiteSmoke" BorderThickness="1" HorizontalAlignment="Left" Height="49" Margin="0,36,0,0" VerticalAlignment="Top" Width="458">
                                 <DockPanel LastChildFill="False" Margin="0,0,-1,0">
@@ -169,15 +169,32 @@
 
 
                 </UniformGrid>
+				<TabControl>
+					<TabItem Width="200" Height="50" Header="Genel Özellikler">
+
+					</TabItem>
+					<TabItem Width="200" Height="50" Header="Ürün Özellikleri">
+
+					</TabItem>
+					<TabItem Width="200" Height="50" Header="Yorumlar(0)">
+
+					</TabItem>
+					<TabItem Width="200" Height="50" Header="Ödeme Seçenekleri">
+
+					</TabItem>
+					<TabItem Width="200" Height="50" Header="Hata Bildir">
+
+					</TabItem>
+				</TabControl>
             </StackPanel>
 
 
             <!--Ürün Sayfası-->
             <Grid Height="199" Width="1134" Background="#003177">
-                <Image x:Name="image1" HorizontalAlignment="Left" Height="53" Margin="103,35,0,0" VerticalAlignment="Top" Width="45" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-1.png"/>
-                <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="344,35,0,0" VerticalAlignment="Top" Width="60" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-2.png"/>
-                <Image x:Name="image11" HorizontalAlignment="Left" Height="53" Margin="574,35,0,0" VerticalAlignment="Top" Width="54" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-3.png"/>
-                <Image x:Name="image12" HorizontalAlignment="Left" Height="49" Margin="810,35,0,0" VerticalAlignment="Top" Width="55" Source="C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\Resources\Icon1\1-4.png"/>
+                <Image x:Name="image1" HorizontalAlignment="Left" Height="53" Margin="103,35,0,0" VerticalAlignment="Top" Width="45" Source="Resources\Icon1\1-1.png"/>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="53" Margin="344,35,0,0" VerticalAlignment="Top" Width="60" Source="Resources\Icon1\1-2.png"/>
+                <Image x:Name="image11" HorizontalAlignment="Left" Height="53" Margin="574,35,0,0" VerticalAlignment="Top" Width="54" Source="Resources\Icon1\1-3.png"/>
+                <Image x:Name="image12" HorizontalAlignment="Left" Height="49" Margin="810,35,0,0" VerticalAlignment="Top" Width="55" Source="Resources\Icon1\1-4.png"/>
                 <Label x:Name="label" Content="MOTOKURYE" Height="29" Margin="148,25,0,0" Width="150" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="18" FontWeight="Bold" Foreground="White"/>
                 <Label x:Name="label1" Content="Seçili ürünlere 30dk - 3&#xA;saat arasında sahip olma&#xA;fırsatı." HorizontalAlignment="Left" Margin="148,59,0,0" VerticalAlignment="Top" Width="150" Foreground="White" Height="62" Background="Transparent" FontWeight="Bold"/>
                 <Label x:Name="label2" Content="BUGÜN TESLİM" HorizontalAlignment="Left" Margin="404,25,0,0" VerticalAlignment="Top" Width="131" FontWeight="Bold" FontSize="16" Height="29" Foreground="#FFE6E8EA"/>

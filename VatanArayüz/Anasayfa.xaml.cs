@@ -9,6 +9,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -21,7 +22,7 @@ namespace VatanArayüz
     /// </summary>
     public partial class Anasayfa : Page
     {
-        List<SwiperItem> swiperItems = new List<SwiperItem>();
+        public List<SwiperItem> swiperItems = new List<SwiperItem>();
         public Frame currentFrame;
         public Anasayfa()
         {
@@ -46,11 +47,12 @@ namespace VatanArayüz
                 Style st = FindResource("frstbutton") as Style;
                 newBtn.Style = st;
                 newBtn.Content = new BitmapImage(new Uri(item.IconLink));
-                newBtn.MouseEnter += frstbutton_MouseEnter;
+                newBtn.MouseEnter += Frstbutton_MouseEnter;
                 swiper.Children.Add(newBtn);
 
             }
             SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
+            butonA.Width = this.Width/2-20;
         }
 
         private void Button_SourceUpdated(object sender, DataTransferEventArgs e)
@@ -58,7 +60,7 @@ namespace VatanArayüz
 
         }
 
-        private void frstbutton_MouseEnter(object sender, MouseEventArgs e)
+        private void Frstbutton_MouseEnter(object sender, MouseEventArgs e)
         {
             Button buton = (sender as Button);
             string butonname = buton.Name;
@@ -86,42 +88,83 @@ namespace VatanArayüz
         }
 
 
-        private async Task SliderControlAsync(int location)
+        private async void SliderButton_Click(object sender, RoutedEventArgs e)
         {
-            double maxw = sc2.ScrollableWidth, b = maxw / 4;
-            double loc = location * b;
-            if (loc < sc2.HorizontalOffset)
+            int location = Convert.ToInt32((sender as Button).Content);
+            await SliderControlAsync(location,4,sc2);
+        }
+        private async void SliderButton_Click2(object sender, RoutedEventArgs e)
+        {
+            int location = Convert.ToInt32((sender as Button).Content);
+            await SliderControlAsync(location,2,sc3);
+        }
+        private async void SliderButton_Click3(object sender, RoutedEventArgs e)
+        {
+            double back_next_scrollable_windth = sc3.ScrollableWidth /10;
+            double location= sc3.HorizontalOffset / back_next_scrollable_windth;
+            int butonnumber = Convert.ToInt32((sender as Button).Content);
+            if (location>=0)
             {
-                while (loc < sc2.HorizontalOffset)
+                if (butonnumber == 0)
                 {
-                    sc2.ScrollToHorizontalOffset(sc2.HorizontalOffset - 50);
+                    location--;
+                }
+                else if (butonnumber == 1)
+                {
+                    location++;
+                }
+                await SliderControlAsync(location, 10, sc3);
+            }
+        }
+        private async Task SliderControlAsync(double location, int numberOfButton, ScrollViewer scrollViewer)
+        {
+            double maxw = scrollViewer.ScrollableWidth, b = maxw / (numberOfButton-1);
+            double loc = location * b;
+            if (loc < scrollViewer.HorizontalOffset)
+            {
+                while (loc < scrollViewer.HorizontalOffset)
+                {
+                    scrollViewer.ScrollToHorizontalOffset(scrollViewer.HorizontalOffset - 50);
                     await Task.Delay(10);
                 }
 
-                if (sc2.HorizontalOffset != loc)
+                if (scrollViewer.HorizontalOffset != loc)
                 {
-                    sc2.ScrollToHorizontalOffset(loc);
+                    scrollViewer.ScrollToHorizontalOffset(loc);
                 }
             }
-            else if (loc > sc2.HorizontalOffset)
+            else if (loc > scrollViewer.HorizontalOffset)
             {
-                while (loc > sc2.HorizontalOffset)
+                while (loc > scrollViewer.HorizontalOffset)
                 {
-                    sc2.ScrollToHorizontalOffset(sc2.HorizontalOffset + 50);
+                    scrollViewer.ScrollToHorizontalOffset(scrollViewer.HorizontalOffset + 50);
                     await Task.Delay(10);
                 }
 
-                if (sc2.HorizontalOffset != loc)
+                if (scrollViewer.HorizontalOffset != loc)
                 {
-                    sc2.ScrollToHorizontalOffset(loc);
+                    scrollViewer.ScrollToHorizontalOffset(loc);
                 }
             }
 
         }
-        private async void SliderButton_Click(object sender, RoutedEventArgs e)
+
+        private void Button_SizeChanged(object sender, SizeChangedEventArgs e)
         {
-            int location = Convert.ToInt32((sender as Button).Content);
-            await SliderControlAsync(location);
+
+        }
+
+        private void Page_SizeChanged(object sender, SizeChangedEventArgs e)
+        {
+            var w = ((System.Windows.Controls.Panel)Application.Current.MainWindow.Content).ActualWidth;
+            foreach (UIElement child in ugrid.Children)
+            {
+                (child as Button).Width = w / 2 - 50;
+            }
+            foreach (UIElement child in ugrid2.Children)
+            {
+                (child as Button).Width = w / 5 - 43;
+            }
         }
     }
 }

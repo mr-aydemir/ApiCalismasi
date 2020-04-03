@@ -10,8 +10,8 @@
     <!--Bilgisayar Sayfası-->
     <UniformGrid Columns="5" Height="765" Width="1044">
         <DockPanel Margin="0,0,-1077,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="1286">
-            <Label x:Name="label10" Content="Notebook" HorizontalAlignment="Left" Width="206" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
-            <Label x:Name="label11" Content="Notebook fiyatları, en uygun laptop modelleri ve distribütör firma garantili markalar sadece Vatan Bilgisayar'da. Apple, Asus, HP, &#xD;&#xA;Lenovo, Msi gibi bir çok marka Notebook modelleri için vatanbilgisayar.com'u ziyaret edin. Fırsatları kaçırmayın!&#xD;&#xA;Bilgisayar kategorisinde Notebook modellerinde 139 adet ürün bulundu." Margin="-205,31,-253,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="56" Width="689"/>
+            <Label x:Name="başlık" Content="Notebook" HorizontalAlignment="Left" Width="206" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+            <Label x:Name="kategoribilgi" Content="Notebook fiyatları, en uygun laptop modelleri ve distribütör firma garantili markalar sadece Vatan Bilgisayar'da. Apple, Asus, HP, &#xD;&#xA;Lenovo, Msi gibi bir çok marka Notebook modelleri için vatanbilgisayar.com'u ziyaret edin. Fırsatları kaçırmayın!&#xD;&#xA;Bilgisayar kategorisinde Notebook modellerinde 139 adet ürün bulundu." Margin="-205,31,-253,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="56" Width="689"/>
             <RadioButton x:Name="radioButton" Content="STOKTAKİLER" Margin="400,10,213,66" RenderTransformOrigin="0.5,0.5" FontSize="14" FontWeight="Bold" ClickMode="Press" BorderThickness="1" Style="{DynamicResource radiobuton}" Width="91" Height="17"/>
         </DockPanel>
         <Border BorderBrush="LightGray" BorderThickness="1" Margin="-209,102,246,250">

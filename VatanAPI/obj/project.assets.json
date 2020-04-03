@@ -2065,6 +2065,15 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
+      },
+      "VatanArayüz/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/VatanArayüz.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/VatanArayüz.dll": {}
+        }
       }
     }
   },
@@ -6809,6 +6818,11 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
+    },
+    "VatanArayüz/1.0.0": {
+      "type": "project",
+      "path": "../VatanArayüz/VatanArayüz.csproj",
+      "msbuildProject": "../VatanArayüz/VatanArayüz.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -6820,7 +6834,8 @@
       "Microsoft.EntityFrameworkCore.Relational >= 3.1.2",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.1",
       "System.Drawing.Common >= 4.7.0",
-      "System.Net.Http >= 4.3.4"
+      "System.Net.Http >= 4.3.4",
+      "VatanArayüz >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -6848,7 +6863,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "E:\\ApiCalismasi\\VatanArayüz\\VatanArayüz.csproj": {
+              "projectPath": "E:\\ApiCalismasi\\VatanArayüz\\VatanArayüz.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

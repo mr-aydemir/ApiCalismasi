@@ -20,8 +20,7 @@
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="Background" Value="White" />
-							<Setter Property="Foreground" Value="Black" />
-							<Setter Property="FontWeight" Value="Medium"/>
+							<Setter Property="Foreground" Value="#337ab7" />
 						</Trigger>
 
 						<Trigger Property="IsPressed" Value="True">
@@ -125,6 +124,7 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+	
 	<!--Koyu mavi Profil Butonu Tasarımı Aşağıdadır-->
 	<Style x:Key="MyAccountButton" TargetType="Button">
 		<Setter Property="SnapsToDevicePixels" Value="True"/>
@@ -340,11 +340,13 @@
 						<StackPanel  Margin="25,3,25,25">
 							<Label Content="Web'e Özel" Foreground="IndianRed" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
 							<Border CornerRadius="5" BorderThickness="1" Background="IndianRed " Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-								<Label FontWeight="Bold" Content="Bu Fiyata Son 35 Ürün" FontSize="12" Foreground="White"  HorizontalAlignment="Center"/>
+								<TextBlock FontWeight="Bold" TextWrapping="WrapWithOverflow" FontSize="11" Foreground="White"  HorizontalAlignment="Center" Margin="3">
+									<Run Text="Bu Fiyata "/> <Run   Text="Son 35 Ürün" />
+								</TextBlock>
 							</Border>
 							<Image Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
 							<Label Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
-							<Label Foreground="Black" Content="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
+							<TextBlock Foreground="Black" TextWrapping="WrapWithOverflow" Text="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
 							<TextBlock>
 								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
 								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
@@ -378,11 +380,11 @@
 							<Image Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
 							<StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,3,25,25">
 								<Label Content="Web'e Özel" Foreground="IndianRed" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
-								<Border CornerRadius="5" BorderThickness="1" Background="IndianRed " Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-									<Label FontWeight="Bold" Content="Bu Fiyata Son 35 Ürün" FontSize="12" Foreground="White"  HorizontalAlignment="Center"/>
+								<Border CornerRadius="5"  BorderThickness="1" Background="IndianRed " Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+									<TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Text="Bu Fiyata Son 35 Ürün" FontSize="12" Foreground="White"  HorizontalAlignment="Center" Margin="3"/>
 								</Border>
 								<Label Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
-								<Label Foreground="Black" Content="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
+								<TextBlock Foreground="Black" TextWrapping="WrapWithOverflow" Text="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
 								<TextBlock>
 								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
 								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
@@ -416,7 +418,7 @@
 						<StackPanel  Margin="25,3,25,25">
 							<Image Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
 							<Label Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
-							<Label Foreground="Black" Content="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
+							<TextBlock Foreground="Black" TextWrapping="WrapWithOverflow" Text="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
 							<TextBlock>
 								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
 								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
@@ -457,7 +459,7 @@
 					<MenuItem Icon="{Binding Icon}"
                             Command="{Binding DataContext.ChangePageCommand, RelativeSource={RelativeSource AncestorType={x:Type Window}}}"
                             CommandParameter="{Binding }"
-                            Style = "{StaticResource MenuItem}">
+                            Style = "{DynamicResource KategoriMenuItem}">
 						<MenuItem.Header>
 							<StackPanel>
 								<TextBlock TextAlignment="Center" Text="{Binding Name}" />
@@ -669,29 +671,77 @@
 	</Style>
 
     <!--Ürün Sayfasındaki Butonlar-->
-    <Style x:Key="ürünsayfaButon" TargetType="Button">
-        <Setter Property="SnapsToDevicePixels" Value="True"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}" >
-                    <Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="13" 
+	<Style x:Key="ürünsayfaButon" TargetType="Button">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}" >
+					<Border Name="border" BorderThickness="1" BorderBrush="Transparent" CornerRadius="13" 
 							HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#003177" MaxWidth="200">
-                        <DockPanel>
-                            <Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Margin="10,-2" Foreground="White" MaxWidth="100" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
-                        </DockPanel>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="Background" Value="#FF020238"/>
-                            <Setter Property="Foreground" Value="White" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter Property="Background" Value="#FF003177" />
-                            <Setter Property="Foreground" Value="White" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+						<DockPanel>
+							<Label Content="{TemplateBinding Content}" FontSize="12" FontWeight="Bold" Margin="10,-2" Foreground="White" MaxWidth="100" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"/>
+						</DockPanel>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="Background" Value="#FF020238"/>
+							<Setter Property="Foreground" Value="White" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" Value="#FF003177" />
+							<Setter Property="Foreground" Value="White" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<!--Tab item-->
+	<Style x:Key="tabitemBlue" TargetType="{x:Type TabItem}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TabItem}">
+					<Grid>
+						<Border 
+                                Name="Border"
+                                Background="White"
+                                BorderBrush="Gray" 
+                                BorderThickness="1" 
+                                CornerRadius="0" >
+							<ContentPresenter x:Name="ContentSite"
+                                    VerticalAlignment="Center"
+                                    HorizontalAlignment="Center"
+                                    ContentSource="Header"											  
+                                    Margin="12,2,12,2"
+                                    RecognizesAccessKey="True"		  />
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsSelected" Value="True">
+							<Setter Property="Panel.ZIndex" Value="100" />
+							<Setter TargetName="Border" Property="Background" Value="#568ce6" />
+							<Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+							<Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="White"/>
+						</Trigger>
+						<Trigger Property="IsSelected" Value="false">
+							<Setter Property="Panel.ZIndex" Value="100" />
+							<Setter TargetName="Border" Property="Background" Value="White" />
+							<Setter TargetName="Border" Property="BorderThickness" Value="1,1,1,0" />
+							<Setter Property="TextElement.Foreground" TargetName="ContentSite" Value="#568ce6"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="TabItemText" TargetType="{x:Type TextBlock}">
+		<Style.Triggers>
+			<DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=TabItem}}" Value="True">
+				<Setter Property="Foreground" Value="White"/>
+			</DataTrigger>
+			<DataTrigger Binding="{Binding IsSelected, RelativeSource={RelativeSource AncestorType=TabItem}}" Value="False">
+				<Setter Property="Foreground" Value="Blue"/>
+			</DataTrigger>
+		</Style.Triggers>
+	</Style>
 </ResourceDictionary>
