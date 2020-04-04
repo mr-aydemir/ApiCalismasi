@@ -70,7 +70,7 @@ namespace VatanArayüz
         }
         void ChangeImage()
         {
-            int number = (Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1)%12;
+            int number = (Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1)%(swiperItems.Count);
             foreach (SwiperItem item in swiperItems)
             {
                 bool a = Convert.ToInt32(item.Name.Substring(2)) == number;

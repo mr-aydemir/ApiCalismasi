@@ -98,5 +98,11 @@ namespace VatanArayüz
             anasayfa.currentFrame = Main;
             Main.Content = anasayfa;
         }
+        private void Hakkımızda_Yönlendir(object sender, RoutedEventArgs e)
+        {
+            Hakkımızda anasayfa = new Hakkımızda();
+            anasayfa.currentFrame = Main;
+            Main.Content = anasayfa;
+        }
     } 
 }

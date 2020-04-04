@@ -63,6 +63,9 @@
     <Compile Include="Controls\NavigationDrawer.cs" />
     <Compile Include="ForControllers\Category.cs" />
     <Compile Include="ForControllers\Product.cs" />
+    <Compile Include="Hakkımızda.xaml.cs">
+      <DependentUpon>Hakkımızda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Notebook-Sayfası.xaml.cs">
       <DependentUpon>Notebook-Sayfası.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,10 @@
     <Page Include="Controls\NavigationDrawer.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Hakkımızda.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Notebook-Sayfası.xaml">
       <SubType>Designer</SubType>
