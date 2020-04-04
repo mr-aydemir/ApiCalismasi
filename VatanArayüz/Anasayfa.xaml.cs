@@ -8,11 +8,13 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
+using System.Windows.Interop;
 using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 using VatanArayüz.Content;
 
 namespace VatanArayüz
@@ -24,6 +26,11 @@ namespace VatanArayüz
     {
         public List<SwiperItem> swiperItems = new List<SwiperItem>();
         public Frame currentFrame;
+        string currentsenderbuttonname="sb0";
+        private int i = 0;
+
+        private DispatcherTimer timer
+          = new DispatcherTimer(DispatcherPriority.Render);
         public Anasayfa()
         {
             InitializeComponent();
@@ -52,9 +59,28 @@ namespace VatanArayüz
 
             }
             SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
-            butonA.Width = this.Width/2-20;
+            butonA.Width = this.Width/2-20; timer.Tick += new EventHandler(AnasayfaIdle);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
+            timer.IsEnabled = true;
+            timer.Start();
         }
-
+        async void AnasayfaIdle(object sender, EventArgs e)
+        {
+          await ChangeImageAsync();   
+        }
+        async Task ChangeImageAsync()
+        {
+            int number = Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1;
+            foreach (SwiperItem item in swiperItems)
+            {
+                bool a = Convert.ToInt32(item.Name.Substring(2)) == number;
+                if (a)
+                {
+                    currentsenderbuttonname = item.Name;
+                    SwipperImage.Source = new BitmapImage(new Uri(item.PicLink));
+                }
+            }
+        }
         private void Button_SourceUpdated(object sender, DataTransferEventArgs e)
         {
 
@@ -63,12 +89,17 @@ namespace VatanArayüz
         private void Frstbutton_MouseEnter(object sender, MouseEventArgs e)
         {
             Button buton = (sender as Button);
-            string butonname = buton.Name;
+            currentsenderbuttonname = buton.Name;
+            ChangeImage(currentsenderbuttonname);
+        }
+        void ChangeImage(string name)
+        {
             foreach (SwiperItem item in swiperItems)
             {
-                bool a = item.Name == butonname;
+                bool a = item.Name == name;
                 if (a)
                 {
+                    currentsenderbuttonname = item.Name;
                     SwipperImage.Source = new BitmapImage(new Uri(item.PicLink));
                 }
             }
