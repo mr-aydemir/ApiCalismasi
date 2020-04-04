@@ -64,11 +64,11 @@ namespace VatanArayüz
             timer.IsEnabled = true;
             timer.Start();
         }
-        async void AnasayfaIdle(object sender, EventArgs e)
+        void AnasayfaIdle(object sender, EventArgs e)
         {
-          await ChangeImageAsync();   
+          ChangeImage();   
         }
-        async Task ChangeImageAsync()
+        void ChangeImage()
         {
             int number = Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1;
             foreach (SwiperItem item in swiperItems)
