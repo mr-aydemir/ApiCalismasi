@@ -13,8 +13,8 @@ namespace VatanAPI.Mapping
             CreateMap<Category, CategoryResource>();
 
             CreateMap<Product, ProductResource>()
-                .ForMember(src => src.UnitOfMeasurement,
-                           opt => opt.MapFrom(src => src.UnitOfMeasurement.ToDescriptionString()));
+                .ForMember(src => src.Marka,
+                           opt => opt.MapFrom(src => src.Marka.ToDescriptionString()));
             CreateMap<Image, ImageResource>();
         }
     }

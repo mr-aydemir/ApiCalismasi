@@ -24,7 +24,6 @@ E:\ApiCalismasi\VatanArayüz\obj\Debug\App.g.cs
 E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.cache
 E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.lref
 E:\ApiCalismasi\VatanArayüz\obj\Debug\App.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanConceptStyle.baml
 E:\ApiCalismasi\VatanArayüz\obj\Debug\MainWindow.baml
 E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.g.resources
 E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.Properties.Resources.resources
@@ -51,10 +50,6 @@ C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Window1.g.cs
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Window1.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Anasayfa.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Anasayfa.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\ÜrünSayfası.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\ÜrünSayfası.baml
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe.config
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.pdb
@@ -109,7 +104,12 @@ C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debu
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.g.cs
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.baml
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Hakkımızda.g.cs
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Hakkımızda.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Anasayfa.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Notebook-Sayfası.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\ÜrünSayfası.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Anasayfa.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Notebook-Sayfası.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\ÜrünSayfası.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Styles\VatanConceptStyle.baml

@@ -4,15 +4,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="VATAN BİLGİSAYAR" Height="1110.2" Width="1160"  WindowState="Maximized" Icon="logo.png" SizeToContent="Width">
+        Title="VATAN BİLGİSAYAR" Height="1110.2" Width="1160"  WindowState="Maximized" Icon="./Resources/logo.png" SizeToContent="Width">
     <Grid>
         <Grid Height="30" Background="Gray" VerticalAlignment="Top" >
             <StackPanel Orientation="Horizontal">
 				<Button Click="Back_Btn" >
-					<Image Source="Previous.png" />
+					<Image Source="./Resources/Previous.png" />
 				</Button>
 				<Button Click="Next_Btn">
-					<Image Source="Next.png" />
+					<Image Source="./Resources/Next.png" />
 				</Button>
 			</StackPanel>
         </Grid>
@@ -59,9 +59,9 @@
 								</DockPanel>
 							</MenuItem>
 							<MenuItem Name="m1" Header="B" Background="aliceblue" Style="{DynamicResource MenuItemKategori}" Visibility="Hidden" Margin="0,-20,0,0" >
-								<DockPanel  Background="aliceblue">
-									<StackPanel  Background="aliceblue">
-										<UniformGrid Columns="3"  Background="aliceblue">
+								<DockPanel  Background="White">
+									<StackPanel  Background="White">
+										<UniformGrid Columns="3"  Background="White">
 											<Button Content="Notebook" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10" Click="Button_Click_1" />
 											<Button Content="Masaüstü Bilgisayar" MaxHeight="100" MaxWidth="150" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,10"/>
 											<Button Content="Tabletler" MaxHeight="100" MaxWidth="100" Style="{DynamicResource topbarbutton}" HorizontalAlignment="Center" VerticalAlignment="Center"  Margin="25,0"/>
@@ -213,16 +213,16 @@
 								</DockPanel>
 							</MenuItem>
 						</Menu>
-						<Button Name="b0" Content="TELEFON"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="15,0,0,0" Style="{DynamicResource menubutton}" Click="b0_Click"/>
-						<Button Name="b1" Content="BİLGİSAYAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="81" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b1_Click" />
-						<Button Name="b2" Content="BİLGİSAYAR PARÇALARI"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="167" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b2_Click"/>
-						<Button Name="b3" Content="KAMERA"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b3_Click"/>
-						<Button Name="b4" Content="TV VE ELEKTRONİĞİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="137" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b4_Click"/>
-						<Button Name="b5" Content="OFİS"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b5_Click"/>
-						<Button Name="b6" Content="AKSESUAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b6_Click"/>
-						<Button Name="b7" Content="OYUN VE HOBİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="106" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b7_Click"/>
-						<Button Name="b8" Content="EV ALETLERİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="90" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b8_Click"/>
-						<Button Name="b9" Content="SPOR VE OUTDOOR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="133" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="b9_Click"/>
+						<Button Name="b0" Content="TELEFON"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="15,0,0,0" Style="{DynamicResource menubutton}" Click="B0_Click"/>
+						<Button Name="b1" Content="BİLGİSAYAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="81" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B1_Click" />
+						<Button Name="b2" Content="BİLGİSAYAR PARÇALARI"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="167" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B2_Click"/>
+						<Button Name="b3" Content="KAMERA"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B3_Click"/>
+						<Button Name="b4" Content="TV VE ELEKTRONİĞİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="137" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B4_Click"/>
+						<Button Name="b5" Content="OFİS"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B5_Click"/>
+						<Button Name="b6" Content="AKSESUAR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="70" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B6_Click"/>
+						<Button Name="b7" Content="OYUN VE HOBİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="106" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B7_Click"/>
+						<Button Name="b8" Content="EV ALETLERİ"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="90" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B8_Click"/>
+						<Button Name="b9" Content="SPOR VE OUTDOOR"  VerticalAlignment="Center" HorizontalAlignment="Center" Height="53" Width="133" Margin="5,0,0,0" Style="{DynamicResource menubutton}" Click="B9_Click"/>
 					</DockPanel>
 				</Border>
 				<!--Sayfalar Ortak Bölümlerini silmedim buraya değişen kısımları page yapıp ekleyebiliriz-->

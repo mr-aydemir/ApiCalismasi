@@ -56,7 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Anasayfa.xaml.cs">
+    <Compile Include="Pages\Anasayfa.xaml.cs">
       <DependentUpon>Anasayfa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\SwiperItem.cs" />
@@ -66,7 +66,7 @@
     <Compile Include="Hakkımızda.xaml.cs">
       <DependentUpon>Hakkımızda.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Notebook-Sayfası.xaml.cs">
+    <Compile Include="Pages\Notebook-Sayfası.xaml.cs">
       <DependentUpon>Notebook-Sayfası.xaml</DependentUpon>
     </Compile>
     <Compile Include="Resource.Designer.cs">
@@ -77,10 +77,10 @@
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ÜrünSayfası.xaml.cs">
+    <Compile Include="Pages\ÜrünSayfası.xaml.cs">
       <DependentUpon>ÜrünSayfası.xaml</DependentUpon>
     </Compile>
-    <Page Include="Anasayfa.xaml">
+    <Page Include="Pages\Anasayfa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -92,11 +92,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Notebook-Sayfası.xaml">
+    <Page Include="Pages\Notebook-Sayfası.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VatanConceptStyle.xaml">
+    <Page Include="Styles\VatanConceptStyle.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -116,7 +116,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ÜrünSayfası.xaml">
+    <Page Include="Pages\ÜrünSayfası.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -161,22 +161,13 @@
     <Resource Include="Resources\Arrow-icon-white.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="search-icon.png" />
+    <Resource Include="Resources\cart-icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="person-icon-white.png" />
+    <Resource Include="Resources\Arrow-icon-Gray.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Arrow-icon-white.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="cart-icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Arrow-icon-Gray.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Arrow-icon-Gray_Left.png" />
+    <Resource Include="Resources\Arrow-icon-Gray_Left.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\Icon1\1-1.png" />
@@ -212,16 +203,25 @@
     <Resource Include="Resources\MenuImage\Tel.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="icon-arrow-down-percent.png" />
+    <Resource Include="Resources\icon-arrow-down-percent.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Previous.png" />
+    <Resource Include="Resources\Previous.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Next.png" />
+    <Resource Include="Resources\Next.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="logo.png" />
+    <Resource Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Arrow-icon-Gray_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Arrow-icon-Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\icon-arrow-down-percent.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

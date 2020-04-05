@@ -2842,8 +2842,7 @@
           "Microsoft.EntityFrameworkCore.Relational": "3.1.2",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
           "System.Drawing.Common": "4.7.0",
-          "System.Net.Http": "4.3.4",
-          "VatanArayüz": "1.0.0"
+          "System.Net.Http": "4.3.4"
         },
         "compile": {
           "bin/placeholder/VatanAPI.dll": {}
@@ -2854,15 +2853,6 @@
         "frameworkReferences": [
           "Microsoft.AspNetCore.App"
         ]
-      },
-      "VatanArayüz/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/VatanArayüz.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/VatanArayüz.dll": {}
-        }
       }
     }
   },
@@ -8960,11 +8950,6 @@
       "type": "project",
       "path": "../VatanAPI/VatanAPI.csproj",
       "msbuildProject": "../VatanAPI/VatanAPI.csproj"
-    },
-    "VatanArayüz/1.0.0": {
-      "type": "project",
-      "path": "../VatanArayüz/VatanArayüz.csproj",
-      "msbuildProject": "../VatanArayüz/VatanArayüz.csproj"
     }
   },
   "projectFileDependencyGroups": {

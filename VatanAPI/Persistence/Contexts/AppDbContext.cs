@@ -50,7 +50,7 @@ namespace VatanAPI.Persistence.Contexts
                 new Product
                 {
                     Id = 100,
-                    Name = "HP 15-DA1021NT",
+                    Name = "15-DA1021NT",
                     Url = "https://www.vatanbilgisayar.com/hp-15-da1021nt-core-i5-8265u-1-6ghz-8gb-256gb-ssd-15-6-mx110-2gb-w10-notebook.html",
                     Cost = 4837,
                     Marka = EMarka.HP,
@@ -59,7 +59,7 @@ namespace VatanAPI.Persistence.Contexts
                 new Product
                 {
                     Id = 101,
-                    Name = "LENOVO IDEAPAD S540",
+                    Name = "81ND003TTX",
                     Url = "https://www.vatanbilgisayar.com/lenovo-ideapad-s540-core-i5-10210u-1-6ghz-8gb-ram-256gb-ssd-15-6-mx250-2gb-w10.html",
                     Marka = EMarka.LENOVO,
                     CategoryId = 101,
@@ -67,84 +67,85 @@ namespace VatanAPI.Persistence.Contexts
                 new Product
                 {
                     Id = 102,
-                    Name = "Monster Abra A5",
-                    Url = "",
-                    Marka = EMarka.Unity,
+                    Name = "53010TTJ",
+                    Url = "https://www.vatanbilgisayar.com/huawei-matebook-d-15-amd-ryzen-5-3500u-2-1ghz-8gb-512gbssd-15-6-amd-w10.html",
+                    Marka = EMarka.HUAWEİ,
                     CategoryId = 101,
                 },
                 new Product
                 {
                     Id = 103,
-                    Name = "Monster Abra A7",
-                    Url = "",
-                    Marka = EMarka.Unity,
+                    Name = "X509FB-BR073T",
+                    Url = "https://www.vatanbilgisayar.com/asus-x509fb-core-i5-8265u-1-6ghz-8gb-ram-256gb-ssd-15-6-mx110-2gb-w10.html",
+                    Marka = EMarka.DELL,
                     CategoryId = 101,
                 },
                 new Product
                 {
                     Id = 104,
-                    Name = "Acer Nitro 5 i5 9300HQ GTX1650 256GB SSD 1TB HDD",
-                    Url = "",
+                    Name = "A315-55G-57HC",
+                    Url = "https://www.vatanbilgisayar.com/acer-aspire-3-core-i5-10210u-1-6ghz-8gb-256gb-ssd-15-6-mx230-2gb-w10-notebook.html",
+                    Cost = 4.599,
                     Marka = EMarka.ACER,
                     CategoryId = 101,
                 },
                 new Product
                 {
                     Id = 105,
-                    Name = "Monster Tulpar 10.71",
-                    Url = "",
-                    Marka = EMarka.Unity,
+                    Name = "MVVM2TU/A",
+                    Url = "https://www.vatanbilgisayar.com/macbook-pro-touch-bar-core-i9-2-3ghz-16gb-1tb-ssd-retina-16-4gb-silver.html",
+                    Marka = EMarka.APPLE,
                     CategoryId = 101,
                 }
             );
             builder.Entity<Image>().ToTable("Images");
             builder.Entity<Image>().HasKey(p => p.Id);
             builder.Entity<Image>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
-            builder.Entity<Image>().Property(p => p.Name).IsRequired().HasMaxLength(50);
             builder.Entity<Image>().Property(p => p.Url).IsRequired();
+            builder.Entity<Image>().Property(p => p.Name).IsRequired();
             builder.Entity<Image>().HasData
             (
                 new Image
                 {
                     Id = 100,
-                    Name = "Monster Abra 14.53",
-                    Url = "mr.org",
+                    Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-106687_large.jpg",
+                    Name= "TeoriV2-106687_large.jpg",
                     ProductId = 100
                 },
                 new Image
                 {
                     Id = 101,
-                    Name = "Monster Abra 14.53",
-                    Url = "sada.com",
+                    Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/LENOVO/thumb/TeoriV2-97788_large.jpg",
+                    Name= "TeoriV2-97788_large.jpg",
                     ProductId = 101
                 },
                 new Image
                 {
                     Id = 102,
-                    Name = "Monster Abra 14.53",
-                    Url = "wwdwd.tr",
+                    Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HUAWEI/thumb/TeoriV2-106613_large.jpg",
+                    Name= "TeoriV2-106613_large.jpg",
                     ProductId = 102
                 },
                 new Image
                 {
                     Id = 103,
-                    Name = "Monster Abra 14.53",
-                    Url = "wdawd.sd",
+                    Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/ASUS/thumb/TeoriV2-105445-7_large.jpg",
+                    Name = "TeoriV2-105445-7_large.jpg",
                     ProductId = 103
                 },
                 new Image
                 {
                     Id = 104,
-                    Name = "Monster Abra 14.53",
-                    Url = "adsad.com",
+                    Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/ACER/thumb/TeoriV2-106597_large.jpg",
+                    Name= "TeoriV2-106597_large.jpg",
                     ProductId = 104
                 },
                 new Image
                 {
                     Id = 105,
-                    Name = "Monster Abra 14.53",
-                    Url = "",
-                    ProductId = 105
+                    Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/TeoriV2-105271-4_large.jpg",
+                    ProductId = 105,
+                    Name= "TeoriV2-105271-4_large.jpg"
                 }
             );
         }

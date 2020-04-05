@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Xunit
+using Xunit;
 using System.Threading.Tasks;
 using VatanAPI.Domain.Services;
 using VatanAPI.Domain.Models;
@@ -10,8 +10,9 @@ using VatanAPI.Persistence.Repositories;
 using VatanAPI.Domain.Services.Communication;
 namespace VatanAPI.UnitTest
 {
-    public class CategoryServiceTest:CategoryService
+    public class CategoryServiceTest //:CategoryService
     {
+        /*
         private readonly ICategoryRepository _categoryRepository;
         private readonly IUnitOfWork _unitOfWork;
 
@@ -79,6 +80,6 @@ namespace VatanAPI.UnitTest
             {
                 // Do some logging stuff
                 return new CategoryResponse($"An error occurred when deleting the category: {ex.Message}");
-            }
+            }*/
         }
 }

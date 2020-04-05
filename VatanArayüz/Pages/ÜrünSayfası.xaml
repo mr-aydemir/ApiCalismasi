@@ -1,0 +1,157 @@
+﻿<Page x:Class="VatanArayüz.ÜrünSayfası"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:VatanArayüz"
+      mc:Ignorable="d" 
+      d:DesignHeight="1000" d:DesignWidth="800"
+      Title="ÜrünSayfası">
+
+	<StackPanel>
+		<Border BorderThickness="1" BorderBrush="LightGray" Height="35">
+			<StackPanel Orientation="Horizontal">
+				<Button Style="{DynamicResource KategoriYolButon}" Content="Bilgisayar" Margin="50,0,0,0"/>
+				<Button Style="{DynamicResource KategoriYolButon}" Content="Notebook" Click="Notebook_Yönlendir"/>
+				<Button Style="{DynamicResource KategoriYolButon}" Content="Laptop" Click="Laptop_Yönlendir"/>
+				<Button Style="{DynamicResource KategoriYolButon}" Content="HP"/>
+				<Button Style="{DynamicResource KategoriYolButon_2}" Content="7WG51EA"/>
+			</StackPanel>
+		</Border>
+		<UniformGrid Columns="2" Margin="50" Height="750">
+			<DockPanel HorizontalAlignment="Stretch" Margin="10" Height="459" VerticalAlignment="Top" >
+				<Button Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="PreviousPhoto">
+					<Image Source="Arrow-icon-Gray_Left.png" Width="26" />
+				</Button>
+				<Image Name="swiperImage" MaxHeight="450" VerticalAlignment="Top" HorizontalAlignment="Left" Width="443" Height="459"/>
+				<Button Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="NextPhoto">
+					<Image Source="Arrow-icon-Gray.png" Width="26"/>
+				</Button>
+			</DockPanel>
+			<StackPanel Background="WhiteSmoke" Margin="0,0,0,-375" >
+				<StackPanel Margin="30,20">
+					<DockPanel>
+						<Label Foreground="Gray" FontSize="15" Content="7WG51EA / 103918" HorizontalAlignment="Left"/>
+					</DockPanel>
+					<Label Foreground="Black" FontSize="18"  HorizontalAlignment="Stretch" Target="{Binding ElementName=textBox1}">
+						<AccessText TextWrapping="WrapWithOverflow" Text="HP 15-BS120NT CORE İ3 5005U 2GHZ-4GB-256GB SSD-15.6&quot;-INT-W10 NOTEBOOK"/>
+					</Label>
+					<DockPanel >
+						<Label Foreground="#003177" FontSize="50" FontWeight="Bold" Content="3.199"/>
+						<Label Foreground="#003177" FontSize="15" FontWeight="Bold" VerticalContentAlignment="Center" Content="TL" Height="47" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="28"/>
+					</DockPanel>
+					<TextBlock FontSize="15" Foreground="Gray" Height="25"><Run TextDecorations="UnderLine" Text="383 TL"/><Run Text="'den başlayan taksitlerle"/></TextBlock>
+					<Button Content="SEPETE EKLE" Style="{DynamicResource AddtoCart}" Width="265" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+				</StackPanel>
+				<Grid Height="290" Width="458" Background="White">
+					<Image x:Name="image14" HorizontalAlignment="Left" Height="31" VerticalAlignment="Top" Width="22" Source="icon-arrow-down-percent.png"/>
+					<Label x:Name="label10" Content="Bu ürünle birlikte alabileceğiniz ürünler" HorizontalAlignment="Left" Margin="27,5,0,0" VerticalAlignment="Top" Width="220"/>
+					<Border BorderBrush="WhiteSmoke" BorderThickness="1" HorizontalAlignment="Left" Height="49" Margin="0,36,0,0" VerticalAlignment="Top" Width="458">
+						<DockPanel LastChildFill="False" Margin="0,0,-1,0">
+							<Image x:Name="image15" Width="47" Source="https://cdn.vatanbilgisayar.com/Upload/Product/MICROSOFT/thumb/v2-84459_small.jpg"/>
+							<Label Foreground="Black" FontSize="18" FontWeight="Bold"  HorizontalAlignment="Stretch" Target="{Binding ElementName=textBox1}">
+								<AccessText TextWrapping="WrapWithOverflow" Text="Online Office 365 Bireysel (1 kullanıcı-1yıl) (Dijital İndirilebilir Lisans)" Width="233" FontSize="12" Height="37"/>
+							</Label>
+							<Label Foreground="#003177" FontSize="15" FontWeight="Bold" Content="299,01" Width="58" Margin="0,10"/>
+							<Label Foreground="#003177" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" Content="TL" HorizontalAlignment="Left" Width="21" Margin="0,10,0,0"/>
+							<Button x:Name="button" Content="SEÇ" Style="{DynamicResource ürünsayfaButon}" Width="54" Margin="10,10"/>
+						</DockPanel>
+					</Border>
+					<Border BorderBrush="WhiteSmoke" BorderThickness="1" HorizontalAlignment="Left" Height="49" Margin="0,85,0,0" VerticalAlignment="Top" Width="458">
+						<DockPanel LastChildFill="False" Margin="0,0,-1,0">
+							<Image x:Name="image16" Width="47" Source="https://cdn.vatanbilgisayar.com/Upload/Product/ASUS/thumb/v2-88816_small.jpg"/>
+							<Label Foreground="Black" FontSize="18" FontWeight="Bold" HorizontalAlignment="Stretch" Target="{Binding ElementName=textBox1}">
+								<AccessText TextWrapping="WrapWithOverflow" Text="ASUS SDRW-08U9M-U ZENDRIVE HARİCİ SLİM DVD-YAZICI - SİYAH" Width="233" FontSize="12"/>
+							</Label>
+							<Label Foreground="#003177" FontSize="15" FontWeight="Bold" Content="277,98" Width="58" Margin="0,10"/>
+							<Label Foreground="#003177" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" Content="TL" HorizontalAlignment="Left" Width="21" Margin="0,10,0,0"/>
+							<Button x:Name="button1" Content="SEÇ" Style="{DynamicResource ürünsayfaButon}" Width="54" Margin="10,10"/>
+						</DockPanel>
+					</Border>
+					<Border BorderBrush="WhiteSmoke" BorderThickness="1" HorizontalAlignment="Left" Height="49" Margin="0,134,0,0" VerticalAlignment="Top" Width="458">
+						<DockPanel LastChildFill="False" Margin="0,0,-1,0">
+							<Image x:Name="image17" Width="47" Source="https://cdn.vatanbilgisayar.com/Upload/Product/ADDISON/thumb/v2-84802_small.jpg"/>
+							<Label Foreground="Black" FontSize="18" FontWeight="Bold"  HorizontalAlignment="Stretch" Target="{Binding ElementName=textBox1}">
+								<AccessText TextWrapping="WrapWithOverflow" Text="ADDISON RAMPAGE AD-RC3 140MM 4 FANLI NOTEBOOK SOĞUTUCU" Width="233" FontSize="12"/>
+							</Label>
+							<Label Foreground="#003177" FontSize="15" FontWeight="Bold" Content="135,48" Width="58" Margin="0,10"/>
+							<Label Foreground="#003177" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" Content="TL" HorizontalAlignment="Left" Width="21" Margin="0,10,0,0"/>
+							<Button x:Name="button2" Content="SEÇ" Style="{DynamicResource ürünsayfaButon}" Width="54" Margin="10,10"/>
+						</DockPanel>
+					</Border>
+					<Border BorderBrush="WhiteSmoke" BorderThickness="1" Height="49" Margin="0,183,0,0" VerticalAlignment="Top">
+						<DockPanel LastChildFill="False" Margin="0,0,-1,0">
+							<Image x:Name="image18" Width="47" Source="https://cdn.vatanbilgisayar.com/Upload/Product/MICROSOFT/thumb/v2-86425-3_small.jpg"/>
+							<Label Foreground="Black" FontSize="18" FontWeight="Bold"  HorizontalAlignment="Stretch" Target="{Binding ElementName=textBox1}">
+								<AccessText TextWrapping="WrapWithOverflow" Text="MICROSOFT XBOX ONE WIRELESS OYUN KUMANDA SİYAH" Width="233" FontSize="12"/>
+							</Label>
+							<Label Foreground="#003177" FontSize="15" FontWeight="Bold" Content="389,00" Width="58" Margin="0,10"/>
+							<Label Foreground="#003177" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" Content="TL" HorizontalAlignment="Left" Width="21" Margin="0,10,0,0"/>
+							<Button x:Name="button3" Content="SEÇ" Style="{DynamicResource ürünsayfaButon}" Width="54" Margin="10,10"/>
+						</DockPanel>
+					</Border>
+					<Border BorderBrush="WhiteSmoke" BorderThickness="1" HorizontalAlignment="Left" Height="60" Margin="0,232,0,0" VerticalAlignment="Top" Width="458">
+						<DockPanel LastChildFill="False" Margin="0,0,-1,0">
+							<Image x:Name="image19" Width="47" Source="https://cdn.vatanbilgisayar.com/Upload/Product/MICROSOFT/thumb/v2-83104-1_small.jpg"/>
+							<Label Foreground="Black" FontSize="18" FontWeight="Bold"  HorizontalAlignment="Stretch" Target="{Binding ElementName=textBox1}">
+								<AccessText TextWrapping="WrapWithOverflow" Text="MICROSOFT XBOX ONE WIRELESS OYUN KUMANDA BEYAZ (XBOX ONE VE PC UYUMLU)" Width="233" FontSize="12"/>
+							</Label>
+							<Label Foreground="#003177" FontSize="15" FontWeight="Bold" Content="389,00" Width="58" Margin="0,10"/>
+							<Label Foreground="#003177" FontSize="10" FontWeight="Bold" VerticalContentAlignment="Center" Content="TL" HorizontalAlignment="Left" Width="21" Margin="0,10"/>
+							<Button x:Name="button4" Content="SEÇ" Style="{DynamicResource ürünsayfaButon}" Width="54" Margin="10,10,10,21"/>
+						</DockPanel>
+					</Border>
+
+				</Grid>
+			</StackPanel>
+			<Grid Width="515"  HorizontalAlignment="Center">
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,80,305,169"><Run FontWeight="Bold" Text="İşlemci Ön Bellek:       "/><Run Text="3 MB"/></TextBlock>
+				<Image x:Name="image13" HorizontalAlignment="Left" Height="70" Margin="0,5,0,0" VerticalAlignment="Top" Width="56" Source="https://www.vatanbilgisayar.com/upload/general/intel/i3.png"/>
+				<DockPanel Name="swiper" Height="65" LastChildFill="False" Margin="61,10,10,0" VerticalAlignment="Top">
+					<!--Butonlar programla ekleniyor foreach-->
+				</DockPanel>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,110,305,138"><Run FontWeight="Bold" Text="İşlemci Hızı:                 "/><Run Text="2 GHz"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,140,305,108"><Run FontWeight="Bold" Text="İşlemci Markası:          "/><Run Text="Intel"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,170,305,78"><Run FontWeight="Bold" Text="RAM Tipi:                    "/><Run Text="DDR3L"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,80,63,168"><Run FontWeight="Bold" Text="İşlemci Teknolojisi:       "/><Run Text="Core i3"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,110,63,138"><Run FontWeight="Bold" Text="İşlemci Numarası:         "/><Run Text="5005U"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,140,63,108"><Run FontWeight="Bold" Text="İşlemci Çekirdek           "/><Run Text="2"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,170,63,78"><Run FontWeight="Bold" Text="Ram (Sistem Belleği):   "/><Run Text="4 GB"/></TextBlock>
+			</Grid>
+
+
+
+
+		</UniformGrid>
+
+		<TabControl HorizontalAlignment="Center" >
+			<TabItem Name="tabitem1"  Width="200" Height="50" Header="Genel Özellikler" FontWeight="Bold" Style="{DynamicResource tabitemBlue}">
+				<StackPanel Height="1000" >
+					<TextBlock FontSize="30">Burada Genel Özellikler Bulunacaktır</TextBlock>
+				</StackPanel>
+			</TabItem>
+			<TabItem Width="200" Height="50" Header="Ürün Özellikleri" FontWeight="Bold" Style="{DynamicResource tabitemBlue}">
+				<StackPanel Height="1000">
+					<TextBlock FontSize="30">Burada Ürün Özellikleri Bulunacaktır</TextBlock>
+				</StackPanel>
+			</TabItem>
+			<TabItem Width="200" Height="50" Header="Yorumlar(0)" FontWeight="Bold" Style="{DynamicResource tabitemBlue}">
+				<StackPanel Height="1000">
+					<TextBlock FontSize="30">Burada Yorumlar Bulunacaktır</TextBlock>
+				</StackPanel>
+			</TabItem>
+			<TabItem Width="200" Height="50" Header="Ödeme Seçenekleri" FontWeight="Bold" Style="{DynamicResource tabitemBlue}">
+				<StackPanel Height="1000">
+					<TextBlock FontSize="30">Burada Ödeme Seçenekleri Bulunacaktır</TextBlock>
+				</StackPanel>
+			</TabItem>
+			<TabItem Width="200" Height="50" Header="Hata Bildir" FontWeight="Bold" Style="{DynamicResource tabitemBlue}">
+				<StackPanel Height="1000">
+					<TextBlock FontSize="30">Burada Hata Bildir Bulunacaktır</TextBlock>
+				</StackPanel>
+			</TabItem>
+
+		</TabControl>
+
+	</StackPanel>
+</Page>
