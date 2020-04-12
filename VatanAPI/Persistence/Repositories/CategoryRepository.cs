@@ -21,7 +21,7 @@ namespace VatanAPI.Persistence.Repositories
         }
         public async Task AddAsync(Category category)
         {
-            await _context.Categories.AddAsync(category);
+             await _context.Categories.AddAsync(category);
         }
         public async Task<Category> FindByIdAsync(int id)
         {

@@ -113,3 +113,4 @@ E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Anasayfa.baml
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Notebook-Sayfası.baml
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\ÜrünSayfası.baml
 E:\ApiCalismasi\VatanArayüz\obj\Debug\Styles\VatanConceptStyle.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.CoreCompileInputs.cache

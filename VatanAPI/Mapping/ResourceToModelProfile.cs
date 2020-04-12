@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using VatanAPI.Domain.Models;
 using VatanAPI.Resources;
+using VatanAPI.Controllers.Resources;
+using VatanAPI.Core.Models;
 
 namespace VatanAPI.Mapping
 {
@@ -9,6 +11,7 @@ namespace VatanAPI.Mapping
         public ResourceToModelProfile()
         {
             CreateMap<SaveCategoryResource, Category>();
+            CreateMap<UserCredentialsResource, User>();
         }
     }
 }

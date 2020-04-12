@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.InMemory.ValueGeneration.Internal;
 using VatanAPI.Domain.Models;
+using VatanAPI.Core.Models;
 
 namespace VatanAPI.Persistence.Contexts
 {
@@ -14,6 +15,8 @@ namespace VatanAPI.Persistence.Contexts
         public DbSet<Product> Products { get; set; }
         public DbSet<Image> Images { get; set; }
 
+        public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -50,7 +53,7 @@ namespace VatanAPI.Persistence.Contexts
                 new Product
                 {
                     Id = 100,
-                    Name = "15-DA1021NT",
+                    Name= "da1021nt",
                     Url = "https://www.vatanbilgisayar.com/hp-15-da1021nt-core-i5-8265u-1-6ghz-8gb-256gb-ssd-15-6-mx110-2gb-w10-notebook.html",
                     Cost = 4837,
                     Marka = EMarka.HP,
@@ -97,7 +100,7 @@ namespace VatanAPI.Persistence.Contexts
                     Marka = EMarka.APPLE,
                     CategoryId = 101,
                 }
-            );
+            );;
             builder.Entity<Image>().ToTable("Images");
             builder.Entity<Image>().HasKey(p => p.Id);
             builder.Entity<Image>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
@@ -148,6 +151,9 @@ namespace VatanAPI.Persistence.Contexts
                     Name= "TeoriV2-105271-4_large.jpg"
                 }
             );
+
+
+            builder.Entity<UserRole>().HasKey(ur => new { ur.UserId, ur.RoleId });
         }
     }
 }
