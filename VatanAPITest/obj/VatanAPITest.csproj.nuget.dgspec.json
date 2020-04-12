@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj": {}
+    "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj": {}
   },
   "projects": {
-    "E:\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj": {
+    "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj",
+        "projectUniqueName": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj",
         "projectName": "VatanAPITest",
-        "projectPath": "E:\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj",
-        "packagesPath": "C:\\Users\\Emre AYDEMİR\\.nuget\\packages\\",
-        "outputPath": "E:\\ApiCalismasi\\VatanAPITest\\obj\\",
+        "projectPath": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj",
+        "packagesPath": "C:\\Users\\YusufAKDENİZ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPITest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Emre AYDEMİR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\YusufAKDENİZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -27,8 +27,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {
-                "projectPath": "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj"
+              "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {
+                "projectPath": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj"
               }
             }
           }
@@ -42,6 +42,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.5.0, )"
+            },
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
               "version": "[16.5.0, )"
@@ -49,6 +53,10 @@
             "Moq": {
               "target": "Package",
               "version": "[4.13.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.5.0, )"
             },
             "coverlet.collector": {
               "target": "Package",
@@ -73,16 +81,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -91,21 +89,21 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {
+    "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
+        "projectUniqueName": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
         "projectName": "VatanAPI",
-        "projectPath": "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
-        "packagesPath": "C:\\Users\\Emre AYDEMİR\\.nuget\\packages\\",
-        "outputPath": "E:\\ApiCalismasi\\VatanAPI\\obj\\",
+        "projectPath": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
+        "packagesPath": "C:\\Users\\YusufAKDENİZ\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Emre AYDEMİR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\YusufAKDENİZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -198,16 +196,6 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -216,7 +204,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
         }
       }
     }

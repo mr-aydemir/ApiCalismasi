@@ -26,6 +26,7 @@ namespace VatanAPITest.Persistence.Repositories
 
             await _categoryRepository.AddAsync(new Category() { Id = 100, Name = "Test", Products = new Collection<Product>() });
             var category = await _categoryRepository.FindByIdAsync(100);
+
             Assert.NotNull(category);
             Assert.Equal(100, category.Id);
         }
