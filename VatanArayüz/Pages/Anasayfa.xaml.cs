@@ -52,8 +52,7 @@ namespace VatanArayüz
                 ProductButton3 productButtons3 = new ProductButton3();
                 pb.productName.Content = item.Marka +" "+ item.Name;
                 pb.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
-                UGFırsatUrunleri.Children.Add(pb);
-                
+                UGFırsatUrunleri.Children.Add(pb);               
                 productButtons2.productName.Content = item.Marka + " " + item.Name;
                 productButtons2.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
                 ugrid.Children.Add(productButtons2);

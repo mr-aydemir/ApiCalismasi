@@ -4,17 +4,22 @@
 winexe
 C#
 .cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\
+C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\
 VatanArayüz
 none
 false
 DEBUG;TRACE
+<<<<<<< HEAD
 E:\ApiCalismasi\VatanArayüz\App.xaml
 12-1026835175
+=======
+C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\App.xaml
+81522466520
+>>>>>>> 0e66df8253ee15275cfe17260179afa11832e2e1
 
 19-1751179599
 181723172508
 Controls\ProductButton3.xaml;Controls\ProductButtons.xaml;Controls\ProductsButton2.xaml;Pages\Anasayfa.xaml;Controls\NavigationDrawer.xaml;Hakkımızda.xaml;Pages\Notebook-Sayfası.xaml;Styles\VatanConceptStyle.xaml;MainWindow.xaml;Themes\Generic.xaml;Window1.xaml;Pages\ÜrünSayfası.xaml;
 
-False
+True
 
