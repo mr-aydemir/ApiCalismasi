@@ -283,5 +283,14 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Arrow-icon-Gray_Left.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\Arrow-icon-Gray.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Pages\icon-arrow-down-percent.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

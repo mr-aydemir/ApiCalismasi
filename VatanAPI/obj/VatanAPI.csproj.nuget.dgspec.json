@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {}
+    "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {
+    "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
+        "projectUniqueName": "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
         "projectName": "VatanAPI",
-        "projectPath": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
-        "packagesPath": "C:\\Users\\YusufAKDENİZ\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\YusufAKDENİZ\\Source\\Repos\\SytronXar\\ApiCalismasi\\VatanAPI\\obj\\",
+        "projectPath": "E:\\ApiCalismasi\\VatanAPI\\VatanAPI.csproj",
+        "packagesPath": "C:\\Users\\Emre AYDEMİR\\.nuget\\packages\\",
+        "outputPath": "E:\\ApiCalismasi\\VatanAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\YusufAKDENİZ\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Emre AYDEMİR\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -107,6 +107,16 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[3.1.0, 3.1.0]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -115,7 +125,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -7,10 +7,10 @@
              mc:Ignorable="d" 
              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Margin="20,5">
 	<Grid >
-		<Button x:Name="ProductButton1" BorderThickness="0" BorderBrush="Transparent" Style="{DynamicResource ProductButton}">
+		<Button x:Name="ProductButton" BorderThickness="0" BorderBrush="Transparent" Style="{DynamicResource ProductButton}">
 			<StackPanel  Margin="25,3,25,25">
 				<Image Name="productImage" Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
-				<Label Name="productName" Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
+				<TextBlock Name="productName" Foreground="Gray" Text="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
 				<TextBlock Name="productInfo" Foreground="Black" TextWrapping="WrapWithOverflow" Text="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
 				<TextBlock>
 								<Run Name="productCost" Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>

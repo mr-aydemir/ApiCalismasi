@@ -15,7 +15,7 @@
 				<Button Style="{DynamicResource KategoriYolButon}" Content="Notebook" Click="Notebook_Yönlendir"/>
 				<Button Style="{DynamicResource KategoriYolButon}" Content="Laptop" Click="Laptop_Yönlendir"/>
 				<Button Style="{DynamicResource KategoriYolButon}" Content="HP"/>
-				<Button Style="{DynamicResource KategoriYolButon_2}" Content="7WG51EA"/>
+				<Button Name="productSayfaIsim" Style="{DynamicResource KategoriYolButon_2}" Content="7WG51EA"/>
 			</StackPanel>
 		</Border>
 		<UniformGrid Columns="2" Margin="50" Height="750">
@@ -31,16 +31,16 @@
 			<StackPanel Background="WhiteSmoke" Margin="0,0,0,-375" >
 				<StackPanel Margin="30,20">
 					<DockPanel>
-						<Label Foreground="Gray" FontSize="15" Content="7WG51EA / 103918" HorizontalAlignment="Left"/>
+						<Label Name="productName" Foreground="Gray" FontSize="15" Content="7WG51EA / 103918" HorizontalAlignment="Left"/>
 					</DockPanel>
 					<Label Foreground="Black" FontSize="18"  HorizontalAlignment="Stretch" Target="{Binding ElementName=textBox1}">
-						<AccessText TextWrapping="WrapWithOverflow" Text="HP 15-BS120NT CORE İ3 5005U 2GHZ-4GB-256GB SSD-15.6&quot;-INT-W10 NOTEBOOK"/>
+						<AccessText Name="productInfo" TextWrapping="WrapWithOverflow" Text="HP 15-BS120NT CORE İ3 5005U 2GHZ-4GB-256GB SSD-15.6&quot;-INT-W10 NOTEBOOK"/>
 					</Label>
 					<DockPanel >
-						<Label Foreground="#003177" FontSize="50" FontWeight="Bold" Content="3.199"/>
+						<Label Name="productCost" Foreground="#003177" FontSize="50" FontWeight="Bold" Content="3.199"/>
 						<Label Foreground="#003177" FontSize="15" FontWeight="Bold" VerticalContentAlignment="Center" Content="TL" Height="47" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="28"/>
 					</DockPanel>
-					<TextBlock FontSize="15" Foreground="Gray" Height="25"><Run TextDecorations="UnderLine" Text="383 TL"/><Run Text="'den başlayan taksitlerle"/></TextBlock>
+					<TextBlock FontSize="15" Foreground="Gray" Height="25"><Run TextDecorations="UnderLine" Name="MinTaksitTutarı" Text="383 TL"/><Run Text="'den başlayan taksitlerle"/></TextBlock>
 					<Button Content="SEPETE EKLE" Style="{DynamicResource AddtoCart}" Width="265" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 				</StackPanel>
 				<Grid Height="290" Width="458" Background="White">
@@ -105,18 +105,18 @@
 				</Grid>
 			</StackPanel>
 			<Grid Width="515"  HorizontalAlignment="Center">
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,80,305,169"><Run FontWeight="Bold" Text="İşlemci Ön Bellek:       "/><Run Text="3 MB"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,80,305,169"><Run FontWeight="Bold" Text="İşlemci Ön Bellek:       "/><Run Text="Belirtilmedi"/></TextBlock>
 				<Image x:Name="image13" HorizontalAlignment="Left" Height="70" Margin="0,5,0,0" VerticalAlignment="Top" Width="56" Source="https://www.vatanbilgisayar.com/upload/general/intel/i3.png"/>
 				<DockPanel Name="swiper" Height="65" LastChildFill="False" Margin="61,10,10,0" VerticalAlignment="Top">
 					<!--Butonlar programla ekleniyor foreach-->
 				</DockPanel>
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,110,305,138"><Run FontWeight="Bold" Text="İşlemci Hızı:                 "/><Run Text="2 GHz"/></TextBlock>
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,140,305,108"><Run FontWeight="Bold" Text="İşlemci Markası:          "/><Run Text="Intel"/></TextBlock>
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,170,305,78"><Run FontWeight="Bold" Text="RAM Tipi:                    "/><Run Text="DDR3L"/></TextBlock>
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,80,63,168"><Run FontWeight="Bold" Text="İşlemci Teknolojisi:       "/><Run Text="Core i3"/></TextBlock>
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,110,63,138"><Run FontWeight="Bold" Text="İşlemci Numarası:         "/><Run Text="5005U"/></TextBlock>
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,140,63,108"><Run FontWeight="Bold" Text="İşlemci Çekirdek           "/><Run Text="2"/></TextBlock>
-				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,170,63,78"><Run FontWeight="Bold" Text="Ram (Sistem Belleği):   "/><Run Text="4 GB"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,110,305,138"><Run FontWeight="Bold" Text="İşlemci Hızı:                 "/><Run Text="Belirtilmedi"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,140,305,108"><Run FontWeight="Bold" Text="İşlemci Markası:          "/><Run Text="Belirtilmedi"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="0,170,305,78"><Run FontWeight="Bold" Text="RAM Tipi:                    "/><Run Text="Belirtilmedi"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,80,63,168"><Run FontWeight="Bold" Text="İşlemci Teknolojisi:       "/><Run Text="Belirtilmedi"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,110,63,138"><Run FontWeight="Bold" Text="İşlemci Numarası:         "/><Run Text="Belirtilmedi"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,140,63,108"><Run FontWeight="Bold" Text="İşlemci Çekirdek           "/><Run Text="Belirtilmedi"/></TextBlock>
+				<TextBlock FontSize="15" Foreground="Black" Height="25" Margin="242,170,63,78"><Run FontWeight="Bold" Text="Ram (Sistem Belleği):   "/><Run Text="Belirtilmedi"/></TextBlock>
 			</Grid>
 
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForControllers.VatanArayüz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,7 @@ namespace VatanArayüz.Controls
     /// </summary>
     public partial class ProductButtons : UserControl
     {
+        public Product product;
         public ProductButtons()
         {
             InitializeComponent();

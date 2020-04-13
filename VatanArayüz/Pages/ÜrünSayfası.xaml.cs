@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForControllers.VatanArayüz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,11 +22,14 @@ namespace VatanArayüz
     /// </summary>
     public partial class ÜrünSayfası : Page
     {
-         public List<SwiperItem> swiperItems = new List<SwiperItem>();
-        public Frame currentFrame;
+        public List<SwiperItem> swiperItems = new List<SwiperItem>();
+        public int productId;
         public ÜrünSayfası()
         {
-            InitializeComponent();
+            InitializeComponent();         
+        }
+        public void Swipperaction() 
+        {
             swiperItems.Add(new SwiperItem("sb0", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-5_small.jpg", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-5_large.jpg"));
             swiperItems.Add(new SwiperItem("sb1", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-6_small.jpg", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-6_large.jpg"));
             swiperItems.Add(new SwiperItem("sb2", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-7_small.jpg", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-7_large.jpg"));
@@ -48,7 +52,6 @@ namespace VatanArayüz
             swiperImage.Source = new BitmapImage(new Uri(swiperItems.First<SwiperItem>().PicLink));
             swiperImage.Tag = swiperItems.First<SwiperItem>().Name;
         }
-
         private void Frstbutton_MouseEnter(object sender, MouseEventArgs e)
         {
             Button buton = (sender as Button);
@@ -66,26 +69,22 @@ namespace VatanArayüz
 
         private void Notebook_Yönlendir(object sender, RoutedEventArgs e)
         {
-            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası()
-            {
-                currentFrame = currentFrame
-            };
-            currentFrame.Content = notebook_Sayfası;
+            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası();
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content = notebook_Sayfası;
         }
         private void Laptop_Yönlendir(object sender, RoutedEventArgs e)
         {
-            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası()
-            {
-                currentFrame = this.currentFrame
-            };
+            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası();
             notebook_Sayfası.başlık.Content = "Laptop";
-            notebook_Sayfası.kategoribilgi.Content = "";
-            currentFrame.Content = notebook_Sayfası;
+            notebook_Sayfası.kategoribilgi.Text = "";
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content = notebook_Sayfası;
 
         }
         private void PreviousPhoto(object sender, RoutedEventArgs e)
         {
-            string currentPhotoName = swiperImage.Tag.ToString();
+            /*string currentPhotoName = swiperImage.Tag.ToString();
             int b = (Convert.ToInt32(currentPhotoName.Substring(2)) - 1)%swiperItems.Count;
             if (b==-1)
             {
@@ -99,12 +98,12 @@ namespace VatanArayüz
                     swiperImage.Source = new BitmapImage(new Uri(item.PicLink));
                     swiperImage.Tag = item.Name;
                 }
-            }
+            }*/
 
         }
         private void NextPhoto(object sender, RoutedEventArgs e)
         {
-            string currentPhotoName = swiperImage.Tag.ToString();
+            /*string currentPhotoName = swiperImage.Tag.ToString();
             int b = (Convert.ToInt32(currentPhotoName.Substring(2)) + 1) % swiperItems.Count;
             currentPhotoName = "sb" + b.ToString();
             foreach (SwiperItem item in swiperItems)
@@ -114,7 +113,7 @@ namespace VatanArayüz
                     swiperImage.Source = new BitmapImage(new Uri(item.PicLink));
                     swiperImage.Tag = item.Name;
                 }
-            }
+            }*/
         }
     }
    

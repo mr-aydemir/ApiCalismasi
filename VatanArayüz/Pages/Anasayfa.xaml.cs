@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ForControllers.VatanArayüz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,13 +27,12 @@ namespace VatanArayüz
     public partial class Anasayfa : Page
     {
         public List<SwiperItem> swiperItems = new List<SwiperItem>();
-        public Frame currentFrame;
         string currentsenderbuttonname="sb0";
         private readonly DispatcherTimer timer
           = new DispatcherTimer(DispatcherPriority.Render);
         public Anasayfa()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             AddProductButtons();
             SwiperItemGüncelle(); 
             SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
@@ -40,7 +40,6 @@ namespace VatanArayüz
             timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
             timer.IsEnabled = true;
             timer.Start(); 
-            ProductButtons pb = new ProductButtons();
         }
         void AddProductButtons()
         {
@@ -50,17 +49,85 @@ namespace VatanArayüz
                 ProductButtons pb = new ProductButtons();
                 ProductsButton2 productButtons2 = new ProductsButton2();
                 ProductButton3 productButtons3 = new ProductButton3();
-                pb.productName.Content = item.Marka +" "+ item.Name;
+                pb.productName.Text =item.Name;
+                if (item.Cost < item.PreviousCost)
+                {
+                    pb.ProductPreviousCost.Text = Convert.ToDecimal(item.PreviousCost).ToString();
+                }
+                else pb.ProductPreviousCost.Text = "";
+                if (item.KargoFiyatı != 0)
+                {
+                    pb.KargoDurumuBelirteci.Visibility = Visibility.Hidden;
+                }
+                pb.productInfo.Text = item.Info;
+                if (item.NumberInStock <= 20)
+                {
+                    pb.productCount.Text = "Son " + item.NumberInStock.ToString() + " Ürün";
+                }
+                else pb.OzelUrunBelirteci.Visibility = Visibility.Hidden;
+                pb.productCost.Text = Convert.ToDecimal(item.Cost).ToString();
                 pb.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
-                UGFırsatUrunleri.Children.Add(pb);               
-                productButtons2.productName.Content = item.Marka + " " + item.Name;
-                productButtons2.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
-                ugrid.Children.Add(productButtons2);
-                productButtons3.productName.Content = item.Marka + " " + item.Name;
-                productButtons3.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
-                ugrid2.Children.Add(productButtons3);
-            }
+                pb.ProductButton.Tag = item.Id;
+                pb.ProductButton.Click += Product_Click;
+                UGFırsatUrunleri.Children.Add(pb);
+                if (ugrid.Children.Count<=8)
+                {
 
+
+                    productButtons2.productName.Text = item.Name;
+                    if (item.Cost < item.PreviousCost)
+                    {
+                        productButtons2.ProductPreviousCost.Text = Convert.ToDecimal(item.PreviousCost).ToString();
+                    }
+                    else productButtons2.ProductPreviousCost.Text = "";
+                    if (item.KargoFiyatı != 0)
+                    {
+                        productButtons2.KargoDurumuBelirteci.Visibility = Visibility.Hidden;
+                    }
+                    productButtons2.productInfo.Text = item.Info;
+                    if (item.NumberInStock <= 60)
+                    {
+                        productButtons2.productCount.Text = "Son " + item.NumberInStock.ToString() + " Ürün";
+                    }
+                    else productButtons2.OzelUrunBelirteci.Visibility = Visibility.Hidden;
+                    productButtons2.productCost.Text = Convert.ToDecimal(item.Cost).ToString();
+                    productButtons2.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
+                    productButtons2.ProductButton.Tag = item.Id;
+                    productButtons2.ProductButton.Click += Product_Click;
+                    ugrid.Children.Add(productButtons2);
+                }
+                if (ugrid2.Children.Count<=10)
+                {
+                    productButtons3.productName.Text = item.Name;
+                    productButtons3.productInfo.Text = item.Info;
+                    productButtons3.productCost.Text = Convert.ToDecimal(item.Cost).ToString();
+                    productButtons3.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
+                    productButtons3.ProductButton.Tag = item.Id;
+                    productButtons3.ProductButton.Click += Product_Click;
+                    ugrid2.Children.Add(productButtons3);
+                }
+            }
+        }
+
+        private void Product_Click(object sender, RoutedEventArgs e)
+        {
+            int PId = Convert.ToInt32((sender as Button).Tag); 
+            var window = (MainWindow)Application.Current.MainWindow;
+            ÜrünSayfası ürünSayfası = new ÜrünSayfası();
+            foreach (var item in window.Products)
+            {
+                if (PId == item.Id)
+                {
+                    ürünSayfası.productInfo.Text = item.Info;
+                    ürünSayfası.productName.Content = item.Name;
+                    ürünSayfası.swiperImage.Source = new BitmapImage(new Uri(item.ImageUrl));
+                    ürünSayfası.productCost.Content = item.Cost.ToString();
+                    ürünSayfası.MinTaksitTutarı.Text = (item.Cost / 12).ToString("C") + "TL";
+                    ürünSayfası.productSayfaIsim.Content = item.Name;
+                    break;
+                }
+            }
+            window.Main.Content = ürünSayfası;
         }
         void AnasayfaIdle(object sender, EventArgs e)
         {
@@ -135,19 +202,16 @@ namespace VatanArayüz
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            ÜrünSayfası ürünSayfası = new ÜrünSayfası()
-            {
-                currentFrame = currentFrame
-            };
-            currentFrame.Content = ürünSayfası;
+            ÜrünSayfası ürünSayfası = new ÜrünSayfası();
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content = ürünSayfası;
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası()
-            {
-                currentFrame = currentFrame
-            };
-            currentFrame.Content = notebook_Sayfası;
+            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası();
+
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content= notebook_Sayfası;
         }
 
 

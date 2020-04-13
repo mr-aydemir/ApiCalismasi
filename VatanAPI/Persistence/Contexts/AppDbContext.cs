@@ -47,17 +47,25 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Product>().Property(p => p.Url).IsRequired();
             builder.Entity<Product>().Property(p => p.Cost).IsRequired();
             builder.Entity<Product>().Property(p => p.Marka).IsRequired();
+            builder.Entity<Product>().Property(p => p.PreviousCost).IsRequired();
+            builder.Entity<Product>().Property(p => p.NumberInStock).IsRequired();
+            builder.Entity<Product>().Property(p => p.Info).IsRequired();
+            builder.Entity<Product>().Property(p => p.KargoFiyatı).IsRequired();
             builder.Entity<Product>().HasMany(p => p.Images).WithOne(p => p.Product).HasForeignKey(p => p.ProductId);
             builder.Entity<Product>().HasData
             (
                 new Product
                 {
                     Id = 100,
-                    Name= "da1021nt",
+                    Name= "5QS63EA",
                     Url = "https://www.vatanbilgisayar.com/hp-15-da1021nt-core-i5-8265u-1-6ghz-8gb-256gb-ssd-15-6-mx110-2gb-w10-notebook.html",
-                    Cost = 4837,
+                    Cost = 5049,
                     Marka = EMarka.HP,
-                    CategoryId = 101
+                    CategoryId = 101,
+                    PreviousCost=4837 ,
+                    NumberInStock= 15,
+                    Info= "HP 15 - DA1021NT CORE İ5 8265U 1.6GHZ - 8GB - 256GB SSD - 15.6-MX110 2GB-W10 NOTEBOOK",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -66,6 +74,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/lenovo-ideapad-s540-core-i5-10210u-1-6ghz-8gb-ram-256gb-ssd-15-6-mx250-2gb-w10.html",
                     Marka = EMarka.LENOVO,
                     CategoryId = 101,
+                    Cost = 6899,
+                    PreviousCost = 6593,
+                    NumberInStock = 9,
+                    Info = "LENOVO IDEAPAD S540 CORE İ5 10210U 1.6GHZ-8GB RAM-256GB SSD-15.6''-MX250 2GB-W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -74,6 +87,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/huawei-matebook-d-15-amd-ryzen-5-3500u-2-1ghz-8gb-512gbssd-15-6-amd-w10.html",
                     Marka = EMarka.HUAWEİ,
                     CategoryId = 101,
+                    Cost = 4599,
+                    PreviousCost = 4395,
+                    NumberInStock = 10,
+                    Info = "HUAWEI MATEBOOK D 15 AMD RYZEN 5 3500U 2.1GHZ-8GB-256GB SSD-15.6' - AMD - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -82,15 +100,24 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/asus-x509fb-core-i5-8265u-1-6ghz-8gb-ram-256gb-ssd-15-6-mx110-2gb-w10.html",
                     Marka = EMarka.DELL,
                     CategoryId = 101,
+                    Cost = 4813,
+                    PreviousCost = 5000,
+                    NumberInStock = 8,
+                    Info = "ASUS X509FB CORE İ5 8265U 1.6GHZ-8GB RAM-256GB SSD-15.6' - MX110 2GB - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
                     Id = 104,
                     Name = "A315-55G-57HC",
                     Url = "https://www.vatanbilgisayar.com/acer-aspire-3-core-i5-10210u-1-6ghz-8gb-256gb-ssd-15-6-mx230-2gb-w10-notebook.html",
-                    Cost = 4.599,
                     Marka = EMarka.ACER,
                     CategoryId = 101,
+                    Cost = 4599,
+                    PreviousCost = 5000,
+                    NumberInStock = 15,
+                    Info = "ACER ASPIRE 3 CORE İ5 10210U 1.6GHZ-8GB-256GB SSD-15.6' - MX230 2GB - W10 NOTEBOOK",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -99,6 +126,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/macbook-pro-touch-bar-core-i9-2-3ghz-16gb-1tb-ssd-retina-16-4gb-silver.html",
                     Marka = EMarka.APPLE,
                     CategoryId = 101,
+                    Cost = 21499,
+                    PreviousCost = 21800,
+                    NumberInStock = 3,
+                    Info = "MACBOOK PRO TOUCH BAR CORE İ9 2.3GHZ-16GB-1TB SSD-RETINA 16' - 4GB - SILVER",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -107,6 +139,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/acer-aspire-3-celeron-n4000-1-1ghz-4gb-ram-128gb-ssd-15-6-int-w10-notebook.html",
                     Marka = EMarka.ACER,
                     CategoryId = 101,
+                    Cost = 2299,
+                    PreviousCost = 2500,
+                    NumberInStock = 35,
+                    Info = "ACER ASPIRE 3 CELERON N4000 1.1GHZ-4GB RAM-128GB SSD-15.6' - INT - W10 NOTEBOOK",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -115,6 +152,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/acer-nitro-5-core-i7-9750h-2-6ghz-16gb-1tb-128gb-ssd-15-6-gtx1660ti-6gb-w10.html",
                     Marka = EMarka.ACER,
                     CategoryId = 101,
+                    Cost = 10399,
+                    PreviousCost = 11000,
+                    NumberInStock = 5,
+                    Info = "ACER NITRO 5 CORE İ7 9750H 2.6GHZ-16GB-1TB+128GB SSD-15.6' - GTX1660TI 6GB - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -123,6 +165,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/acer-nitro-5-core-i5-8300h-2-3ghz-8gb-1tb-128gb-ssd-15-6-gtx1050-3gb-w10.html",
                     Marka = EMarka.ACER,
                     CategoryId = 101,
+                    Cost = 6299,
+                    PreviousCost = 6700,
+                    NumberInStock = 12,
+                    Info = "ACER NITRO 5 CORE İ5 8300H 2.3GHZ-8GB-1TB+128GB SSD-15.6' - GTX1050 3GB - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -131,6 +178,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/acer-nitro-5-core-i7-9750h-2-6ghz-16gb-1tb-256gb-ssd-15-6-gtx1650-4gb-w10.html",
                     Marka = EMarka.ACER,
                     CategoryId = 101,
+                    Cost = 8999,
+                    PreviousCost = 9105,
+                    NumberInStock = 12,
+                    Info = "ACER NITRO 5 CORE İ7 9750H 2.6GHZ-16GB-1TB+256GB SSD-15.6' - GTX1650 4GB - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -139,6 +191,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/hp-15-da1021nt-core-i5-8265u-1-6ghz-8gb-256gb-ssd-15-6-mx110-2gb-w10-notebook.html",
                     Marka = EMarka.HP,
                     CategoryId = 101,
+                    Cost = 5049,
+                    PreviousCost = 5500,
+                    NumberInStock = 11,
+                    Info = "HP 15-DA1021NT CORE İ5 8265U 1.6GHZ-8GB-256GB SSD-15.6' - MX110 2GB - W10 NOTEBOOK",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -147,6 +204,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/asus-g531gt-core-i7-9750h-2-6ghz-16gb-512gb-ssd-15-6-gtx1650-4gb-w10.html",
                     Marka = EMarka.ASUS,
                     CategoryId = 101,
+                    Cost = 10028,
+                    PreviousCost = 10050,
+                    NumberInStock = 2,
+                    Info = "ASUS G531GT CORE İ7 9750H 2.6GHZ-16GB-512GB SSD-15.6''-GTX1650 4GB-W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -155,6 +217,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/hp-spectre-x360-13-aw0001nt-core-i7-1065g7-1-3ghz-16gb-512gb-ssd-13-3-int-w10.html",
                     Marka = EMarka.HP,
                     CategoryId = 101,
+                    Cost = 12499,
+                    PreviousCost = 14299,
+                    NumberInStock = 8,
+                    Info = "HP SPECTRE X360 13-AW0001NT CORE İ7 1065G7 1.3GHZ-16GB-512GB SSD-13.3' - INT - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -163,6 +230,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/hp-15-da1116nt-core-i5-8265u-1-6ghz-8gb-1tb-128gb-ssd-15-6-mx110-2gb-w10.html",
                     Marka = EMarka.HP,
                     CategoryId = 101,
+                    Cost = 5599,
+                    PreviousCost = 5300,
+                    NumberInStock = 35,
+                    Info = "HP 15-DA1116NT CORE İ5 8265U 1.6GHZ-8GB-1TB+128GB SSD-15.6' - MX110 2GB - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -171,6 +243,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/hp-15-da1065nt-core-i5-8265u-1-6ghz-4gb-128gb-ssd-15-6-mx110-2gb-w10-notebook.html",
                     Marka = EMarka.HP,
                     CategoryId = 101,
+                    Cost = 4949,
+                    PreviousCost = 4725,
+                    NumberInStock = 50,
+                    Info = "HP 15-DA1065NT CORE İ5 8265U 1.6GHZ-4GB-128GB SSD-15.6' - MX110 2GB - W10 NOTEBOOK",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -179,6 +256,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/acer-swift-3-amd-ryzen-7-3700u-2-3ghz-8gb-256gb-ssd-14-rx540-2gb-w10.html",
                     Marka = EMarka.ACER,
                     CategoryId = 101,
+                    Cost = 5799,
+                    PreviousCost = 5700,
+                    NumberInStock = 50,
+                    Info = "ACER SWIFT 3 AMD RYZEN 7 3700U 2.3GHZ-8GB-256GB SSD-14' - RX540 2GB - W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -187,6 +269,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/dell-g315-core-i7-9750h-2-6ghz-16gb-1tb-256-ssd-gtx1650-4gb-15-6-w10.html",
                     Marka = EMarka.DELL,
                     CategoryId = 101,
+                    Cost = 9686,
+                    PreviousCost = 9686,
+                    NumberInStock = 8,
+                    Info = "DELL G315 CORE İ7 9750H 2.6GHZ-16GB -1TB+256 SSD-GTX1650 4GB-15.6'W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -195,6 +282,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/hometech-alfa-300i-intel-core-i3-5005u-2ghz-4gb-128gb-ssd-14-int-w10.html",
                     Marka = EMarka.HOMETECH,
                     CategoryId = 101,
+                    Cost = 2299,
+                    PreviousCost = 2500,
+                    NumberInStock = 35,
+                    Info = "HOMETECH ALFA 300i INTEL CORE İ3 5005U 2GHZ-4GB-128GB SSD-14''INT-W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -203,6 +295,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/dell-g317-core-i7-8750h-2-2ghz-16gb-2tb-256-ssd-gtx1060-6gb-17-3-w10.html",
                     Marka = EMarka.DELL,
                     CategoryId = 101,
+                    Cost = 11697,
+                    PreviousCost = 11000,
+                    NumberInStock = 12,
+                    Info = "DELL G317 CORE İ7 8750H 2.2GHZ-16GB -2TB+256 SSD-GTX1060 6GB-17.3'W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -211,6 +308,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/dell-g315-core-i7-9750h-2-6ghz-16gb-1tb-256-ssd-gtx1650-4gb-15-6-w10.html",
                     Marka = EMarka.DELL,
                     CategoryId = 101,
+                    Cost = 9686,
+                    PreviousCost = 9700,
+                    NumberInStock = 18,
+                    Info = "DELL G315 CORE İ7 9750H 2.6GHZ-16GB -1TB+256 SSD-GTX1650 4GB-15.6'W10",
+                    KargoFiyatı = 0
                 },
                 new Product
                 {
@@ -219,6 +321,11 @@ namespace VatanAPI.Persistence.Contexts
                     Url = "https://www.vatanbilgisayar.com/huawei-matebook-d-15-amd-ryzen-5-3500u-2-1ghz-8gb-512gbssd-15-6-amd-w10.html",
                     Marka = EMarka.HUAWEİ,
                     CategoryId = 101,
+                    Cost = 4599,
+                    PreviousCost = 4680,
+                    NumberInStock = 35,
+                    Info = "HUAWEI MATEBOOK D 15 AMD RYZEN 5 3500U 2.1GHZ-8GB-256GB SSD-15.6' - AMD - W10",
+                    KargoFiyatı = 0
                 }
 
             );;

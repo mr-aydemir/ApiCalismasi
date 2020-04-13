@@ -7,23 +7,25 @@
              mc:Ignorable="d" 
              VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Margin="20,5">
 	<Grid >
-		<Button x:Name="ProductButton1" BorderThickness="0" BorderBrush="Transparent" Style="{DynamicResource ProductButton}">
+		<Button Name="ProductButton" BorderThickness="0" BorderBrush="Transparent" Style="{DynamicResource ProductButton}">
 			<StackPanel  Margin="25,3,25,25">
-				<Label Content="Web'e Özel" Foreground="IndianRed" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
-				<Border CornerRadius="5" BorderThickness="1" Background="IndianRed " Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
-					<TextBlock FontWeight="Bold" TextWrapping="WrapWithOverflow" FontSize="11" Foreground="White"  HorizontalAlignment="Center" Margin="3">
+				<StackPanel Name="OzelUrunBelirteci">
+					<Label Content="Web'e Özel" Foreground="IndianRed" FontSize="12" HorizontalAlignment="Center" FontWeight="Bold"/>
+					<Border CornerRadius="5" BorderThickness="1" Background="IndianRed " Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+						<TextBlock FontWeight="Bold" TextWrapping="WrapWithOverflow" FontSize="11" Foreground="White"  HorizontalAlignment="Center" Margin="3">
 									<Run Text="Bu Fiyata "/> <Run Name="productCount"  Text="Son 35 Ürün" />
-					</TextBlock>
-				</Border>
+						</TextBlock>
+					</Border>
+				</StackPanel>
 				<Image Name="productImage" Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
-				<Label Name="productName" Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
+				<TextBlock Name="productName" Foreground="Gray" Text="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
 				<TextBlock Name="productInfo" Foreground="Black" TextWrapping="WrapWithOverflow" Text="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
 				<TextBlock>
 								<Run Name="productCost" Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
 								<Run Name="Döviz" Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
 								<Run Name="ProductPreviousCost" Foreground="LightGray" FontWeight="Bold" FontSize="15" TextDecorations="Strikethrough" >6999 TL</Run>
 				</TextBlock>
-				<Border CornerRadius="1" BorderThickness="1" BorderBrush="LightGray" Background="White">
+				<Border Name="KargoDurumuBelirteci" CornerRadius="1" BorderThickness="1" BorderBrush="LightGray" Background="White">
 					<Label Foreground="DarkBlue" FontWeight="Bold" Content="KARGO BEDAVA" FontSize="10"  HorizontalAlignment="Center"/>
 				</Border>
 			</StackPanel>

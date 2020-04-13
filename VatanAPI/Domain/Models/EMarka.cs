@@ -20,15 +20,15 @@ namespace VatanAPI.Domain.Models
         APPLE = 5,
 
         [Description("DELL")]
-        DELL = 5,
+        DELL = 6,
 
         [Description("HUAWEI")]
-        HUAWEİ = 5,
+        HUAWEİ = 7,
 
         [Description("HP")]
-        HP = 5,
+        HP = 8,
 
         [Description("HOMETECH")]
-        HOMETECH = 5
+        HOMETECH = 9
     }
 }

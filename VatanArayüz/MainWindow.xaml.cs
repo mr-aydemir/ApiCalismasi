@@ -17,17 +17,14 @@ namespace VatanArayüz
         public List<Product> Products; 
         public List<Category> Categories; 
         public List<ImageModel> ImageModels;
-        static readonly SqlConnection baglan = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VeriTabanı.mdf;Integrated Security=True");
         public MainWindow()
         {
             InitializeComponent();
             GetData();
             //Altaki kodlar sayfayı değiştirken kullanılması gereken kodlardır
-            Anasayfa anasayfa = new Anasayfa()
-            {
-                currentFrame = Main
-            };
-            Main.Content = anasayfa;
+            Anasayfa anasayfa = new Anasayfa();
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content = anasayfa;
         }
         private void GetData()
         {
@@ -45,11 +42,6 @@ namespace VatanArayüz
             {
                 var items = response.Content.ReadAsAsync <IEnumerable <Product>>().Result;               
                 Products= items as List<Product>;
-                foreach (var item in Products)
-                {
-                    Title = item.Name;
-                }
-
             }
             else
             {
@@ -149,28 +141,22 @@ namespace VatanArayüz
         }
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası() 
-            {
-                currentFrame = Main
-            };
-            Main.Content = notebook_Sayfası;
+            Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası();
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content = notebook_Sayfası;
         }
 
         private void AnasayfayaDön_Click(object sender, RoutedEventArgs e)
         {
-            Anasayfa anasayfa = new Anasayfa()
-            {
-                currentFrame = Main
-            };
-            Main.Content = anasayfa;
+            Anasayfa anasayfa = new Anasayfa();
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content = anasayfa;
         }
         private void Hakkımızda_Yönlendir(object sender, RoutedEventArgs e)
         {
-            Hakkımızda anasayfa = new Hakkımızda()
-            {
-                currentFrame = Main
-            };
-            Main.Content = anasayfa;
+            Hakkımızda anasayfa = new Hakkımızda();
+            var window = (MainWindow)Application.Current.MainWindow;
+            window.Main.Content = anasayfa;
         }
     } 
 }

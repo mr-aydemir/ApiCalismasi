@@ -13,8 +13,12 @@ namespace ForControllers.VatanArayüz
         public string Name { get; set; }
         public EMarka Marka { get; set; }
         public double Cost { get; set; }
-        public string Url { get; set; }
+        public double PreviousCost { get; set; }
         public int CategoryId { get; set; }
+        public string Url { get; set; }
+        public int NumberInStock { get; set; }
+        public string Info { get; set; }
+        public double KargoFiyatı { get; set; }
         public Category Category { get; set; }
         public IList<ImageModel> Images { get; set; } = new List<ImageModel>();
         public string ImageUrl;
@@ -40,14 +44,14 @@ public enum EMarka : byte
     APPLE = 5,
 
     [Description("DELL")]
-    DELL = 5,
+    DELL = 6,
 
     [Description("HUAWEI")]
-    HUAWEİ = 5,
+    HUAWEI = 7,
 
     [Description("HP")]
-    HP = 5,
+    HP = 8,
 
     [Description("HOMETECH")]
-    HOMETECH = 5
+    HOMETECH = 9
 }
