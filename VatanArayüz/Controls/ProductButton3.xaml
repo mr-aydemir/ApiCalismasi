@@ -1,0 +1,22 @@
+﻿<UserControl x:Class="VatanArayüz.Controls.ProductButton3"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VatanArayüz.Controls"
+             mc:Ignorable="d" 
+             VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  Margin="20,5">
+	<Grid >
+		<Button x:Name="ProductButton1" BorderThickness="0" BorderBrush="Transparent" Style="{DynamicResource ProductButton}">
+			<StackPanel  Margin="25,3,25,25">
+				<Image Name="productImage" Source="https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/v2-91830-4_small.jpg" Margin="25,10,25,25"/>
+				<Label Name="productName" Foreground="Gray" Content="MRY42TUA" FontSize="12" FontWeight="Bold" HorizontalAlignment="Left"/>
+				<TextBlock Name="productInfo" Foreground="Black" TextWrapping="WrapWithOverflow" Text="iPHONE XR 64 GB AKILLI TELEFON SİYAH" FontSize="12"  HorizontalAlignment="Left"/>
+				<TextBlock>
+								<Run Name="productCost" Foreground="DarkBlue" FontWeight="Bold" FontSize="25" >6099</Run>
+								<Run Foreground="DarkBlue" FontWeight="Bold" FontSize="10" >TL</Run>
+				</TextBlock>
+			</StackPanel>
+		</Button>
+	</Grid>
+</UserControl>

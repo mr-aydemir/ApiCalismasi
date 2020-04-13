@@ -8,6 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("pages/icon-arrow-down-percent.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("veritaban%c4%b1.mdf")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("veritaban%c4%b1_log.ldf")]
 
 

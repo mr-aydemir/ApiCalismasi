@@ -16,6 +16,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using VatanArayüz.Content;
+using VatanArayüz.Controls;
 
 namespace VatanArayüz
 {
@@ -27,12 +28,60 @@ namespace VatanArayüz
         public List<SwiperItem> swiperItems = new List<SwiperItem>();
         public Frame currentFrame;
         string currentsenderbuttonname="sb0";
-
         private readonly DispatcherTimer timer
           = new DispatcherTimer(DispatcherPriority.Render);
         public Anasayfa()
         {
             InitializeComponent();
+            AddProductButtons();
+            SwiperItemGüncelle(); 
+            SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
+            timer.Tick += new EventHandler(AnasayfaIdle);
+            timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
+            timer.IsEnabled = true;
+            timer.Start(); 
+            ProductButtons pb = new ProductButtons();
+        }
+        void AddProductButtons()
+        {
+            var window = (MainWindow)Application.Current.MainWindow;
+            foreach (var item in window.Products)
+            {
+                ProductButtons pb = new ProductButtons();
+                ProductsButton2 productButtons2 = new ProductsButton2();
+                ProductButton3 productButtons3 = new ProductButton3();
+                pb.productName.Content = item.Marka +" "+ item.Name;
+                pb.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
+                UGFırsatUrunleri.Children.Add(pb);
+                
+                productButtons2.productName.Content = item.Marka + " " + item.Name;
+                productButtons2.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
+                ugrid.Children.Add(productButtons2);
+                productButtons3.productName.Content = item.Marka + " " + item.Name;
+                productButtons3.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
+                ugrid2.Children.Add(productButtons3);
+            }
+
+        }
+        void AnasayfaIdle(object sender, EventArgs e)
+        {
+          ChangeImage();   
+        }
+        void ChangeImage()
+        {
+            int number = (Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1)%(swiperItems.Count);
+            foreach (SwiperItem item in swiperItems)
+            {
+                bool a = Convert.ToInt32(item.Name.Substring(2)) == number;
+                if (a)
+                {
+                    currentsenderbuttonname = item.Name;
+                    SwipperImage.Source = new BitmapImage(new Uri(item.PicLink));
+                }
+            }
+        }
+        void SwiperItemGüncelle() 
+        {
             swiperItems.Add(new SwiperItem("sb0", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/kapali-thumb-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
             swiperItems.Add(new SwiperItem("sb1", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/cep7-thumb-min.png", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/cep-kamp-23-mart-web-min.jpg"));
             swiperItems.Add(new SwiperItem("sb2", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/sepet-yuzde-5-thumb-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/note-kdv-23-mart-web-reviz-min.jpg"));
@@ -59,28 +108,6 @@ namespace VatanArayüz
                 newBtn.MouseEnter += Frstbutton_MouseEnter;
                 swiper.Children.Add(newBtn);
 
-            }
-            SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
-            butonA.Width = this.Width/2-20; timer.Tick += new EventHandler(AnasayfaIdle);
-            timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
-            timer.IsEnabled = true;
-            timer.Start();
-        }
-        void AnasayfaIdle(object sender, EventArgs e)
-        {
-          ChangeImage();   
-        }
-        void ChangeImage()
-        {
-            int number = (Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1)%(swiperItems.Count);
-            foreach (SwiperItem item in swiperItems)
-            {
-                bool a = Convert.ToInt32(item.Name.Substring(2)) == number;
-                if (a)
-                {
-                    currentsenderbuttonname = item.Name;
-                    SwipperImage.Source = new BitmapImage(new Uri(item.PicLink));
-                }
             }
         }
         private void Button_SourceUpdated(object sender, DataTransferEventArgs e)
@@ -196,11 +223,11 @@ namespace VatanArayüz
             var w = ((System.Windows.Controls.Panel)Application.Current.MainWindow.Content).ActualWidth;
             foreach (UIElement child in ugrid.Children)
             {
-                (child as Button).Width = w / 2 - 50;
+                (child as UserControl).Width = w / 2 - 50;
             }
             foreach (UIElement child in ugrid2.Children)
             {
-                (child as Button).Width = w / 5 - 43;
+                (child as UserControl).Width = w / 5 - 43;
             }
         }
     }

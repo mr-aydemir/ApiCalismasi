@@ -13,6 +13,7 @@ namespace VatanAPI.Resources
         public string Marka { get; set; }
         public string Url { get; set; }
         public double Cost { get; set; }
+        public int CategoryId { get; set; }
         public CategoryResource Category { get; set; }
     }
 }

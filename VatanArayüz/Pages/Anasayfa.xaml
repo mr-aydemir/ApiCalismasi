@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:VatanArayüz"
+      xmlns:uc="clr-namespace:VatanArayüz.Controls"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800" SizeChanged="Page_SizeChanged"
       Title="Anasayfa">
@@ -45,14 +45,7 @@
 				<Button x:Name="frstbutton" Content="TÜM FIRSAT ÜRÜNLERİ" HorizontalAlignment="Right" Margin="5,5" Style="{DynamicResource Button_1}"/>
 			</UniformGrid>
 			<!--Fırsat Ürünlerin olduğu bölüm-->
-			<UniformGrid Columns="4" >
-				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click" />
-				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click"/>
-				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click"/>
-				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click"/>
-				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click"/>
-				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click"/>
-				<Button Margin="20,5" Style="{DynamicResource ProductButton1}" Click="Button_Click"/>
+			<UniformGrid Name="UGFırsatUrunleri" Columns="4" >
 			</UniformGrid>
 		</StackPanel>
 		<!--Web'e Özel Sınırlı Ürünlerin Bölümü-->
@@ -63,14 +56,6 @@
 			</UniformGrid>
 			<ScrollViewer x:Name="sc2" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Hidden">
 				<UniformGrid Name="ugrid"  Rows="1" Columns="8"   Background="#FFEBEBEB"  Width="{Binding ElementName=MyScrollViewer, Path=ViewportWidth}" >
-					<Button Name="butonA" SnapsToDevicePixels="True" Margin="20,5"  Style="{DynamicResource ProductButton2}" />
-					<Button SnapsToDevicePixels="True" Margin="20,5"   Style="{DynamicResource ProductButton2}" />
-					<Button SnapsToDevicePixels="True" Margin="20,5"  Style="{DynamicResource ProductButton2}" />
-					<Button SnapsToDevicePixels="True" Margin="20,5"  Style="{DynamicResource ProductButton2}" />
-					<Button SnapsToDevicePixels="True" Margin="20,5" Style="{DynamicResource ProductButton2}" />
-					<Button SnapsToDevicePixels="True" Margin="20,5"  Style="{DynamicResource ProductButton2}" />
-					<Button SnapsToDevicePixels="True" Margin="20,5"  Style="{DynamicResource ProductButton2}" />
-					<Button SnapsToDevicePixels="True"  Margin="20,5"  Style="{DynamicResource ProductButton2}" />
 				</UniformGrid>
 			</ScrollViewer>
 			<DockPanel Background="#FFEBEBEB" HorizontalAlignment="Center" VerticalAlignment="Center" LastChildFill="False" Margin="0,50">
@@ -89,16 +74,6 @@
 			</DockPanel>
 			<ScrollViewer x:Name="sc3"  Background="White" VerticalScrollBarVisibility="Disabled" HorizontalScrollBarVisibility="Hidden">
 				<UniformGrid Name="ugrid2"  Rows="1" Columns="10"   Background="White"  >
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
-					<Button Margin="20,5" Style="{DynamicResource ProductButton3}" />
 				</UniformGrid>
 			</ScrollViewer>
 			<DockPanel Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" LastChildFill="False" Margin="0,50">

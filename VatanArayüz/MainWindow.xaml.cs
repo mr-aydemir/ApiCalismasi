@@ -1,31 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+using System.Net.Http;
+using System.Net.Http.Headers;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using ForControllers;
 using ForControllers.VatanArayüz;
-using VatanArayüz.Content;
-
 namespace VatanArayüz
 {
     /// <summary>
     /// MainWindow.xaml etkileşim mantığı
     /// </summary>
     public partial class MainWindow : Window
-    {      
+    {
+        public List<Product> Products; 
+        public List<Category> Categories; 
+        public List<ImageModel> ImageModels;
+        static readonly SqlConnection baglan = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\VeriTabanı.mdf;Integrated Security=True");
         public MainWindow()
         {
             InitializeComponent();
+            GetData();
             //Altaki kodlar sayfayı değiştirken kullanılması gereken kodlardır
             Anasayfa anasayfa = new Anasayfa()
             {
@@ -33,6 +29,70 @@ namespace VatanArayüz
             };
             Main.Content = anasayfa;
         }
+        private void GetData()
+        {
+
+            HttpClient client = new HttpClient()
+            {
+                BaseAddress = new Uri("https://localhost:5001/")
+            };
+
+            // Add an Accept header for JSON format.
+            client.DefaultRequestHeaders.Accept.Add(
+                new MediaTypeWithQualityHeaderValue("application/json"));
+            HttpResponseMessage response = client.GetAsync("api/products").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var items = response.Content.ReadAsAsync <IEnumerable <Product>>().Result;               
+                Products= items as List<Product>;
+                foreach (var item in Products)
+                {
+                    Title = item.Name;
+                }
+
+            }
+            else
+            {
+                MessageBox.Show("Error Code" +
+                response.StatusCode + " : Message - " + response.ReasonPhrase);
+            }
+
+            response = client.GetAsync("api/categories").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var items = response.Content.ReadAsAsync<IEnumerable<Category>>().Result;
+               Categories = items as List<Category>;
+            }
+            else
+            {
+                MessageBox.Show("Error Code" +
+                response.StatusCode + " : Message - " + response.ReasonPhrase);
+            }
+            response = client.GetAsync("api/images").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var items = response.Content.ReadAsAsync<IEnumerable<ImageModel>>().Result;
+                ImageModels = items as List<ImageModel>; 
+
+            }
+            else
+            {
+                MessageBox.Show("Error Code" +
+                response.StatusCode + " : Message - " + response.ReasonPhrase);
+            }
+            foreach (var item in Products)
+            {
+                foreach (var item2 in ImageModels)
+                {
+                    if (item2.ProductId==item.Id)
+                    {
+                        item.ImageUrl = item2.Url;
+                        break;
+                    }
+                }
+            }
+        }
+
         public void OnImageButtonClick(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Tamam");

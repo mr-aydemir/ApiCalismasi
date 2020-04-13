@@ -8,18 +8,9 @@ namespace ForControllers.VatanArayüz
 {
     public class Category
     {
+        public int Id { get; set; }
         public string Name { get; set; }
-        public string Url  { get; set; }
-        public string Info { get; set; }
-        public List<Product> Products;
-        
-        public Category(string name, string url, string info, List<Product> products)
-        {
-            Name = name;
-            Url  = url;
-            Info = info;
-            Products = products;
-        }
+        public IList<Product> Products { get; set; } = new List<Product>();
 
     }
 }
