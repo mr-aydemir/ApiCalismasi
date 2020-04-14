@@ -1,1 +1,2 @@
 Wpfi Çalıştırmadan önce apiyi çalıştırmalısınız.
+VatanApi.Exe yi kullanabilirsiniz

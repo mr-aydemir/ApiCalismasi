@@ -18,12 +18,12 @@
 				<Button Name="productSayfaIsim" Style="{DynamicResource KategoriYolButon_2}" Content="7WG51EA"/>
 			</StackPanel>
 		</Border>
-		<UniformGrid Columns="2" Margin="50" Height="750">
+		<UniformGrid Columns="2" >
 			<DockPanel HorizontalAlignment="Stretch" Margin="10" Height="459" VerticalAlignment="Top" >
 				<Button Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="PreviousPhoto">
 					<Image Source="Arrow-icon-Gray_Left.png" Width="26" />
 				</Button>
-				<Image Name="swiperImage" MaxHeight="450" VerticalAlignment="Top" HorizontalAlignment="Left" Width="443" Height="459"/>
+				<Image Name="swiperImage"  VerticalAlignment="Top" HorizontalAlignment="Left"/>
 				<Button Background="Transparent" BorderThickness="0" HorizontalAlignment="Center" VerticalAlignment="Center" Click="NextPhoto">
 					<Image Source="Arrow-icon-Gray.png" Width="26"/>
 				</Button>

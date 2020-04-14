@@ -6,18 +6,18 @@
       xmlns:local="clr-namespace:VatanArayüz"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="Notebook_Sayfası">
+      Title="Notebook_Sayfası" Background="White">
     <!--Bilgisayar Sayfası-->
 
 	<StackPanel Margin="50,0">
-		<DockPanel HorizontalAlignment="Left" Margin="0,10">
+		<DockPanel Margin="0,10">
 			<Label x:Name="başlık" Content="Notebook" HorizontalAlignment="Left"  FontWeight="Bold" FontSize="16"/>
-			<TextBlock Margin="130,0" x:Name="kategoribilgi" TextWrapping="WrapWithOverflow">
+			<TextBlock FontSize="10" Margin="120,0" x:Name="kategoribilgi" TextWrapping="WrapWithOverflow" Width="289">
 				<Run>Notebook fiyatları, en uygun laptop modelleri ve distribütör firma garantili markalar sadece Vatan Bilgisayar'da. Apple, Asus, HP, &#xD;&#xA;Lenovo, Msi gibi bir çok marka Notebook modelleri için vatanbilgisayar.com'u ziyaret edin. Fırsatları kaçırmayın!&#xD;&#xA;Bilgisayar kategorisinde Notebook modellerinde </Run>
 				<Run Name="Numberofproducts">139</Run>
 				<Run> adet ürün bulundu.</Run>
 			</TextBlock>
-			<RadioButton x:Name="radioButton" Content="STOKTAKİLER" RenderTransformOrigin="0.5,0.5" FontSize="14" FontWeight="Bold" ClickMode="Press" BorderThickness="1" Style="{DynamicResource radiobuton}"  VerticalAlignment="Center"/>
+			<RadioButton x:Name="radioButton" Content="STOKTAKİLER" FontSize="14" FontWeight="Bold" ClickMode="Press" BorderThickness="1" Style="{DynamicResource radiobuton}"  VerticalAlignment="Center"/>
 		</DockPanel>
 		<DockPanel>
 			<StackPanel>

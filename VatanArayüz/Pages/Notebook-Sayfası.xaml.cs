@@ -33,6 +33,8 @@ namespace VatanArayüz
                 RB.Tag = item;
                 RB.Content = item.ToString();
                 RB.Click += MarkaFiltresi_Click;
+                Thickness thickness = new Thickness(5, 0, 5, 0);
+                RB.Margin = thickness;
                 markafiltrePaneli.Children.Add(RB);
             }
             AddProductButtons();

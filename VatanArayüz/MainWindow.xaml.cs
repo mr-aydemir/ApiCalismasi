@@ -7,6 +7,8 @@ using System.Net.Http.Headers;
 using System.Windows;
 using System.Windows.Controls;
 using ForControllers.VatanArayüz;
+using System.Diagnostics;
+
 namespace VatanArayüz
 {
     /// <summary>
@@ -28,15 +30,12 @@ namespace VatanArayüz
         }
         private void GetData()
         {
-
             HttpClient client = new HttpClient()
             {
                 BaseAddress = new Uri("https://localhost:5001/")
             };
-
             // Add an Accept header for JSON format.
-            client.DefaultRequestHeaders.Accept.Add(
-                new MediaTypeWithQualityHeaderValue("application/json"));
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync("api/products").Result;
             if (response.IsSuccessStatusCode)
             {
