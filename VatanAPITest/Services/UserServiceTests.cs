@@ -1,13 +1,13 @@
+using Moq;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Repositories;
 using VatanAPI.Core.Security.Hashing;
 using VatanAPI.Core.Services;
-using VatanAPI.Services;
-using Moq;
-using Xunit;
 using VatanAPI.Domain.Repositories;
+using VatanAPI.Services;
+using Xunit;
 
 namespace VatanAPITest.Services
 {

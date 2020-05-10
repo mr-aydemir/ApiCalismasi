@@ -1,13 +1,9 @@
-﻿using System;
+﻿using ForControllers.VatanArayüz;
+using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Data.SqlClient;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Windows;
-using System.Windows.Controls;
-using ForControllers.VatanArayüz;
-using System.Diagnostics;
 
 namespace VatanArayüz
 {
@@ -16,8 +12,8 @@ namespace VatanArayüz
     /// </summary>
     public partial class MainWindow : Window
     {
-        public List<Product> Products; 
-        public List<Category> Categories; 
+        public List<Product> Products;
+        public List<Category> Categories;
         public List<ImageModel> ImageModels;
         public MainWindow()
         {
@@ -39,8 +35,8 @@ namespace VatanArayüz
             HttpResponseMessage response = client.GetAsync("api/products").Result;
             if (response.IsSuccessStatusCode)
             {
-                var items = response.Content.ReadAsAsync <IEnumerable <Product>>().Result;               
-                Products= items as List<Product>;
+                var items = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;
+                Products = items as List<Product>;
             }
             else
             {
@@ -52,7 +48,7 @@ namespace VatanArayüz
             if (response.IsSuccessStatusCode)
             {
                 var items = response.Content.ReadAsAsync<IEnumerable<Category>>().Result;
-               Categories = items as List<Category>;
+                Categories = items as List<Category>;
             }
             else
             {
@@ -63,7 +59,7 @@ namespace VatanArayüz
             if (response.IsSuccessStatusCode)
             {
                 var items = response.Content.ReadAsAsync<IEnumerable<ImageModel>>().Result;
-                ImageModels = items as List<ImageModel>; 
+                ImageModels = items as List<ImageModel>;
 
             }
             else
@@ -75,7 +71,7 @@ namespace VatanArayüz
             {
                 foreach (var item2 in ImageModels)
                 {
-                    if (item2.ProductId==item.Id)
+                    if (item2.ProductId == item.Id)
                     {
                         item.ImageUrl = item2.Url;
                         break;
@@ -87,7 +83,7 @@ namespace VatanArayüz
         public void OnImageButtonClick(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Tamam");
-        }       
+        }
         private void Next_Btn(object sender, RoutedEventArgs e)
         {
             if (this.Main.CanGoForward)
@@ -157,5 +153,5 @@ namespace VatanArayüz
             var window = (MainWindow)Application.Current.MainWindow;
             window.Main.Content = anasayfa;
         }
-    } 
+    }
 }

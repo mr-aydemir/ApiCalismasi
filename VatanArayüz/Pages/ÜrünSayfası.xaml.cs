@@ -1,18 +1,10 @@
-﻿using ForControllers.VatanArayüz;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using VatanArayüz.Content;
 
 namespace VatanArayüz
@@ -26,9 +18,9 @@ namespace VatanArayüz
         public int productId;
         public ÜrünSayfası()
         {
-            InitializeComponent();         
+            InitializeComponent();
         }
-        public void Swipperaction() 
+        public void Swipperaction()
         {
             swiperItems.Add(new SwiperItem("sb0", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-5_small.jpg", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-5_large.jpg"));
             swiperItems.Add(new SwiperItem("sb1", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-6_small.jpg", "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-103918-6_large.jpg"));
@@ -116,5 +108,5 @@ namespace VatanArayüz
             }*/
         }
     }
-   
+
 }

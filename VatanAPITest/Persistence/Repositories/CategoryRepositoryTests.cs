@@ -1,34 +1,69 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using VatanAPI.Domain.Repositories;
-using VatanAPI.Persistence.Contexts;
-using VatanAPI.Persistence.Repositories;
-using VatanAPI.Core.Security.Hashing;
-using VatanAPI.Security.Hashing;
-using Xunit;
-using VatanAPI.Domain.Models;
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace VatanAPITest.Persistence.Repositories
 {
+
+    [TestClass()]
     public class CategoryRepositoryTests
-    {
-        static AppDbContext AppDbContext = new AppDbContext( new DbContextOptions<AppDbContext>());
-        private ICategoryRepository _categoryRepository = new CategoryRepository(AppDbContext);
+    {/*
+        ICategoryRepository _repository;
 
+        private int Id;
+        private string Name;
 
-        [Fact]
-        public async Task Should_Find_Existing_User_By_Email()
+        [TestInitialize]
+        public void SetUp()
         {
-
-            await _categoryRepository.AddAsync(new Category() { Id = 100, Name = "Test", Products = new Collection<Product>() });
-            var category = await _categoryRepository.FindByIdAsync(100);
-
-            Assert.NotNull(category);
-            Assert.Equal(100, category.Id);
+            _repository = (ICategoryRepository)RepositoryFactory.Instance("CompetitionRepository");
+             InitialiseParameters();
         }
+
+        [TestMethod]
+        public void CategoryCrud()
+        {
+            int newID = Create();
+            GetByID(newID);
+            GetAll();
+            Update(newID);
+            Delete(newID);
+        }
+        private void InitialiseParameters()
+        {
+            Id = 1000;
+            Name = "TestCategory";
+        }
+        private int Create()
+        {
+            // Arrange
+            Category category = new Category();
+            category.Id = Id;
+            category.Name = Name;
+
+            // Act
+            _repository.AddAsync(category);
+
+            // Assert
+            Assert.AreNotEqual(Guid.Empty, category.Id, "Creating new record does not return id");
+
+            return category.Id;
+        }
+        private void Update(int id)
+        {
+            // Arrange
+            Category category = _repository.FindByIdAsync(id).Result ;
+            category.CompetitionKey = "SWQ";
+            competition.SetCompetitionState(new ClosedState());
+            competition.CreatedBy = new User() { ID = CREATED_BY_ID };
+
+            // Act
+            _repository.Update(competition);
+
+            Competition updatedCompetition = _repository.FindByID(id);
+
+            // Assert
+            Assert.AreEqual("SWQ", updatedCompetition.CompetitionKey, "Record is not updated.");
+            Assert.AreEqual(CLOSED_STATE, updatedCompetition.State.Status, "Competition status is not updated.");
+        }
+        */
     }
 }

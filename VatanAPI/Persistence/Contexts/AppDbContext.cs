@@ -17,6 +17,8 @@ namespace VatanAPI.Persistence.Contexts
 
         public DbSet<User> Users { get; set; }
         public DbSet<Role> Roles { get; set; }
+        public DbSet<Sepet> Sepet { get; set; }
+        public DbSet<Siparis> Siparis { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -483,6 +485,69 @@ namespace VatanAPI.Persistence.Contexts
                     ProductId = 120,
                     Name = "TeoriV2-106613_large.jpg"
                 }
+            ); 
+            builder.Entity<Sepet>().ToTable("Sepet");
+            builder.Entity<Sepet>().HasKey(p => p.Id);
+            builder.Entity<Sepet>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Sepet>().Property(p => p.SepetKullanicisi).IsRequired();
+            builder.Entity<Sepet>().HasData
+            (
+                 new Sepet
+                 {
+                     Id = 1,
+                     SepetKullanicisi = "Emre Aydemir",
+
+                 },
+                 new Sepet
+                 {
+                     Id = 2,
+                     SepetKullanicisi = "Yusuf Akdeniz",
+
+                 }
+            );
+
+
+            builder.Entity<Siparis>().ToTable("Sepet");
+            builder.Entity<Siparis>().HasKey(p => p.Id);
+            builder.Entity<Siparis>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Siparis>().Property(p => p.UrunFiyati).IsRequired();
+            builder.Entity<Siparis>().Property(p => p.SepetToplamTutar).IsRequired();
+            builder.Entity<Siparis>().Property(p => p.SiparisNo).IsRequired();
+            builder.Entity<Siparis>().Property(p => p.SepetUser).IsRequired();
+            builder.Entity<Siparis>().HasData
+            (
+                 new Siparis
+                 {
+                     Id = 1,
+                     UrunFiyati = 279.90,
+                     SepetToplamTutar = 279.90,
+                     SiparisNo = 1,
+                     SepetUser = "Yusuf Akdeniz",
+
+                 },
+                new Siparis
+                {
+                    Id = 2,
+                    UrunFiyati = 289.90,
+                    SepetToplamTutar = 289.90,
+                    SiparisNo = 2,
+                    SepetUser = "Emre Aydemir",
+                }
+             );
+            builder.Entity<User>().ToTable("User");
+            builder.Entity<User>().HasKey(p => p.Id);
+            builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<User>().Property(p => p.Email).IsRequired();
+            builder.Entity<User>().Property(p => p.Name).IsRequired();
+            builder.Entity<User>().Property(p => p.LastName).IsRequired();
+            builder.Entity<User>().Property(p => p.UserName).IsRequired();
+            builder.Entity<User>().Property(p => p.Password).IsRequired();
+
+            builder.Entity<User>().HasData
+            (
+
+                new User { Id = 1,  Name= "Emre", LastName = "Aydemir", UserName = "AydemirEmre", Email = "aydemir@gmail.com", Password = "1234",  },
+                new User { Id = 2, Name = "Yusuf", LastName = "Akdeniz", UserName = "AkdenizYusuf", Email = "akdeniz@gmail.com", Password = "4567" }
             );
 
 

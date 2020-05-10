@@ -1,20 +1,11 @@
-﻿using ForControllers.VatanArayüz;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Interop;
-using System.Windows.Media;
-using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
 using VatanArayüz.Content;
 using VatanArayüz.Controls;
@@ -27,19 +18,19 @@ namespace VatanArayüz
     public partial class Anasayfa : Page
     {
         public List<SwiperItem> swiperItems = new List<SwiperItem>();
-        string currentsenderbuttonname="sb0";
+        string currentsenderbuttonname = "sb0";
         private readonly DispatcherTimer timer
           = new DispatcherTimer(DispatcherPriority.Render);
         public Anasayfa()
         {
-            InitializeComponent(); 
+            InitializeComponent();
             AddProductButtons();
-            SwiperItemGüncelle(); 
+            SwiperItemGüncelle();
             SwipperImage.Source = new BitmapImage(new Uri("https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
             timer.Tick += new EventHandler(AnasayfaIdle);
             timer.Interval = new TimeSpan(0, 0, 0, 0, 3000);
             timer.IsEnabled = true;
-            timer.Start(); 
+            timer.Start();
         }
         void AddProductButtons()
         {
@@ -49,7 +40,7 @@ namespace VatanArayüz
                 ProductButtons pb = new ProductButtons();
                 ProductsButton2 productButtons2 = new ProductsButton2();
                 ProductButton3 productButtons3 = new ProductButton3();
-                pb.productName.Text =item.Name;
+                pb.productName.Text = item.Name;
                 if (item.Cost < item.PreviousCost)
                 {
                     pb.ProductPreviousCost.Text = Convert.ToDecimal(item.PreviousCost).ToString();
@@ -70,7 +61,7 @@ namespace VatanArayüz
                 pb.ProductButton.Tag = item.Id;
                 pb.ProductButton.Click += Product_Click;
                 UGFırsatUrunleri.Children.Add(pb);
-                if (ugrid.Children.Count<=8)
+                if (ugrid.Children.Count <= 8)
                 {
 
 
@@ -96,7 +87,7 @@ namespace VatanArayüz
                     productButtons2.ProductButton.Click += Product_Click;
                     ugrid.Children.Add(productButtons2);
                 }
-                if (ugrid2.Children.Count<=10)
+                if (ugrid2.Children.Count <= 10)
                 {
                     productButtons3.productName.Text = item.Name;
                     productButtons3.productInfo.Text = item.Info;
@@ -111,7 +102,7 @@ namespace VatanArayüz
 
         private void Product_Click(object sender, RoutedEventArgs e)
         {
-            int PId = Convert.ToInt32((sender as Button).Tag); 
+            int PId = Convert.ToInt32((sender as Button).Tag);
             var window = (MainWindow)Application.Current.MainWindow;
             ÜrünSayfası ürünSayfası = new ÜrünSayfası();
             foreach (var item in window.Products)
@@ -131,11 +122,11 @@ namespace VatanArayüz
         }
         void AnasayfaIdle(object sender, EventArgs e)
         {
-          ChangeImage();   
+            ChangeImage();
         }
         void ChangeImage()
         {
-            int number = (Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1)%(swiperItems.Count);
+            int number = (Convert.ToInt32(currentsenderbuttonname.Substring(2)) + 1) % (swiperItems.Count);
             foreach (SwiperItem item in swiperItems)
             {
                 bool a = Convert.ToInt32(item.Name.Substring(2)) == number;
@@ -146,7 +137,7 @@ namespace VatanArayüz
                 }
             }
         }
-        void SwiperItemGüncelle() 
+        void SwiperItemGüncelle()
         {
             swiperItems.Add(new SwiperItem("sb0", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/kapali-thumb-min.jpg", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/duyuru-web2-min.jpg"));
             swiperItems.Add(new SwiperItem("sb1", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/thumb/cep7-thumb-min.png", "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_Mart/cep-kamp-23-mart-web-min.jpg"));
@@ -211,26 +202,26 @@ namespace VatanArayüz
             Notebook_Sayfası notebook_Sayfası = new Notebook_Sayfası();
 
             var window = (MainWindow)Application.Current.MainWindow;
-            window.Main.Content= notebook_Sayfası;
+            window.Main.Content = notebook_Sayfası;
         }
 
 
         private async void SliderButton_Click(object sender, RoutedEventArgs e)
         {
             int location = Convert.ToInt32((sender as Button).Content);
-            await SliderControlAsync(location,4,sc2);
+            await SliderControlAsync(location, 4, sc2);
         }
         private async void SliderButton_Click2(object sender, RoutedEventArgs e)
         {
             int location = Convert.ToInt32((sender as Button).Content);
-            await SliderControlAsync(location,2,sc3);
+            await SliderControlAsync(location, 2, sc3);
         }
         private async void SliderButton_Click3(object sender, RoutedEventArgs e)
         {
-            double back_next_scrollable_windth = sc3.ScrollableWidth /10;
-            double location= sc3.HorizontalOffset / back_next_scrollable_windth;
+            double back_next_scrollable_windth = sc3.ScrollableWidth / 10;
+            double location = sc3.HorizontalOffset / back_next_scrollable_windth;
             int butonnumber = Convert.ToInt32((sender as Button).Content);
-            if (location>=0)
+            if (location >= 0)
             {
                 if (butonnumber == 0)
                 {
@@ -245,7 +236,7 @@ namespace VatanArayüz
         }
         private async Task SliderControlAsync(double location, int numberOfButton, ScrollViewer scrollViewer)
         {
-            double maxw = scrollViewer.ScrollableWidth, b = maxw / (numberOfButton-1);
+            double maxw = scrollViewer.ScrollableWidth, b = maxw / (numberOfButton - 1);
             double loc = location * b;
             if (loc < scrollViewer.HorizontalOffset)
             {

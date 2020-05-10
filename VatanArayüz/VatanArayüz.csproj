@@ -92,27 +92,19 @@
     <Compile Include="Controls\ProductsButton2.xaml.cs">
       <DependentUpon>ProductsButton2.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ForControllers\ImageModel.cs" />
+    <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Pages\Anasayfa.xaml.cs">
       <DependentUpon>Anasayfa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\SwiperItem.cs" />
     <Compile Include="Controls\NavigationDrawer.cs" />
-    <Compile Include="ForControllers\Category.cs" />
-    <Compile Include="ForControllers\Product.cs" />
-    <Compile Include="Hakkımızda.xaml.cs">
+    <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Pages\Hakkımızda.xaml.cs">
       <DependentUpon>Hakkımızda.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Notebook-Sayfası.xaml.cs">
       <DependentUpon>Notebook-Sayfası.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Resource.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resource.resx</DependentUpon>
-    </Compile>
-    <Compile Include="Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ÜrünSayfası.xaml.cs">
       <DependentUpon>ÜrünSayfası.xaml</DependentUpon>
@@ -137,7 +129,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Hakkımızda.xaml">
+    <Page Include="Pages\Hakkımızda.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -165,10 +157,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Pages\ÜrünSayfası.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -191,10 +179,6 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Resource.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

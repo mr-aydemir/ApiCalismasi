@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Moq;
-using Xunit;
+﻿using Moq;
+using System.Threading.Tasks;
+using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Repositories;
 using VatanAPI.Domain.Services;
-using VatanAPI.Domain.Models;
-using System.Threading.Tasks;
+using Xunit;
 
 namespace VatanAPITest.Services
 {

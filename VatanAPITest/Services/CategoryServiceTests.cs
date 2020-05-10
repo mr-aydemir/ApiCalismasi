@@ -1,16 +1,10 @@
+using Moq;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
-using VatanAPI.Core.Models;
-using VatanAPI.Core.Repositories;
-using VatanAPI.Core.Security.Hashing;
-using VatanAPI.Core.Services;
-using VatanAPI.Services;
-using Moq;
-using Xunit;
+using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Repositories;
 using VatanAPI.Domain.Services;
-using VatanAPI.Domain.Models;
-using System.Collections.Generic;
+using Xunit;
 
 namespace VatanAPITest.Services
 {
@@ -41,7 +35,7 @@ namespace VatanAPITest.Services
         [Fact]
         public async Task Should_Create_Non_Existing_Category()
         {
-            var category = new Category { Id = 1003, Name="TestKategory3", Products = new Collection<Product>() };
+            var category = new Category { Id = 1003, Name = "TestKategory3", Products = new Collection<Product>() };
 
             var response = await _categoryService.SaveAsync(category);
 
@@ -51,16 +45,16 @@ namespace VatanAPITest.Services
             Assert.Equal(category.Products, response.Category.Products);
             Assert.Equal(category.Id, response.Category.Id);
         }
-       /* [Fact]
-        public async Task Should_Not_Create_User_When_Name_Is_Alreary_In_Use()
-        {
-            var category = new Category { Name="TestCategory" ,Products = new Collection<Product>() };
+        /* [Fact]
+         public async Task Should_Not_Create_User_When_Name_Is_Alreary_In_Use()
+         {
+             var category = new Category { Name="TestCategory" ,Products = new Collection<Product>() };
 
-            var response = await _categoryService.SaveAsync(category);
+             var response = await _categoryService.SaveAsync(category);
 
-            Assert.False(response.Success);
-            Assert.Equal("Category already in use.", response.Message);
-        }*/
+             Assert.False(response.Success);
+             Assert.Equal("Category already in use.", response.Message);
+         }*/
         [Fact]
         public async Task Should_Delete_Existing_Category_By_ID()
         {

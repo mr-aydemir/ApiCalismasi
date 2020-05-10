@@ -121,9 +121,6 @@ E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.D
 E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
 E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
-E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.csproj.CoreCompileInputs.cache
-E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.MvcApplicationPartsAssemblyInfo.cs
-E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -379,3 +376,9 @@ C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanAPI\obj\Debug\netcoreapp
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.dll
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.pdb
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.genruntimeconfig.cache
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+E:\ApiCalismasi\VatanAPI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.csproj.CoreCompileInputs.cache
+E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.MvcApplicationPartsAssemblyInfo.cs
+E:\ApiCalismasi\VatanAPI\obj\Debug\netcoreapp3.1\VatanAPI.MvcApplicationPartsAssemblyInfo.cache

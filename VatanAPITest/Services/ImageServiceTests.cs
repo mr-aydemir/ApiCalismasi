@@ -1,16 +1,9 @@
-using System.Collections.ObjectModel;
-using System.Threading.Tasks;
-using VatanAPI.Core.Models;
-using VatanAPI.Core.Repositories;
-using VatanAPI.Core.Security.Hashing;
-using VatanAPI.Core.Services;
-using VatanAPI.Services;
 using Moq;
-using Xunit;
+using System.Threading.Tasks;
+using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Repositories;
 using VatanAPI.Domain.Services;
-using VatanAPI.Domain.Models;
-using System.Collections.Generic;
+using Xunit;
 
 namespace VatanAPITest.Services
 {
@@ -41,7 +34,7 @@ namespace VatanAPITest.Services
         [Fact]
         public async Task Should_Create_Non_Existing_Image()
         {
-            var image = new Image { Id = 1003, Name = "TestImage3" , Url= "http://www.yalova.edu.tr/Uploads/www/images/Yalova-U%CC%88niversitesi-Logo.png",ProductId=It.IsAny<int>()};
+            var image = new Image { Id = 1003, Name = "TestImage3", Url = "http://www.yalova.edu.tr/Uploads/www/images/Yalova-U%CC%88niversitesi-Logo.png", ProductId = It.IsAny<int>() };
 
             var response = await _imageService.SaveAsync(image);
 

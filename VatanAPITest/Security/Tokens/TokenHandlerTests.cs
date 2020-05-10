@@ -1,11 +1,11 @@
+using Microsoft.Extensions.Options;
+using Moq;
 using System;
 using System.Collections.ObjectModel;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Security.Hashing;
 using VatanAPI.Core.Security.Tokens;
 using VatanAPI.Security.Tokens;
-using Microsoft.Extensions.Options;
-using Moq;
 using Xunit;
 
 namespace VatanAPITest.Security.Tokens

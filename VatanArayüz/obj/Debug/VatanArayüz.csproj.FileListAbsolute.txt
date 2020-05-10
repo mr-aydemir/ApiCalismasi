@@ -15,22 +15,6 @@ C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.pdb
 C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanArayüz.Resource1.resources
 C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\App.baml
 C:\Users\Emre AYDEMİR\Source\Repos\VatanArayüz\obj\Debug\VatanConceptStyle.baml
-E:\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe.config
-E:\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe
-E:\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.pdb
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csprojAssemblyReference.cache
-E:\ApiCalismasi\VatanArayüz\obj\Debug\MainWindow.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\App.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.cache
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.lref
-E:\ApiCalismasi\VatanArayüz\obj\Debug\App.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\MainWindow.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.g.resources
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.Properties.Resources.resources
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.Resource.resources
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.GenerateResource.cache
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe.config
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.pdb
@@ -48,8 +32,6 @@ C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.GenerateResource.cache
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
 C:\Users\YusufAKDENİZ\Source\Repos\005Yusuf\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Window1.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Window1.baml
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe.config
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.pdb
@@ -75,8 +57,6 @@ C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanAra
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.GenerateResource.cache
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
 C:\Users\YusufAKDENİZ\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
-E:\ApiCalismasi\VatanArayüz\obj\Debug\GeneratedInternalTypeHelper.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\NavigationDrawer.baml
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe.config
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.pdb
@@ -104,29 +84,6 @@ C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debu
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.g.cs
 C:\Users\YusufAKDENİZ\Source\Repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\Notebook-Sayfası.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Hakkımızda.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Hakkımızda.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Anasayfa.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Notebook-Sayfası.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\ÜrünSayfası.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Anasayfa.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Notebook-Sayfası.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\ÜrünSayfası.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Styles\VatanConceptStyle.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.CoreCompileInputs.cache
-E:\ApiCalismasi\VatanArayüz\bin\Debug\Json.Net.dll
-E:\ApiCalismasi\VatanArayüz\bin\Debug\Newtonsoft.Json.dll
-E:\ApiCalismasi\VatanArayüz\bin\Debug\System.Net.Http.Formatting.dll
-E:\ApiCalismasi\VatanArayüz\bin\Debug\Newtonsoft.Json.xml
-E:\ApiCalismasi\VatanArayüz\bin\Debug\System.Net.Http.Formatting.xml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.CopyComplete
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButtons.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButtons.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButton3.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductsButton2.g.cs
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButton3.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductsButton2.baml
-E:\ApiCalismasi\VatanArayüz\obj\Debug\Themes\Generic.baml
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanArayüz\bin\Debug\VatanArayüz.exe.config
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanArayüz\bin\Debug\VatanArayüz.exe
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanArayüz\bin\Debug\VatanArayüz.pdb
@@ -170,3 +127,43 @@ C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanArayüz\obj\Debug\VatanA
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanArayüz\obj\Debug\VatanArayüz.csproj.CopyComplete
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanArayüz\obj\Debug\VatanArayüz.exe
 C:\Users\Emre AYDEMİR\Desktop\ApiCalismasi-master\VatanArayüz\obj\Debug\VatanArayüz.pdb
+E:\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe.config
+E:\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.exe
+E:\ApiCalismasi\VatanArayüz\bin\Debug\VatanArayüz.pdb
+E:\ApiCalismasi\VatanArayüz\bin\Debug\Json.Net.dll
+E:\ApiCalismasi\VatanArayüz\bin\Debug\Newtonsoft.Json.dll
+E:\ApiCalismasi\VatanArayüz\bin\Debug\System.Net.Http.Formatting.dll
+E:\ApiCalismasi\VatanArayüz\bin\Debug\Newtonsoft.Json.xml
+E:\ApiCalismasi\VatanArayüz\bin\Debug\System.Net.Http.Formatting.xml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csprojAssemblyReference.cache
+E:\ApiCalismasi\VatanArayüz\obj\Debug\MainWindow.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButton3.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButtons.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductsButton2.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Anasayfa.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Hakkımızda.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Notebook-Sayfası.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\MainWindow.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\ÜrünSayfası.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\App.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\GeneratedInternalTypeHelper.g.cs
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.cache
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz_MarkupCompile.lref
+E:\ApiCalismasi\VatanArayüz\obj\Debug\App.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButton3.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductButtons.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\ProductsButton2.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Anasayfa.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Controls\NavigationDrawer.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Hakkımızda.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\Notebook-Sayfası.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Styles\VatanConceptStyle.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Themes\Generic.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\Pages\ÜrünSayfası.baml
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.g.resources
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.Properties.Resources.resources
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.GenerateResource.cache
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.CoreCompileInputs.cache
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.CopyComplete
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
+E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
