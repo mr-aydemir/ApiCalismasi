@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+			 mc:Ignorable="d"
 			 
              x:Class="VatanBilgisayarMobil.Views.Anasayfa">
 	
@@ -12,17 +12,64 @@
 			<StackLayout >
 				<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
 					
-					<SearchBar Placeholder="Ürün Ara" BackgroundColor="White" Margin="5"/>
-					<StackLayout HeightRequest="250" BackgroundColor="{StaticResource NavigationPrimary}">
-						<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}"  >
+					<SearchBar Placeholder="Ürün Ara" BackgroundColor="White" Margin="5,0"/>
+					<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
+						<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}" HeightRequest="250"  >
 							<CarouselView.ItemTemplate>
 								<DataTemplate>
-									<ImageButton Source="{Binding .}" BackgroundColor="{StaticResource NavigationPrimary}" CornerRadius="5"/>
+									<StackLayout Padding="5">
+										<Frame CornerRadius="10" IsClippedToBounds="True"  Padding="0">
+											<ImageButton Source="{Binding .}" BackgroundColor="{StaticResource NavigationPrimary}" HorizontalOptions="Fill" />
+										</Frame>
+									</StackLayout>
 								</DataTemplate>
 							</CarouselView.ItemTemplate>
 						</CarouselView>
 					</StackLayout>
+				</StackLayout>
 					<Label Margin="5,0" Text="Öne Çıkan Ürünler"  FontAttributes="Bold"/>
+					<StackLayout>
+						<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
+							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}">
+							<flv:FlowListView.FlowColumnTemplate>
+								<DataTemplate>
+								<Frame BackgroundColor="White" BorderColor="Gray">
+										<StackLayout>
+											<Image Source="{ Binding ImageSource} "/>
+											<Label HorizontalOptions="Fill" 
+												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}"/>
+											<Label HorizontalOptions="Fill" 
+													XAlign="Center"  YAlign="Center"  Text="{Binding ÜrünDetayı }"/>
+											<Label HorizontalOptions="Fill"   
+													XAlign="Center" YAlign="Center" Text="{Binding ÜrünFiyatı }"/>
+										</StackLayout>
+									</Frame>
+								</DataTemplate>
+							</flv:FlowListView.FlowColumnTemplate>
+						</flv:FlowListView>
+					</StackLayout>
+					<Label Margin="5,0" Text="En Çok Satanlar"  FontAttributes="Bold"/>
+				<StackLayout>
+					<ScrollView Orientation="Horizontal">
+						<StackLayout Orientation="Horizontal"   
+							   BindableLayout.ItemsSource="{Binding Items}">
+							<BindableLayout.ItemTemplate>
+								<DataTemplate>
+									<Frame BackgroundColor="White" BorderColor="Gray"  >
+										<StackLayout>
+											<Image Source="{ Binding ImageSource} "/>
+											<Label HorizontalOptions="Fill"   
+												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}"/>
+											<Label HorizontalOptions="Fill" 
+													XAlign="Center"  YAlign="Center"  Text="{Binding ÜrünDetayı }"/>
+											<Label HorizontalOptions="Fill" 
+													XAlign="Center" YAlign="Center" Text="{Binding ÜrünFiyatı }"/>
+										</StackLayout>
+									</Frame>
+								</DataTemplate>
+							</BindableLayout.ItemTemplate>
+						</StackLayout>
+					</ScrollView>
 				</StackLayout>
 			</StackLayout>
 		</ScrollView>

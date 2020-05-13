@@ -20,9 +20,13 @@ namespace VatanBilgisayarMobil.Views {
         private global::Xamarin.Forms.CarouselView FırsatÜrünleriCarousel;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::DLToolkit.Forms.Controls.FlowListView ÖneÇıkanÜrünlerFLV;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Anasayfa));
             FırsatÜrünleriCarousel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.CarouselView>(this, "FırsatÜrünleriCarousel");
+            ÖneÇıkanÜrünlerFLV = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::DLToolkit.Forms.Controls.FlowListView>(this, "ÖneÇıkanÜrünlerFLV");
         }
     }
 }

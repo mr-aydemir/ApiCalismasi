@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZC72SmywW/POhg+Sx7cnxTg3okDsKrHVVgLEGZNYi3VBZ5fsJUKcpnrhHKzNgP8g8Bk0pQHdFi6qCv9DPE3oEA==",
+  "dgSpecHash": "gwHQI+hgPsp8JTvIPBmUpMYG0i73gmZkHKG/doZL2mD/RSv0t4DwrT0cjYbys0DaW18emWLREWO3kCgatsZx6w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
+  "projectFilePath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",

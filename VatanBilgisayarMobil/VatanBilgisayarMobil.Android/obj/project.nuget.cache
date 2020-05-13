@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "kDINmG2HLYdVkj3VkEG8AUVJ5rwvWWs7nWDOE2s+4TM2twaSmoTEpC6WR27D1Ny4Ygew6HCrXuHbpCtk3DzEoA==",
+  "dgSpecHash": "w26aOR7g+x7GZKEXtwAK3O3Sqn27SSLqM9jYpsLgh9PRtCct34J69xOGMRpsAsQEcrMj98WCGQPEBkBbcqdXAw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
+  "projectFilePath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.lifecycle.common\\1.1.1.3\\xamarin.android.arch.lifecycle.common.1.1.1.3.nupkg.sha512",

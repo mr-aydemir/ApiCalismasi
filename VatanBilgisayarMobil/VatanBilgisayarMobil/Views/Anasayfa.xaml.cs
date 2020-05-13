@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using VatanBilgisayarMobil.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,6 +19,7 @@ namespace VatanBilgisayarMobil.Views
         {
             InitializeComponent();
             ImageButton ImageButton = new ImageButton();
+            ÜrünButonuModeli ürünButonuModeli;
             List<string> FırsatÜrünleriImages = new List<string>()
             {
                 "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_nisan/ensuper-mob-min.jpg",
@@ -33,7 +35,10 @@ namespace VatanBilgisayarMobil.Views
                 "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_mayis/oppo-reno3-banner-mob-min.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_nisan/sss-mob-min.jpg"
             };
+            ürünButonuModeli = new ÜrünButonuModeli(this);
+            BindingContext = ürünButonuModeli;
             FırsatÜrünleriCarousel.ItemsSource = FırsatÜrünleriImages;
+            ÖneÇıkanÜrünlerFLV.HeightRequest = Convert.ToDouble(ürünButonuModeli.Items.Count / ÖneÇıkanÜrünlerFLV.FlowColumnCount * 250);
         }
 
         private void FırsatResmi_Tapped(object sender, EventArgs e)

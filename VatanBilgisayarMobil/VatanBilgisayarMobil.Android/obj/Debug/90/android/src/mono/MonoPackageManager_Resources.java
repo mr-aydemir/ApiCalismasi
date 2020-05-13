@@ -3,6 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "VatanBilgisayarMobil.Android.dll" comes first in this list. */
 		"VatanBilgisayarMobil.Android.dll",
+		"DLToolkit.Forms.Controls.FlowListView.dll",
 		"FormsViewGroup.dll",
 		"VatanBilgisayarMobil.dll",
 		"Xamarin.Android.Arch.Core.Common.dll",

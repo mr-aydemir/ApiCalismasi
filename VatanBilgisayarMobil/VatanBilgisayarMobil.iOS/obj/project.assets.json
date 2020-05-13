@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     "Xamarin.iOS,Version=v1.0": {
+      "DLToolkit.Forms.Controls.FlowListView/2.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.0.0.6482"
+        },
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -140,6 +152,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "DLToolkit.Forms.Controls.FlowListView": "2.0.11",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.726"
         },
@@ -152,6 +165,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win": {
+      "DLToolkit.Forms.Controls.FlowListView/2.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.0.0.6482"
+        },
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -290,6 +315,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "DLToolkit.Forms.Controls.FlowListView": "2.0.11",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.726"
         },
@@ -302,6 +328,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x64": {
+      "DLToolkit.Forms.Controls.FlowListView/2.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.0.0.6482"
+        },
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -440,6 +478,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "DLToolkit.Forms.Controls.FlowListView": "2.0.11",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.726"
         },
@@ -452,6 +491,18 @@
       }
     },
     "Xamarin.iOS,Version=v1.0/win-x86": {
+      "DLToolkit.Forms.Controls.FlowListView/2.0.11": {
+        "type": "package",
+        "dependencies": {
+          "Xamarin.Forms": "2.0.0.6482"
+        },
+        "compile": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        },
+        "runtime": {
+          "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll": {}
+        }
+      },
       "Xamarin.Essentials/1.5.3.2": {
         "type": "package",
         "frameworkAssemblies": [
@@ -590,6 +641,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "DLToolkit.Forms.Controls.FlowListView": "2.0.11",
           "Xamarin.Essentials": "1.5.3.2",
           "Xamarin.Forms": "4.6.0.726"
         },
@@ -603,6 +655,19 @@
     }
   },
   "libraries": {
+    "DLToolkit.Forms.Controls.FlowListView/2.0.11": {
+      "sha512": "n/TIbW3a7q/h5wA5vt8VfkN3eecJN8nMlPVu3NS7hvFODg0YqFHXDgbX1O/a9agcuk5Km6DZqJqpxpcYRS9sOQ==",
+      "type": "package",
+      "path": "dltoolkit.forms.controls.flowlistview/2.0.11",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
+        "dltoolkit.forms.controls.flowlistview.nuspec",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.dll",
+        "lib/portable-net45+wp8+wpa81+win8+MonoAndroid10+MonoTouch10+Xamarin.iOS10+netstandard1.0/DLToolkit.Forms.Controls.FlowListView.xml"
+      ]
+    },
     "Xamarin.Essentials/1.5.3.2": {
       "sha512": "BSLgDJUOPFRwTpQaftM+s4qb/MsTjrqXulEYDOcK6KF3i0Orf75zo3RwRfqnQ8WfpoEFxW/v0jgcPWCvOMgHxg==",
       "type": "package",
@@ -972,6 +1037,7 @@
   },
   "projectFileDependencyGroups": {
     "Xamarin.iOS,Version=v1.0": [
+      "DLToolkit.Forms.Controls.FlowListView >= 2.0.11",
       "VatanBilgisayarMobil >= 1.0.0",
       "Xamarin.Essentials >= 1.5.3.2",
       "Xamarin.Forms >= 4.6.0.726"
@@ -984,11 +1050,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
+      "projectUniqueName": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
       "projectName": "VatanBilgisayarMobil.iOS",
-      "projectPath": "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
+      "projectPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
       "packagesPath": "C:\\Users\\AydemirPC\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\obj\\",
+      "outputPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1009,8 +1075,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
-              "projectPath": "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj"
+            "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
+              "projectPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj"
             }
           }
         }
@@ -1019,6 +1085,10 @@
     "frameworks": {
       "xamarinios10": {
         "dependencies": {
+          "DLToolkit.Forms.Controls.FlowListView": {
+            "target": "Package",
+            "version": "[2.0.11, )"
+          },
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.5.3.2, )"

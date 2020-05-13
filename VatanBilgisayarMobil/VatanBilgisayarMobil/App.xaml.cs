@@ -3,6 +3,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using VatanBilgisayarMobil.Services;
 using VatanBilgisayarMobil.Views;
+using DLToolkit.Forms.Controls;
 
 namespace VatanBilgisayarMobil
 {
@@ -12,7 +13,7 @@ namespace VatanBilgisayarMobil
         public App()
         {
             InitializeComponent();
-
+            FlowListView.Init();
             DependencyService.Register<MockDataStore>();
             MainPage = new MainPage();
         }
