@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+			 
+             x:Class="VatanBilgisayarMobil.Views.Anasayfa">
+	
+    <ContentPage.Content>
+		<ScrollView>
+			<StackLayout >
+				<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
+					
+					<SearchBar Placeholder="Ürün Ara" BackgroundColor="White" Margin="5"/>
+					<StackLayout HeightRequest="250" BackgroundColor="{StaticResource NavigationPrimary}">
+						<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}"  >
+							<CarouselView.ItemTemplate>
+								<DataTemplate>
+									<ImageButton Source="{Binding .}" BackgroundColor="{StaticResource NavigationPrimary}" CornerRadius="5"/>
+								</DataTemplate>
+							</CarouselView.ItemTemplate>
+						</CarouselView>
+					</StackLayout>
+					<Label Margin="5,0" Text="Öne Çıkan Ürünler"  FontAttributes="Bold"/>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+    </ContentPage.Content>
+</ContentPage>

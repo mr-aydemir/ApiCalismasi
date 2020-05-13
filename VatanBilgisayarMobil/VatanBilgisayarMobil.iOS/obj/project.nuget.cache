@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "QE7PGhGWoGDMw2vYq/EX5gheIn14NmFehSilKyVOjZlvW+yT3YZYnlyFR8s8ps1sR1YIAicwxn5hxERxK29z8Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\AydemirPC\\Source\\Repos\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512"
+  ],
+  "logs": []
+}
