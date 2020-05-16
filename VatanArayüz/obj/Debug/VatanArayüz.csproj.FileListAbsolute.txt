@@ -167,3 +167,6 @@ E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.CoreCompileInputs.cac
 E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csproj.CopyComplete
 E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
 E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
+C:\Users\YusrndiL\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csprojAssemblyReference.cache
+C:\Users\YusrndiL\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
+C:\Users\YusrndiL\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb

@@ -4,9 +4,9 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="VatanBilgisayarMobil.Views.MenuPage"
-             Title="Menu">
-             
+             x:Class="VatanBilgisayarMobil.Views.BilgisayarMenu"
+             Title="PCmenu">
+    
     <StackLayout VerticalOptions="FillAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
@@ -18,12 +18,6 @@
                     <x:String>Item 4</x:String>
                     <x:String>Item 5</x:String>
                     <x:String>Item 6</x:String>
-                    <x:String>Item 7</x:String>
-                    <x:String>Item 8</x:String>
-                    <x:String>Item 9</x:String>
-                    <x:String>Item 10</x:String>
-                    <x:String>Item 11</x:String>
-                    <x:String>Item 12</x:String>
                 </x:Array>
             </d:ListView.ItemsSource>
             <ListView.ItemTemplate>
@@ -37,5 +31,4 @@
             </ListView.ItemTemplate>
         </ListView>
     </StackLayout>
-
 </ContentPage>

@@ -6,8 +6,18 @@ namespace VatanBilgisayarMobil.Models
 {
     public enum MenuItemType
     {
-        Browse,
-        About
+        AnaSayfa,
+        Telefon,
+        Bilgisayar,
+        Bilgisayar_Parcalari,
+        Kamera,
+        TV_ve_Elektronigi,
+        Ofis,
+        Aksesuar,
+        Oyun_ve_Hobi,
+        EvAletleri,
+        Spor_ve_Outdoor,
+        Hakkımızda
     }
     public class HomeMenuItem
     {
