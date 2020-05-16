@@ -1,12 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "HOQZyQUJUgXlsidBYt2ZndTWXucyodaeanXEjRSyVvyOtLD86m0jhGuCQERf++yTUGCsNa6bOk1MsIpVeoHLXQ==",
+  "dgSpecHash": "/rTevv0JxHa+HAWD7dqvo18tImM5z17eRev7IBfd7QyWWszweMZjDWlAuMJNt7/9sSNTR1bV5/4Sr/8SgcE1+A==",
   "success": true,
-  "projectFilePath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
+  "projectFilePath": "C:\\Users\\YusrndiL\\Source\\Repos\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
-    "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512"
+    "C:\\Users\\YusrndiL\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
+    "C:\\Users\\YusrndiL\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\YusrndiL\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512"
   ],
   "logs": []
 }

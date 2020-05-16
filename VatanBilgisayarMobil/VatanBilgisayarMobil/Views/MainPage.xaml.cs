@@ -21,7 +21,7 @@ namespace VatanBilgisayarMobil.Views
 
             MasterBehavior = MasterBehavior.Popover;
 
-            MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
+            MenuPages.Add((int)MenuItemType.AnaSayfa, (NavigationPage)Detail);
         }
 
         public async Task NavigateFromMenu(int id)
@@ -30,10 +30,13 @@ namespace VatanBilgisayarMobil.Views
             {
                 switch (id)
                 {
-                    case (int)MenuItemType.Browse:
+                    case (int)MenuItemType.AnaSayfa:
                         MenuPages.Add(id, new NavigationPage(new ItemsPage()));
                         break;
-                    case (int)MenuItemType.About:
+                    case (int)MenuItemType.Bilgisayar:
+                        MenuPages.Add(id, new NavigationPage(new BilgisayarMenu()));
+                        break;
+                    case (int)MenuItemType.Hakkımızda:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
                 }

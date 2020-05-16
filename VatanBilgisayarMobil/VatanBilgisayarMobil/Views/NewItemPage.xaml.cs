@@ -21,6 +21,7 @@ namespace VatanBilgisayarMobil.Views
 
             Item = new Item
             {
+                Id = 100,
                 Text = "Item name",
                 Description = "This is an item description."
             };
