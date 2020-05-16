@@ -2,7 +2,7 @@
 
 namespace VatanAPI.Domain.Models
 {
-    public enum EMarka:byte
+    public enum EMarka : byte
     {
         [Description("LENOVO")]
         LENOVO = 1,

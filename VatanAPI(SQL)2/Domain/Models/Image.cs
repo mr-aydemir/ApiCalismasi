@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Drawing;
-
-namespace VatanAPI.Domain.Models
+﻿namespace VatanAPI.Domain.Models
 {
     public class Image
     {

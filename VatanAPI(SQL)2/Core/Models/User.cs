@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
-using Microsoft.AspNetCore.Identity;
 using VatanAPI.Domain.Models;
 
 namespace VatanAPI.Core.Models
@@ -22,7 +20,7 @@ namespace VatanAPI.Core.Models
         [Required]
         public string Password { get; set; }
         public int SepetID { get; set; }
-        public  Sepet Sepet { get; set; }
+        public Sepet Sepet { get; set; }
         public int SiparisID { get; set; }
         public IList<Siparis> Siparis { get; set; }
 

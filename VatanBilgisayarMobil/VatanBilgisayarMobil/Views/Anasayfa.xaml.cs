@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VatanBilgisayarMobil.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -38,12 +39,15 @@ namespace VatanBilgisayarMobil.Views
             ürünButonuModeli = new ÜrünButonuModeli(this);
             BindingContext = ürünButonuModeli;
             FırsatÜrünleriCarousel.ItemsSource = FırsatÜrünleriImages;
-            ÖneÇıkanÜrünlerFLV.HeightRequest = Convert.ToDouble(ürünButonuModeli.Items.Count / ÖneÇıkanÜrünlerFLV.FlowColumnCount * 250);
+            //ÖneÇıkanÜrünlerFLV.HeightRequest = Convert.ToDouble(ürünButonuModeli.Items.Count / ÖneÇıkanÜrünlerFLV.FlowColumnCount * 250); 
+            
         }
 
         private void FırsatResmi_Tapped(object sender, EventArgs e)
         {
-
+            
         }
+
+        
     }
 }

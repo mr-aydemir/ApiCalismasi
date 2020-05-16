@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using VatanAPI.Domain.Services;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using VatanAPI.Domain.Models;
-using AutoMapper;
-using VatanAPI.Resources;
+using VatanAPI.Domain.Services;
 using VatanAPI.Extensions;
+using VatanAPI.Resources;
 
 namespace VatanAPI.Controllers
 {
@@ -30,15 +27,15 @@ namespace VatanAPI.Controllers
         {
             var categories = await _categoryService.ListAsync();
             var resources = _mapper.Map<IEnumerable<Category>, IEnumerable<CategoryResource>>(categories);
-            
+
             return resources;
         }
         [HttpPost]
         public async Task<IActionResult> PostAsync([FromBody] SaveCategoryResource resource)
         {
             if (!ModelState.IsValid)
-                return BadRequest(ModelState.GetErrorMessages()); 
-            var category = _mapper.Map<SaveCategoryResource, Category>(resource); 
+                return BadRequest(ModelState.GetErrorMessages());
+            var category = _mapper.Map<SaveCategoryResource, Category>(resource);
             var result = await _categoryService.SaveAsync(category);
 
             if (!result.Success)

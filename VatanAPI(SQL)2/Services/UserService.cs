@@ -24,10 +24,10 @@ namespace VatanAPI.Services
         public async Task<CreateUserResponse> CreateUserAsync(User user, params ERole[] userRoles)
         {
             var existingUser = await _userRepository.FindByEmailAsync(user.Email);
-            if(existingUser != null)
+            if (existingUser != null)
             {
                 return new CreateUserResponse(false, "Email already in use.", null);
-            } 
+            }
 
             user.Password = _passwordHasher.HashPassword(user.Password);
 

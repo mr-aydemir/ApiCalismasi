@@ -1,9 +1,9 @@
-using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using VatanAPI.Controllers.Resources;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Services;
-using Microsoft.AspNetCore.Mvc;
 
 namespace VatanAPI.Controllers
 {
@@ -29,9 +29,9 @@ namespace VatanAPI.Controllers
             }
 
             var user = _mapper.Map<UserCredentialsResource, User>(userCredentials);
-            
+
             var response = await _userService.CreateUserAsync(user, ERole.Common);
-            if(!response.Success)
+            if (!response.Success)
             {
                 return BadRequest(response.Message);
             }

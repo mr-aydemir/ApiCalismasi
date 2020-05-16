@@ -1,3 +1,4 @@
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -6,7 +7,6 @@ using System.Security.Claims;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Security.Hashing;
 using VatanAPI.Core.Security.Tokens;
-using Microsoft.Extensions.Options;
 
 namespace VatanAPI.Security.Tokens
 {
@@ -55,8 +55,8 @@ namespace VatanAPI.Security.Tokens
         {
             var refreshToken = new RefreshToken
             (
-                token : _passwordHaser.HashPassword(Guid.NewGuid().ToString()),
-                expiration : DateTime.UtcNow.AddSeconds(_tokenOptions.RefreshTokenExpiration).Ticks
+                token: _passwordHaser.HashPassword(Guid.NewGuid().ToString()),
+                expiration: DateTime.UtcNow.AddSeconds(_tokenOptions.RefreshTokenExpiration).Ticks
             );
 
             return refreshToken;
@@ -68,12 +68,12 @@ namespace VatanAPI.Security.Tokens
 
             var securityToken = new JwtSecurityToken
             (
-                issuer : _tokenOptions.Issuer,
-                audience : _tokenOptions.Audience,
-                claims : GetClaims(user),
-                expires : accessTokenExpiration,
-                notBefore : DateTime.UtcNow,
-                signingCredentials : _signingConfigurations.SigningCredentials
+                issuer: _tokenOptions.Issuer,
+                audience: _tokenOptions.Audience,
+                claims: GetClaims(user),
+                expires: accessTokenExpiration,
+                notBefore: DateTime.UtcNow,
+                signingCredentials: _signingConfigurations.SigningCredentials
             );
 
             var handler = new JwtSecurityTokenHandler();

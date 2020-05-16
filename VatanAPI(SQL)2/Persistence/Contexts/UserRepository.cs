@@ -1,8 +1,7 @@
-using System.Linq;
+using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Repositories;
-using Microsoft.EntityFrameworkCore;
 using VatanAPI.Persistence.Contexts;
 
 

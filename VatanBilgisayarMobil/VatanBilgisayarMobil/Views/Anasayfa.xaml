@@ -11,15 +11,16 @@
 		<ScrollView>
 			<StackLayout >
 				<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
-					
-					<SearchBar Placeholder="Ürün Ara" BackgroundColor="White" Margin="5,0"/>
-					<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
-						<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}" HeightRequest="250"  >
+					<Frame CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="5">
+						<SearchBar Placeholder="Ürün Ara" BackgroundColor="White"  />
+					</Frame>
+					<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}"   HeightRequest="{DynamicResource FırsatÜrünleriCarouselHeight}" Padding="5">
+						<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}"   >
 							<CarouselView.ItemTemplate>
 								<DataTemplate>
-									<StackLayout Padding="5">
-										<Frame CornerRadius="10" IsClippedToBounds="True"  Padding="0">
-											<ImageButton Source="{Binding .}" BackgroundColor="{StaticResource NavigationPrimary}" HorizontalOptions="Fill" />
+									<StackLayout >
+										<Frame CornerRadius="10" IsClippedToBounds="True"   Padding="0" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand">
+											<ImageButton Source="{Binding Image}" BackgroundColor="{StaticResource NavigationPrimary}"  VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" />
 										</Frame>
 									</StackLayout>
 								</DataTemplate>
@@ -30,7 +31,7 @@
 					<Label Margin="5,0" Text="Öne Çıkan Ürünler"  FontAttributes="Bold"/>
 					<StackLayout>
 						<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
-							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}">
+							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}" >
 							<flv:FlowListView.FlowColumnTemplate>
 								<DataTemplate>
 								<Frame BackgroundColor="White" BorderColor="Gray">
@@ -52,7 +53,10 @@
 				<StackLayout>
 					<ScrollView Orientation="Horizontal">
 						<StackLayout Orientation="Horizontal"   
-							   BindableLayout.ItemsSource="{Binding Items}">
+							   BindableLayout.ItemsSource="{Binding Items}"  >
+							<StackLayout.GestureRecognizers>
+								<TapGestureRecognizer Command="{Binding ItemTappedCommand}" />
+							</StackLayout.GestureRecognizers>
 							<BindableLayout.ItemTemplate>
 								<DataTemplate>
 									<Frame BackgroundColor="White" BorderColor="Gray"  >

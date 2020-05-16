@@ -1,34 +1,23 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.EntityFrameworkCore;
+using VatanAPI.Core.Repositories;
+using VatanAPI.Core.Security.Hashing;
+using VatanAPI.Core.Security.Tokens;
+using VatanAPI.Core.Services;
 using VatanAPI.Domain.Repositories;
 using VatanAPI.Domain.Services;
+using VatanAPI.Persistence;
 using VatanAPI.Persistence.Contexts;
 using VatanAPI.Persistence.Repositories;
-using AutoMapper;
-using VatanAPI.Core.Models;
-using VatanAPI.Controllers.Resources;
-using VatanAPI.Core.Security.Tokens;
-using VatanAPI.Core.Repositories;
-using VatanAPI.Persistence;
-using VatanAPI.Core.Security.Hashing;
 using VatanAPI.Security.Hashing;
-using VatanAPI.Core.Services;
-using VatanAPI.Services;
 using VatanAPI.Security.Tokens;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.IdentityModel.Tokens;
-using VatanAPI.Extensions;
+using VatanAPI.Services;
 
 namespace VatanAPI
 {
@@ -37,7 +26,7 @@ namespace VatanAPI
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
-            
+
         }
 
         public IConfiguration Configuration { get; }
@@ -72,21 +61,21 @@ namespace VatanAPI
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
 
-           /* services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
-                .AddJwtBearer(jwtBearerOptions =>
-                {
-                    jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters()
-                    {
-                        ValidateAudience = true,
-                        ValidateLifetime = true,
-                        ValidateIssuerSigningKey = true,
-                        ValidIssuer = tokenOptions.Issuer,
-                        ValidAudience = tokenOptions.Audience,
-                        IssuerSigningKey = signingConfigurations.Key,
-                        ClockSkew = TimeSpan.Zero
-                    };
-                });
-*/
+            /* services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                 .AddJwtBearer(jwtBearerOptions =>
+                 {
+                     jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters()
+                     {
+                         ValidateAudience = true,
+                         ValidateLifetime = true,
+                         ValidateIssuerSigningKey = true,
+                         ValidIssuer = tokenOptions.Issuer,
+                         ValidAudience = tokenOptions.Audience,
+                         IssuerSigningKey = signingConfigurations.Key,
+                         ClockSkew = TimeSpan.Zero
+                     };
+                 });
+ */
             services.AddAutoMapper(this.GetType().Assembly);
         }
 

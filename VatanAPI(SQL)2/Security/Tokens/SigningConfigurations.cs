@@ -1,5 +1,5 @@
-using System.Security.Cryptography;
 using Microsoft.IdentityModel.Tokens;
+using System.Security.Cryptography;
 
 namespace VatanAPI.Security.Tokens
 {
@@ -10,7 +10,7 @@ namespace VatanAPI.Security.Tokens
 
         public SigningConfigurations()
         {
-            using(var provider = new RSACryptoServiceProvider(2048))
+            using (var provider = new RSACryptoServiceProvider(2048))
             {
                 Key = new RsaSecurityKey(provider.ExportParameters(true));
             }

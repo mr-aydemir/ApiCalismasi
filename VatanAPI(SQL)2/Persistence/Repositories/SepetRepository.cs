@@ -1,8 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Repositories;
 using VatanAPI.Persistence.Contexts;

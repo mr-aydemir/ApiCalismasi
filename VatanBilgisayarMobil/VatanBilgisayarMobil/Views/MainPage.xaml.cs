@@ -6,6 +6,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using VatanBilgisayarMobil.Models;
+using VatanBilgisayarMobil.Data;
 
 namespace VatanBilgisayarMobil.Views
 {
@@ -15,6 +16,7 @@ namespace VatanBilgisayarMobil.Views
     public partial class MainPage : MasterDetailPage
     {
         Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
+        
         public MainPage()
         {
             InitializeComponent();
@@ -23,7 +25,6 @@ namespace VatanBilgisayarMobil.Views
 
             MenuPages.Add((int)MenuItemType.Browse, (NavigationPage)Detail);
         }
-
         public async Task NavigateFromMenu(int id)
         {
             if (!MenuPages.ContainsKey(id))

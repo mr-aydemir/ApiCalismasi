@@ -11,7 +11,7 @@ namespace VatanAPI.Services
         private readonly IUserService _userService;
         private readonly IPasswordHasher _passwordHasher;
         private readonly ITokenHandler _tokenHandler;
-        
+
         public AuthenticationService(IUserService userService, IPasswordHasher passwordHasher, ITokenHandler tokenHandler)
         {
             _tokenHandler = tokenHandler;

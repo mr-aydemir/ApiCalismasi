@@ -8792,7 +8792,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Emre AYDEMİR\\.nuget\\packages\\": {},
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
@@ -8801,14 +8801,14 @@
       "projectUniqueName": "E:\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj",
       "projectName": "VatanAPITest",
       "projectPath": "E:\\ApiCalismasi\\VatanAPITest\\VatanAPITest.csproj",
-      "packagesPath": "C:\\Users\\Emre AYDEMİR\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\AydemirPC\\.nuget\\packages\\",
       "outputPath": "E:\\ApiCalismasi\\VatanAPITest\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Emre AYDEMİR\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AydemirPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

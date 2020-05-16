@@ -1,100 +1,97 @@
-﻿using System;
+﻿using Microsoft.Extensions.Caching.Memory;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using VatanAPI.Domain.Models;
-using VatanAPI.Domain.Services;
-using VatanAPI.Domain.Repositories;
-using VatanAPI.Persistence.Repositories;
-using VatanAPI.Domain.Services.Communication;
 using VatanAPI.Core.Repositories;
-using Microsoft.Extensions.Caching.Memory;
+using VatanAPI.Domain.Models;
+using VatanAPI.Domain.Repositories;
+using VatanAPI.Domain.Services.Communication;
 
 namespace VatanAPI.Domain.Services
 {
-	public class SiparisService : ISiparisService
-	{
-		private readonly IUserRepository _usersRepository;
-		private readonly ISiparisRepository _siparisRepository;
-		private readonly IProductRepository _productRepository;
-		private readonly IUnitOfWork _unitOfWork;
-		private readonly IMemoryCache _cache;
+    public class SiparisService : ISiparisService
+    {
+        private readonly IUserRepository _usersRepository;
+        private readonly ISiparisRepository _siparisRepository;
+        private readonly IProductRepository _productRepository;
+        private readonly IUnitOfWork _unitOfWork;
+        private readonly IMemoryCache _cache;
 
-		public SiparisService(ISiparisRepository siparisRepository, IUserRepository usersRepository, IProductRepository productRepository, IUnitOfWork unitOfWork, IMemoryCache cache)
-		{
-			_usersRepository = usersRepository;
-			_productRepository = productRepository;
-			_siparisRepository = siparisRepository;
-			_unitOfWork = unitOfWork;
-			_cache = cache;
-		}
+        public SiparisService(ISiparisRepository siparisRepository, IUserRepository usersRepository, IProductRepository productRepository, IUnitOfWork unitOfWork, IMemoryCache cache)
+        {
+            _usersRepository = usersRepository;
+            _productRepository = productRepository;
+            _siparisRepository = siparisRepository;
+            _unitOfWork = unitOfWork;
+            _cache = cache;
+        }
 
-		public async Task<SiparisResponse> DeleteAsync(int id)
-		{
-			var existingSiparis = await _siparisRepository.FindByIdAsync(id);
+        public async Task<SiparisResponse> DeleteAsync(int id)
+        {
+            var existingSiparis = await _siparisRepository.FindByIdAsync(id);
 
-			if (existingSiparis == null)
-				return new SiparisResponse("Siparis not found.");
+            if (existingSiparis == null)
+                return new SiparisResponse("Siparis not found.");
 
-			try
-			{
-				
-				await _unitOfWork.CompleteAsync();
+            try
+            {
 
-				return new SiparisResponse(existingSiparis);
-			}
-			catch (Exception ex)
-			{
-				// Do some logging stuff
-				return new SiparisResponse($"An error occurred when deleting the siparis: {ex.Message}");
-			}
-		}
+                await _unitOfWork.CompleteAsync();
 
-		public async Task<IEnumerable<Siparis>> ListAsync()
-		{
-			return await _siparisRepository.ListAsync();
-		}
+                return new SiparisResponse(existingSiparis);
+            }
+            catch (Exception ex)
+            {
+                // Do some logging stuff
+                return new SiparisResponse($"An error occurred when deleting the siparis: {ex.Message}");
+            }
+        }
 
-		public async Task<SiparisResponse> SaveAsync(Siparis siparis)
-		{
-			try
-			{
-				await _siparisRepository.AddAsync(siparis);
-				await _unitOfWork.CompleteAsync();
+        public async Task<IEnumerable<Siparis>> ListAsync()
+        {
+            return await _siparisRepository.ListAsync();
+        }
 
-				return new SiparisResponse(siparis);
-			}
-			catch (Exception ex)
-			{
-				// Do some logging stuff
-				return new SiparisResponse($"An error occurred when saving the siparis: {ex.Message}");
-			}
-		}
+        public async Task<SiparisResponse> SaveAsync(Siparis siparis)
+        {
+            try
+            {
+                await _siparisRepository.AddAsync(siparis);
+                await _unitOfWork.CompleteAsync();
 
-		public async Task<SiparisResponse> UpdateAsync(int id, Siparis siparis)
-		{
+                return new SiparisResponse(siparis);
+            }
+            catch (Exception ex)
+            {
+                // Do some logging stuff
+                return new SiparisResponse($"An error occurred when saving the siparis: {ex.Message}");
+            }
+        }
 
-			var existingSiparis = await _siparisRepository.FindByIdAsync(id);
+        public async Task<SiparisResponse> UpdateAsync(int id, Siparis siparis)
+        {
 
-			if (existingSiparis == null)
-				return new SiparisResponse("Siparis not found.");
+            var existingSiparis = await _siparisRepository.FindByIdAsync(id);
 
-			existingSiparis.SiparisId = siparis.SiparisId;
+            if (existingSiparis == null)
+                return new SiparisResponse("Siparis not found.");
 
-			try
-			{
-				_siparisRepository.Update(existingSiparis);
-				await _unitOfWork.CompleteAsync();
+            existingSiparis.SiparisId = siparis.SiparisId;
 
-				return new SiparisResponse(existingSiparis);
-			}
-			catch (Exception ex)
-			{
-				// Do some logging stuff
-				return new SiparisResponse($"An error occurred when updating the siparis: {ex.Message}");
-			}
-		}
+            try
+            {
+                _siparisRepository.Update(existingSiparis);
+                await _unitOfWork.CompleteAsync();
 
-	}
+                return new SiparisResponse(existingSiparis);
+            }
+            catch (Exception ex)
+            {
+                // Do some logging stuff
+                return new SiparisResponse($"An error occurred when updating the siparis: {ex.Message}");
+            }
+        }
+
+    }
 }
 

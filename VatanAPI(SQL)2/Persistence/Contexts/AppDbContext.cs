@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
-using VatanAPI.Domain.Models;
+﻿using Microsoft.EntityFrameworkCore;
 using VatanAPI.Core.Models;
+using VatanAPI.Domain.Models;
 
 namespace VatanAPI.Persistence.Contexts
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext : DbContext
     {
         public DbSet<Category> Categories { get; set; }
         public DbSet<Product> Products { get; set; }
@@ -39,7 +35,7 @@ namespace VatanAPI.Persistence.Contexts
                 new Category { Id = 107, Name = "Oyun & Hobi" },
                 new Category { Id = 108, Name = "Ev Aletleri" },
                 new Category { Id = 109, Name = "Spor & Outdoor" }
-            ); 
+            );
             builder.Entity<Product>().ToTable("Products");
             builder.Entity<Product>().HasKey(p => p.Id);
             builder.Entity<Product>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
@@ -57,14 +53,14 @@ namespace VatanAPI.Persistence.Contexts
                 new Product
                 {
                     Id = 100,
-                    Name= "5QS63EA",
+                    Name = "5QS63EA",
                     Url = "https://www.vatanbilgisayar.com/hp-15-da1021nt-core-i5-8265u-1-6ghz-8gb-256gb-ssd-15-6-mx110-2gb-w10-notebook.html",
                     Cost = 5049,
                     Marka = EMarka.HP,
                     CategoryId = 101,
-                    PreviousCost=4837 ,
-                    NumberInStock= 15,
-                    Info= "HP 15 - DA1021NT CORE İ5 8265U 1.6GHZ - 8GB - 256GB SSD - 15.6-MX110 2GB-W10 NOTEBOOK",
+                    PreviousCost = 4837,
+                    NumberInStock = 15,
+                    Info = "HP 15 - DA1021NT CORE İ5 8265U 1.6GHZ - 8GB - 256GB SSD - 15.6-MX110 2GB-W10 NOTEBOOK",
                     KargoFiyatı = 0
                 },
                 new Product
@@ -328,7 +324,7 @@ namespace VatanAPI.Persistence.Contexts
                     KargoFiyatı = 0
                 }
 
-            );;
+            ); ;
             builder.Entity<Image>().ToTable("Images");
             builder.Entity<Image>().HasKey(p => p.Id);
             builder.Entity<Image>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
@@ -340,21 +336,21 @@ namespace VatanAPI.Persistence.Contexts
                 {
                     Id = 100,
                     Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HP/thumb/TeoriV2-106687_large.jpg",
-                    Name= "TeoriV2-106687_large.jpg",
+                    Name = "TeoriV2-106687_large.jpg",
                     ProductId = 100
                 },
                 new Image
                 {
                     Id = 101,
                     Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/LENOVO/thumb/TeoriV2-97788_large.jpg",
-                    Name= "TeoriV2-97788_large.jpg",
+                    Name = "TeoriV2-97788_large.jpg",
                     ProductId = 101
                 },
                 new Image
                 {
                     Id = 102,
                     Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/HUAWEI/thumb/TeoriV2-106613_large.jpg",
-                    Name= "TeoriV2-106613_large.jpg",
+                    Name = "TeoriV2-106613_large.jpg",
                     ProductId = 102
                 },
                 new Image
@@ -368,7 +364,7 @@ namespace VatanAPI.Persistence.Contexts
                 {
                     Id = 104,
                     Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/ACER/thumb/TeoriV2-106597_large.jpg",
-                    Name= "TeoriV2-106597_large.jpg",
+                    Name = "TeoriV2-106597_large.jpg",
                     ProductId = 104
                 },
                 new Image
@@ -376,7 +372,7 @@ namespace VatanAPI.Persistence.Contexts
                     Id = 105,
                     Url = "https://cdn.vatanbilgisayar.com/Upload/PRODUCT/APPLE/thumb/TeoriV2-105271-4_large.jpg",
                     ProductId = 105,
-                    Name= "TeoriV2-105271-4_large.jpg"
+                    Name = "TeoriV2-105271-4_large.jpg"
                 },
                 new Image
                 {
@@ -483,7 +479,7 @@ namespace VatanAPI.Persistence.Contexts
                     ProductId = 120,
                     Name = "TeoriV2-106613_large.jpg"
                 }
-            ); 
+            );
             builder.Entity<Sepet>().ToTable("Sepet");
             builder.Entity<Sepet>().HasKey(p => p.SepetId);
             builder.Entity<Sepet>().Property(p => p.SepetId).IsRequired().ValueGeneratedOnAdd();
@@ -493,7 +489,7 @@ namespace VatanAPI.Persistence.Contexts
                  new Sepet
                  {
                      SepetId = 1,
-                     UserId=1
+                     UserId = 1
 
                  },
                  new Sepet
@@ -537,7 +533,7 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<User>().HasData
             (
 
-                new User { Id = 1,  Name= "Emre", LastName = "Aydemir", UserName = "AydemirEmre", Email = "aydemir@gmail.com", Password = "1234",  },
+                new User { Id = 1, Name = "Emre", LastName = "Aydemir", UserName = "AydemirEmre", Email = "aydemir@gmail.com", Password = "1234", },
                 new User { Id = 2, Name = "Yusuf", LastName = "Akdeniz", UserName = "AkdenizYusuf", Email = "akdeniz@gmail.com", Password = "4567" }
             );
 

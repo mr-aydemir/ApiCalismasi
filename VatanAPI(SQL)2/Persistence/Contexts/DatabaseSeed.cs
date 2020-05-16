@@ -16,7 +16,7 @@ namespace VatanAPI.Persistence
         public static void Seed(AppDbContext context, IPasswordHasher passwordHasher)
         {
             context.Database.EnsureCreated();
-            
+
             /*if (context.Roles.Count() == 0)
             {
 

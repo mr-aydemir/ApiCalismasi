@@ -1,14 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using AutoMapper;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Internal;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 using VatanAPI.Domain.Models;
-using VatanAPI.Domain.Services;
 using VatanAPI.Persistence.Contexts;
-using VatanAPI.Resources;
 
 namespace VatanAPI.Controllers
 {

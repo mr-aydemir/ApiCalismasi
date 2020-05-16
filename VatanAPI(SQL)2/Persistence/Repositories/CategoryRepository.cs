@@ -1,15 +1,13 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.EntityFrameworkCore;
 using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Repositories;
 using VatanAPI.Persistence.Contexts;
 
 namespace VatanAPI.Persistence.Repositories
 {
-    public class CategoryRepository: BaseRepository, ICategoryRepository
+    public class CategoryRepository : BaseRepository, ICategoryRepository
     {
         public CategoryRepository(AppDbContext context) : base(context)
         {
@@ -21,7 +19,7 @@ namespace VatanAPI.Persistence.Repositories
         }
         public async Task AddAsync(Category category)
         {
-             await _context.Categories.AddAsync(category);
+            await _context.Categories.AddAsync(category);
         }
         public async Task<Category> FindByIdAsync(int id)
         {

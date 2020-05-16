@@ -1,7 +1,7 @@
 ﻿
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.AspNetCore.Mvc.ModelBinding;
 
 namespace VatanAPI.Extensions
 {

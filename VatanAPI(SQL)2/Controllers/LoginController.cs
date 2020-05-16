@@ -1,9 +1,9 @@
-using System.Threading.Tasks;
 using AutoMapper;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 using VatanAPI.Controllers.Resources;
 using VatanAPI.Core.Security.Tokens;
 using VatanAPI.Core.Services;
-using Microsoft.AspNetCore.Mvc;
 
 namespace VatanAPI.Controllers
 {
@@ -29,7 +29,7 @@ namespace VatanAPI.Controllers
             }
 
             var response = await _authenticationService.CreateAccessTokenAsync(userCredentials.Email, userCredentials.Password);
-            if(!response.Success)
+            if (!response.Success)
             {
                 return BadRequest(response.Message);
             }
@@ -48,11 +48,11 @@ namespace VatanAPI.Controllers
             }
 
             var response = await _authenticationService.RefreshTokenAsync(refreshTokenResource.Token, refreshTokenResource.UserEmail);
-            if(!response.Success)
+            if (!response.Success)
             {
                 return BadRequest(response.Message);
             }
-           
+
             var tokenResource = _mapper.Map<AccessToken, AccessTokenResource>(response.Token);
             return Ok(tokenResource);
         }

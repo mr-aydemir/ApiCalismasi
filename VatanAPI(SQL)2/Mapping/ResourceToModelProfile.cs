@@ -1,8 +1,8 @@
 ﻿using AutoMapper;
-using VatanAPI.Domain.Models;
-using VatanAPI.Resources;
 using VatanAPI.Controllers.Resources;
 using VatanAPI.Core.Models;
+using VatanAPI.Domain.Models;
+using VatanAPI.Resources;
 
 namespace VatanAPI.Mapping
 {
