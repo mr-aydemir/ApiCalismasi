@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"         
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.ÜrünSayfasi">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout BackgroundColor="LightBlue" >
+                <Label Margin="5,0,0,0" Text="Bilgisayar > Notebook > Laptop > ACER > A315-55G-57HC"  FontAttributes="Bold" />
+                <StackLayout Orientation="Vertical" BackgroundColor="LightGray">
+                    <Image Source="Acer1" />
+                    <Image Source="https://cdn.vatanbilgisayar.com/Upload//MARKA/ACER/ACER.jpg" />
+                    <StackLayout Orientation="Vertical">
+                        <Label Margin="5,0,0,0" Text="A315-55G-57HC"  FontAttributes="Bold" FontSize="10" BackgroundColor="red" />
+                        <Label Margin="5,0,0,0" Text="ACER ASPIRE 3 CORE İ5 10210U 1.6GHZ-8GB-256GB SSD-15.6-MX230 2GB-W10 NOTEBOOK"  FontAttributes="Bold" FontSize="20" />
+                        <Label Margin="5,0,0,0" Text="A315-55G-57HC"  FontAttributes="Bold" FontSize="10" />
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+            
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

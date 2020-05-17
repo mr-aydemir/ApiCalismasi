@@ -5,8 +5,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="VatanBilgisayarMobil.Views.BilgisayarMenu"
-             Title="PCmenu">
-    
+             Title="Bilgisayar">
+
     <StackLayout VerticalOptions="FillAndExpand">
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">

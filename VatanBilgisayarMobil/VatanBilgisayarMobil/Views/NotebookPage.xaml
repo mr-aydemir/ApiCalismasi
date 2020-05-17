@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.NotebookPage"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             Title="Notebook">
+            
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
+							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}">
+                        <flv:FlowListView.FlowColumnTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="White" BorderColor="Gray">
+                                    <StackLayout>
+                                        <Image Source="{ Binding ImageSource} "/>
+                                        <Label HorizontalOptions="Fill" 
+												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}"/>
+                                        <Label HorizontalOptions="Fill" 
+													XAlign="Center"  YAlign="Center"  Text="{Binding ÜrünDetayı }"/>
+                                        <Label HorizontalOptions="Fill"   
+													XAlign="Center" YAlign="Center" Text="{Binding ÜrünFiyatı }"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

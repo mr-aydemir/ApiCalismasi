@@ -6,7 +6,7 @@
              mc:Ignorable="d"
              x:Class="VatanBilgisayarMobil.Views.AboutPage"
              xmlns:vm="clr-namespace:VatanBilgisayarMobil.ViewModels"
-             Title="{Binding Title}">
+             Title="Hakkımızda">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
