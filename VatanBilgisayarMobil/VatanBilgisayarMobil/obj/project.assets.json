@@ -654,23 +654,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\YusrndiL\\.nuget\\packages\\": {},
+    "C:\\Users\\yusuf\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\YusrndiL\\Source\\Repos\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
+      "projectUniqueName": "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
       "projectName": "VatanBilgisayarMobil",
-      "projectPath": "C:\\Users\\YusrndiL\\Source\\Repos\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
-      "packagesPath": "C:\\Users\\YusrndiL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\YusrndiL\\Source\\Repos\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\obj\\",
+      "projectPath": "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
+      "packagesPath": "C:\\Users\\yusuf\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\YusrndiL\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\yusuf\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],

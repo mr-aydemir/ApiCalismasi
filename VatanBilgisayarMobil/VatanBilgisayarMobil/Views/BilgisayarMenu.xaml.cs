@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using VatanBilgisayarMobil.Models;
+using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

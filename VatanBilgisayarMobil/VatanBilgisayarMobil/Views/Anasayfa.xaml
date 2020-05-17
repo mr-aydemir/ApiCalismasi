@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
 			 mc:Ignorable="d"
 			 
              x:Class="VatanBilgisayarMobil.Views.Anasayfa">
@@ -10,9 +11,8 @@
     <ContentPage.Content>
 		<ScrollView>
 			<StackLayout >
-				<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
-					
-					<SearchBar Placeholder="Ürün Ara" BackgroundColor="White" Margin="5,0"/>
+                <StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
+                    <SearchBar Placeholder="Ürün Ara" BackgroundColor="White" Margin="5,0"/>
 					<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
 						<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}" HeightRequest="250"  >
 							<CarouselView.ItemTemplate>

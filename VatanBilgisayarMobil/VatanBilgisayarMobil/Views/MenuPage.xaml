@@ -8,6 +8,9 @@
              Title="Menu">
              
     <StackLayout VerticalOptions="FillAndExpand">
+        <StackLayout>
+            <Image Source="VatanLogo.png" HeightRequest="100" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" ></Image>
+        </StackLayout>
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <d:ListView.ItemsSource>
