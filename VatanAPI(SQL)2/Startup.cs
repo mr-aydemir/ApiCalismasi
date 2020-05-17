@@ -18,6 +18,7 @@ using VatanAPI.Persistence.Repositories;
 using VatanAPI.Security.Hashing;
 using VatanAPI.Security.Tokens;
 using VatanAPI.Services;
+using Microsoft.EntityFrameworkCore.Sqlite;
 
 namespace VatanAPI
 {
@@ -37,7 +38,8 @@ namespace VatanAPI
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
             services.AddDbContext<AppDbContext>(options =>
-        options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
+        options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))); 
+            //options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
             services.AddControllers();
             //services.AddCustomSwagger();

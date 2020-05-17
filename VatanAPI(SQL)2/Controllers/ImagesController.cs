@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Services;
+using VatanAPI.Extensions;
 using VatanAPI.Resources;
 
 namespace VatanAPI.Controllers
@@ -27,6 +28,47 @@ namespace VatanAPI.Controllers
             var images = await _imageService.ListAsync();
             var resources = _mapper.Map<IEnumerable<Image>, IEnumerable<ImageResource>>(images);
             return resources;
+        }
+        [HttpPost]
+        public async Task<IActionResult> PostAsync([FromBody] SaveImageResource resource)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+            var image = _mapper.Map<SaveImageResource, Image>(resource);
+            var result = await _imageService.SaveAsync(image);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var imageResource = _mapper.Map<Image, ImageResource>(result.Image);
+            return Ok(imageResource);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] SaveImageResource resource)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var image = _mapper.Map<SaveImageResource, Image>(resource);
+            var result = await _imageService.UpdateAsync(id, image);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var imageResource = _mapper.Map<Image, SaveImageResource>(result.Image);
+            return Ok(imageResource);
+        }
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteAsync(int id)//parametrede verilmiş olan id numarasına sahip veriyi siler.
+        {
+            var result = await _imageService.DeleteAsync(id);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var imageResource = _mapper.Map<Image, ImageResource>(result.Image);
+            return Ok(imageResource);
         }
     }
 }
