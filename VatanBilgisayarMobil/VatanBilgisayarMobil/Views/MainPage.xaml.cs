@@ -14,7 +14,7 @@ namespace VatanBilgisayarMobil.Views
     [DesignTimeVisible(false)]
     public partial class MainPage : MasterDetailPage
     {
-        Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();      
+        Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
         public MainPage()
         {
             InitializeComponent();
@@ -22,6 +22,7 @@ namespace VatanBilgisayarMobil.Views
             MasterBehavior = MasterBehavior.Popover;
 
             MenuPages.Add((int)MenuItemType.AnaSayfa, (NavigationPage)Detail);
+            
         }
 
         public async Task NavigateFromMenu(int id)
@@ -33,40 +34,19 @@ namespace VatanBilgisayarMobil.Views
                     case (int)MenuItemType.AnaSayfa:
                            MenuPages.Add(id, new NavigationPage(new Anasayfa()));
                         break;
-                    case (int)MenuItemType.Telefon:
-                        MenuPages.Add(id, new NavigationPage(new ÜrünSayfasi()));
-                        break;
                     case (int)MenuItemType.Bilgisayar:
                         MenuPages.Add(id, new NavigationPage(new BilgisayarMenu()));
-                        break;
-                    case (int)MenuItemType.Bilgisayar_Parcalari:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
-                        break;
-                    case (int)MenuItemType.Kamera:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
-                        break;
-                    case (int)MenuItemType.TV_ve_Elektronigi:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
-                        break;
-                    case (int)MenuItemType.Ofis:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
-                        break;
-                    case (int)MenuItemType.Aksesuar:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
-                        break;
-                    case (int)MenuItemType.Oyun_ve_Hobi:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
-                        break;
-                    case (int)MenuItemType.EvAletleri:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
-                        break;
-                    case (int)MenuItemType.Spor_ve_Outdoor:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
                         break;
                     case (int)MenuItemType.Hakkımızda:
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
-                    
+                    case (int)MenuItemType.Notebook:
+                        MenuPages.Add(id, new NavigationPage(new NotebookPage()));
+                        break;
+                    default:
+                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
+                        break;
+
                 }
             }
 

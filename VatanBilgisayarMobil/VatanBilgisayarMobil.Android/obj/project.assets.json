@@ -5293,24 +5293,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\yusuf\\.nuget\\packages\\": {},
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
+      "projectUniqueName": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
       "projectName": "VatanBilgisayarMobil.Android",
-      "projectPath": "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
-      "packagesPath": "C:\\Users\\yusuf\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\obj\\",
+      "projectPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
+      "packagesPath": "C:\\Users\\AydemirPC\\.nuget\\packages\\",
+      "outputPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\yusuf\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\AydemirPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
@@ -5324,8 +5324,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
-              "projectPath": "C:\\Users\\yusuf\\source\\repos\\SytronXar\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj"
+            "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
+              "projectPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj"
             }
           }
         }

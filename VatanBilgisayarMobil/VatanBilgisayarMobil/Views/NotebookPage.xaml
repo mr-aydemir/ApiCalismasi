@@ -11,28 +11,27 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <StackLayout>
-                    <flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
-							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}">
-                        <flv:FlowListView.FlowColumnTemplate>
-                            <DataTemplate>
-                                <Frame BackgroundColor="White" BorderColor="Gray">
-                                    <StackLayout>
-                                        <Image Source="{ Binding ImageSource} "/>
-                                        <Label HorizontalOptions="Fill" 
+				<StackLayout>
+					<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
+							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}" >
+						<flv:FlowListView.FlowColumnTemplate>
+							<DataTemplate>
+								<Frame BackgroundColor="White" BorderColor="Gray">
+									<StackLayout>
+										<Image Source="{ Binding ImageSource} " HeightRequest="150"/>
+										<Label HorizontalOptions="Fill" 
 												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}"/>
-                                        <Label HorizontalOptions="Fill" 
+										<Label HorizontalOptions="Fill" 
 													XAlign="Center"  YAlign="Center"  Text="{Binding ÜrünDetayı }"/>
-                                        <Label HorizontalOptions="Fill"   
+										<Label HorizontalOptions="Fill"   
 													XAlign="Center" YAlign="Center" Text="{Binding ÜrünFiyatı }"/>
-                                    </StackLayout>
-                                </Frame>
-                            </DataTemplate>
-                        </flv:FlowListView.FlowColumnTemplate>
-                    </flv:FlowListView>
-                </StackLayout>
-
-            </StackLayout>
+									</StackLayout>
+								</Frame>
+							</DataTemplate>
+						</flv:FlowListView.FlowColumnTemplate>
+					</flv:FlowListView>
+				</StackLayout>
+			</StackLayout>
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>

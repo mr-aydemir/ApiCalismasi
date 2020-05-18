@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace VatanBilgisayarMobil.Models
@@ -30,6 +31,10 @@ namespace VatanBilgisayarMobil.Models
         {
             get { return _ürünFiyatı; }
             set { _ürünFiyatı = value; }
+        }
+        public Command ItemTappedCommand
+        {
+            get; set;
         }
     }
 }

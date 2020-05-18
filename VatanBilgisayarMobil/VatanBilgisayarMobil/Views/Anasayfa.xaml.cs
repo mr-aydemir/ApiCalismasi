@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using VatanBilgisayarMobil.Models;
 using VatanBilgisayarMobil.ViewModels;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,12 +11,11 @@ namespace VatanBilgisayarMobil.Views
     public partial class Anasayfa : ContentPage
     {
         public double screensize;
-        
+
         public Anasayfa()
         {
             InitializeComponent();
-            ImageButton ImageButton = new ImageButton();
-            ÜrünButonuModeli ürünButonuModeli;
+            ÜrünModel ÜrünModel;
             List<string> FırsatÜrünleriImages = new List<string>()
             {
                 "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_nisan/ensuper-mob-min.jpg",
@@ -36,18 +31,25 @@ namespace VatanBilgisayarMobil.Views
                 "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_mayis/oppo-reno3-banner-mob-min.jpg",
                 "https://cdn.vatanbilgisayar.com/Upload/BANNER//yeni-tasarim/anasayfa/2020_nisan/sss-mob-min.jpg"
             };
-            ürünButonuModeli = new ÜrünButonuModeli(this);
-            BindingContext = ürünButonuModeli;
+            FırsatÜrünleriCarousel.ItemsSource = FırsatÜrünleriImages;
+            ÜrünModel = new ÜrünModel(this);
+            ÖneÇıkanÜrünlerFLV.FlowItemsSource = new ÜrünModel(this).GetItems(10);
+            BindableLayout.SetItemsSource(EnÇokSatanlarSB, new ÜrünModel(this).GetItems(15));
             FırsatÜrünleriCarousel.ItemsSource = FırsatÜrünleriImages;
             //ÖneÇıkanÜrünlerFLV.HeightRequest = Convert.ToDouble(ürünButonuModeli.Items.Count / ÖneÇıkanÜrünlerFLV.FlowColumnCount * 250); 
-            
         }
 
-        private void FırsatResmi_Tapped(object sender, EventArgs e)
+        private async void ÜrünTapped(object sender, ItemTappedEventArgs e)
         {
-            
+            var content = e.Item as ÜrünItem;
+            await Navigation.PushAsync(new ÜrünSayfasi(content));
         }
 
-        
+        private async void ÜrünTapped2(object sender, EventArgs e)
+        {
+            var tappedItem = (StackLayout)sender;
+            string ProductName = (tappedItem.Children[1] as Label).Text;
+            await Navigation.PushAsync(new ÜrünSayfasi(new ÜrünModel(this).FindÜrünItemWithName(ProductName)));
+        }
     }
 }

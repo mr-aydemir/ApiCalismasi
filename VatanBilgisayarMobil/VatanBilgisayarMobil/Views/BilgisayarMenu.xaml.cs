@@ -10,19 +10,19 @@ namespace VatanBilgisayarMobil.Views
     public partial class BilgisayarMenu : ContentPage
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }//buradan emin değilim
-        List<PCMenuItem> PCmenuItems;
+        List<HomeMenuItem> PCmenuItems;
         public BilgisayarMenu()
         {
             InitializeComponent();
 
-            PCmenuItems = new List<PCMenuItem>
+            PCmenuItems = new List<HomeMenuItem>
             {
-                new PCMenuItem {Id = PCMenuItemType.Notebook, Title="Notebook" },
-                new PCMenuItem {Id = PCMenuItemType.MasaustuPC, Title="Masaüstü Bilgisayar" },
-                new PCMenuItem {Id = PCMenuItemType.Tablet, Title="Tablerler" },
-                new PCMenuItem {Id = PCMenuItemType.PCBilesenler, Title="Bilgisayar Bileşenleri" },
-                new PCMenuItem {Id = PCMenuItemType.OyunBilgisayarlari, Title="Oyun Bilgisayarları" },
-                new PCMenuItem {Id = PCMenuItemType.EkranKartlari, Title="Ekran Kartları" },
+                new HomeMenuItem {Id = MenuItemType.Notebook, Title="Notebook" },
+                new HomeMenuItem {Id = MenuItemType.Diğer, Title="Masaüstü Bilgisayar" },
+                new HomeMenuItem {Id = MenuItemType.Diğer, Title="Tablerler" },
+                new HomeMenuItem {Id = MenuItemType.Diğer, Title="Bilgisayar Bileşenleri" },
+                new HomeMenuItem {Id = MenuItemType.Diğer, Title="Oyun Bilgisayarları" },
+                new HomeMenuItem {Id = MenuItemType.Diğer, Title="Ekran Kartları" },
             };
 
             ListViewMenu.ItemsSource = PCmenuItems;
@@ -33,7 +33,7 @@ namespace VatanBilgisayarMobil.Views
                 if (e.SelectedItem == null)
                     return;
 
-                var id = (int)((PCMenuItem)e.SelectedItem).Id;
+                var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
         }

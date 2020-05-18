@@ -9,35 +9,25 @@ using Xamarin.Forms;
 
 namespace VatanBilgisayarMobil.Data
 {
-    public class RestApi
+    public class RestAPI
     {
+        HttpClient client;
+        HttpResponseMessage response;
         public List<Product> Products;
         public List<Category> Categories;
         public List<ImageModel> ImageModels;
-        public RestApi()
+        public RestAPI()
         {
+            client = new HttpClient()
+            {
+                BaseAddress = new Uri("https://vatanwebapi.azurewebsites.net/")
+            };
+            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             GetData();
         }
+
         public List<Product> GetProducts()
         {
-            return Products;
-        }
-        public List<Category> GetCategories()
-        {
-            return Categories;
-        }
-        public List<ImageModel> GetImageModels()
-        {
-            return ImageModels;
-        }
-        private void GetData()
-        {
-            HttpClient client = new HttpClient()
-            {
-                BaseAddress = new Uri("https://localhost:5001/")
-            };
-            // Add an Accept header for JSON format.
-            client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             HttpResponseMessage response = client.GetAsync("api/products").Result;
             if (response.IsSuccessStatusCode)
             {
@@ -46,32 +36,8 @@ namespace VatanBilgisayarMobil.Data
             }
             else
             {
-                Application.Current.MainPage.DisplayAlert("Hata!","Error Code" +
-                response.StatusCode + " : Message - " + response.ReasonPhrase,"Tamam");
-            }
-
-            response = client.GetAsync("api/categories").Result;
-            if (response.IsSuccessStatusCode)
-            {
-                var items = response.Content.ReadAsAsync<IEnumerable<Category>>().Result;
-                Categories = items as List<Category>;
-            }
-            else
-            {
                 Application.Current.MainPage.DisplayAlert("Hata!", "Error Code" +
-               response.StatusCode + " : Message - " + response.ReasonPhrase, "Tamam");
-            }
-            response = client.GetAsync("api/images").Result;
-            if (response.IsSuccessStatusCode)
-            {
-                var items = response.Content.ReadAsAsync<IEnumerable<ImageModel>>().Result;
-                ImageModels = items as List<ImageModel>;
-
-            }
-            else
-            {
-                Application.Current.MainPage.DisplayAlert("Hata!", "Error Code" +
-               response.StatusCode + " : Message - " + response.ReasonPhrase, "Tamam");
+                response.StatusCode + " : Message - " + response.ReasonPhrase, "Tamam");
             }
             foreach (var item in Products)
             {
@@ -84,8 +50,55 @@ namespace VatanBilgisayarMobil.Data
                     }
                 }
             }
+            return Products;
         }
 
+        public List<Category> GetCategories()
+        {
+            response = client.GetAsync("api/categories").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var items = response.Content.ReadAsAsync<IEnumerable<Category>>().Result;
+                Categories = items as List<Category>;
+            }
+            else
+            {
+                Application.Current.MainPage.DisplayAlert("Hata!", "Error Code" +
+               response.StatusCode + " : Message - " + response.ReasonPhrase, "Tamam");
+            }
+            return Categories;
+        }
+
+        public List<ImageModel> GetImageModels()
+        {
+            response = client.GetAsync("api/images").Result;
+            if (response.IsSuccessStatusCode)
+            {
+                var items = response.Content.ReadAsAsync<IEnumerable<ImageModel>>().Result;
+                ImageModels = items as List<ImageModel>;
+
+            }
+            else
+            {
+                Application.Current.MainPage.DisplayAlert("Hata!", "Error Code" +
+               response.StatusCode + " : Message - " + response.ReasonPhrase, "Tamam");
+            }
+            return ImageModels;
+        }
+
+        private void GetData()
+        {
+
+            GetImageModels();
+            GetCategories();
+            GetProducts();
+        }
+        /// <summary>
+        /// Aşağıda Apide var olan modelleri birebir aldık, Benim Image için fazladan bir kontrollerim vardı
+        /// Onu producta birleştirmek için fazladan bir işlem yaptım,
+        /// Ürünün görüntülerken sadece bir image kullanacağım için resim için bir ImageUrl yaptım eğer isterseniz side resimler birden
+        /// fazla ise string listesi yazın.
+        /// </summary>
         public class ImageModel
         {
             public int Id { get; set; }
@@ -94,7 +107,6 @@ namespace VatanBilgisayarMobil.Data
             public int ProductId { get; set; }
             public Product Product { get; set; }
         }
-
         public class Category
         {
             public int Id { get; set; }

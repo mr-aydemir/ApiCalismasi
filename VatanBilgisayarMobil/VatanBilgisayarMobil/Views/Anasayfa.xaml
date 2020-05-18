@@ -19,8 +19,8 @@
 							<CarouselView.ItemTemplate>
 								<DataTemplate>
 									<StackLayout >
-										<Frame CornerRadius="10" IsClippedToBounds="True"   Padding="0" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand">
-											<ImageButton Source="{Binding Image}" BackgroundColor="{StaticResource NavigationPrimary}"  VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" />
+										<Frame CornerRadius="10" IsClippedToBounds="True"   Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+											<ImageButton Source="{Binding .}" BackgroundColor="{StaticResource NavigationPrimary}"  VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" />
 										</Frame>
 									</StackLayout>
 								</DataTemplate>
@@ -29,14 +29,14 @@
 					</StackLayout>
 				</StackLayout>
 					<Label Margin="5,0" Text="Öne Çıkan Ürünler"  FontAttributes="Bold"/>
-					<StackLayout>
+					<StackLayout VerticalOptions="FillAndExpand">
 						<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
-							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}" >
+							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünTapped" >
 							<flv:FlowListView.FlowColumnTemplate>
 								<DataTemplate>
 								<Frame BackgroundColor="White" BorderColor="Gray">
 										<StackLayout>
-											<Image Source="{ Binding ImageSource} "/>
+											<Image Source="{ Binding ImageSource} " HeightRequest="150"/>
 											<Label HorizontalOptions="Fill" 
 												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}"/>
 											<Label HorizontalOptions="Fill" 
@@ -52,22 +52,23 @@
 					<Label Margin="5,0" Text="En Çok Satanlar"  FontAttributes="Bold"/>
 				<StackLayout>
 					<ScrollView Orientation="Horizontal">
-						<StackLayout Orientation="Horizontal"   
+						<StackLayout x:Name="EnÇokSatanlarSB" Orientation="Horizontal"   
 							   BindableLayout.ItemsSource="{Binding Items}"  >
-							<StackLayout.GestureRecognizers>
-								<TapGestureRecognizer Command="{Binding ItemTappedCommand}" />
-							</StackLayout.GestureRecognizers>
 							<BindableLayout.ItemTemplate>
+								
 								<DataTemplate>
 									<Frame BackgroundColor="White" BorderColor="Gray"  >
-										<StackLayout>
-											<Image Source="{ Binding ImageSource} "/>
+										<StackLayout WidthRequest="150" >
+											<StackLayout.GestureRecognizers>
+												<TapGestureRecognizer Tapped="ÜrünTapped2"  NumberOfTapsRequired="1"/>
+											</StackLayout.GestureRecognizers>
+											<Image Source="{ Binding ImageSource} " HeightRequest="150"/>
 											<Label HorizontalOptions="Fill"   
-												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}"/>
+												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}" LineBreakMode="WordWrap"/>
 											<Label HorizontalOptions="Fill" 
-													XAlign="Center"  YAlign="Center"  Text="{Binding ÜrünDetayı }"/>
+													XAlign="Center"  YAlign="Center"  Text="{Binding ÜrünDetayı }" LineBreakMode="WordWrap" />
 											<Label HorizontalOptions="Fill" 
-													XAlign="Center" YAlign="Center" Text="{Binding ÜrünFiyatı }"/>
+													XAlign="Center" YAlign="Center" Text="{Binding ÜrünFiyatı }" LineBreakMode="WordWrap"/>
 										</StackLayout>
 									</Frame>
 								</DataTemplate>
