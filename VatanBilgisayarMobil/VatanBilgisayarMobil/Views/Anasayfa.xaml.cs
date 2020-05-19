@@ -51,5 +51,10 @@ namespace VatanBilgisayarMobil.Views
             string ProductName = (tappedItem.Children[1] as Label).Text;
             await Navigation.PushAsync(new ÜrünSayfasi(new ÜrünModel(this).FindÜrünItemWithName(ProductName)));
         }
+
+        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

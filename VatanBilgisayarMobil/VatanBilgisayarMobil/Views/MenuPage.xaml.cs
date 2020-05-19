@@ -19,7 +19,7 @@ namespace VatanBilgisayarMobil.Views
             InitializeComponent();
 
             menuItems = new List<HomeMenuItem>
-            {   
+            {                  
                 new HomeMenuItem {Id = MenuItemType.AnaSayfa, Title="Anasayfa" },
                 new HomeMenuItem {Id = MenuItemType.Telefon, Title="Telefon" },
                 new HomeMenuItem {Id = MenuItemType.Bilgisayar, Title="Bilgisayar" },
@@ -45,6 +45,11 @@ namespace VatanBilgisayarMobil.Views
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
                 await RootPage.NavigateFromMenu(id);
             };
+        }
+
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Giris());
         }
     }
 }

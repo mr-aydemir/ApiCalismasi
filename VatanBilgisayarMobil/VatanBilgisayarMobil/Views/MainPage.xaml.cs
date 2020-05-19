@@ -43,6 +43,15 @@ namespace VatanBilgisayarMobil.Views
                     case (int)MenuItemType.Notebook:
                         MenuPages.Add(id, new NavigationPage(new NotebookPage()));
                         break;
+                    case (int)MenuItemType.Telefon:
+                        MenuPages.Add(id, new NavigationPage(new Giris()));
+                        break;
+                    case (int)MenuItemType.Bilgisayar_Parcalari:
+                        MenuPages.Add(id, new NavigationPage(new UyeOl()));
+                        break;
+                    case (int)MenuItemType.Kamera:
+                        MenuPages.Add(id, new NavigationPage(new Sepetim()));
+                        break;
                     default:
                         MenuPages.Add(id, new NavigationPage(new Sayfa()));
                         break;

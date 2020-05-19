@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.UyeOl"
+             Title="Yeni Üyelik">
+            
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Horizontal" >
+                <Entry BackgroundColor="#F5F5F5" Placeholder="AD" x:Name="Ad" Margin="-20,5" WidthRequest="190" HorizontalOptions="CenterAndExpand" />
+                <Entry BackgroundColor="#F5F5F5" Placeholder="SOYAD" x:Name="Soyad" Margin="-20,5" WidthRequest="200" HorizontalOptions="CenterAndExpand" />
+            </StackLayout>
+            <Entry BackgroundColor="#F5F5F5" Placeholder="E-POSTA" x:Name="Eposta" Margin="5,5" />
+            <Entry BackgroundColor="#F5F5F5" Placeholder="ŞİFRE" IsPassword="True" x:Name="Sifre" Margin="5,5" />
+            <Entry BackgroundColor="#F5F5F5" Placeholder="DOĞUM TARİHİ" x:Name="Email" Margin="5,5" />
+            <Entry BackgroundColor="#F5F5F5" Placeholder="CEP TELEFONU" x:Name="TelNo"  Margin="5,5" />
+            
+            
+            <Button BackgroundColor="#2199E8" Text="Üye Ol" TextColor="White" x:Name="KayitOl" CornerRadius="15" 
+                    HorizontalOptions="CenterAndExpand" WidthRequest="350" Margin="0,15,0,0" Clicked="KayitOl_Clicked" ></Button>
+           
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
