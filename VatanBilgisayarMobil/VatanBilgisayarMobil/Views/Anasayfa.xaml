@@ -6,7 +6,16 @@
 			 mc:Ignorable="d"
 			 
              x:Class="VatanBilgisayarMobil.Views.Anasayfa">
-	
+
+    <NavigationPage.TitleView>
+        <AbsoluteLayout BackgroundColor="{StaticResource NavigationPrimary}" HorizontalOptions="FillAndExpand">
+            <Image Source="VatanLogoBlueBackGround.png" AbsoluteLayout.LayoutBounds="-5,-5,1,1" AbsoluteLayout.LayoutFlags="All" HeightRequest="50" Margin="-20,0,0,0" />
+        </AbsoluteLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="Sepetim.jpg" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
     <ContentPage.Content>
 		<ScrollView>
 			<StackLayout >
