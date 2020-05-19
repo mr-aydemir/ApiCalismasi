@@ -11,6 +11,10 @@ namespace VatanAPI.Mapping
         public ResourceToModelProfile()
         {
             CreateMap<SaveCategoryResource, Category>();
+            CreateMap<SaveProductResource, Product>();
+            CreateMap<SaveImageResource, Image>();
+            CreateMap<SaveSiparisResource, Siparis>();
+            CreateMap<SaveSepetResource, Sepet>();
             CreateMap<UserCredentialsResource, User>();
         }
     }

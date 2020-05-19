@@ -15,6 +15,9 @@ namespace VatanAPI.Domain.Models
         public string Info { get; set; }
         public double KargoFiyatı { get; set; }
         public Category Category { get; set; }
+        public IList<Siparis> Siparisler { get; set; }
+
+        public IList<Sepet> Sepetler { get; set; }
         public IList<Image> Images { get; set; } = new List<Image>();
     }
 }

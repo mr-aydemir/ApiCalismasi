@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using VatanAPI.Core.Models;
 
 namespace VatanAPI.Domain.Models
@@ -7,7 +8,9 @@ namespace VatanAPI.Domain.Models
     {
         public int SepetId { get; set; }
         public int UserId { get; set; }
+        //public DateTime SepeteKonulmaTarihi { get; set; }
+        public int ProductID { get; set; }
         public User User { get; set; }
-        public IList<Product> Product { get; set; }
+        public Product Product { get; set; }
     }
 }

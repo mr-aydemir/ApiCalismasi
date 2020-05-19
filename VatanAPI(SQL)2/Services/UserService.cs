@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Repositories;
@@ -31,7 +32,7 @@ namespace VatanAPI.Services
 
             user.Password = _passwordHasher.HashPassword(user.Password);
 
-            await _userRepository.AddAsync(user/*, userRoles*/);
+            await _userRepository.AddAsync(user, userRoles);
             await _unitOfWork.CompleteAsync();
 
             return new CreateUserResponse(true, null, user);
@@ -40,6 +41,11 @@ namespace VatanAPI.Services
         public async Task<User> FindByEmailAsync(string email)
         {
             return await _userRepository.FindByEmailAsync(email);
+        }
+
+        public async Task<IEnumerable<User>> ListAsync()
+        {
+            return await _userRepository.ListAsync();
         }
     }
 }

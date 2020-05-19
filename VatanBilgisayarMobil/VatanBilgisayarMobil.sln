@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VatanBilgisayarMobil.iOS", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VatanBilgisayarMobil", "VatanBilgisayarMobil\VatanBilgisayarMobil.csproj", "{E2DA9CEC-1487-4074-9818-DA0A242B9923}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VatanAPI", "..\VatanAPI(SQL)2\VatanAPI.csproj", "{0C0C490F-CE39-4088-A9F5-E1F4254CA880}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -73,6 +75,18 @@ Global
 		{E2DA9CEC-1487-4074-9818-DA0A242B9923}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{E2DA9CEC-1487-4074-9818-DA0A242B9923}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{E2DA9CEC-1487-4074-9818-DA0A242B9923}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Release|iPhone.Build.0 = Release|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{0C0C490F-CE39-4088-A9F5-E1F4254CA880}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

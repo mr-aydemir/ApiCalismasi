@@ -16,7 +16,9 @@ namespace VatanAPI.Persistence.Repositories
 
         public async Task<IEnumerable<Sepet>> ListAsync()
         {
-            return await _context.Sepet.ToListAsync();
+            //return await _context.Sepet.ToListAsync();
+            return await _context.Sepet.Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User)
+                                        .ToListAsync(); ;
         }
         public async Task AddAsync(Sepet sepet)
         {

@@ -15,7 +15,9 @@ namespace VatanAPI.Persistence.Repositories
 
         public async Task<IEnumerable<Siparis>> ListAsync()
         {
-            return await _context.Siparis.ToListAsync();
+            //return await _context.Siparis.ToListAsync();
+            return await _context.Siparis.Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User)
+                                         .ToListAsync(); ;
         }
         public async Task AddAsync(Siparis siparis)
         {

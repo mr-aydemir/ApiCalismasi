@@ -1,12 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "6lqUyHHDg/w6pBKsLQcXQCzQucP53EeRY/69vYv5K/sUOwH5POPVjNHiRdFmYKM7KYQOJs8GqIis77ulwlyybA==",
+  "dgSpecHash": "PsgfUNRkDqLuxT4PkmG4T+3XckV6H+xWd2wG7uodWZc66IgmzpD6PRrQiYMjd6llS4hoB+pKcDOicPgt0//K6w==",
   "success": true,
   "projectFilePath": "E:\\ApiCalismasi\\VatanAPI(SQL)2\\VatanAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AydemirPC\\.nuget\\packages\\automapper\\9.0.0\\automapper.9.0.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\7.0.0\\automapper.extensions.microsoft.dependencyinjection.7.0.0.nupkg.sha512",
-    "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\3.1.3\\microsoft.aspnetcore.authentication.jwtbearer.3.1.3.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",
@@ -184,19 +183,7 @@
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\AydemirPC\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
-    "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.forms\\2.0.0.6482\\xamarin.forms.2.0.0.6482.nupkg.sha512"
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
   ],
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "'Xamarin.Forms 2.0.0.6482' paketi, proje hedef çerçevesi '.NETCoreApp,Version=v3.1' yerine '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' kullanılarak geri yüklendi. Bu paket projenizle tamamen uyumlu olmayabilir.",
-      "libraryId": "Xamarin.Forms",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v3.1"
-      ]
-    }
-  ]
+  "logs": []
 }

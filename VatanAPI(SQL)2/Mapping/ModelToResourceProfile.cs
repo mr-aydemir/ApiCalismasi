@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using System.Linq;
 using VatanAPI.Controllers.Resources;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Security.Tokens;
@@ -18,8 +19,10 @@ namespace VatanAPI.Mapping
                 .ForMember(src => src.Marka,
                            opt => opt.MapFrom(src => src.Marka.ToDescriptionString()));
             CreateMap<Image, ImageResource>();
-            CreateMap<User, UserResource>();
-            //.ForMember(u => u.Roles, opt => opt.MapFrom(u => u.UserRoles.Select(ur => ur.Role.Name)));
+            CreateMap<Sepet, SepetResource>();
+            CreateMap<Siparis, SiparisResource>();
+            CreateMap<User, UserResource>()
+            .ForMember(u => u.Roles, opt => opt.MapFrom(u => u.UserRoles.Select(ur => ur.Role.Name)));
 
             CreateMap<AccessToken, AccessTokenResource>()
                 .ForMember(a => a.AccessToken, opt => opt.MapFrom(a => a.Token))

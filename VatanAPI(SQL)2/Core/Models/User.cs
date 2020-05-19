@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using VatanAPI.Domain.Models;
 
@@ -19,11 +20,9 @@ namespace VatanAPI.Core.Models
 
         [Required]
         public string Password { get; set; }
-        public int SepetID { get; set; }
-        public Sepet Sepet { get; set; }
-        public int SiparisID { get; set; }
-        public IList<Siparis> Siparis { get; set; }
 
-        //public ICollection<UserRole> UserRoles { get; set; } = new Collection<UserRole>();
+        public ICollection<UserRole> UserRoles { get; set; } = new Collection<UserRole>();
+        public IList<Sepet> Sepetler { get; set; }
+        public IList<Siparis> Siparisler { get; set; }
     }
 }

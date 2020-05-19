@@ -2,6 +2,9 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.DependencyInjection;
 using VatanAPI.Persistence.Contexts;
+using VatanAPI.Core.Security.Hashing;
+using VatanAPI.Persistence;
+using Microsoft.Extensions.Hosting;
 
 namespace VatanAPI
 {
@@ -12,9 +15,11 @@ namespace VatanAPI
             var host = BuildWebHost(args);
 
             using (var scope = host.Services.CreateScope())
-            using (var context = scope.ServiceProvider.GetService<AppDbContext>())
             {
-                context.Database.EnsureCreated();
+                var services = scope.ServiceProvider;
+                var context = services.GetService<AppDbContext>();
+                var passwordHasher = services.GetService<IPasswordHasher>();
+                DatabaseSeed.Seed(context, passwordHasher);
             }
 
             host.Run();

@@ -11,6 +11,7 @@ namespace VatanAPI.Persistence.Contexts
         public DbSet<Image> Images { get; set; }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Role> Roles { get; set; }
         public DbSet<Sepet> Sepet { get; set; }
         public DbSet<Siparis> Siparis { get; set; }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
@@ -48,6 +49,8 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Product>().Property(p => p.Info).IsRequired();
             builder.Entity<Product>().Property(p => p.KargoFiyatı).IsRequired();
             builder.Entity<Product>().HasMany(p => p.Images).WithOne(p => p.Product).HasForeignKey(p => p.ProductId);
+           builder.Entity<Product>().HasMany(p => p.Sepetler).WithOne(p => p.Product).HasForeignKey(p => p.ProductID);
+          builder.Entity<Product>().HasMany(p => p.Siparisler).WithOne(p => p.Product).HasForeignKey(p => p.ProductID);
             builder.Entity<Product>().HasData
             (
                 new Product
@@ -483,19 +486,22 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Sepet>().ToTable("Sepet");
             builder.Entity<Sepet>().HasKey(p => p.SepetId);
             builder.Entity<Sepet>().Property(p => p.SepetId).IsRequired().ValueGeneratedOnAdd();
-            //builder.Entity<Sepet>().HasMany(p => p.Images).WithOne(p => p.Product).HasForeignKey(p => p.ProductId);
+           builder.Entity<Siparis>().Property(p => p.UserId).IsRequired();
+            builder.Entity<Siparis>().Property(p => p.ProductID).IsRequired();
             builder.Entity<Sepet>().HasData
             (
                  new Sepet
                  {
                      SepetId = 1,
-                     UserId = 1
+                     UserId = 1,
+                     ProductID = 117
 
                  },
                  new Sepet
                  {
                      SepetId = 2,
-                     UserId = 2
+                     UserId = 2,
+                     ProductID = 118
 
                  }
             );
@@ -505,20 +511,27 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Siparis>().HasKey(p => p.SiparisId);
             builder.Entity<Siparis>().Property(p => p.SiparisId).IsRequired().ValueGeneratedOnAdd();
             builder.Entity<Siparis>().Property(p => p.UserId).IsRequired();
+            builder.Entity<Siparis>().Property(p => p.ProductID).IsRequired();
             builder.Entity<Siparis>().HasData
             (
                  new Siparis
                  {
                      SiparisId = 1,
                      UserId = 1,
+                     ProductID=117
+                     
 
                  },
                 new Siparis
                 {
                     SiparisId = 2,
                     UserId = 2,
+                    ProductID = 118
                 }
              );
+
+            builder.Entity<UserRole>().HasKey(ur => new { ur.UserId, ur.RoleId });
+
             builder.Entity<User>().ToTable("User");
             builder.Entity<User>().HasKey(p => p.Id);
             builder.Entity<User>().Property(p => p.Id).IsRequired().ValueGeneratedOnAdd();
@@ -527,9 +540,8 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<User>().Property(p => p.LastName).IsRequired();
             builder.Entity<User>().Property(p => p.UserName).IsRequired();
             builder.Entity<User>().Property(p => p.Password).IsRequired();
-            builder.Entity<User>().Property(p => p.SepetID).IsRequired();
-            builder.Entity<User>().HasOne(p => p.Sepet).WithOne(p => p.User).HasForeignKey<Sepet>(b => b.UserId);
-            builder.Entity<User>().HasMany(p => p.Siparis).WithOne(p => p.User).HasForeignKey(p => p.UserId);
+            builder.Entity<User>().HasMany(p => p.Sepetler).WithOne(p => p.User).HasForeignKey(b => b.UserId);
+            builder.Entity<User>().HasMany(p => p.Siparisler).WithOne(p => p.User).HasForeignKey(p => p.UserId);
             builder.Entity<User>().HasData
             (
 

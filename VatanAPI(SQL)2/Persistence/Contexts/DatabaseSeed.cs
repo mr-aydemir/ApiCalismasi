@@ -17,7 +17,7 @@ namespace VatanAPI.Persistence
         {
             context.Database.EnsureCreated();
 
-            /*if (context.Roles.Count() == 0)
+            if (context.Roles.Count() == 0)
             {
 
                 var roles = new List<Role>
@@ -26,9 +26,9 @@ namespace VatanAPI.Persistence
                 new Role { Name = ERole.Administrator.ToString() }
                 };
 
-               // context.Roles.AddRange(roles);
+                context.Roles.AddRange(roles);
                 context.SaveChanges();
-            }*/
+            }
 
             if (context.Users.Count() == 0)
             {
@@ -38,7 +38,7 @@ namespace VatanAPI.Persistence
                     new User { Email = "common@common.com", Password = passwordHasher.HashPassword("12345678") },
                 };
 
-                /*users[0].UserRoles.Add(new UserRole
+                users[0].UserRoles.Add(new UserRole
                 {
                     RoleId = context.Roles.SingleOrDefault(r => r.Name == ERole.Administrator.ToString()).Id
                 });
@@ -46,7 +46,7 @@ namespace VatanAPI.Persistence
                 users[1].UserRoles.Add(new UserRole
                 {
                     RoleId = context.Roles.SingleOrDefault(r => r.Name == ERole.Common.ToString()).Id
-                });*/
+                });
 
                 context.Users.AddRange(users);
                 context.SaveChanges();

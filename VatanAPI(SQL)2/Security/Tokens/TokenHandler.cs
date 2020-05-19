@@ -90,10 +90,10 @@ namespace VatanAPI.Security.Tokens
                 new Claim(JwtRegisteredClaimNames.Sub, user.Email)
             };
 
-            /*foreach (var userRole in user.UserRoles)
+            foreach (var userRole in user.UserRoles)
             {
                 claims.Add(new Claim(ClaimTypes.Role, userRole.Role.Name));
-            }*/
+            }
 
             return claims;
         }

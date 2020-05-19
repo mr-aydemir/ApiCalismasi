@@ -19,6 +19,10 @@ using VatanAPI.Security.Hashing;
 using VatanAPI.Security.Tokens;
 using VatanAPI.Services;
 using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System;
+using VatanAPI.Extensions;
 
 namespace VatanAPI
 {
@@ -46,10 +50,14 @@ namespace VatanAPI
             services.AddScoped<ICategoryRepository, CategoryRepository>();
             services.AddScoped<IProductRepository, ProductRepository>();
             services.AddScoped<IImageRepository, ImageRepository>();
+            services.AddScoped<ISepetRepository, SepetRepository>();
+            services.AddScoped<ISiparisRepository, SiparisRepository>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddScoped<ICategoryService, CategoryService>();
             services.AddScoped<IProductService, ProductService>();
             services.AddScoped<IImageService, ImageService>();
+            services.AddScoped<ISiparisService, SiparisService>();
+            services.AddScoped<ISepetService, SepetService>();
             services.AddAutoMapper(typeof(Startup));
             //services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddScoped<IUserRepository, UserRepository>();
@@ -63,7 +71,7 @@ namespace VatanAPI
             var signingConfigurations = new SigningConfigurations();
             services.AddSingleton(signingConfigurations);
 
-            /* services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                  .AddJwtBearer(jwtBearerOptions =>
                  {
                      jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters()
@@ -77,7 +85,7 @@ namespace VatanAPI
                          ClockSkew = TimeSpan.Zero
                      };
                  });
- */
+ 
             services.AddAutoMapper(this.GetType().Assembly);
         }
 
@@ -92,7 +100,7 @@ namespace VatanAPI
 
             app.UseHttpsRedirection();
 
-            //app.UseCustomSwagger();
+            app.UseCustomSwagger();
 
             app.UseAuthentication();
 

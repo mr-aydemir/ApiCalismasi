@@ -11,46 +11,19 @@ namespace VatanAPI.Domain.Services
 {
     public class SepetService : ISepetService
     {
-        private readonly IUserRepository _usersRepository;
         private readonly ISepetRepository _sepetRepository;
-        private readonly IProductRepository _productRepository;
         private readonly IUnitOfWork _unitOfWork;
-        private readonly IMemoryCache _cache;
 
-        public SepetService(ISepetRepository sepetRepository, IUserRepository usersRepository, IProductRepository productRepository, IUnitOfWork unitOfWork, IMemoryCache cache)
+        public SepetService(ISepetRepository sepetRepository, IUnitOfWork unitOfWork)
         {
-            _usersRepository = usersRepository;
-            _productRepository = productRepository;
             _sepetRepository = sepetRepository;
             _unitOfWork = unitOfWork;
-            _cache = cache;
-        }
-
-        public async Task<SepetResponse> DeleteAsync(int id)
-        {
-            var existingSepet = await _sepetRepository.FindByIdAsync(id);
-
-            if (existingSepet == null)
-                return new SepetResponse("Sepet not found.");
-
-            try
-            {
-                await _unitOfWork.CompleteAsync();
-
-                return new SepetResponse(existingSepet);
-            }
-            catch (Exception ex)
-            {
-                // Do some logging stuff
-                return new SepetResponse($"An error occurred when deleting the sepet: {ex.Message}");
-            }
         }
 
         public async Task<IEnumerable<Sepet>> ListAsync()
         {
             return await _sepetRepository.ListAsync();
         }
-
         public async Task<SepetResponse> SaveAsync(Sepet sepet)
         {
             try
@@ -66,10 +39,8 @@ namespace VatanAPI.Domain.Services
                 return new SepetResponse($"An error occurred when saving the sepet: {ex.Message}");
             }
         }
-
         public async Task<SepetResponse> UpdateAsync(int id, Sepet sepet)
         {
-
             var existingSepet = await _sepetRepository.FindByIdAsync(id);
 
             if (existingSepet == null)
@@ -88,6 +59,26 @@ namespace VatanAPI.Domain.Services
             {
                 // Do some logging stuff
                 return new SepetResponse($"An error occurred when updating the sepet: {ex.Message}");
+            }
+        }
+        public async Task<SepetResponse> DeleteAsync(int id)
+        {
+            var existingSepet = await _sepetRepository.FindByIdAsync(id);
+
+            if (existingSepet == null)
+                return new SepetResponse("Sepet not found.");
+
+            try
+            {
+                _sepetRepository.Remove(existingSepet);
+                await _unitOfWork.CompleteAsync();
+
+                return new SepetResponse(existingSepet);
+            }
+            catch (Exception ex)
+            {
+                // Do some logging stuff
+                return new SepetResponse($"An error occurred when deleting the sepet: {ex.Message}");
             }
         }
 

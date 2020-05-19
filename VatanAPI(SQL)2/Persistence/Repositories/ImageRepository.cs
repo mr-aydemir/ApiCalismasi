@@ -15,7 +15,7 @@ namespace VatanAPI.Persistence.Repositories
 
         public async Task<IEnumerable<Image>> ListAsync()
         {
-            return await _context.Images.Include(p => p.Product)
+            return await _context.Images.Include(p => p.Product).ThenInclude(p=> p.Category)
                                           .ToListAsync();
         }
         public async Task AddAsync(Image image)//Ekle
