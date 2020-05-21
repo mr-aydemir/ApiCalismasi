@@ -32,44 +32,40 @@ namespace VatanBilgisayarMobil.Views
                 switch (id)
                 {                  
                     case (int)MenuItemType.AnaSayfa:
-                           MenuPages.Add(id, new NavigationPage(new Anasayfa()));
+                        PushPage(new Anasayfa());
                         break;
                     case (int)MenuItemType.Bilgisayar:
-                        MenuPages.Add(id, new NavigationPage(new BilgisayarMenu()));
+                        PushPage((new BilgisayarMenu()));
                         break;
                     case (int)MenuItemType.Hakkımızda:
-                        MenuPages.Add(id, new NavigationPage(new AboutPage()));
+                        PushPage((new AboutPage()));
                         break;
                     case (int)MenuItemType.Notebook:
-                        MenuPages.Add(id, new NavigationPage(new NotebookPage()));
+                        PushPage((new NotebookPage()));
                         break;
-                    case (int)MenuItemType.Telefon:
-                        MenuPages.Add(id, new NavigationPage(new Giris()));
-                        break;
-                    case (int)MenuItemType.Bilgisayar_Parcalari:
-                        MenuPages.Add(id, new NavigationPage(new UyeOl()));
-                        break;
-                    case (int)MenuItemType.Kamera:
-                        MenuPages.Add(id, new NavigationPage(new Sepetim()));
+                    case (int)MenuItemType.ÜyeGirisi:
+                        PushPage(new Giris());
                         break;
                     default:
-                        MenuPages.Add(id, new NavigationPage(new Sayfa()));
+                        PushPage((new Sayfa()));
                         break;
 
                 }
             }
+            if (Device.RuntimePlatform == Device.Android)
+                await Task.Delay(100);
 
-            var newPage = MenuPages[id];
+            IsPresented = false;
+        }
 
-            if (newPage != null && Detail != newPage)
-            {
-                Detail = newPage;
+        public async void PushPage(ContentPage page)
+        {
+            await ((NavigationPage)((MasterDetailPage)Application.Current.MainPage).Detail).CurrentPage.Navigation.PushAsync(page);
 
-                if (Device.RuntimePlatform == Device.Android)
-                    await Task.Delay(100);
+            if (Device.RuntimePlatform == Device.Android)
+                await Task.Delay(100);
 
-                IsPresented = false;
-            }
+            IsPresented = false;
         }
     }
 }

@@ -15,6 +15,7 @@ namespace VatanBilgisayarMobil.Views
         {
             InitializeComponent();
 
+            ListViewMenu.SelectedItem = null;
             PCmenuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Notebook, Title="Notebook" },
@@ -34,6 +35,8 @@ namespace VatanBilgisayarMobil.Views
                     return;
 
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
+
+                ListViewMenu.SelectedItem = null;
                 await RootPage.NavigateFromMenu(id);
             };
         }

@@ -1,75 +1,57 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using VatanBilgisayarMobil.Data;
 using VatanBilgisayarMobil.Models;
 using VatanBilgisayarMobil.Views;
 using Xamarin.Forms;
+using static VatanBilgisayarMobil.Data.RestAPIForProducts;
 
 namespace VatanBilgisayarMobil.ViewModels
 {
     public class ÜrünModel : BindableObject
     {
         private Page Page;
-
-        RestAPI RestAPI;
+        List<Product> Products = new List<Product>();
+        RestAPIForProducts RestAPI;
         public ÜrünModel(Page mainPage)
         {
             this.Page = mainPage;
-            RestAPI = new RestAPI();
-            //AddItems();
+            RestAPI = new RestAPIForProducts();
+            Products = GetAllItems();
         }
-
-        /*private void AddItems()
+        public Product FindÜrünItemWithName(string Name)
         {
-            foreach (var item in RestAPI.GetProducts())
-            {
-                ÜrünItem ürünItem = new ÜrünItem()
-                {
-                    ImageSource = item.ImageUrl,
-                    Ürünİsmi = item.Name,
-                    ÜrünDetayı = item.Info,
-                    ÜrünFiyatı = item.Cost.ToString()
-
-                };
-                Items.Add(ürünItem);
-
-            }
-        }*/
-        public ÜrünItem FindÜrünItemWithName(string Name)
-        {
-            ÜrünItem ürünItem = new ÜrünItem();
-            foreach (var item in RestAPI.GetProducts())
+            Product Ürün = new Product();
+            foreach (var item in Products)
             {
                 if (Name == item.Name)
                 {
-                    ürünItem = new ÜrünItem()
-                    {
-                        ImageSource = item.ImageUrl,
-                        Ürünİsmi = item.Name,
-                        ÜrünDetayı = item.Info,
-                        ÜrünFiyatı = item.Cost.ToString()
-
-                    };
+                    Ürün = item;
                     break;
                 }
             }
-            return ürünItem;
+            return Ürün;
         }
-        public ObservableCollection<ÜrünItem> GetItems(int numberOfItem)
+        public Product FindÜrünItemWithId(string Id)
         {
-            ObservableCollection<ÜrünItem> Items = new ObservableCollection<ÜrünItem>();
-            foreach (var item in RestAPI.GetProducts())
+            Product Ürün =new Product();
+            foreach (Product item in Products)
             {
-
-                ÜrünItem ürünItem = new ÜrünItem()
+                if (Id == item.Id.ToString())
                 {
-                    ImageSource = item.ImageUrl,
-                    Ürünİsmi = item.Name,
-                    ÜrünDetayı = item.Info,
-                    ÜrünFiyatı = item.Cost.ToString()
-
-                };
-                Items.Add(ürünItem);
+                    Ürün = item;
+                    break;
+                }
+            }
+            return Ürün;
+        }
+        public List<Product> GetItems(int numberOfItem)
+        {
+            List<Product> Items = new List<Product>();
+            foreach (Product item in Products)
+            {
+                Items.Add(item);
                 if (Items.Count == numberOfItem)
                 {
                     break;
@@ -78,25 +60,10 @@ namespace VatanBilgisayarMobil.ViewModels
             }
             return Items;
         }
-        public ObservableCollection<ÜrünItem> GetAllItems()
+        public List<Product> GetAllItems()
         {
-            ObservableCollection<ÜrünItem> Items = new ObservableCollection<ÜrünItem>();
             
-            foreach (var item in RestAPI.GetProducts())
-            {
-
-                ÜrünItem ürünItem = new ÜrünItem()
-                {
-                    ImageSource = item.ImageUrl,
-                    Ürünİsmi = item.Name,
-                    ÜrünDetayı = item.Info,
-                    ÜrünFiyatı = item.Cost.ToString()
-
-                };
-                Items.Add(ürünItem);
-
-            }
-            return Items;
+            return RestAPI.GetProducts();
         }
     }
 }

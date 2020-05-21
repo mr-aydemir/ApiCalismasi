@@ -10,7 +10,7 @@
     <StackLayout VerticalOptions="FillAndExpand">
         <StackLayout BackgroundColor="#1565C1" Orientation="Horizontal">
             <Image Source="UyeGirisi.png" HeightRequest="30" Margin="10,0,0,0"/>
-            <Button Text="Üye Girişi" TextColor="White" Clicked="Button_Clicked" BackgroundColor="#1565C1" Margin="-10,0,0,0"/>
+            <Button x:Name="ÜyeOlButton" Text="Üye Girişi" TextColor="White" Clicked="Button_Clicked" BackgroundColor="#1565C1" Margin="-10,0,0,0"/>
         </StackLayout>
         <ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">

@@ -5,7 +5,7 @@
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
   <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-  <application android:label="VatanBilgisayarMobil.Android" android:name="android.app.Application" android:allowBackup="true" android:icon="@mipmap/icon" android:debuggable="true">
+  <application android:label="VatanBilgisayarMobil.Android" android:debuggable="true" android:name="crc643376a7c2e5abf7a6.MainApplication" android:allowBackup="true" android:icon="@mipmap/icon">
     <activity android:configChanges="orientation|screenSize" android:icon="@mipmap/icon" android:label="VatanBilgisayarMobil" android:theme="@style/MainTheme" android:name="crc643376a7c2e5abf7a6.MainActivity">
       <intent-filter>
         <action android:name="android.intent.action.MAIN" />

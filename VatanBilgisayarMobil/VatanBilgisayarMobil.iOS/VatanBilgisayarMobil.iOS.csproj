@@ -65,6 +65,8 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Services\ToolbarItemBadgeService.cs" />
+    <Compile Include="Utils\BarButtonItemExtensions.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -157,5 +159,17 @@
       <Project>{0788FD3D-19BF-4639-8681-1FA22B739E5D}</Project>
       <Name>VatanBilgisayarMobil</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\VatanLogoBlueBackGround.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\indicator_unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\indicator_selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Cart.png" />
   </ItemGroup>
 </Project>

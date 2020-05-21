@@ -5,6 +5,8 @@ using VatanBilgisayarMobil.Services;
 using VatanBilgisayarMobil.Views;
 using DLToolkit.Forms.Controls;
 using Xamarin.Essentials;
+using System.Linq;
+
 namespace VatanBilgisayarMobil
 {
     public partial class App : Application

@@ -19,6 +19,8 @@ namespace VatanBilgisayarMobil.Models
         Spor_ve_Outdoor,
         Hakkımızda,
         Notebook,
+        ÜyeGirisi,
+        Sepet,
         Diğer
     }
     public class HomeMenuItem

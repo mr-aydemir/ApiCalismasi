@@ -32,9 +32,5 @@ namespace VatanBilgisayarMobil.Models
             get { return _ürünFiyatı; }
             set { _ürünFiyatı = value; }
         }
-        public Command ItemTappedCommand
-        {
-            get; set;
-        }
     }
 }

@@ -13,18 +13,25 @@
             <StackLayout>
 				<StackLayout>
 					<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
-							FlowItemTappedCommand="{Binding ItemTappedCommand}"   FlowItemsSource="{Binding Items}" >
+							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünTapped" HeightRequest="1250" RowHeight="250">
 						<flv:FlowListView.FlowColumnTemplate>
 							<DataTemplate>
-								<Frame BackgroundColor="White" BorderColor="Gray">
-									<StackLayout>
+								<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
+									<StackLayout Spacing="1">
 										<Image Source="{ Binding ImageSource} " HeightRequest="150"/>
-										<Label HorizontalOptions="Fill" 
-												XAlign="Center"  YAlign="Center"  Text="{Binding Ürünİsmi}"/>
-										<Label HorizontalOptions="Fill" 
-													XAlign="Center"  YAlign="Center"  Text="{Binding ÜrünDetayı }"/>
-										<Label HorizontalOptions="Fill"   
-													XAlign="Center" YAlign="Center" Text="{Binding ÜrünFiyatı }"/>
+										<Label HorizontalOptions="Fill" TextColor="DarkGray"
+												XAlign="Center"  YAlign="Center"  Text="{Binding Name}"/>
+										<Label HorizontalOptions="Fill"  FontAttributes="Bold"
+													XAlign="Center"  YAlign="Center"  Text="{Binding Info }"/>
+										<Label HorizontalOptions="Fill"    TextColor="{StaticResource NavigationPrimary}"
+													XAlign="Center" YAlign="Center" >
+											<Label.FormattedText>
+												<FormattedString>
+													<Span Text="₺"  FontSize="Medium" FontAttributes="Bold"/>
+													<Span FontSize="Large" Text="{Binding Cost,Converter={StaticResource intToString}}" FontAttributes="Bold"/>
+												</FormattedString>
+											</Label.FormattedText>
+										</Label>
 									</StackLayout>
 								</Frame>
 							</DataTemplate>

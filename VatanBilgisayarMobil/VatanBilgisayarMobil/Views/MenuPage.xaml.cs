@@ -17,7 +17,7 @@ namespace VatanBilgisayarMobil.Views
         public MenuPage()
         {
             InitializeComponent();
-
+            ListViewMenu.SelectedItem = null;
             menuItems = new List<HomeMenuItem>
             {                  
                 new HomeMenuItem {Id = MenuItemType.AnaSayfa, Title="Anasayfa" },
@@ -43,13 +43,14 @@ namespace VatanBilgisayarMobil.Views
                     return;
 
                 var id = (int)((HomeMenuItem)e.SelectedItem).Id;
+                ((ListView)sender).SelectedItem = null;
                 await RootPage.NavigateFromMenu(id);
             };
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new Giris());
+            await RootPage.NavigateFromMenu(Convert.ToInt32(MenuItemType.ÜyeGirisi));
         }
     }
 }

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using VatanBilgisayarMobil.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -17,14 +17,16 @@ namespace VatanBilgisayarMobil.Views
             InitializeComponent();
         }
 
-        private void KayıtOl_Clicked(object sender, EventArgs e)
+        private async void KayıtOl_Clicked(object sender, EventArgs e)
         {
-
+            await Navigation.PushAsync(new UyeOl());
         }
 
-        private void GirisYap_Clicked(object sender, EventArgs e)
+        private async void GirisYap_Clicked(object sender, EventArgs e)
         {
+            RestAPIForAccounts restAPIForAccounts = new RestAPIForAccounts();
 
+            await restAPIForAccounts.LoginAsync(Email.Text, Sifre.Text);
         }
     }
 }
