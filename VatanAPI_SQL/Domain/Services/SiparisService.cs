@@ -94,6 +94,10 @@ namespace VatanAPI.Domain.Services
 				return new SiparisResponse($"An error occurred when updating the siparis: {ex.Message}");
 			}
 		}
+		public async Task<IEnumerable<Siparis>> FindByEmailAsync(string email)
+		{
+			return await _siparisRepository.FindByEmailAsync(email);
+		}
 
 	}
 }

@@ -20,6 +20,11 @@ namespace VatanBilgisayarMobil.Models
         Hakkımızda,
         Notebook,
         ÜyeGirisi,
+        Hesabım,
+        ÜyelikBilgileri,
+        Siparişler,
+        ŞifreDeğiştirme,
+        ÇıkışYap,
         Sepet,
         Diğer
     }

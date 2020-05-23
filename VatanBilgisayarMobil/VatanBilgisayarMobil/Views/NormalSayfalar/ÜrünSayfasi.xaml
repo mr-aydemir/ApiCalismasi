@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"         
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.ÜrünSayfasi">
+    <ContentPage.Content>
+		<StackLayout>
+			<ScrollView>
+				<StackLayout BackgroundColor="White" >
+					<Label HorizontalOptions="Center" Margin="0,10,0,0" x:Name="id" />
+					<Image x:Name="Image" HeightRequest="300" />
+					<StackLayout>
+						<StackLayout HorizontalOptions="Center">
+							<Label HorizontalOptions="Center"  x:Name="Name"  FontSize="Default" TextColor="LightGray"  />
+							<Label Margin="5,0" HorizontalOptions="Center"  x:Name="Detail"  FontAttributes="Bold" FontSize="Medium" LineBreakMode="WordWrap"/>
+							<Label  HorizontalOptions="Center"  x:Name="Cost"  FontAttributes="Bold" FontSize="20" TextColor="{StaticResource NavigationPrimary}"/>
+							<Label HorizontalOptions="Center" x:Name="Taksit" FontAttributes="Bold" TextDecorations="Underline" TextColor="LightGray" FontSize="Micro"/>
+						</StackLayout>
+					</StackLayout>
+				</StackLayout>
+			</ScrollView>
+
+			<StackLayout Orientation="Horizontal" BackgroundColor="#14C160">
+				<Picker x:Name="picker" Title="Adet" TitleColor="White" TextColor="White" BackgroundColor="#39D87C" WidthRequest="100" SelectedIndexChanged="picker_SelectedIndexChanged">
+					<Picker.ItemsSource>
+						<x:Array Type="{x:Type x:String}">
+							<x:String>1 Adet</x:String>
+							<x:String>2 Adet</x:String>
+							<x:String>3 Adet</x:String>
+							<x:String>4 Adet</x:String>
+							<x:String>5 Adet</x:String>
+						</x:Array>
+					</Picker.ItemsSource>
+				</Picker>
+				<Button Text="SEPETE EKLE" TextColor="White" BackgroundColor="#14C160" HorizontalOptions="Fill" Clicked="SepeteEkle_Clicked" x:Name="SepeteEkle"/>
+			</StackLayout>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>

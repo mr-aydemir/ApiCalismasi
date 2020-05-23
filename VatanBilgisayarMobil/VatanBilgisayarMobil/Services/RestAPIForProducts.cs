@@ -7,21 +7,23 @@ using System.Net.Http.Headers;
 using System.Text;
 using VatanBilgisayarMobil.Models;
 using Xamarin.Forms;
+using Settings = VatanBilgisayarMobil.Helpers.Settings;
 
 namespace VatanBilgisayarMobil.Data
 {
     public class RestAPIForProducts
     {
+        private string _ApiUrl = "https://sytronus.azurewebsites.net/";
         HttpClient client;
         HttpResponseMessage response;
-        public List<Product> Products;
-        public List<Category> Categories;
-        public List<ImageModel> ImageModels;
+        public List<Product> Products=new List<Product>();
+        public List<Category> Categories = new List<Category>();
+        public List<ImageModel> ImageModels=new List<ImageModel>();
         public RestAPIForProducts()
         {
             client = new HttpClient()
             {
-                BaseAddress = new Uri("https://vatanrestapi.azurewebsites.net/")
+                BaseAddress = new Uri(_ApiUrl)
             };
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             GetData();
@@ -29,7 +31,7 @@ namespace VatanBilgisayarMobil.Data
 
         public List<Product> GetProducts()
         {
-            HttpResponseMessage response = client.GetAsync("api/products").Result;
+            response = client.GetAsync("api/products").Result;
             if (response.IsSuccessStatusCode)
             {
                 var items = response.Content.ReadAsAsync<IEnumerable<Product>>().Result;

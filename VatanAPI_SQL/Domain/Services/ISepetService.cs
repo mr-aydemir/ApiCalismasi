@@ -16,6 +16,7 @@ namespace VatanAPI.Domain.Services
         Task<SepetResponse> SaveAsync(Sepet sepet);
         Task<SepetResponse> UpdateAsync(int id, Sepet sepet);
         Task<SepetResponse> DeleteAsync(int id);
+        Task<IEnumerable<Sepet>> FindByEmailAsync(string email);
     }
 }
 

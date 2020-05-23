@@ -4,6 +4,8 @@ using VatanAPI.Controllers.Resources;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Services;
 using Microsoft.AspNetCore.Mvc;
+using VatanAPI.Resources;
+using VatanAPI.Domain.Models;
 
 namespace VatanAPI.Controllers
 {
@@ -38,6 +40,15 @@ namespace VatanAPI.Controllers
 
             var userResource = _mapper.Map<User, UserResource>(response.User);
             return Ok(userResource);
+        }
+        [HttpGet("{email}")]
+        public async Task<UserResource> GetUserInfos(string email)
+        {
+            var userinfo =  await _userService.FindByEmailAsync(email);
+            var resource = _mapper.Map<User, UserResource>(userinfo);
+            resource.Password = null;
+            resource.Roles = null;
+            return resource;
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Repositories;
@@ -16,8 +17,12 @@ namespace VatanAPI.Persistence.Repositories
         public async Task<IEnumerable<Siparis>> ListAsync()
         {
             //return await _context.Siparis.ToListAsync();
-            return await _context.Siparis.Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User)
-                                         .ToListAsync(); ;
+            var List = await _context.Siparis.Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User).ToListAsync();
+            foreach (var item in List)
+            {
+                item.User.Password = null;
+            }
+            return List;
         }
         public async Task AddAsync(Siparis siparis)
         {
@@ -26,6 +31,16 @@ namespace VatanAPI.Persistence.Repositories
         public async Task<Siparis> FindByIdAsync(int id)
         {
             return await _context.Siparis.FindAsync(id);
+        }
+        public async Task<IEnumerable<Siparis>> FindByEmailAsync(string Email)
+        {
+            var List = await _context.Siparis.Where(p => p.User.Email == Email).Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User)
+                                        .ToListAsync();
+            foreach (var item in List)
+            {
+                item.User.Password = null;
+            }
+            return List;
         }
         public void Update(Siparis siparis)
         {

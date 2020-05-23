@@ -1,16 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "+Wajmf51dlB/+FWilecwnFGGeTgiTavenSmWgnhsiAP2/wo5zTPiSGpSMSyuDmzAhdV3/bMMlgD79ECdMF3R8Q==",
+  "dgSpecHash": "hw9CzC9QS/Kwtw68lcfKJgkK9pPb5lVvhBMotQnVhLJkX0eJhuA8U565buC3QJ+xeBf7ETDAVe+eCkqfEJpr1A==",
   "success": true,
   "projectFilePath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\newtonsoft.json.bson\\1.0.1\\newtonsoft.json.bson.1.0.1.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\xfcontrols\\1.0.0.6\\xfcontrols.1.0.0.6.nupkg.sha512"

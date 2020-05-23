@@ -8,8 +8,8 @@ namespace VatanBilgisayarMobil.Models
 {
     public class Product
     {
-        private int _ID, _CategoryId,_NumberInStock;
-        private string _Name, _Url,_Info,_ImageSource;
+        private int _ID, _CategoryId,_NumberInStock, _Adet=0, _SepetId;
+        private string _Name, _Url,_Info,_ImageSource ;
         private double _Cost, _PreviousCost, _KargoFiyatı;
         private EMarka _Marka;
         private Category _Category;
@@ -80,6 +80,16 @@ namespace VatanBilgisayarMobil.Models
         {
             get { return _ImageSource; }
             set { _ImageSource = value; }
+        }
+        public int Adet
+        {
+            get { return _Adet; }
+            set { _Adet = value; }
+        }
+        public int SepetId
+        {
+            get { return _SepetId; }
+            set { _SepetId = value; }
         }
 
         public enum EMarka : byte

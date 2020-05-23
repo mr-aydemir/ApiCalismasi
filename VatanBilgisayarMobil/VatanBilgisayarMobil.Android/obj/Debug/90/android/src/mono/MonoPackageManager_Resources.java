@@ -8,6 +8,8 @@ public class MonoPackageManager_Resources {
 		"Newtonsoft.Json.Bson.dll",
 		"Newtonsoft.Json.dll",
 		"Plugin.CurrentActivity.dll",
+		"Plugin.Settings.Abstractions.dll",
+		"Plugin.Settings.dll",
 		"SQLite-net.dll",
 		"SQLitePCLRaw.batteries_v2.dll",
 		"SQLitePCLRaw.core.dll",

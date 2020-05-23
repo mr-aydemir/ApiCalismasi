@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.KullanıcıSayfaları.Siparislerim">
+    <ContentPage.Content>
+		<StackLayout>
+			<CollectionView  x:Name="SiparislerFLV">
+				<CollectionView.ItemTemplate>
+					<DataTemplate>
+						<Frame  BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
+							<StackLayout Orientation="Horizontal" HeightRequest="120">
+								<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
+									<StackLayout HorizontalOptions="Center">
+										<Label Text="SİPARİŞ NUMARASI" />
+										<Label Text="SİPARİŞ TARİHİ"/>
+										<Label Text="TİP"/>
+										<Label Text="DETAY"/>
+									</StackLayout>
+								</Frame>
+								<StackLayout>
+									<Frame BackgroundColor="White"  BorderColor="#E0E0E0" CornerRadius="0" Padding="0" Margin="0" >
+										<Label Text="{Binding SiparisId,Converter={StaticResource IntToString}}" />
+									</Frame>
+									<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" Padding="0" Margin="0">
+										<Label Text="{Binding SiparisTarihi,Converter={StaticResource DateTimeToStringConverter}}" />
+									</Frame>
+									<Frame  BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" Padding="0" Margin="0">
+										<Label Text="Online Sipariş" />
+									</Frame>
+									<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" Padding="0" Margin="0">
+										<StackLayout>
+											<Label Text="{Binding ProductID,Converter={StaticResource IntToString}}" IsVisible="False"/>
+											<Label Text="Detay" TextDecorations="Underline" >
+												<Label.GestureRecognizers>
+													<TapGestureRecognizer x:Name="Detay" Tapped="Detay_Tapped"  NumberOfTapsRequired="1"/>
+												</Label.GestureRecognizers>
+											</Label>
+										</StackLayout>
+									</Frame>
+								</StackLayout>
+							</StackLayout>
+						</Frame>
+					</DataTemplate>
+				</CollectionView.ItemTemplate>
+			</CollectionView>
+		</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

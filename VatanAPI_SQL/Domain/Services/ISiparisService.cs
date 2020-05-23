@@ -16,6 +16,7 @@ namespace VatanAPI.Domain.Services
         Task<SiparisResponse> SaveAsync(Siparis siparis);
         Task<SiparisResponse> UpdateAsync(int id, Siparis siparis);
         Task<SiparisResponse> DeleteAsync(int id);
+        Task<IEnumerable<Siparis>> FindByEmailAsync(string email);
     }
 }
 

@@ -14,6 +14,7 @@ namespace VatanAPI.Domain.Models
         public int NumberInStock { get; set; }
         public string Info { get; set; }
         public double KargoFiyatı { get; set; }
+        public int ToplamSiparisSayisi { get; set; }
         public ProductTags Tag { get; set; }
         public Category Category { get; set; }
         public IList<Siparis> Siparisler { get; set; }

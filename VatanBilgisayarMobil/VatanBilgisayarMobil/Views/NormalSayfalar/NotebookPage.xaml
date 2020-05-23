@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.NotebookPage"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             Title="Notebook">
+            
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+				<StackLayout>
+					<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
+							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünTapped" HeightRequest="1250" RowHeight="250">
+						<flv:FlowListView.FlowColumnTemplate>
+							<DataTemplate>
+								<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
+									<StackLayout Spacing="1">
+										<Image Source="{ Binding ImageSource} " HeightRequest="150"/>
+										<Label HorizontalOptions="Fill" TextColor="DarkGray"
+												XAlign="Center"  YAlign="Center"  Text="{Binding Name}"/>
+										<Label HorizontalOptions="Fill"  FontAttributes="Bold"
+													XAlign="Center"  YAlign="Center"  Text="{Binding Info }"/>
+										<Label HorizontalOptions="Fill"    TextColor="{StaticResource NavigationPrimary}"
+													XAlign="Center" YAlign="Center" >
+											<Label.FormattedText>
+												<FormattedString>
+													<Span Text="₺"  FontSize="Medium" FontAttributes="Bold"/>
+													<Span FontSize="Large" Text="{Binding Cost,Converter={StaticResource CostToString}}" FontAttributes="Bold"/>
+												</FormattedString>
+											</Label.FormattedText>
+										</Label>
+									</StackLayout>
+								</Frame>
+							</DataTemplate>
+						</flv:FlowListView.FlowColumnTemplate>
+					</flv:FlowListView>
+				</StackLayout>
+			</StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

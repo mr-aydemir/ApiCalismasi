@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "cw1C3QkT3G3nO9mkhUUcnA0Grv8MNs0Wpm0vMDmg71y4GPwbRD2SKEHWuZrDrCo6lcGWyi3D49DrZxJkAbxKbA==",
+  "dgSpecHash": "OkzpwSxbh+FfqB8GpvfMU9gNv2500kGOU0hWPq6/jNrDXPQe0rj4xv6HaGCyZc/ixt7pS+dZOJp8+0AdRFZ40g==",
   "success": true,
   "projectFilePath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.iOS\\VatanBilgisayarMobil.iOS.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
@@ -53,6 +54,7 @@
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\AydemirPC\\.nuget\\packages\\xam.plugins.settings\\3.1.1\\xam.plugins.settings.3.1.1.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\xamarin.forms\\4.6.0.726\\xamarin.forms.4.6.0.726.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\xfcontrols\\1.0.0.6\\xfcontrols.1.0.0.6.nupkg.sha512"

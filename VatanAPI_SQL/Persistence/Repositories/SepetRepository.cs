@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using VatanAPI.Domain.Models;
 using VatanAPI.Domain.Repositories;
@@ -17,8 +18,13 @@ namespace VatanAPI.Persistence.Repositories
         public async Task<IEnumerable<Sepet>> ListAsync()
         {
             //return await _context.Sepet.ToListAsync();
-            return await _context.Sepet.Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User)
-                                        .ToListAsync(); ;
+            var List= await _context.Sepet.Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User)
+                                        .ToListAsync();
+            foreach (var item in List)
+            {
+                item.User.Password = null;
+            }
+            return List;
         }
         public async Task AddAsync(Sepet sepet)
         {
@@ -27,6 +33,16 @@ namespace VatanAPI.Persistence.Repositories
         public async Task<Sepet> FindByIdAsync(int id)
         {
             return await _context.Sepet.FindAsync(id);
+        }
+        public async Task<IEnumerable<Sepet>> FindByEmailAsync(string Email)
+        {
+            var List= await _context.Sepet.Where(p => p.User.Email == Email).Include(p => p.Product).ThenInclude(p => p.Category).Include(p => p.User)
+                                        .ToListAsync();
+            foreach (var item in List)
+            {
+                item.User.Password = null;
+            }
+            return List;
         }
         public void Update(Sepet sepet)
         {

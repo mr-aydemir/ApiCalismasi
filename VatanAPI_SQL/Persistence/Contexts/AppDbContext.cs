@@ -48,6 +48,7 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Product>().Property(p => p.NumberInStock).IsRequired();
             builder.Entity<Product>().Property(p => p.Info).IsRequired();
             builder.Entity<Product>().Property(p => p.KargoFiyatı).IsRequired();
+            builder.Entity<Product>().Property(p => p.ToplamSiparisSayisi).IsRequired();
             builder.Entity<Product>().Property(p => p.Tag).IsRequired();
             builder.Entity<Product>().HasMany(p => p.Images).WithOne(p => p.Product).HasForeignKey(p => p.ProductId);
            builder.Entity<Product>().HasMany(p => p.Sepetler).WithOne(p => p.Product).HasForeignKey(p => p.ProductID);
@@ -305,6 +306,7 @@ namespace VatanAPI.Persistence.Contexts
                     NumberInStock = 35,
                     Info = "HOMETECH ALFA 300i INTEL CORE İ3 5005U 2GHZ-4GB-128GB SSD-14''INT-W10",
                     KargoFiyatı = 0,
+                    ToplamSiparisSayisi=1,
                     Tag = ProductTags.Diğer
                 },
                 new Product
@@ -319,6 +321,7 @@ namespace VatanAPI.Persistence.Contexts
                     NumberInStock = 12,
                     Info = "DELL G317 CORE İ7 8750H 2.2GHZ-16GB -2TB+256 SSD-GTX1060 6GB-17.3'W10",
                     KargoFiyatı = 0,
+                    ToplamSiparisSayisi = 1,
                     Tag = ProductTags.FırsatÜrünü
                 },
                 new Product
@@ -509,13 +512,15 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Sepet>().ToTable("Sepet");
             builder.Entity<Sepet>().HasKey(p => p.SepetId);
             builder.Entity<Sepet>().Property(p => p.SepetId).IsRequired().ValueGeneratedOnAdd();
-           builder.Entity<Siparis>().Property(p => p.UserId).IsRequired();
+            builder.Entity<Siparis>().Property(p => p.Adet).IsRequired();
+            builder.Entity<Siparis>().Property(p => p.UserId).IsRequired();
             builder.Entity<Siparis>().Property(p => p.ProductID).IsRequired();
             builder.Entity<Sepet>().HasData
             (
                  new Sepet
                  {
                      SepetId = 1,
+                     Adet = 1,
                      UserId = 1,
                      ProductID = 117
 
@@ -523,6 +528,7 @@ namespace VatanAPI.Persistence.Contexts
                  new Sepet
                  {
                      SepetId = 2,
+                     Adet = 1,
                      UserId = 2,
                      ProductID = 118
 
@@ -533,6 +539,7 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<Siparis>().ToTable("Siparis");
             builder.Entity<Siparis>().HasKey(p => p.SiparisId);
             builder.Entity<Siparis>().Property(p => p.SiparisId).IsRequired().ValueGeneratedOnAdd();
+            builder.Entity<Siparis>().Property(p => p.Adet).IsRequired();
             builder.Entity<Siparis>().Property(p => p.UserId).IsRequired();
             builder.Entity<Siparis>().Property(p => p.ProductID).IsRequired();
             builder.Entity<Siparis>().HasData
@@ -540,18 +547,21 @@ namespace VatanAPI.Persistence.Contexts
                  new Siparis
                  {
                      SiparisId = 1,
+                     Adet = 1,
                      UserId = 1,
-                     ProductID=117
-                     
+                     ProductID = 117
+
+
 
                  },
                 new Siparis
                 {
                     SiparisId = 2,
+                    Adet = 1,
                     UserId = 2,
                     ProductID = 118
                 }
-             );
+             ) ;
 
             builder.Entity<UserRole>().HasKey(ur => new { ur.UserId, ur.RoleId });
 
@@ -571,7 +581,7 @@ namespace VatanAPI.Persistence.Contexts
             builder.Entity<User>().HasData
             (
 
-                new User { Id = 1, Name = "Emre", LastName = "Aydemir", UserName = "AydemirEmre", Email = "aydemir@gmail.com", Password = "1234", },
+                new User { Id = 1, Name = "Emre", LastName = "Aydemir", UserName = "AydemirEmre", Email = "aydemir@gmail.com", Password = "1234" },
                 new User { Id = 2, Name = "Yusuf", LastName = "Akdeniz", UserName = "AkdenizYusuf", Email = "akdeniz@gmail.com", Password = "4567" }
             );
 

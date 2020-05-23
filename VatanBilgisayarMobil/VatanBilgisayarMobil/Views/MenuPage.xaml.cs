@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Settings = VatanBilgisayarMobil.Helpers.Settings;
+using VatanBilgisayarMobil.Helpers;
 
 namespace VatanBilgisayarMobil.Views
 {
@@ -13,7 +15,7 @@ namespace VatanBilgisayarMobil.Views
     public partial class MenuPage : ContentPage
     {
         MainPage RootPage { get => Application.Current.MainPage as MainPage; }
-        List<HomeMenuItem> menuItems;
+        List<HomeMenuItem> menuItems;        
         public MenuPage()
         {
             InitializeComponent();
@@ -47,10 +49,14 @@ namespace VatanBilgisayarMobil.Views
                 await RootPage.NavigateFromMenu(id);
             };
         }
-
-        private async void Button_Clicked(object sender, EventArgs e)
+        private async void ÜyeOlButton_Clicked(object sender, EventArgs e)
         {
             await RootPage.NavigateFromMenu(Convert.ToInt32(MenuItemType.ÜyeGirisi));
+        }
+
+        private async void Hesabım_Clicked(object sender, EventArgs e)
+        {
+            await RootPage.NavigateFromMenu(Convert.ToInt32(MenuItemType.Hesabım));
         }
     }
 }

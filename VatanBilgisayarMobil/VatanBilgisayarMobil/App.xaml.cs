@@ -6,6 +6,7 @@ using VatanBilgisayarMobil.Views;
 using DLToolkit.Forms.Controls;
 using Xamarin.Essentials;
 using System.Linq;
+using VatanBilgisayarMobil.Helpers;
 
 namespace VatanBilgisayarMobil
 {

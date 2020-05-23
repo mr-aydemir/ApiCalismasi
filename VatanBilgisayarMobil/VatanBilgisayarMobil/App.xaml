@@ -9,7 +9,11 @@
 
     <Application.Resources>
         <ResourceDictionary>
-			<local:IntToStringConverter x:Key="intToString" />
+			<local:CostToStringConverter x:Key="CostToString" />
+			<local:IntToStringConverter x:Key="IntToString" />
+			<local:DateTimeToStringConverter x:Key="DateTimeToStringConverter" />
+			<local:GirisYapildiConverter x:Key="girisYapildiMi" />
+			<local:GirisYapilmadiConverter x:Key="girisYapilmadiMi" />
             <!--Global Styles-->
             <Color x:Key="NavigationPrimary">#1565C1</Color>
             <Style TargetType="NavigationPage">

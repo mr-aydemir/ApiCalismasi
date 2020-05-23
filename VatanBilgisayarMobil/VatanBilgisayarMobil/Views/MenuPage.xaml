@@ -8,11 +8,15 @@
              Title="Menu">
              
     <StackLayout VerticalOptions="FillAndExpand">
-        <StackLayout BackgroundColor="#1565C1" Orientation="Horizontal">
+		<StackLayout x:Name="GirisSL" BackgroundColor="#1565C1" Orientation="Horizontal" IsVisible="{Binding Converter={StaticResource girisYapilmadiMi}}">
             <Image Source="UyeGirisi.png" HeightRequest="30" Margin="10,0,0,0"/>
-            <Button x:Name="ÜyeOlButton" Text="Üye Girişi" TextColor="White" Clicked="Button_Clicked" BackgroundColor="#1565C1" Margin="-10,0,0,0"/>
-        </StackLayout>
-        <ListView x:Name="ListViewMenu"
+            <Button x:Name="ÜyeOlButton" Text="Üye Girişi" TextColor="White" Clicked="ÜyeOlButton_Clicked" BackgroundColor="#1565C1" Margin="-10,0,0,0"/>
+		</StackLayout>
+		<StackLayout x:Name="HesabımSL" BackgroundColor="#1565C1" Orientation="Horizontal" IsVisible="{Binding  Converter={StaticResource girisYapildiMi}}">
+			<Image Source="UyeGirisi.png" HeightRequest="30" Margin="10,0,0,0"/>
+			<Button x:Name="Hesabım" Text="Hesabım" TextColor="White" Clicked="Hesabım_Clicked" BackgroundColor="#1565C1" Margin="-10,0,0,0"/>
+		</StackLayout>
+		<ListView x:Name="ListViewMenu"
                     HasUnevenRows="True">
             <d:ListView.ItemsSource>
                 <x:Array Type="{x:Type x:String}">

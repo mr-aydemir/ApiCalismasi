@@ -94,6 +94,11 @@ namespace VatanAPI.Domain.Services
 			}
 		}
 
+		public async Task<IEnumerable<Sepet>> FindByEmailAsync(string email)
+		{
+			return await _sepetRepository.FindByEmailAsync(email);
+		}
+
 	}
 }
 

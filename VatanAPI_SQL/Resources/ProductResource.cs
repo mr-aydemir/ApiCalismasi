@@ -18,6 +18,7 @@ namespace VatanAPI.Resources
         public int NumberInStock { get; set; }
         public string Info { get; set; }
         public double KargoFiyatı { get; set; }
+        public int ToplamSiparisSayisi { get; set; }
         public string Tag { get; set; }
         public CategoryResource Category { get; set; }
     }

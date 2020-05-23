@@ -6,6 +6,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using VatanBilgisayarMobil.Models;
+using VatanBilgisayarMobil.Helpers;
+using VatanBilgisayarMobil.Views.KullanıcıSayfaları;
 
 namespace VatanBilgisayarMobil.Views
 {
@@ -15,6 +17,7 @@ namespace VatanBilgisayarMobil.Views
     public partial class MainPage : MasterDetailPage
     {
         Dictionary<int, NavigationPage> MenuPages = new Dictionary<int, NavigationPage>();
+        KullaniciIslemleri KullaniciIslemleri = new KullaniciIslemleri();
         public MainPage()
         {
             InitializeComponent();
@@ -32,22 +35,35 @@ namespace VatanBilgisayarMobil.Views
                 switch (id)
                 {                  
                     case (int)MenuItemType.AnaSayfa:
-                        PushPage(new Anasayfa());
+                        PushPage(MenuItemType.AnaSayfa,new Anasayfa());
                         break;
                     case (int)MenuItemType.Bilgisayar:
-                        PushPage((new BilgisayarMenu()));
+                        PushPage(MenuItemType.Bilgisayar,(new BilgisayarMenu()));
                         break;
                     case (int)MenuItemType.Hakkımızda:
-                        PushPage((new AboutPage()));
+                        PushPage(MenuItemType.Hakkımızda,(new AboutPage()));
                         break;
                     case (int)MenuItemType.Notebook:
-                        PushPage((new NotebookPage()));
+                        PushPage(MenuItemType.Notebook,(new NotebookPage()));
                         break;
                     case (int)MenuItemType.ÜyeGirisi:
-                        PushPage(new Giris());
+                        PushPage(MenuItemType.ÜyeGirisi,new Giris());
+                        break;
+                    case (int)MenuItemType.Hesabım:
+                        PushPage(MenuItemType.Hesabım, new Hesabım());
+                        break;
+                    case (int)MenuItemType.ÜyelikBilgileri:
+                        PushPage(MenuItemType.ÜyelikBilgileri, new ÜyelikBilgileri());
+                        break;
+                    case (int)MenuItemType.Siparişler:
+                        PushPage(MenuItemType.ÜyelikBilgileri, new Siparislerim());
+                        break;
+                    case (int)MenuItemType.ÇıkışYap:
+                        KullaniciIslemleri.ÇıkışYap();
+                        PushPage(MenuItemType.ÇıkışYap, new Anasayfa());
                         break;
                     default:
-                        PushPage((new Sayfa()));
+                        PushPage(MenuItemType.Diğer, (new Sayfa()));
                         break;
 
                 }
@@ -57,9 +73,19 @@ namespace VatanBilgisayarMobil.Views
 
             IsPresented = false;
         }
-
-        public async void PushPage(ContentPage page)
+        public void NavigateTo(ContentPage TargetPage)
         {
+            this.Master = TargetPage;
+            //this.Title = TargetPage.Title;
+            //this.IsPresented = false;
+        }
+        public async void PushPage(MenuItemType menuItemType,ContentPage page)
+        {
+            if (menuItemType== MenuItemType.ÇıkışYap)
+            {
+                await ((NavigationPage)((MasterDetailPage)Application.Current.MainPage).Detail).CurrentPage.Navigation.PopAsync();
+            }
+            else
             await ((NavigationPage)((MasterDetailPage)Application.Current.MainPage).Detail).CurrentPage.Navigation.PushAsync(page);
 
             if (Device.RuntimePlatform == Device.Android)

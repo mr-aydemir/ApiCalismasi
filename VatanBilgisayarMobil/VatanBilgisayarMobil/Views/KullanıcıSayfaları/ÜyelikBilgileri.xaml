@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.ÜyelikBilgileri">
+    <ContentPage.Content>
+		<ScrollView>
+			<StackLayout BackgroundColor="White">
+				<Label Text="Hoşgeldiniz! Üyelik bilgileriniz görüntülemek ve güncellemek için aşağıdaki formu kullanabilirsiniz"/>
+				<Entry BackgroundColor="#F5F5F5" Placeholder="AD" x:Name="Ad" Margin="5" />
+				<Entry BackgroundColor="#F5F5F5" Placeholder="SOYAD" x:Name="Soyad" Margin="5" />
+				<Entry BackgroundColor="#F5F5F5" Placeholder="E-MAİL" x:Name="Email" Margin="5" IsEnabled="False" />
+				<Entry BackgroundColor="#F5F5F5" Placeholder="CEP TELEFONU" x:Name="CepTLF" Margin="5" />
+				<Entry BackgroundColor="#F5F5F5" Placeholder="CİNSİYET" x:Name="Cinsiyet" Margin="5" />
+				<StackLayout Orientation="Horizontal">
+					<Button BackgroundColor="#2199E8" Text="KAYDET" TextColor="White" x:Name="KAYDET" CornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="190" Margin="5,5,0,0" Clicked="KAYDET_Clicked" ></Button>
+					<Button BackgroundColor="White" Text="İPTAL" TextColor="#2199E8" x:Name="İPTAL" CornerRadius="15" HorizontalOptions="CenterAndExpand" WidthRequest="190" Margin="-10,5,0,0" Clicked="İPTAL_Clicked" ></Button>
+				</StackLayout>
+			</StackLayout>
+		</ScrollView>
+    </ContentPage.Content>
+</ContentPage>

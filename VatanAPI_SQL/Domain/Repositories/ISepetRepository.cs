@@ -13,5 +13,6 @@ namespace VatanAPI.Domain.Repositories
         Task<Sepet> FindByIdAsync(int id);
         void Update(Sepet sepet);
         void Remove(Sepet sepet);
+        Task<IEnumerable<Sepet>> FindByEmailAsync(string email);
     }
 }

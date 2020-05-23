@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+			 mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.Sepetim"
+             Title="Sepetim">
+            
+    <ContentPage.Content>
+		<StackLayout>
+			<StackLayout>
+					<StackLayout Orientation="Vertical" x:Name="BosSepet" IsVisible="True">
+						<Image Source="BosSepet.png" HorizontalOptions="CenterAndExpand" Margin="10,100" />
+					<Button BackgroundColor="#2199E8" Text="ALIŞVERİŞE BAŞLA" TextColor="White" x:Name="AlisveriseBasla" 
+                        CornerRadius="5" HorizontalOptions="CenterAndExpand" WidthRequest="150" Margin="-10,-100,0,0"  Clicked="AlisveriseBasla_Clicked"/>
+				</StackLayout>
+					<StackLayout Orientation="Vertical" x:Name="DoluSepet" IsVisible="False">
+					<ScrollView>
+						<StackLayout>
+							<Label Text="Ürünlerim" Margin="10" FontSize="18" TextColor="#1565C1" />
+							<StackLayout Orientation="Vertical">
+								<CollectionView  x:Name="SepettekilerFLV">
+									<CollectionView.ItemTemplate>
+										<DataTemplate>
+											<Frame HeightRequest="100" BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" HorizontalOptions="FillAndExpand">
+												<StackLayout Orientation="Horizontal" Spacing="1">
+													<Label Text="{Binding SepetId}" IsVisible="False"/>
+													<ImageButton Source="ExitCrossIcon" WidthRequest="10" BackgroundColor="Transparent" Margin="10,0" x:Name="SepettenSil" Clicked="SepettenSil_Clicked"/>
+													<Image Source="{Binding ImageSource} " HeightRequest="40" Margin="10,0"/>
+													<StackLayout WidthRequest="200" VerticalOptions="Center" HorizontalOptions="Center">
+														<Label FontSize="Small"
+													XAlign="Center"  YAlign="Center"   Text="{Binding Info }"/>
+
+														<Label   FontAttributes="Bold"
+													XAlign="Start"  YAlign="Center" Margin="5,0,0,0" >
+															<Label.FormattedText>
+																<FormattedString>
+																	<Span Text="{Binding Adet,Converter={StaticResource IntToString}}" FontSize="Small"   FontAttributes="Bold"/>
+																	<Span Text=" Adet" FontAttributes="Bold" FontSize="Small"/>
+																</FormattedString>
+															</Label.FormattedText>
+														</Label>
+
+													</StackLayout>
+													<StackLayout VerticalOptions="End" HorizontalOptions="End">
+														<Label     TextColor="{StaticResource NavigationPrimary} " VerticalOptions="End" HorizontalOptions="End"
+											XAlign="End"  YAlign="End"	LineBreakMode="NoWrap"	 >
+															<Label.FormattedText>
+																<FormattedString>
+																	<Span Text="₺"  FontSize="Micro" FontAttributes="Bold"/>
+																	<Span FontSize="Small" Text="{Binding Cost,Converter={StaticResource CostToString}}" FontAttributes="Bold"/>
+																</FormattedString>
+															</Label.FormattedText>
+														</Label>
+													</StackLayout>
+												</StackLayout>
+											</Frame>
+										</DataTemplate>
+									</CollectionView.ItemTemplate>
+								</CollectionView>
+							</StackLayout>
+							<StackLayout Orientation="Horizontal">
+								<Button Text="SEPETİ BOŞALT" x:Name="SptiBslt" TextColor="#1565C1" BackgroundColor="#FAFAFA" HorizontalOptions="CenterAndExpand" Clicked="SptiBslt_Clicked"/>
+								<Button Text="SEPETİ GÜNCELLE" x:Name="SptiGnclle" TextColor="#1565C1" BackgroundColor="#FAFAFA" HorizontalOptions="CenterAndExpand"/>
+							</StackLayout>
+							<Label Text="SİPARİŞ ÖZETİ" TextColor="Black" FontSize="20" HorizontalOptions="CenterAndExpand"/>
+							<StackLayout>
+								<StackLayout Orientation="Horizontal">
+									<Label  Margin="15,0,0,0" Text="Ara Toplam:" />
+									<Label  Margin="15,0,0,0" x:Name="AraToplamLBL" HorizontalOptions="End" XAlign="End"/>
+								</StackLayout>
+								<StackLayout Orientation="Horizontal">
+									<Label  Margin="15,0,0,0" Text="KDV:"  />
+									<Label  Margin="15,0,0,0" x:Name="KDVLBL" HorizontalOptions="End" XAlign="End"/>
+								</StackLayout>
+								<StackLayout Orientation="Horizontal">
+									<Label  FontSize="22" TextColor="#1565C1" Margin="15,0,0,0" Text="TUTAR:" />
+									<Label  FontSize="22" TextColor="#1565C1" Margin="15,0,0,0" HorizontalOptions="End" x:Name="TutarLBL" XAlign="End"/>
+								</StackLayout>
+							</StackLayout>
+						</StackLayout>
+					</ScrollView>
+					<Button Text="ALIŞVERİŞİ TAMAMLA" WidthRequest="400" BackgroundColor="#13C160" TextColor="White" HorizontalOptions="CenterAndExpand"  x:Name="Tamamla" Clicked="Tamamla_Clicked"/>
+				</StackLayout>
+				</StackLayout>
+		</StackLayout>
+    </ContentPage.Content>
+</ContentPage>
