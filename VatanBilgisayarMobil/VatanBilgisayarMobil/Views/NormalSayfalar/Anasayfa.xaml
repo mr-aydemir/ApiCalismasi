@@ -25,7 +25,10 @@
 				<StackLayout >
 					<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
 						<Frame CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="5">
-							<SearchBar Placeholder="Ürün Ara" BackgroundColor="White"  />
+							<Frame.GestureRecognizers>
+								<TapGestureRecognizer x:Name="ÜrünAra" Tapped="ÜrünAra_Tapped"  NumberOfTapsRequired="1"/>
+							</Frame.GestureRecognizers>
+							<SearchBar  Placeholder="Ürün Ara" BackgroundColor="White"  IsEnabled="False"/>
 						</Frame>
 						<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}"   HeightRequest="{DynamicResource FırsatÜrünleriCarouselHeight}" Padding="5">
 							<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}" IndicatorView="indicatorView"   >

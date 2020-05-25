@@ -19,8 +19,6 @@ namespace VatanBilgisayarMobil.Views
         {
             var isSuccess = await restAPIForAccounts.Register(EmailLBL.Text, 
             PasswordLBL.Text, NameLBL.Text, LastNameLBL.Text, UserNameLBL.Text);
-            Settings.Email = EmailLBL.Text;
-            Settings.Password = PasswordLBL.Text;
             if (isSuccess)
             {
                 Mesaj.Text = "Kayıt başarılı!";

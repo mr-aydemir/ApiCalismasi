@@ -136,17 +136,17 @@ namespace VatanBilgisayarMobil.Helpers
             {
                 AppSettings.AddOrUpdateValue("GirişYapıldı", value);
                 ((MainPage)Application.Current.MainPage).NavigateTo(new MenuPage());
-                NotifyStaticPropertyChanged();
+               // NotifyStaticPropertyChanged();
             }
 
 
         }
-        public static event PropertyChangedEventHandler StaticPropertyChanged;
+       // public static event PropertyChangedEventHandler StaticPropertyChanged;
 
-        private static void NotifyStaticPropertyChanged([CallerMemberName] string name = null)
+       /* private static void NotifyStaticPropertyChanged([CallerMemberName] string name = null)
         {
             StaticPropertyChanged?.Invoke(null, new PropertyChangedEventArgs(name));
-        }
+        }*/
 
     }
 }

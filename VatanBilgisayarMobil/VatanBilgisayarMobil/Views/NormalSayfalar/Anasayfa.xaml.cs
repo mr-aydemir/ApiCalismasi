@@ -86,5 +86,11 @@ namespace VatanBilgisayarMobil.Views
                 DependencyService.Get<IToolbarItemBadgeService>().SetBadge(this, ToolbarItems.First(), $"{e.NewValue}", Color.Red, Color.White);
             }
         }
+
+
+        private async void ÜrünAra_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Sayfa());
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using VatanBilgisayarMobil.Data;
 using VatanBilgisayarMobil.Models;
 using VatanBilgisayarMobil.Views;
@@ -58,12 +59,18 @@ namespace VatanBilgisayarMobil.ViewModels
                 }
 
             }
+            
             return Items;
         }
         public List<Product> GetAllItems()
         {
             
             return RestAPI.GetProducts();
+        }
+        public List<Product> GetAllItemsNonCallApi()
+        {
+
+            return Products;
         }
     }
 }

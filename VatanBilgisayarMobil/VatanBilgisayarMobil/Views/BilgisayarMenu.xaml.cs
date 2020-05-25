@@ -15,7 +15,7 @@ namespace VatanBilgisayarMobil.Views
         {
             InitializeComponent();
 
-            ListViewMenu.SelectedItem = null;
+            
             PCmenuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Notebook, Title="Notebook" },
@@ -28,7 +28,6 @@ namespace VatanBilgisayarMobil.Views
 
             ListViewMenu.ItemsSource = PCmenuItems;
 
-            ListViewMenu.SelectedItem = PCmenuItems[0];
             ListViewMenu.ItemSelected += async (sender, e) =>
             {
                 if (e.SelectedItem == null)
