@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             mc:Ignorable="d"
+             x:Class="VatanBilgisayarMobil.Views.KullanıcıSayfaları.AramaSayfası">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#1565C1">
+            <Frame CornerRadius="10" Padding="0" >
+                <SearchBar x:Name="ürünAraması" Placeholder="Ürüm Ara" TextChanged="ürünAraması_TextChanged"></SearchBar>
+            </Frame>
+            <flv:FlowListView x:Name="ÜrünList" IsVisible="True"  FlowColumnCount="1"  SeparatorVisibility="Default" HasUnevenRows="True"  
+							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünList_FlowItemTapped" HeightRequest="1250" RowHeight="250">
+                <flv:FlowListView.FlowColumnTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
+                            <StackLayout Spacing="1" Orientation="Horizontal">
+                                <Image Source="{Binding ImageSource} " HeightRequest="90"/>
+                                <Label HorizontalOptions="Fill"  FontAttributes="Bold"
+													XAlign="Center"  YAlign="Center"  Text="{Binding Info }"/>
+                            </StackLayout>
+                        </Frame>
+                    </DataTemplate>
+                </flv:FlowListView.FlowColumnTemplate>
+            </flv:FlowListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

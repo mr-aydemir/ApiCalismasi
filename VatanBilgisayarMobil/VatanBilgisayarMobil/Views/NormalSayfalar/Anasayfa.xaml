@@ -5,7 +5,6 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
 			 xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
 			 mc:Ignorable="d"
-			 
              x:Class="VatanBilgisayarMobil.Views.Anasayfa">
 
     <NavigationPage.TitleView>
@@ -19,18 +18,19 @@
 
     <ContentPage.Content>
 		<StackLayout>
-
-			 <!--#region  <Stepper Value="0" Minimum="0" Maximum="99" Increment="1" HorizontalOptions="Center" VerticalOptions="Center" ValueChanged="Stepper_ValueChanged" />#endregion-->
-			<ScrollView>
-				<StackLayout >
-					<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
-						<Frame CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="5">
-							<Frame.GestureRecognizers>
-								<TapGestureRecognizer x:Name="ÜrünAra" Tapped="ÜrünAra_Tapped"  NumberOfTapsRequired="1"/>
-							</Frame.GestureRecognizers>
-							<SearchBar  Placeholder="Ürün Ara" BackgroundColor="White"  IsEnabled="False"/>
-						</Frame>
-						<StackLayout  BackgroundColor="{StaticResource NavigationPrimary}"   HeightRequest="{DynamicResource FırsatÜrünleriCarouselHeight}" Padding="5">
+          
+           
+            <!--#region  <Stepper Value="0" Minimum="0" Maximum="99" Increment="1" HorizontalOptions="Center" VerticalOptions="Center" ValueChanged="Stepper_ValueChanged" />#endregion-->
+            <ScrollView>
+                <StackLayout >
+                    <StackLayout  BackgroundColor="{StaticResource NavigationPrimary}">
+                        <Frame CornerRadius="10" IsClippedToBounds="True" Padding="0" Margin="5">
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer x:Name="Arama" Tapped="Arama_Clicked"  NumberOfTapsRequired="1"/>
+                            </Frame.GestureRecognizers>
+                            <SearchBar  Placeholder="Ürün Ara" BackgroundColor="White"  IsEnabled="False"/>
+                        </Frame>
+                        <StackLayout  BackgroundColor="{StaticResource NavigationPrimary}"   HeightRequest="{DynamicResource FırsatÜrünleriCarouselHeight}" Padding="5">
 							<CarouselView x:Name="FırsatÜrünleriCarousel" BackgroundColor="{StaticResource NavigationPrimary}" IndicatorView="indicatorView"   >
 								<CarouselView.ItemTemplate>
 									<DataTemplate>
