@@ -153,5 +153,10 @@ namespace VatanArayüz
             var window = (MainWindow)Application.Current.MainWindow;
             window.Main.Content = anasayfa;
         }
+
+        private void TextBox_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        {
+
+        }
     }
 }

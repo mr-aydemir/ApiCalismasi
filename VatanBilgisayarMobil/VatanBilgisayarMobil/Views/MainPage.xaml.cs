@@ -27,7 +27,6 @@ namespace VatanBilgisayarMobil.Views
             MenuPages.Add((int)MenuItemType.AnaSayfa, (NavigationPage)Detail);
             
         }
-
         public async Task NavigateFromMenu(int id)
         {
             if (!MenuPages.ContainsKey(id))

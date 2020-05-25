@@ -170,3 +170,6 @@ E:\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
 C:\Users\YusrndiL\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csprojAssemblyReference.cache
 C:\Users\YusrndiL\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
 C:\Users\YusrndiL\Source\Repos\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb
+C:\Users\yusuf\source\repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.csprojAssemblyReference.cache
+C:\Users\yusuf\source\repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.exe
+C:\Users\yusuf\source\repos\SytronXar\ApiCalismasi\VatanArayüz\obj\Debug\VatanArayüz.pdb

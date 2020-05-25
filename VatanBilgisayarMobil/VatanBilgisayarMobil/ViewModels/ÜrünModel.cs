@@ -60,6 +60,10 @@ namespace VatanBilgisayarMobil.ViewModels
             }
             return Items;
         }
+        public List<Product> GetAllItemsNonCallApi()
+        {
+            return Products;
+        }
         public List<Product> GetAllItems()
         {
             

@@ -7,6 +7,7 @@ using VatanBilgisayarMobil.Helpers;
 using VatanBilgisayarMobil.Models;
 using VatanBilgisayarMobil.Services;
 using VatanBilgisayarMobil.ViewModels;
+using VatanBilgisayarMobil.Views.KullanıcıSayfaları;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static VatanBilgisayarMobil.Data.RestAPIForProducts;
@@ -21,7 +22,6 @@ namespace VatanBilgisayarMobil.Views
         public double screensize;
         ÜrünModel Ürünler;
         SepetIslemleri SepetIslemleri = new SepetIslemleri();
-        
         public Anasayfa()
         {
             InitializeComponent();
@@ -85,6 +85,10 @@ namespace VatanBilgisayarMobil.Views
                 await Task.Delay(100);
                 DependencyService.Get<IToolbarItemBadgeService>().SetBadge(this, ToolbarItems.First(), $"{e.NewValue}", Color.Red, Color.White);
             }
+        }  
+        private async void Arama_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AramaSayfası());
         }
     }
 }
