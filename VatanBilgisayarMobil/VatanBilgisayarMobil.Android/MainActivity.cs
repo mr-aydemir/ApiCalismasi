@@ -20,8 +20,7 @@ namespace VatanBilgisayarMobil.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
-            Forms.SetFlags("IndicatorView_Experimental");
+            Forms.SetFlags("IndicatorView_Experimental", "RadioButton_Experimental"); 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             CrossCurrentActivity.Current.Init(this, savedInstanceState);

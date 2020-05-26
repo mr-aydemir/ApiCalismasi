@@ -23,7 +23,8 @@ namespace VatanBilgisayarMobil.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            Forms.SetFlags("IndicatorView_Experimental");
+
+            Forms.SetFlags("IndicatorView_Experimental", "RadioButton_Experimental");
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 

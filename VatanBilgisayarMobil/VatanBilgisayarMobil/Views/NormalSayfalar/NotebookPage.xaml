@@ -9,36 +9,53 @@
              Title="Notebook">
             
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-				<StackLayout>
-					<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
-							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünTapped" HeightRequest="1250" RowHeight="250">
-						<flv:FlowListView.FlowColumnTemplate>
-							<DataTemplate>
-								<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
-									<StackLayout Spacing="1">
-										<Image Source="{ Binding ImageSource} " HeightRequest="150"/>
-										<Label HorizontalOptions="Fill" TextColor="DarkGray"
-												XAlign="Center"  YAlign="Center"  Text="{Binding Name}"/>
-										<Label HorizontalOptions="Fill"  FontAttributes="Bold"
-													XAlign="Center"  YAlign="Center"  Text="{Binding Info }"/>
-										<Label HorizontalOptions="Fill"    TextColor="{StaticResource NavigationPrimary}"
-													XAlign="Center" YAlign="Center" >
-											<Label.FormattedText>
-												<FormattedString>
-													<Span Text="₺"  FontSize="Medium" FontAttributes="Bold"/>
-													<Span FontSize="Large" Text="{Binding Cost,Converter={StaticResource CostToString}}" FontAttributes="Bold"/>
-												</FormattedString>
-											</Label.FormattedText>
-										</Label>
-									</StackLayout>
-								</Frame>
-							</DataTemplate>
-						</flv:FlowListView.FlowColumnTemplate>
-					</flv:FlowListView>
+		<StackLayout>
+			<StackLayout Orientation="Horizontal" BackgroundColor="{DynamicResource NavigationPrimary}">
+				<Button Text="FİLTRELER" x:Name="Filtre" Clicked="Filtre_Clicked" BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand" />
+				<Button  x:Name="AdetLabel" Text="3 ADET" BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand"/>
+			</StackLayout>
+			<StackLayout x:Name="FiltreMenusu"  IsVisible="False">
+				<StackLayout Orientation="Horizontal">
+					<Entry x:Name="Minimum" Placeholder="Minimum Fiyat" HorizontalOptions="Fill" Keyboard="Numeric" />
+					<Entry x:Name="Maksimum" Placeholder="Maximum Fiyat" HorizontalOptions="Fill" Keyboard="Numeric" />
+					<Button Text="Filtrele" x:Name="Onayla" Clicked="Onayla_Clicked" BackgroundColor="Transparent"/>
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<RadioButton Text="Azalan Fiyata Göre Sırala" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
+					<RadioButton Text="Artan Fiyata Göre Sırala" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
 				</StackLayout>
 			</StackLayout>
-        </ScrollView>
+			<ScrollView>
+				<StackLayout>
+					<StackLayout>
+						<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
+							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünTapped" HeightRequest="1250" RowHeight="250">
+							<flv:FlowListView.FlowColumnTemplate>
+								<DataTemplate>
+									<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
+										<StackLayout Spacing="1">
+											<Image Source="{ Binding ImageSource} " HeightRequest="150"/>
+											<Label HorizontalOptions="Fill" TextColor="DarkGray"
+												XAlign="Center"  YAlign="Center"  Text="{Binding Name}"/>
+											<Label HorizontalOptions="Fill"  FontAttributes="Bold"
+													XAlign="Center"  YAlign="Center"  Text="{Binding Info }"/>
+											<Label HorizontalOptions="Fill"    TextColor="{StaticResource NavigationPrimary}"
+													XAlign="Center" YAlign="Center" >
+												<Label.FormattedText>
+													<FormattedString>
+														<Span Text="₺"  FontSize="Medium" FontAttributes="Bold"/>
+														<Span FontSize="Large" Text="{Binding Cost,Converter={StaticResource CostToString}}" FontAttributes="Bold"/>
+													</FormattedString>
+												</Label.FormattedText>
+											</Label>
+										</StackLayout>
+									</Frame>
+								</DataTemplate>
+							</flv:FlowListView.FlowColumnTemplate>
+						</flv:FlowListView>
+					</StackLayout>
+				</StackLayout>
+			</ScrollView>
+		</StackLayout>
     </ContentPage.Content>
 </ContentPage>

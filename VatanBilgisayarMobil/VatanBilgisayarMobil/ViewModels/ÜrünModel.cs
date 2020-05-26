@@ -71,10 +71,17 @@ namespace VatanBilgisayarMobil.ViewModels
             
             return RestAPI.GetProducts();
         }
-        public List<Product> GetAllItemsNonCallApi()
+        public List<Product> GetProductsWithDetailWord(string word)
         {
-
-            return Products;
+            List<Product> Ürünler = new List<Product>();
+            foreach (var item in Products)
+            {
+                if (item.Info.ToLower().Contains(word.ToLower()))
+                {
+                    Ürünler.Add(item);
+                }
+            }
+            return Ürünler;
         }
     }
 }

@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="Views\KullanıcıSayfaları\AramaSayfası.xaml">
+    <EmbeddedResource Update="Views\NormalSayfalar\AramaSayfası.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\KullanıcıSayfaları\Siparislerim.xaml">
@@ -34,7 +34,7 @@
     <EmbeddedResource Update="Views\NormalSayfalar\Anasayfa.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\BilgisayarMenu.xaml">
+    <EmbeddedResource Update="Views\NormalSayfalar\BilgisayarMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\KullanıcıSayfaları\Giris.xaml">
@@ -74,5 +74,6 @@
 
   <ItemGroup>
     <Folder Include="Data\" />
+    <Folder Include="Views\PopupPage\" />
   </ItemGroup>
 </Project>

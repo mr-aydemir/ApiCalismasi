@@ -8398,13 +8398,16 @@ namespace VatanBilgisayarMobil.Droid
 			public const int PCPartIcon = 2131165192;
 			
 			// aapt resource value: 0x7F070009
-			public const int RadioIcon = 2131165193;
+			public const int PrinterIcon = 2131165193;
 			
 			// aapt resource value: 0x7F07000A
-			public const int Sepetim = 2131165194;
+			public const int RadioIcon = 2131165194;
 			
-			// aapt resource value: 0x7F07000C
-			public const int TelIcon = 2131165196;
+			// aapt resource value: 0x7F07000B
+			public const int Sepetim = 2131165195;
+			
+			// aapt resource value: 0x7F07000D
+			public const int TelIcon = 2131165197;
 			
 			// aapt resource value: 0x7F070082
 			public const int tooltip_frame_dark = 2131165314;
@@ -8412,20 +8415,17 @@ namespace VatanBilgisayarMobil.Droid
 			// aapt resource value: 0x7F070083
 			public const int tooltip_frame_light = 2131165315;
 			
-			// aapt resource value: 0x7F07000B
-			public const int TVIcon = 2131165195;
-			
-			// aapt resource value: 0x7F07000D
-			public const int UyeGirisi = 2131165197;
+			// aapt resource value: 0x7F07000C
+			public const int TVIcon = 2131165196;
 			
 			// aapt resource value: 0x7F07000E
-			public const int VatanLogoBlueBackGround = 2131165198;
+			public const int UyeGirisi = 2131165198;
+			
+			// aapt resource value: 0x7F07000F
+			public const int VatanLogoBlueBackGround = 2131165199;
 			
 			// aapt resource value: 0x7F070084
 			public const int xamarin_logo = 2131165316;
-			
-			// aapt resource value: 0x7F07000F
-			public const int YazıcıIcon = 2131165199;
 			
 			static Drawable()
 			{
