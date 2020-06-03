@@ -7,8 +7,14 @@
              x:Class="VatanBilgisayarMobil.Views.NotebookPage"
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              Title="Notebook">
-            
-    <ContentPage.Content>
+	<NavigationPage.TitleView>
+		<AbsoluteLayout BackgroundColor="{StaticResource NavigationPrimary}" HorizontalOptions="FillAndExpand">
+			<Frame CornerRadius="10" Padding="0" >
+				<SearchBar x:Name="ürünAraması" Placeholder="Ürüm Ara" TextChanged="ürünAraması_TextChanged"/>
+			</Frame>
+		</AbsoluteLayout>
+	</NavigationPage.TitleView>
+	<ContentPage.Content>
 		<StackLayout>
 			<StackLayout Orientation="Horizontal" BackgroundColor="{DynamicResource NavigationPrimary}">
 				<Button Text="FİLTRELER" x:Name="Filtre" Clicked="Filtre_Clicked" BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand" />
@@ -20,9 +26,9 @@
 					<Entry x:Name="Maksimum" Placeholder="Maximum Fiyat" HorizontalOptions="Fill" Keyboard="Numeric" />
 					<Button Text="Filtrele" x:Name="Onayla" Clicked="Onayla_Clicked" BackgroundColor="Transparent"/>
 				</StackLayout>
-				<StackLayout Orientation="Horizontal">
-					<RadioButton Text="Azalan Fiyata Göre Sırala" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
-					<RadioButton Text="Artan Fiyata Göre Sırala" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
+				<StackLayout x:Name="OrderTypesRBTN" Orientation="Horizontal">
+					<RadioButton x:Name="Azalan" Text="{Binding TextString}" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
+					<RadioButton x:Name="Artan" Text="{Binding TextString}" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
 				</StackLayout>
 			</StackLayout>
 			<ScrollView>

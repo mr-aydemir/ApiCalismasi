@@ -83,5 +83,42 @@ namespace VatanBilgisayarMobil.ViewModels
             }
             return Ürünler;
         }
+
+        public List<Product> FiyataGöreFiltrele(string minimum, string maksimum)
+        {
+            int min = 0;
+            int max = 0;
+            if (string.IsNullOrWhiteSpace(minimum))
+            {
+                min = 0;
+            }
+            else min = Convert.ToInt32(minimum);
+            if (string.IsNullOrWhiteSpace(maksimum))
+            {
+                max = 100000;
+            }
+            else max = Convert.ToInt32(maksimum);
+
+            var products = GetAllItemsNonCallApi();
+            products = products.Where(c => c.Cost >= min).ToList();
+            products = products.Where(c => c.Cost <= max).ToList();
+            return products;
+        }
+        public List<Product> Arama(string word)
+        {
+            string[] substrings = word.Split(' ');
+            if (string.IsNullOrWhiteSpace(word))
+                return null;
+            else
+            {
+                var products = GetAllItemsNonCallApi();
+                foreach (var item in substrings)
+                {
+                    products = products.Where(c => c.Info.ToLower().Contains(item.ToLower())).ToList();
+                }
+                return products;
+            }
+
+        }
     }
 }

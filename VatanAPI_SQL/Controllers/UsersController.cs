@@ -6,6 +6,7 @@ using VatanAPI.Core.Services;
 using Microsoft.AspNetCore.Mvc;
 using VatanAPI.Resources;
 using VatanAPI.Domain.Models;
+using VatanAPI.Extensions;
 
 namespace VatanAPI.Controllers
 {
@@ -49,6 +50,21 @@ namespace VatanAPI.Controllers
             resource.Password = null;
             resource.Roles = null;
             return resource;
+        }
+        [HttpPut("{id}")]
+        public async Task<IActionResult> PutAsync(int id, [FromBody] UserCredentialsResource resource)
+        {
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState.GetErrorMessages());
+
+            var siparis = _mapper.Map<UserCredentialsResource, User>(resource);
+            var result = await _userService.UpdateAsync(id, siparis);
+
+            if (!result.Success)
+                return BadRequest(result.Message);
+
+            var siparisResource = _mapper.Map<User, UserResource>(result.User);
+            return Ok(siparisResource);
         }
     }
 }

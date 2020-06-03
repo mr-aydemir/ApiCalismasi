@@ -41,5 +41,20 @@ namespace VatanAPI.Services
         {
             return await _userRepository.FindByEmailAsync(email);
         }
+        public async Task<CreateUserResponse> SaveAsync(User siparis)
+        {
+            try
+            {
+                await _userRepository.AddAsync(siparis);
+                await _unitOfWork.CompleteAsync();
+
+                return new CreateUserResponse(siparis);
+            }
+            catch (Exception ex)
+            {
+                // Do some logging stuff
+                return new SiparisResponse($"An error occurred when saving the siparis: {ex.Message}");
+            }
+        }
     }
 }

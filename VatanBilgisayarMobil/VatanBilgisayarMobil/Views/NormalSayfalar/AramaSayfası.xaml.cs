@@ -27,19 +27,7 @@ namespace VatanBilgisayarMobil.Views.KullanıcıSayfaları
         private void ürünAraması_TextChanged(object sender, TextChangedEventArgs e)
         {
             ÜrünList.BeginRefresh();
-            string[] substrings = e.NewTextValue.Split(' ');
-            if (string.IsNullOrWhiteSpace(e.NewTextValue))
-                ÜrünList.FlowItemsSource = null;
-            else
-            {
-                var products = ürünler.GetAllItemsNonCallApi();       
-                foreach (var item in substrings)
-                {
-                    products = products.Where(c => c.Info.ToLower().Contains(item.ToLower())).ToList();
-                }
-                ÜrünList.FlowItemsSource = products;
-            }
-
+            ÜrünList.FlowItemsSource = ürünler.Arama(e.NewTextValue);
             ÜrünList.EndRefresh();
         }
 
@@ -47,6 +35,54 @@ namespace VatanBilgisayarMobil.Views.KullanıcıSayfaları
         {
             var content = e.Item as Product;
             await Navigation.PushAsync(new ÜrünSayfasi(content));
+        }
+
+        private void Filtre_Clicked(object sender, EventArgs e)
+        {
+            if (FiltreMenusu.IsVisible)
+            {
+                Filtre.Text = "FİLTRELE";
+                FiltreMenusu.IsVisible = false;
+            }
+            else
+            {
+                Filtre.Text = "GİZLE";
+                FiltreMenusu.IsVisible = true;
+            }
+        }
+
+        private void Onayla_Clicked(object sender, EventArgs e)
+        {
+            ÜrünList.BeginRefresh();
+
+            ÜrünList.FlowItemsSource = ürünler.FiyataGöreFiltrele(Minimum.Text, Maksimum.Text);
+            ÜrünList.EndRefresh();
+        }
+
+        private void RadioButton_CheckedChanged(object sender, CheckedChangedEventArgs e)
+        {
+            bool a = e.Value;
+            if ((sender as RadioButton).Text == "Artan Fiyata Göre Sırala")
+            {
+                if (a == true)
+                {
+                    ÜrünList.BeginRefresh();
+                    ÜrünList.FlowItemsSource = ürünler.FiyataGöreFiltrele(Minimum.Text, Maksimum.Text).OrderBy(o => o.Cost).ToList();
+                    ÜrünList.EndRefresh();
+                }
+            }
+            else
+            {
+                if (a == true)
+                {
+                    if (a == true)
+                    {
+                        ÜrünList.BeginRefresh();
+                        ÜrünList.FlowItemsSource = ürünler.FiyataGöreFiltrele(Minimum.Text, Maksimum.Text).OrderBy(o => o.Cost * (-1)).ToList();
+                        ÜrünList.EndRefresh();
+                    }
+                }
+            }
         }
     }
 }

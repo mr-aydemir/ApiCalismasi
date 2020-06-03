@@ -6,25 +6,46 @@
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              mc:Ignorable="d"
              x:Class="VatanBilgisayarMobil.Views.KullanıcıSayfaları.AramaSayfası">
-	<ContentPage.Content>
-        <StackLayout BackgroundColor="#1565C1">
-            <Frame CornerRadius="10" Padding="0" >
+	<NavigationPage.TitleView>
+		<AbsoluteLayout BackgroundColor="{StaticResource NavigationPrimary}" HorizontalOptions="FillAndExpand">
+			<Frame CornerRadius="10" Padding="0" >
 				<SearchBar x:Name="ürünAraması" Placeholder="Ürüm Ara" TextChanged="ürünAraması_TextChanged"/>
 			</Frame>
-            <flv:FlowListView x:Name="ÜrünList" IsVisible="True"  FlowColumnCount="1"  SeparatorVisibility="Default" HasUnevenRows="True"  
+		</AbsoluteLayout>
+	</NavigationPage.TitleView>
+	<ContentPage.Content>
+		<StackLayout BackgroundColor="#1565C1">
+			<StackLayout Orientation="Horizontal" BackgroundColor="{DynamicResource NavigationPrimary}">
+				<Button Text="FİLTRELER" x:Name="Filtre" Clicked="Filtre_Clicked" BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand" />
+				<Button  x:Name="AdetLabel" Text="3 ADET" BackgroundColor="Transparent" TextColor="White" HorizontalOptions="FillAndExpand"/>
+			</StackLayout>
+			<StackLayout x:Name="FiltreMenusu"  IsVisible="False" BackgroundColor="White">
+				<StackLayout Orientation="Horizontal">
+					<Entry x:Name="Minimum" Placeholder="Minimum Fiyat" HorizontalOptions="Fill" Keyboard="Numeric" />
+					<Entry x:Name="Maksimum" Placeholder="Maximum Fiyat" HorizontalOptions="Fill" Keyboard="Numeric" />
+					<Button Text="Filtrele" x:Name="Onayla" Clicked="Onayla_Clicked" BackgroundColor="Transparent" />
+				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<RadioButton Text="Azalan Fiyata Göre Sırala" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged" />
+					<RadioButton Text="Artan Fiyata Göre Sırala" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged" />
+				</StackLayout>
+			</StackLayout>
+			<ScrollView>
+				<flv:FlowListView x:Name="ÜrünList" IsVisible="True"  FlowColumnCount="1"  SeparatorVisibility="Default" HasUnevenRows="True"  
 							    FlowItemTapped="ÜrünList_FlowItemTapped" HeightRequest="1250" RowHeight="250">
-                <flv:FlowListView.FlowColumnTemplate>
-                    <DataTemplate>
-                        <Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
-                            <StackLayout Spacing="1" Orientation="Horizontal">
-                                <Image Source="{Binding ImageSource} " HeightRequest="90"/>
-                                <Label HorizontalOptions="Fill"  FontAttributes="Bold"
+					<flv:FlowListView.FlowColumnTemplate>
+						<DataTemplate>
+							<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >
+								<StackLayout Spacing="1" Orientation="Horizontal">
+									<Image Source="{Binding ImageSource} " HeightRequest="90"/>
+									<Label HorizontalOptions="Fill"  FontAttributes="Bold"
 													XAlign="Center"  YAlign="Center"  Text="{Binding Info }"/>
-                            </StackLayout>
-                        </Frame>
-                    </DataTemplate>
-                </flv:FlowListView.FlowColumnTemplate>
-            </flv:FlowListView>
+								</StackLayout>
+							</Frame>
+						</DataTemplate>
+					</flv:FlowListView.FlowColumnTemplate>
+				</flv:FlowListView>
+			</ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

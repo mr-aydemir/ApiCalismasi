@@ -88,7 +88,7 @@ namespace VatanBilgisayarMobil.Views
         }  
         private async void Arama_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AramaSayfası());
+            await Navigation.PushAsync(new NotebookPage());
         }
 
 

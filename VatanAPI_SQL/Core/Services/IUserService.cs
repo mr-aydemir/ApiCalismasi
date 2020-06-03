@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using VatanAPI.Core.Models;
 using VatanAPI.Core.Services.Communication;
+using VatanAPI.Domain.Services.Communication;
 
 namespace VatanAPI.Core.Services
 {
@@ -8,5 +9,6 @@ namespace VatanAPI.Core.Services
     {
          Task<CreateUserResponse> CreateUserAsync(User user, params ERole[] userRoles);
          Task<User> FindByEmailAsync(string email);
+         Task<CreateUserResponse> UpdateAsync(int id, User user);
     }
 }
