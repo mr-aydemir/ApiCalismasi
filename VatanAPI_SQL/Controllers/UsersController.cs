@@ -45,20 +45,20 @@ namespace VatanAPI.Controllers
         [HttpGet("{email}")]
         public async Task<UserResource> GetUserInfos(string email)
         {
-            var userinfo =  await _userService.FindByEmailAsync(email);
+            var userinfo = await _userService.FindByEmailAsync(email);
             var resource = _mapper.Map<User, UserResource>(userinfo);
             resource.Password = null;
             resource.Roles = null;
             return resource;
         }
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(int id, [FromBody] UserCredentialsResource resource)
+        [HttpPut("{email}")]
+        public async Task<IActionResult> PutAsync(string email, [FromBody] UserCredentialsResource resource)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState.GetErrorMessages());
 
             var siparis = _mapper.Map<UserCredentialsResource, User>(resource);
-            var result = await _userService.UpdateAsync(id, siparis);
+            var result = await _userService.UpdateAsync(email, siparis);
 
             if (!result.Success)
                 return BadRequest(result.Message);

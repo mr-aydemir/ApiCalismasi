@@ -47,7 +47,7 @@ namespace VatanAPI
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
-            services.AddDbContext<AppDbContext>((options =>
+            services.AddDbContextPool<AppDbContext>((options =>
         options.UseSqlite(Configuration.GetConnectionString("DefaultConnection"))));
 
             services.AddControllers();

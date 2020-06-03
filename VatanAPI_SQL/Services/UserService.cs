@@ -5,6 +5,7 @@ using VatanAPI.Core.Security.Hashing;
 using VatanAPI.Core.Services;
 using VatanAPI.Core.Services.Communication;
 using VatanAPI.Domain.Repositories;
+using System;
 
 namespace VatanAPI.Services
 {
@@ -41,19 +42,28 @@ namespace VatanAPI.Services
         {
             return await _userRepository.FindByEmailAsync(email);
         }
-        public async Task<CreateUserResponse> SaveAsync(User siparis)
+
+        public async Task<CreateUserResponse> UpdateAsync(string email, User siparis)
         {
+
+            var existingUser = await _userRepository.FindByEmailAsync(email);
+
+            if (existingUser == null)
+                return new CreateUserResponse("Siparis not found.");
+
+            existingUser.Email = siparis.Email;
+
             try
             {
-                await _userRepository.AddAsync(siparis);
+                _userRepository.Update(existingUser);
                 await _unitOfWork.CompleteAsync();
 
-                return new CreateUserResponse(siparis);
+                return new CreateUserResponse(existingUser);
             }
             catch (Exception ex)
             {
                 // Do some logging stuff
-                return new SiparisResponse($"An error occurred when saving the siparis: {ex.Message}");
+                return new CreateUserResponse($"An error occurred when updating the siparis: {ex.Message}");
             }
         }
     }

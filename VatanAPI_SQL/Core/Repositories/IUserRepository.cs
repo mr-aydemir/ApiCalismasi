@@ -7,5 +7,6 @@ namespace VatanAPI.Core.Repositories
     {
         Task AddAsync(User user, ERole[] userRoles);
         Task<User> FindByEmailAsync(string email);
+        void Update(User user);
     }
 }
