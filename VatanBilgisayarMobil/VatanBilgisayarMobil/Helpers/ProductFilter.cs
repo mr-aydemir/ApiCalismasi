@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Java.Sql;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using VatanBilgisayarMobil.Models;
 using VatanBilgisayarMobil.ViewModels;
 using Xamarin.Forms;
+using static VatanBilgisayarMobil.Models.Product;
 
 namespace VatanBilgisayarMobil.Helpers
 {
@@ -12,6 +14,7 @@ namespace VatanBilgisayarMobil.Helpers
     {
         ÜrünModel ÜrünModel;
         List<Product> Products = new List<Product>();
+        public List<EMarka> Markalar = new List<EMarka>();
         public string searchkeywords { get; set; }
         public string MinPrice { get; set; }
         public string MaxPrice { get; set; }
@@ -19,13 +22,15 @@ namespace VatanBilgisayarMobil.Helpers
         {
             ÜrünModel = new ÜrünModel(page);
             ResetList();
+            Markalar = Enum.GetValues(typeof(EMarka)).Cast<EMarka>().ToList();
         }
-        public List<Product> Filtrele(string word, string minPrice, string maxPrice, ERadioButtonProperty OrderType)
+        public List<Product> Filtrele(string word, string minPrice, string maxPrice, ERadioButtonProperty OrderType ,EMarka marka)
         {
             ResetList();
             Products=Arama(word);
             Products=FiyataGöreFiltrele(minPrice, maxPrice);
-            Products=Order(OrderType);
+            MarkaFiltreleme(marka);
+            Products =Order(OrderType);
             return Products;
         }
         public List<Product> ResetList()
@@ -92,6 +97,14 @@ namespace VatanBilgisayarMobil.Helpers
                 return Products;
             }
 
+        }
+        public List<Product> MarkaFiltreleme(EMarka marka)
+        {
+            if (marka!=EMarka.TÜMÜ)
+            {
+                Products = Products.Where(c => c.Marka.Equals(marka)).ToList();
+            }
+            return Products;
         }
     }
 }

@@ -5724,11 +5724,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
+      "projectUniqueName": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
       "projectName": "VatanBilgisayarMobil.Android",
-      "projectPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
+      "projectPath": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
       "packagesPath": "C:\\Users\\AydemirPC\\.nuget\\packages\\",
-      "outputPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\obj\\",
+      "outputPath": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -5749,8 +5749,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
-              "projectPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj"
+            "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
+              "projectPath": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj"
             }
           }
         }

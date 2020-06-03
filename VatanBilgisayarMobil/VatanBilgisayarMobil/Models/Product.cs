@@ -119,7 +119,9 @@ namespace VatanBilgisayarMobil.Models
             HP = 8,
 
             [Description("HOMETECH")]
-            HOMETECH = 9
+            HOMETECH = 9,
+            [Description("TÜMÜ")]
+            TÜMÜ = 10
         }
     }
 }

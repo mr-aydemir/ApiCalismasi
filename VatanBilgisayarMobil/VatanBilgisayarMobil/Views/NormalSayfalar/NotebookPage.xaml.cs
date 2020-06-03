@@ -9,6 +9,7 @@ using VatanBilgisayarMobil.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using static VatanBilgisayarMobil.Data.RestAPIForProducts;
+using static VatanBilgisayarMobil.Models.Product;
 
 namespace VatanBilgisayarMobil.Views
 {
@@ -18,6 +19,7 @@ namespace VatanBilgisayarMobil.Views
         ÜrünModel Ürünler;
         ProductFilter ProductFilter;
         ERadioButtonProperty RadioButtonProperty;
+        EMarka Marka;
         public NotebookPage()
         {
             InitializeComponent();
@@ -31,7 +33,15 @@ namespace VatanBilgisayarMobil.Views
                 new RadioButtonsModel() { Property = ERadioButtonProperty.Artan, TextString = "Artan Fiyata Göre Sırala" }
             };
             Azalan.BindingContext = radioButtonsModels[0];
-            Artan.BindingContext = radioButtonsModels[1];
+            Artan.BindingContext = radioButtonsModels[1]; 
+            Marka = EMarka.TÜMÜ;
+            List<string> MarkaNames = Enum.GetNames(typeof(EMarka)).ToList();
+            foreach (var item in MarkaNames)
+            {
+                picker.Items.Add(item);
+            }
+            picker.SelectedIndex = (int)EMarka.TÜMÜ-1;
+            picker.ItemsSource = Enum.GetNames(typeof(EMarka)).ToList();
         }
 
         private async void ÜrünTapped(object sender, ItemTappedEventArgs e)
@@ -47,7 +57,7 @@ namespace VatanBilgisayarMobil.Views
         private void Filtrele()
         {
             ÖneÇıkanÜrünlerFLV.BeginRefresh();
-            ÖneÇıkanÜrünlerFLV.FlowItemsSource = ProductFilter.Filtrele(ürünAraması.Text, Minimum.Text, Maksimum.Text, RadioButtonProperty);
+            ÖneÇıkanÜrünlerFLV.FlowItemsSource = ProductFilter.Filtrele(ürünAraması.Text, Minimum.Text, Maksimum.Text, RadioButtonProperty,Marka);
             ÖneÇıkanÜrünlerFLV.EndRefresh();
         }
 
@@ -75,6 +85,17 @@ namespace VatanBilgisayarMobil.Views
             if (e.Value==true)
             {
                 RadioButtonProperty = ((sender as RadioButton).BindingContext as RadioButtonsModel).Property;
+            }
+            Filtrele();
+        }
+
+        private void picker_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var picker = (Picker)sender;
+            int selectedIndex = picker.SelectedIndex;
+            if (selectedIndex != -1)
+            {
+                Marka = ProductFilter.Markalar[selectedIndex];
             }
             Filtrele();
         }

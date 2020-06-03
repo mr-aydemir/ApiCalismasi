@@ -26,6 +26,10 @@
 					<Entry x:Name="Maksimum" Placeholder="Maximum Fiyat" HorizontalOptions="Fill" Keyboard="Numeric" />
 					<Button Text="Filtrele" x:Name="Onayla" Clicked="Onayla_Clicked" BackgroundColor="Transparent"/>
 				</StackLayout>
+				<StackLayout Orientation="Horizontal">
+					<Label Text="Marka:" XAlign="Center"  YAlign="Center" FontSize="Medium"/>
+					<Picker x:Name="picker" Title="TÜMÜ"  WidthRequest="100" SelectedIndexChanged="picker_SelectedIndexChanged" />
+				</StackLayout>
 				<StackLayout x:Name="OrderTypesRBTN" Orientation="Horizontal">
 					<RadioButton x:Name="Azalan" Text="{Binding TextString}" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
 					<RadioButton x:Name="Artan" Text="{Binding TextString}" HorizontalOptions="Fill" CheckedChanged="RadioButton_CheckedChanged"/>
@@ -35,7 +39,7 @@
 				<StackLayout>
 					<StackLayout>
 						<flv:FlowListView x:Name="ÖneÇıkanÜrünlerFLV"   FlowColumnCount="2"  SeparatorVisibility="Default" HasUnevenRows="True"  
-							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünTapped" HeightRequest="1250" RowHeight="250">
+							   FlowItemsSource="{Binding Items}" FlowItemTapped="ÜrünTapped" HeightRequest="1250" RowHeight="260">
 							<flv:FlowListView.FlowColumnTemplate>
 								<DataTemplate>
 									<Frame BackgroundColor="White" BorderColor="#E0E0E0" CornerRadius="0" >

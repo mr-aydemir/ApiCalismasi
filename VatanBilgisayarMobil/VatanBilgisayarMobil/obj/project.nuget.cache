@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hw9CzC9QS/Kwtw68lcfKJgkK9pPb5lVvhBMotQnVhLJkX0eJhuA8U565buC3QJ+xeBf7ETDAVe+eCkqfEJpr1A==",
+  "dgSpecHash": "9Y3JifTQZ/iOk5LLKy/7J1aTtOMj/8IDPCtuBRBe/A62pHvXPPVNNNKYlJqOLXY+eszWrKPalxTAEcdd4f/8PA==",
   "success": true,
-  "projectFilePath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
+  "projectFilePath": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",

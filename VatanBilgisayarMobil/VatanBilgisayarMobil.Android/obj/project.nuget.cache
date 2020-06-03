@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GgNdaZ9JSV/Bv5HsGeZhy05y1k4cjGPxbm+SJ9Vocu1Ec1itLbLPQft6jjQbHFq0v1w2PSyeF9snMK0oShR5ZQ==",
+  "dgSpecHash": "hG6EZ55lwOxcEBvc0G3+xIqBsLBgyvcql39VKCLyYLB2vVh5iHzpkfyBfV2HtVXGppo4nNnuclRMOhNgohrYbg==",
   "success": true,
-  "projectFilePath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
+  "projectFilePath": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil.Android\\VatanBilgisayarMobil.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\AydemirPC\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\AydemirPC\\.nuget\\packages\\microsoft.aspnet.webapi.client\\5.2.7\\microsoft.aspnet.webapi.client.5.2.7.nupkg.sha512",
