@@ -28,7 +28,7 @@ namespace VatanArayüz
         {
             HttpClient client = new HttpClient()
             {
-                BaseAddress = new Uri("https://localhost:5001/")
+                BaseAddress = new Uri("https://sytronus.azurewebsites.net/")
             };
             // Add an Accept header for JSON format.
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));

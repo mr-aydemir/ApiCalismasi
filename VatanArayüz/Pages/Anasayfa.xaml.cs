@@ -8,6 +8,7 @@ using System.Windows.Input;
 using System.Windows.Media.Imaging;
 using System.Windows.Threading;
 using VatanArayüz.Content;
+using VatanArayüz.UserControls2;
 using VatanArayüz.Controls;
 
 namespace VatanArayüz
@@ -37,8 +38,8 @@ namespace VatanArayüz
             var window = (MainWindow)Application.Current.MainWindow;
             foreach (var item in window.Products)
             {
-                ProductButtons pb = new ProductButtons();
-                ProductsButton2 productButtons2 = new ProductsButton2();
+                ProductButton pb = new ProductButton();
+                ProductButton2 productButtons2 = new ProductButton2();
                 ProductButton3 productButtons3 = new ProductButton3();
                 pb.productName.Text = item.Name;
                 if (item.Cost < item.PreviousCost)
@@ -58,8 +59,8 @@ namespace VatanArayüz
                 else pb.OzelUrunBelirteci.Visibility = Visibility.Hidden;
                 pb.productCost.Text = Convert.ToDecimal(item.Cost).ToString();
                 pb.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
-                pb.ProductButton.Tag = item.Id;
-                pb.ProductButton.Click += Product_Click;
+                pb.ProductButton1.Tag = item.Id;
+                pb.ProductButton1.Click += Product_Click;
                 UGFırsatUrunleri.Children.Add(pb);
                 if (ugrid.Children.Count <= 8)
                 {

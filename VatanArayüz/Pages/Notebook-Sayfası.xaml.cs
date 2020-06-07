@@ -3,7 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
-using VatanArayüz.Controls;
+using VatanArayüz.UserControls2;
 
 namespace VatanArayüz
 {
@@ -44,8 +44,8 @@ namespace VatanArayüz
             Numberofproducts.Text = window.Products.Count.ToString();
             foreach (var item in window.Products)
             {
-                ProductButtons pb = new ProductButtons();
-                ProductsButton2 productButtons2 = new ProductsButton2();
+                ProductButton pb = new ProductButton();
+                ProductButton2 productButtons2 = new ProductButton2();
                 ProductButton3 productButtons3 = new ProductButton3();
                 pb.productName.Text = item.Name;
                 if (item.Cost < item.PreviousCost)
@@ -65,8 +65,8 @@ namespace VatanArayüz
                 else pb.OzelUrunBelirteci.Visibility = Visibility.Hidden;
                 pb.productCost.Text = Convert.ToDecimal(item.Cost).ToString();
                 pb.productImage.Source = new BitmapImage(new Uri(item.ImageUrl));
-                pb.ProductButton.Tag = item.Id;
-                pb.ProductButton.Click += Product_Click;
+                pb.ProductButton1.Tag = item.Id;
+                pb.ProductButton1.Click += Product_Click;
                 if (FilterMarkaCurrent != "")
                 {
                     if (FilterFiyatCurrent != "")

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {}
+    "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {}
   },
   "projects": {
-    "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
+    "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
+        "projectUniqueName": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
         "projectName": "VatanBilgisayarMobil",
-        "projectPath": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
+        "projectPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\VatanBilgisayarMobil.csproj",
         "packagesPath": "C:\\Users\\AydemirPC\\.nuget\\packages\\",
-        "outputPath": "E:\\Ders\\OOP2\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\obj\\",
+        "outputPath": "E:\\ApiCalismasi\\VatanBilgisayarMobil\\VatanBilgisayarMobil\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

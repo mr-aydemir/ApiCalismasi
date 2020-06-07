@@ -46,6 +46,7 @@
 			</UniformGrid>
 			<!--Fırsat Ürünlerin olduğu bölüm-->
 			<UniformGrid Name="UGFırsatUrunleri" Columns="4" >
+				
 			</UniformGrid>
 		</StackPanel>
 		<!--Web'e Özel Sınırlı Ürünlerin Bölümü-->

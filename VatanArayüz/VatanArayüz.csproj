@@ -83,21 +83,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Controls\ProductButton3.xaml.cs">
-      <DependentUpon>ProductButton3.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\ProductButtons.xaml.cs">
-      <DependentUpon>ProductButtons.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\ProductsButton2.xaml.cs">
-      <DependentUpon>ProductsButton2.xaml</DependentUpon>
+    <Compile Include="Controls\UserControl2.xaml.cs">
+      <DependentUpon>UserControl2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Pages\Anasayfa.xaml.cs">
       <DependentUpon>Anasayfa.xaml</DependentUpon>
     </Compile>
     <Compile Include="Content\SwiperItem.cs" />
-    <Compile Include="Controls\NavigationDrawer.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Pages\Hakkımızda.xaml.cs">
@@ -109,25 +102,22 @@
     <Compile Include="Pages\ÜrünSayfası.xaml.cs">
       <DependentUpon>ÜrünSayfası.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\ProductButton3.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\ProductButtons.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\ProductsButton2.xaml">
+    <Compile Include="Controls\ProductButton.xaml.cs">
+      <DependentUpon>ProductButton.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductButton2.xaml.cs">
+      <DependentUpon>ProductButton2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ProductButton3.xaml.cs">
+      <DependentUpon>ProductButton3.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Controls\UserControl2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Anasayfa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\NavigationDrawer.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\Hakkımızda.xaml">
       <SubType>Designer</SubType>
@@ -158,6 +148,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Pages\ÜrünSayfası.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProductButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProductButton2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\ProductButton3.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
