@@ -1,5 +1,0 @@
-Github Linki.
-https://github.com/SytronXar/ApiCalismasi
-
-Xamarin direk çalışıyor.
-Wpfi Çalıştırmadan önce apiyi çalıştırmalısınız.
